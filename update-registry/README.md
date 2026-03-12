@@ -40,12 +40,12 @@ Common fields:
 | Field | Type | Description |
 |---|---|---|
 | `id` | string | Stable unique ID (do not change after publish) |
-| `name` | string | Display name in marketplace |
+| `name` | string | Display name in provider dropdowns |
 | `type` | `"offline"` \| `"online"` | Offline download or online API |
-| `role` | string | `transcription`, `translation`, `diarization`, `transcription_engine` |
+| `role` | string | `transcription`, `translation`, `diarization` |
 | `provider_id` | string | Internal provider key, for example `whispercpp`, `openai`, `sherpa` |
 | `size_bytes` | integer | Approximate total download size |
-| `description` | string | One-line marketplace description |
+| `description` | string | One-line provider/model description |
 
 Offline single file (`download`):
 
@@ -81,7 +81,7 @@ Online model:
 }
 ```
 
-`settings_fields` controls where the UI scrolls when clicking setup.
+`settings_fields` can be used by the UI to show relevant context fields for the provider.
 
 ---
 
@@ -132,7 +132,7 @@ Prompt packs are consumed by translation runtime and can be selected in Settings
 2. Parsed JSON is cached to `%LOCALAPPDATA%/XYRA Captions/update-registry-cache.json`.
 3. If network fetch fails, cached JSON is used.
 4. Manifest entries can be filtered automatically by app version (`min_app_version` / `max_app_version`).
-5. Settings renders one card per model in `AI Settings -> KI-Modelle`.
+5. Settings renders role-based provider dropdowns and shows inline install/deinstall actions for offline models.
 6. If `manifest_version` changes (or release text is present on first run), a visible update notice is shown.
 
 ---

@@ -1,51 +1,19 @@
 {
   "schema_version": 1,
-  "manifest_version": "2026.03.12",
-  "published_at": "2026-03-12T00:00:00Z",
+  "manifest_version": "2026.03.13",
+  "published_at": "2026-03-13T00:00:00Z",
   "min_app_version": "2.0.0",
-  "update_title": "Update 2026.03.12 verfuegbar",
-  "update_text": "Der Update-Kanal ist jetzt fest eingebaut. Neue Modelle und Regeln werden automatisch geladen. Die manuelle Manifest-URL wurde entfernt.",
+  "update_title": "Update 2026.03.13 verfuegbar",
+  "update_text": "Whisper wird jetzt als Bundle installiert, Sherpa-Download wurde repariert, und die Provider-Auswahl ist auf role-basierte Dropdowns umgestellt.",
   "providers": [
-    {
-      "id": "openai",
-      "name": "OpenAI",
-      "kind": "cloud"
-    },
-    {
-      "id": "azure",
-      "name": "Azure OpenAI",
-      "kind": "cloud"
-    },
-    {
-      "id": "anthropic",
-      "name": "Anthropic",
-      "kind": "cloud"
-    },
-    {
-      "id": "deepl",
-      "name": "DeepL",
-      "kind": "cloud"
-    },
-    {
-      "id": "ollama",
-      "name": "Ollama",
-      "kind": "local"
-    },
-    {
-      "id": "whispercpp",
-      "name": "whisper.cpp",
-      "kind": "local"
-    },
-    {
-      "id": "sherpa-onnx",
-      "name": "Sherpa-ONNX",
-      "kind": "local"
-    },
-    {
-      "id": "pyannote",
-      "name": "Pyannote",
-      "kind": "cloud"
-    }
+    { "id": "openai", "name": "OpenAI", "kind": "cloud" },
+    { "id": "azure", "name": "Azure OpenAI", "kind": "cloud" },
+    { "id": "anthropic", "name": "Anthropic", "kind": "cloud" },
+    { "id": "deepl", "name": "DeepL", "kind": "cloud" },
+    { "id": "ollama", "name": "Ollama", "kind": "local" },
+    { "id": "whispercpp", "name": "whisper.cpp", "kind": "local" },
+    { "id": "sherpa-onnx", "name": "Sherpa-ONNX", "kind": "local" },
+    { "id": "pyannote", "name": "Pyannote", "kind": "cloud" }
   ],
   "prompt_packs": [
     {
@@ -61,55 +29,70 @@
   ],
   "ai_models": [
     {
-      "id": "whisper-base",
-      "name": "Whisper Base (multilingual)",
+      "id": "whispercpp-offline-bundle",
+      "name": "whisper.cpp Offline Bundle",
       "type": "offline",
       "role": "transcription",
       "provider_id": "whispercpp",
-      "size_bytes": 148000000,
-      "description": "Schnelle mehrsprachige Transkription. Empfohlen für die meisten Anwendungsfälle.",
-      "download": {
-        "url": "https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-base.bin",
-        "filename": "ggml-base.bin",
-        "dest_dir": "models",
-        "sha256": "60ed5bc3dd14eea856493d334349b405782ddcaf0a6aca8713f1e3b3b54f6c80"
-      },
+      "size_bytes": 152000000,
+      "description": "Lokale Whisper-Transkription (Model + Binary) in einem Installationsschritt.",
+      "bundle": [
+        {
+          "url": "https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-base.bin",
+          "filename": "ggml-base.bin",
+          "dest_dir": "models",
+          "sha256": "60ed5bc3dd14eea856493d334349b405782ddcaf0028d4b5df4088345fba2efe"
+        },
+        {
+          "url": "https://github.com/ggml-org/whisper.cpp/releases/latest/download/whisper-bin-x64.zip",
+          "filename": "whisper-x86_64-pc-windows-msvc.exe",
+          "dest_dir": "binaries",
+          "archive_format": "zip",
+          "archive_entry": "whisper-cli.exe",
+          "extract_siblings": true,
+          "allow_unverified": true
+        }
+      ],
       "settings_after_install": {
         "transcription_provider": "whispercpp"
       }
     },
     {
-      "id": "whisper-cpp-binary",
-      "name": "Whisper.cpp Binary (Windows x64)",
-      "type": "offline",
-      "role": "transcription_engine",
-      "provider_id": "whispercpp",
-      "size_bytes": 4000000,
-      "description": "Laufzeitbinary für lokale Whisper-Transkription. Wird zusammen mit Whisper Base benötigt.",
-      "download": {
-        "url": "https://github.com/ggml-org/whisper.cpp/releases/latest/download/whisper-bin-x64.zip",
-        "filename": "whisper-x86_64-pc-windows-msvc.exe",
-        "dest_dir": "binaries",
-        "archive_format": "zip",
-        "archive_entry": "whisper-cli.exe",
-        "extract_siblings": true,
-        "allow_unverified": true
-      },
-      "settings_after_install": {}
+      "id": "openai-whisper-api",
+      "name": "OpenAI Whisper API",
+      "type": "online",
+      "role": "transcription",
+      "provider_id": "openai",
+      "description": "Cloud-Transkription via OpenAI Whisper.",
+      "requires_api_key": true,
+      "settings_fields": ["transcription_provider"]
+    },
+    {
+      "id": "azure-speech",
+      "name": "Azure Speech",
+      "type": "online",
+      "role": "transcription",
+      "provider_id": "azure",
+      "description": "Cloud-Transkription via Azure Speech.",
+      "requires_api_key": true,
+      "settings_fields": ["transcription_provider", "ai_endpoint", "azure_whisper_deployment"]
     },
     {
       "id": "sherpa-diarization-bundle",
-      "name": "Sherpa-ONNX Sprechertrennung",
+      "name": "Sherpa-ONNX Speaker Diarization Bundle",
       "type": "offline",
       "role": "diarization",
-      "provider_id": "sherpa",
-      "size_bytes": 111000000,
-      "description": "Lokale Sprechertrennung ohne Cloud-Anbindung. Erkennt automatisch verschiedene Sprecher (~111 MB, 3 Dateien).",
+      "provider_id": "sherpa-onnx",
+      "size_bytes": 250000000,
+      "description": "Lokale Sprechertrennung (Binary + Segmentation + Embedding).",
       "bundle": [
         {
-          "url": "https://github.com/k2-fsa/sherpa-onnx/releases/latest/download/sherpa-onnx-offline-speaker-diarization-x86_64-pc-windows-msvc.exe",
-          "filename": "sherpa-onnx-offline-speaker-diarization-x86_64-pc-windows-msvc.exe",
+          "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/v1.12.29/sherpa-onnx-v1.12.29-win-x64-shared-MT-Release.tar.bz2",
+          "filename": "sherpa-onnx-offline-speaker-diarization.exe",
           "dest_dir": "binaries",
+          "archive_format": "tar.bz2",
+          "archive_entry": "sherpa-onnx-v1.12.29-win-x64-shared-MT-Release/bin/sherpa-onnx-offline-speaker-diarization.exe",
+          "extract_siblings": true,
           "allow_unverified": true
         },
         {
@@ -129,48 +112,38 @@
       ],
       "settings_after_install": {
         "diarization_enabled": true,
-        "diarization_provider": "sherpa"
+        "diarization_provider": "sherpa-onnx"
       }
     },
     {
-      "id": "openai-whisper-api",
-      "name": "OpenAI Whisper API",
+      "id": "pyannote-online",
+      "name": "Pyannote API",
       "type": "online",
-      "role": "transcription",
-      "provider_id": "openai",
-      "description": "Hochwertige Cloud-Transkription via OpenAI. Benötigt einen OpenAI API-Schlüssel.",
+      "role": "diarization",
+      "provider_id": "pyannote",
+      "description": "Cloud-Diarization via Pyannote API.",
       "requires_api_key": true,
-      "settings_fields": ["ai_api_key", "transcription_provider"]
+      "settings_fields": ["diarization_provider", "pyannote_endpoint"]
     },
     {
-      "id": "azure-speech",
-      "name": "Azure Cognitive Speech",
+      "id": "openai-translation",
+      "name": "OpenAI Translation",
       "type": "online",
-      "role": "transcription",
+      "role": "translation",
+      "provider_id": "openai",
+      "description": "Cloud-Uebersetzung via OpenAI.",
+      "requires_api_key": true,
+      "settings_fields": ["translation_provider"]
+    },
+    {
+      "id": "azure-translation",
+      "name": "Azure Translation",
+      "type": "online",
+      "role": "translation",
       "provider_id": "azure",
-      "description": "Microsoft Azure Speech-to-Text. Benötigt Azure-Abonnement und API-Schlüssel.",
+      "description": "Cloud-Uebersetzung via Azure OpenAI.",
       "requires_api_key": true,
-      "settings_fields": ["ai_api_key", "ai_endpoint", "transcription_provider"]
-    },
-    {
-      "id": "openai-gpt4o-translation",
-      "name": "OpenAI GPT-4o Übersetzung",
-      "type": "online",
-      "role": "translation",
-      "provider_id": "openai",
-      "description": "Beste Cloud-Übersetzungsqualität via GPT-4o. Benötigt einen OpenAI API-Schlüssel.",
-      "requires_api_key": true,
-      "settings_fields": ["ai_api_key", "translation_provider"]
-    },
-    {
-      "id": "ollama-local",
-      "name": "Ollama (lokale KI-Übersetzung)",
-      "type": "online",
-      "role": "translation",
-      "provider_id": "ollama",
-      "description": "Kostenlose lokale KI-Übersetzung via Ollama. Ollama muss separat installiert und gestartet sein.",
-      "requires_api_key": false,
-      "settings_fields": ["ollama_endpoint", "translation_provider"]
+      "settings_fields": ["translation_provider", "ai_endpoint", "azure_chat_deployment"]
     },
     {
       "id": "anthropic-translation",
@@ -178,19 +151,29 @@
       "type": "online",
       "role": "translation",
       "provider_id": "anthropic",
-      "description": "Cloud translation with Anthropic Claude. Requires API key and model configuration.",
+      "description": "Cloud-Uebersetzung mit Anthropic Claude.",
       "requires_api_key": true,
       "settings_fields": ["translation_provider", "anthropic_endpoint", "anthropic_model"]
     },
     {
       "id": "deepl-translation",
-      "name": "DeepL Übersetzung",
+      "name": "DeepL Translation",
       "type": "online",
       "role": "translation",
       "provider_id": "deepl",
-      "description": "Professionelle Übersetzungsqualität via DeepL. Benötigt einen DeepL API-Schlüssel.",
+      "description": "Cloud-Uebersetzung via DeepL API.",
       "requires_api_key": true,
-      "settings_fields": ["ai_api_key", "translation_provider"]
+      "settings_fields": ["translation_provider", "deepl_endpoint"]
+    },
+    {
+      "id": "ollama-local",
+      "name": "Ollama Local Translation",
+      "type": "online",
+      "role": "translation",
+      "provider_id": "ollama",
+      "description": "Lokale Uebersetzung via Ollama.",
+      "requires_api_key": false,
+      "settings_fields": ["translation_provider", "ollama_endpoint", "ollama_model"]
     }
   ],
   "accessibility_rules": [
@@ -201,9 +184,9 @@
     { "id": "gap_between_subtitles_min", "label": "Min. Pause zwischen Untertiteln", "value": 0.04, "unit": "seconds" }
   ],
   "audit_rules": [
-    { "id": "no_overlap", "label": "Keine überlappenden Untertitel", "severity": "error" },
-    { "id": "gap_too_small", "label": "Lücke zu klein (< 40ms)", "severity": "warning" },
-    { "id": "reading_speed", "label": "Lesegeschwindigkeit überschritten", "severity": "warning" },
+    { "id": "no_overlap", "label": "Keine ueberlappenden Untertitel", "severity": "error" },
+    { "id": "gap_too_small", "label": "Luecke zu klein (< 40ms)", "severity": "warning" },
+    { "id": "reading_speed", "label": "Lesegeschwindigkeit ueberschritten", "severity": "warning" },
     { "id": "line_too_long", "label": "Zeile zu lang (> 42 Zeichen)", "severity": "warning" },
     { "id": "empty_subtitle", "label": "Leerer Untertiteltext", "severity": "error" },
     { "id": "duration_too_short", "label": "Untertitel zu kurz (< 1s)", "severity": "warning" },
