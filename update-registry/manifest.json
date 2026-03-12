@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "manifest_version": "2026.03.12",
+  "published_at": "2026-03-12T00:00:00Z",
+  "update_title": "Update 2026.03.12 verfuegbar",
+  "update_text": "Der Update-Kanal ist jetzt fest eingebaut. Neue Modelle und Regeln werden automatisch geladen. Die manuelle Manifest-URL wurde entfernt.",
+  "ai_models": [
+    {
+      "id": "whisper-base",
+      "name": "Whisper Base (multilingual)",
+      "type": "offline",
+      "role": "transcription",
+      "provider_id": "whispercpp",
+      "size_bytes": 148000000,
+      "description": "Schnelle mehrsprachige Transkription. Empfohlen für die meisten Anwendungsfälle.",
+      "download": {
+        "url": "https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-base.bin",
+        "filename": "ggml-base.bin",
+        "dest_dir": "models",
+        "sha256": "60ed5bc3dd14eea856493d334349b405782ddcaf0a6aca8713f1e3b3b54f6c80"
+      },
+      "settings_after_install": {
+        "transcription_provider": "whispercpp"
+      }
+    },
+    {
+      "id": "whisper-cpp-binary",
+      "name": "Whisper.cpp Binary (Windows x64)",
+      "type": "offline",
+      "role": "transcription_engine",
+      "provider_id": "whispercpp",
+      "size_bytes": 4000000,
+      "description": "Laufzeitbinary für lokale Whisper-Transkription. Wird zusammen mit Whisper Base benötigt.",
+      "download": {
+        "url": "https://github.com/ggml-org/whisper.cpp/releases/latest/download/whisper-bin-x64.zip",
+        "filename": "whisper-x86_64-pc-windows-msvc.exe",
+        "dest_dir": "binaries",
+        "archive_format": "zip",
+        "archive_entry": "whisper-cli.exe",
+        "extract_siblings": true
+      },
+      "settings_after_install": {}
+    },
+    {
+      "id": "sherpa-diarization-bundle",
+      "name": "Sherpa-ONNX Sprechertrennung",
+      "type": "offline",
+      "role": "diarization",
+      "provider_id": "sherpa",
+      "size_bytes": 111000000,
+      "description": "Lokale Sprechertrennung ohne Cloud-Anbindung. Erkennt automatisch verschiedene Sprecher (~111 MB, 3 Dateien).",
+      "bundle": [
+        {
+          "url": "https://github.com/k2-fsa/sherpa-onnx/releases/latest/download/sherpa-onnx-offline-speaker-diarization-x86_64-pc-windows-msvc.exe",
+          "filename": "sherpa-onnx-offline-speaker-diarization-x86_64-pc-windows-msvc.exe",
+          "dest_dir": "binaries"
+        },
+        {
+          "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/speaker-segmentation-models/sherpa-onnx-pyannote-segmentation-3-0.tar.bz2",
+          "filename": "sherpa-onnx-pyannote-segmentation.onnx",
+          "dest_dir": "models",
+          "archive_format": "tar.bz2",
+          "archive_entry": "sherpa-onnx-pyannote-segmentation-3-0/model.onnx"
+        },
+        {
+          "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/speaker-recongition-models/3dspeaker_speech_eres2net_base_sv_zh-cn_3dspeaker_16k.onnx",
+          "filename": "sherpa-onnx-3dspeaker-embedding.onnx",
+          "dest_dir": "models"
+        }
+      ],
+      "settings_after_install": {
+        "diarization_enabled": true,
+        "diarization_provider": "sherpa"
+      }
+    },
+    {
+      "id": "openai-whisper-api",
+      "name": "OpenAI Whisper API",
+      "type": "online",
+      "role": "transcription",
+      "provider_id": "openai",
+      "description": "Hochwertige Cloud-Transkription via OpenAI. Benötigt einen OpenAI API-Schlüssel.",
+      "requires_api_key": true,
+      "settings_fields": ["ai_api_key", "transcription_provider"]
+    },
+    {
+      "id": "azure-speech",
+      "name": "Azure Cognitive Speech",
+      "type": "online",
+      "role": "transcription",
+      "provider_id": "azure",
+      "description": "Microsoft Azure Speech-to-Text. Benötigt Azure-Abonnement und API-Schlüssel.",
+      "requires_api_key": true,
+      "settings_fields": ["ai_api_key", "ai_endpoint", "transcription_provider"]
+    },
+    {
+      "id": "openai-gpt4o-translation",
+      "name": "OpenAI GPT-4o Übersetzung",
+      "type": "online",
+      "role": "translation",
+      "provider_id": "openai",
+      "description": "Beste Cloud-Übersetzungsqualität via GPT-4o. Benötigt einen OpenAI API-Schlüssel.",
+      "requires_api_key": true,
+      "settings_fields": ["ai_api_key", "translation_provider"]
+    },
+    {
+      "id": "ollama-local",
+      "name": "Ollama (lokale KI-Übersetzung)",
+      "type": "online",
+      "role": "translation",
+      "provider_id": "ollama",
+      "description": "Kostenlose lokale KI-Übersetzung via Ollama. Ollama muss separat installiert und gestartet sein.",
+      "requires_api_key": false,
+      "settings_fields": ["ollama_endpoint", "translation_provider"]
+    },
+    {
+      "id": "deepl-translation",
+      "name": "DeepL Übersetzung",
+      "type": "online",
+      "role": "translation",
+      "provider_id": "deepl",
+      "description": "Professionelle Übersetzungsqualität via DeepL. Benötigt einen DeepL API-Schlüssel.",
+      "requires_api_key": true,
+      "settings_fields": ["ai_api_key", "translation_provider"]
+    }
+  ],
+  "accessibility_rules": [
+    { "id": "subtitle_duration_min", "label": "Minimale Untertiteldauer", "value": 1.0, "unit": "seconds" },
+    { "id": "subtitle_duration_max", "label": "Maximale Untertiteldauer", "value": 7.0, "unit": "seconds" },
+    { "id": "chars_per_second_max", "label": "Max. Zeichen pro Sekunde", "value": 20, "unit": "cps" },
+    { "id": "chars_per_line_max", "label": "Max. Zeichen pro Zeile", "value": 42, "unit": "chars" },
+    { "id": "gap_between_subtitles_min", "label": "Min. Pause zwischen Untertiteln", "value": 0.04, "unit": "seconds" }
+  ],
+  "audit_rules": [
+    { "id": "no_overlap", "label": "Keine überlappenden Untertitel", "severity": "error" },
+    { "id": "gap_too_small", "label": "Lücke zu klein (< 40ms)", "severity": "warning" },
+    { "id": "reading_speed", "label": "Lesegeschwindigkeit überschritten", "severity": "warning" },
+    { "id": "line_too_long", "label": "Zeile zu lang (> 42 Zeichen)", "severity": "warning" },
+    { "id": "empty_subtitle", "label": "Leerer Untertiteltext", "severity": "error" },
+    { "id": "duration_too_short", "label": "Untertitel zu kurz (< 1s)", "severity": "warning" },
+    { "id": "duration_too_long", "label": "Untertitel zu lang (> 7s)", "severity": "warning" }
+  ]
+}
