@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "manifest_version": "2026.03.13",
-  "published_at": "2026-03-13T00:00:00Z",
+  "manifest_version": "2026.03.15",
+  "published_at": "2026-03-15T00:00:00Z",
   "min_app_version": "2.0.0",
-  "update_title": "Update 2026.03.13 verfuegbar",
-  "update_text": "Whisper wird jetzt als Bundle installiert, Sherpa-Download wurde repariert, und die Provider-Auswahl ist auf role-basierte Dropdowns umgestellt.",
+  "update_title": "Update 2026.03.15 available",
+  "update_text": "Pipeline packages can now ship strict handler modules that are downloaded, versioned, and activated through the AI package manager.",
   "providers": [
     { "id": "openai", "name": "OpenAI", "kind": "cloud" },
     { "id": "azure", "name": "Azure OpenAI", "kind": "cloud" },
@@ -35,7 +35,7 @@
       "role": "transcription",
       "provider_id": "whispercpp",
       "size_bytes": 152000000,
-      "description": "Lokale Whisper-Transkription (Model + Binary) in einem Installationsschritt.",
+      "description": "Local Whisper transcription (model + binary) in a single installation step.",
       "bundle": [
         {
           "url": "https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-base.bin",
@@ -63,7 +63,7 @@
       "type": "online",
       "role": "transcription",
       "provider_id": "openai",
-      "description": "Cloud-Transkription via OpenAI Whisper.",
+      "description": "Cloud transcription via OpenAI Whisper.",
       "requires_api_key": true,
       "settings_fields": ["transcription_provider"]
     },
@@ -73,7 +73,7 @@
       "type": "online",
       "role": "transcription",
       "provider_id": "azure",
-      "description": "Cloud-Transkription via Azure Speech.",
+      "description": "Cloud transcription via Azure Speech.",
       "requires_api_key": true,
       "settings_fields": ["transcription_provider", "ai_endpoint", "azure_whisper_deployment"]
     },
@@ -84,7 +84,7 @@
       "role": "diarization",
       "provider_id": "sherpa-onnx",
       "size_bytes": 250000000,
-      "description": "Lokale Sprechertrennung (Binary + Segmentation + Embedding).",
+      "description": "Local speaker diarization (binary + segmentation + embedding).",
       "bundle": [
         {
           "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/v1.12.29/sherpa-onnx-v1.12.29-win-x64-shared-MT-Release.tar.bz2",
@@ -131,7 +131,7 @@
       "type": "online",
       "role": "translation",
       "provider_id": "openai",
-      "description": "Cloud-Uebersetzung via OpenAI.",
+      "description": "Cloud translation via OpenAI.",
       "requires_api_key": true,
       "settings_fields": ["translation_provider"]
     },
@@ -141,7 +141,7 @@
       "type": "online",
       "role": "translation",
       "provider_id": "azure",
-      "description": "Cloud-Uebersetzung via Azure OpenAI.",
+      "description": "Cloud translation via Azure OpenAI.",
       "requires_api_key": true,
       "settings_fields": ["translation_provider", "ai_endpoint", "azure_chat_deployment"]
     },
@@ -151,7 +151,7 @@
       "type": "online",
       "role": "translation",
       "provider_id": "anthropic",
-      "description": "Cloud-Uebersetzung mit Anthropic Claude.",
+      "description": "Cloud translation with Anthropic Claude.",
       "requires_api_key": true,
       "settings_fields": ["translation_provider", "anthropic_endpoint", "anthropic_model"]
     },
@@ -161,7 +161,7 @@
       "type": "online",
       "role": "translation",
       "provider_id": "deepl",
-      "description": "Cloud-Uebersetzung via DeepL API.",
+      "description": "Cloud translation via DeepL API.",
       "requires_api_key": true,
       "settings_fields": ["translation_provider", "deepl_endpoint"]
     },
@@ -171,25 +171,125 @@
       "type": "online",
       "role": "translation",
       "provider_id": "ollama",
-      "description": "Lokale Uebersetzung via Ollama.",
+      "description": "Local translation via Ollama.",
       "requires_api_key": false,
       "settings_fields": ["translation_provider", "ollama_endpoint", "ollama_model"]
     }
   ],
+  "pipeline_packages": [
+    {
+      "id": "pipeline-whispercpp-sherpa",
+      "name": "whisper.cpp + Sherpa-ONNX",
+      "type": "pipeline",
+      "role": "transcription",
+      "stage": "pipeline",
+      "provider_id": "whispercpp+sherpa-onnx",
+      "version": "1.0.0",
+      "manifest_version": "2026.03.15",
+      "dependencies": [
+        { "id": "whispercpp-offline-bundle", "version": "2026.03.14" },
+        { "id": "sherpa-diarization-bundle", "version": "2026.03.14" }
+      ],
+      "bundle": [
+        {
+          "url": "https://raw.githubusercontent.com/realfabianschmidt/XYRA-Captions-Update-Registry/main/update-registry/pipeline-handlers/pipeline-whispercpp-sherpa/handler.js",
+          "filename": "handler.js",
+          "dest_dir": "pipeline-handlers",
+          "sha256": "CB7D2A5B2E4953350C66EBD7E6E63CEA141D3320736508BB8A3018747C5DA1E3"
+        }
+      ],
+      "settings_after_install": {
+        "transcription_provider": "whispercpp",
+        "diarization_enabled": true,
+        "diarization_provider": "sherpa-onnx"
+      },
+      "command": "transcribe_with_diarization",
+      "handler_entry": "handler.js",
+      "handler_api_version": "1",
+      "capabilities": ["offline", "speaker-labels", "word-midpoint-merge"],
+      "outputs": ["SubtitleArtifact"]
+    },
+    {
+      "id": "pipeline-openai-sherpa",
+      "name": "OpenAI Whisper + Sherpa-ONNX",
+      "type": "pipeline",
+      "role": "transcription",
+      "stage": "pipeline",
+      "provider_id": "openai+sherpa-onnx",
+      "version": "1.0.0",
+      "manifest_version": "2026.03.15",
+      "dependencies": [
+        { "id": "openai-whisper-api", "version": "2026.03.14" },
+        { "id": "sherpa-diarization-bundle", "version": "2026.03.14" }
+      ],
+      "bundle": [
+        {
+          "url": "https://raw.githubusercontent.com/realfabianschmidt/XYRA-Captions-Update-Registry/main/update-registry/pipeline-handlers/pipeline-openai-sherpa/handler.js",
+          "filename": "handler.js",
+          "dest_dir": "pipeline-handlers",
+          "sha256": "E06DBE7D7D946A27C52726C71C6616C688E2A95A24D93F4720F8BBF2E80E5DD0"
+        }
+      ],
+      "settings_after_install": {
+        "transcription_provider": "openai",
+        "diarization_enabled": true,
+        "diarization_provider": "sherpa-onnx"
+      },
+      "command": "transcribe_with_diarization",
+      "handler_entry": "handler.js",
+      "handler_api_version": "1",
+      "capabilities": ["hybrid", "speaker-labels", "word-midpoint-merge"],
+      "outputs": ["SubtitleArtifact"]
+    }
+  ],
+  "ai_bundles": [
+    {
+      "id": "offline-speaker-transcription",
+      "name": "Offline Speaker Transcription",
+      "version": "1.0.0",
+      "manifest_version": "2026.03.15",
+      "packages": [
+        { "id": "pipeline-whispercpp-sherpa", "version": "1.0.0" }
+      ],
+      "profile_id": "offline-speaker"
+    },
+    {
+      "id": "hybrid-cloud-local-speaker",
+      "name": "Cloud Whisper + Local Diarization",
+      "version": "1.0.0",
+      "manifest_version": "2026.03.15",
+      "packages": [
+        { "id": "pipeline-openai-sherpa", "version": "1.0.0" }
+      ],
+      "profile_id": "hybrid-cloud-local-speaker"
+    }
+  ],
+  "pipeline_profiles": [
+    {
+      "id": "offline-speaker",
+      "name": "Offline Speaker",
+      "pipeline_package": "pipeline-whispercpp-sherpa"
+    },
+    {
+      "id": "hybrid-cloud-local-speaker",
+      "name": "Cloud Whisper + Local Diarization",
+      "pipeline_package": "pipeline-openai-sherpa"
+    }
+  ],
   "accessibility_rules": [
-    { "id": "subtitle_duration_min", "label": "Minimale Untertiteldauer", "value": 1.0, "unit": "seconds" },
-    { "id": "subtitle_duration_max", "label": "Maximale Untertiteldauer", "value": 7.0, "unit": "seconds" },
-    { "id": "chars_per_second_max", "label": "Max. Zeichen pro Sekunde", "value": 20, "unit": "cps" },
-    { "id": "chars_per_line_max", "label": "Max. Zeichen pro Zeile", "value": 42, "unit": "chars" },
-    { "id": "gap_between_subtitles_min", "label": "Min. Pause zwischen Untertiteln", "value": 0.04, "unit": "seconds" }
+    { "id": "subtitle_duration_min", "label": "Minimum subtitle duration", "value": 1.0, "unit": "seconds" },
+    { "id": "subtitle_duration_max", "label": "Maximum subtitle duration", "value": 7.0, "unit": "seconds" },
+    { "id": "chars_per_second_max", "label": "Maximum characters per second", "value": 20, "unit": "cps" },
+    { "id": "chars_per_line_max", "label": "Maximum characters per line", "value": 42, "unit": "chars" },
+    { "id": "gap_between_subtitles_min", "label": "Minimum gap between subtitles", "value": 0.04, "unit": "seconds" }
   ],
   "audit_rules": [
-    { "id": "no_overlap", "label": "Keine ueberlappenden Untertitel", "severity": "error" },
-    { "id": "gap_too_small", "label": "Luecke zu klein (< 40ms)", "severity": "warning" },
-    { "id": "reading_speed", "label": "Lesegeschwindigkeit ueberschritten", "severity": "warning" },
-    { "id": "line_too_long", "label": "Zeile zu lang (> 42 Zeichen)", "severity": "warning" },
-    { "id": "empty_subtitle", "label": "Leerer Untertiteltext", "severity": "error" },
-    { "id": "duration_too_short", "label": "Untertitel zu kurz (< 1s)", "severity": "warning" },
-    { "id": "duration_too_long", "label": "Untertitel zu lang (> 7s)", "severity": "warning" }
+    { "id": "no_overlap", "label": "No overlapping subtitles", "severity": "error" },
+    { "id": "gap_too_small", "label": "Gap too small (< 40ms)", "severity": "warning" },
+    { "id": "reading_speed", "label": "Reading speed exceeded", "severity": "warning" },
+    { "id": "line_too_long", "label": "Line too long (> 42 characters)", "severity": "warning" },
+    { "id": "empty_subtitle", "label": "Empty subtitle text", "severity": "error" },
+    { "id": "duration_too_short", "label": "Subtitle too short (< 1s)", "severity": "warning" },
+    { "id": "duration_too_long", "label": "Subtitle too long (> 7s)", "severity": "warning" }
   ]
 }
