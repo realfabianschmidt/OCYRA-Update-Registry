@@ -1,0 +1,39 @@
+{
+  "id": "easy-reading",
+  "name": "Easy Reading",
+  "description": "High-comfort subtitle defaults for slower reading speed and simplified pacing.",
+  "capabilities": ["compliance", "easy-reading", "transcription-autofit"],
+  "quality_rules": {
+    "MAX_CPS": 12,
+    "MAX_LINE_LENGTH": 37,
+    "MAX_LINES": 2,
+    "MIN_DURATION": 1.0,
+    "MAX_DURATION": 6.0,
+    "MIN_GAP": 0.08
+  },
+  "transcription_policy": {
+    "autoFit": true
+  },
+  "audit_rules": [
+    { "rule_id": "MAX_CPS", "severity": "error" },
+    { "rule_id": "MAX_LINE_LENGTH", "severity": "error" },
+    { "rule_id": "MAX_LINES", "severity": "error" },
+    { "rule_id": "MIN_DURATION", "severity": "warning" },
+    { "rule_id": "MAX_DURATION", "severity": "warning" },
+    { "rule_id": "MIN_GAP", "severity": "warning" },
+    { "rule_id": "OVERLAP", "severity": "error" }
+  ],
+  "audit_checklist": [
+    { "id": "1.2.1", "title": "Audio-only and Video-only (Prerecorded)", "level": "A", "evaluation": "subtitle_presence" },
+    { "id": "1.2.2", "title": "Captions (Prerecorded)", "level": "A", "evaluation": "captions_prerecorded" },
+    { "id": "1.2.3", "title": "Audio Description or Media Alternative (Prerecorded)", "level": "A", "evaluation": "manual_audio_description" },
+    { "id": "1.2.4", "title": "Captions (Live)", "level": "AA", "evaluation": "not_applicable_live" },
+    { "id": "1.2.5", "title": "Audio Description (Prerecorded)", "level": "AA", "evaluation": "manual_audio_description_aa" },
+    { "id": "ER", "title": "Easy Reading Comfort", "level": "-", "evaluation": "easy_reading_comfort" }
+  ],
+  "report": {
+    "profile_name": "Easy Reading Accessibility Profile",
+    "profile_version": "2026.1",
+    "standards_reference": "WCAG 2.1 AA · Easy Reading Subtitle Comfort Profile"
+  }
+}

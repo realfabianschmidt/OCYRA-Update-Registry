@@ -5,6 +5,9 @@
   "min_app_version": "2.0.0",
   "update_title": "Update 2026.03.15 available",
   "update_text": "Pipeline packages can now ship strict handler modules that are downloaded, versioned, and activated through the AI package manager.",
+  "trusted_registry_roots": [
+    "https://raw.githubusercontent.com/realfabianschmidt/XYRA-Captions-Update-Registry/main/update-registry/"
+  ],
   "providers": [
     { "id": "openai", "name": "OpenAI", "kind": "cloud" },
     { "id": "azure", "name": "Azure OpenAI", "kind": "cloud" },
@@ -276,20 +279,146 @@
       "pipeline_package": "pipeline-openai-sherpa"
     }
   ],
-  "accessibility_rules": [
-    { "id": "subtitle_duration_min", "label": "Minimum subtitle duration", "value": 1.0, "unit": "seconds" },
-    { "id": "subtitle_duration_max", "label": "Maximum subtitle duration", "value": 7.0, "unit": "seconds" },
-    { "id": "chars_per_second_max", "label": "Maximum characters per second", "value": 20, "unit": "cps" },
-    { "id": "chars_per_line_max", "label": "Maximum characters per line", "value": 42, "unit": "chars" },
-    { "id": "gap_between_subtitles_min", "label": "Minimum gap between subtitles", "value": 0.04, "unit": "seconds" }
+  "file_formats": [
+    {
+      "id": "webvtt",
+      "name": "Export VTT",
+      "description": "WebVTT subtitle file with timing and metadata",
+      "target": "subtitle",
+      "directions": ["import", "export"],
+      "extensions": ["vtt"],
+      "icon": "page",
+      "export_order": 10,
+      "quality_gate": "timed-subtitle",
+      "version": "1.0.0",
+      "manifest_version": "2026.03.15",
+      "handler_url": "https://raw.githubusercontent.com/realfabianschmidt/XYRA-Captions-Update-Registry/main/update-registry/file-formats/webvtt/handler.js",
+      "handler_api_version": "1",
+      "handler_sha256": "12913300983F708E6AC8B37D12B180F98CCA805DC6294F295B6F809A9CA8E6E4"
+    },
+    {
+      "id": "plain-text",
+      "name": "Export Plain Text",
+      "description": "Continuous text with smart paragraph breaks",
+      "target": "subtitle",
+      "directions": ["export"],
+      "extensions": ["txt"],
+      "icon": "page",
+      "export_order": 20,
+      "version": "1.0.0",
+      "manifest_version": "2026.03.15",
+      "handler_url": "https://raw.githubusercontent.com/realfabianschmidt/XYRA-Captions-Update-Registry/main/update-registry/file-formats/plain-text/handler.js",
+      "handler_api_version": "1",
+      "handler_sha256": "296E0D465353DF92656637CF166CDEA01BE646552056ED22DC5B981ADE295E0C"
+    },
+    {
+      "id": "subrip",
+      "name": "Export SRT",
+      "description": "SubRip format for YouTube, Vimeo and general subtitle workflows",
+      "target": "subtitle",
+      "directions": ["import", "export"],
+      "extensions": ["srt"],
+      "icon": "page-edit",
+      "export_order": 30,
+      "quality_gate": "timed-subtitle",
+      "version": "1.0.0",
+      "manifest_version": "2026.03.15",
+      "handler_url": "https://raw.githubusercontent.com/realfabianschmidt/XYRA-Captions-Update-Registry/main/update-registry/file-formats/subrip/handler.js",
+      "handler_api_version": "1",
+      "handler_sha256": "BC30A75361FA29BAF453712F6E9876E1682E5470C4F048BAE47A632A0FA9B5D0"
+    },
+    {
+      "id": "ttml",
+      "name": "Export TTML",
+      "description": "Timed Text Markup for broadcast and OTT delivery",
+      "target": "subtitle",
+      "directions": ["export"],
+      "extensions": ["ttml"],
+      "icon": "code-brackets",
+      "export_order": 40,
+      "quality_gate": "timed-subtitle",
+      "version": "1.0.0",
+      "manifest_version": "2026.03.15",
+      "handler_url": "https://raw.githubusercontent.com/realfabianschmidt/XYRA-Captions-Update-Registry/main/update-registry/file-formats/ttml/handler.js",
+      "handler_api_version": "1",
+      "handler_sha256": "A3FD29E82FA9335C7EAB36DDE8CA587EBE7EF558270A95DCF9ED6062610CD510"
+    },
+    {
+      "id": "ebu-tt",
+      "name": "Export EBU-TT",
+      "description": "European Broadcasting Union XML subtitle format",
+      "target": "subtitle",
+      "directions": ["export"],
+      "extensions": ["xml"],
+      "icon": "tv",
+      "export_order": 50,
+      "quality_gate": "timed-subtitle",
+      "version": "1.0.0",
+      "manifest_version": "2026.03.15",
+      "handler_url": "https://raw.githubusercontent.com/realfabianschmidt/XYRA-Captions-Update-Registry/main/update-registry/file-formats/ebu-tt/handler.js",
+      "handler_api_version": "1",
+      "handler_sha256": "14231523754D1D0FF662BC00CB3C981377AA67376C69500A8AFA900B69CA3BF8"
+    },
+    {
+      "id": "vttp-project",
+      "name": "XYRA Project",
+      "description": "Native XYRA Captions project file",
+      "target": "project",
+      "directions": ["import", "export"],
+      "extensions": ["vttp", "json"],
+      "icon": "folder",
+      "version": "1.0.0",
+      "manifest_version": "2026.03.15",
+      "handler_url": "https://raw.githubusercontent.com/realfabianschmidt/XYRA-Captions-Update-Registry/main/update-registry/file-formats/vttp-project/handler.js",
+      "handler_api_version": "1",
+      "handler_sha256": "D6E6ED28CF7F8D60878B2B1D5BC9BAD2A0957AB0EAF8A39AF3AF32A282057EE8"
+    },
+    {
+      "id": "rvvttp-review-package",
+      "name": "XYRA Review Package",
+      "description": "Review package with language-scoped subtitles and review metadata",
+      "target": "review-package",
+      "directions": ["import", "export"],
+      "extensions": ["rvvttp"],
+      "icon": "package",
+      "version": "1.0.0",
+      "manifest_version": "2026.03.15",
+      "handler_url": "https://raw.githubusercontent.com/realfabianschmidt/XYRA-Captions-Update-Registry/main/update-registry/file-formats/rvvttp-review-package/handler.js",
+      "handler_api_version": "1",
+      "handler_sha256": "E18D944CF4758FED86C5C64A34FC8E3E3DCF4EC610E673F2D00CE498CD528C33"
+    }
   ],
-  "audit_rules": [
-    { "id": "no_overlap", "label": "No overlapping subtitles", "severity": "error" },
-    { "id": "gap_too_small", "label": "Gap too small (< 40ms)", "severity": "warning" },
-    { "id": "reading_speed", "label": "Reading speed exceeded", "severity": "warning" },
-    { "id": "line_too_long", "label": "Line too long (> 42 characters)", "severity": "warning" },
-    { "id": "empty_subtitle", "label": "Empty subtitle text", "severity": "error" },
-    { "id": "duration_too_short", "label": "Subtitle too short (< 1s)", "severity": "warning" },
-    { "id": "duration_too_long", "label": "Subtitle too long (> 7s)", "severity": "warning" }
+  "default_accessibility_profile": "eu-eaa-bfsg",
+  "accessibility_profiles": [
+    {
+      "id": "eu-eaa-bfsg",
+      "name": "EU Accessibility Act / BFSG",
+      "description": "Balanced accessibility defaults for BFSG, EAA, WCAG 2.1 AA and EBU R37.",
+      "version": "1.0.0",
+      "manifest_version": "2026.03.15",
+      "profile_url": "https://raw.githubusercontent.com/realfabianschmidt/XYRA-Captions-Update-Registry/main/update-registry/accessibility-profiles/eu-eaa-bfsg/profile.json",
+      "profile_sha256": "6680A1E032D6C8DB3A384BAF0729CD8917ACBED0031412B49436BAC24913ED94"
+    },
+    {
+      "id": "web-balanced",
+      "name": "Web Accessibility Balanced",
+      "description": "Slightly faster subtitle defaults for general web video while preserving accessibility checks.",
+      "version": "1.0.0",
+      "manifest_version": "2026.03.15",
+      "profile_url": "https://raw.githubusercontent.com/realfabianschmidt/XYRA-Captions-Update-Registry/main/update-registry/accessibility-profiles/web-balanced/profile.json",
+      "profile_sha256": "7704CA63818DAEF08416819017B39D19F0DBA149516838C80E4C1E7F107B2BA3"
+    },
+    {
+      "id": "easy-reading",
+      "name": "Easy Reading",
+      "description": "High-comfort subtitle defaults for slower reading speed and simplified pacing.",
+      "version": "1.0.0",
+      "manifest_version": "2026.03.15",
+      "profile_url": "https://raw.githubusercontent.com/realfabianschmidt/XYRA-Captions-Update-Registry/main/update-registry/accessibility-profiles/easy-reading/profile.json",
+      "profile_sha256": "5B52CA85049B468CA25B2F21999C06BE32F60E8E13C4924ACBF5D4A8C7F5A36E",
+      "handler_url": "https://raw.githubusercontent.com/realfabianschmidt/XYRA-Captions-Update-Registry/main/update-registry/accessibility-profiles/easy-reading/handler.js",
+      "handler_api_version": "1",
+      "handler_sha256": "AFEF8D6B3A720D26E2F619A6053D342E0175BAAD6ED0B94FDEE95F3666028F5F"
+    }
   ]
 }

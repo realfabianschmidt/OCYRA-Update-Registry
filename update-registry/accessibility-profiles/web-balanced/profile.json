@@ -1,0 +1,39 @@
+{
+  "id": "web-balanced",
+  "name": "Web Accessibility Balanced",
+  "description": "Slightly faster subtitle defaults for general web video while preserving accessibility checks.",
+  "capabilities": ["compliance", "web", "transcription-autofit"],
+  "quality_rules": {
+    "MAX_CPS": 20,
+    "MAX_LINE_LENGTH": 42,
+    "MAX_LINES": 2,
+    "MIN_DURATION": 0.5,
+    "MAX_DURATION": 6.5,
+    "MIN_GAP": 0.04
+  },
+  "transcription_policy": {
+    "autoFit": true
+  },
+  "audit_rules": [
+    { "rule_id": "MAX_CPS", "severity": "warning" },
+    { "rule_id": "MAX_LINE_LENGTH", "severity": "warning" },
+    { "rule_id": "MAX_LINES", "severity": "error" },
+    { "rule_id": "MIN_DURATION", "severity": "warning" },
+    { "rule_id": "MAX_DURATION", "severity": "warning" },
+    { "rule_id": "MIN_GAP", "severity": "warning" },
+    { "rule_id": "OVERLAP", "severity": "error" }
+  ],
+  "audit_checklist": [
+    { "id": "1.2.1", "title": "Audio-only and Video-only (Prerecorded)", "level": "A", "evaluation": "subtitle_presence" },
+    { "id": "1.2.2", "title": "Captions (Prerecorded)", "level": "A", "evaluation": "captions_prerecorded" },
+    { "id": "1.2.3", "title": "Audio Description or Media Alternative (Prerecorded)", "level": "A", "evaluation": "manual_audio_description" },
+    { "id": "1.2.4", "title": "Captions (Live)", "level": "AA", "evaluation": "not_applicable_live" },
+    { "id": "1.2.5", "title": "Audio Description (Prerecorded)", "level": "AA", "evaluation": "manual_audio_description_aa" },
+    { "id": "WEB", "title": "Balanced Web Subtitle Quality", "level": "-", "evaluation": "subtitle_quality" }
+  ],
+  "report": {
+    "profile_name": "Web Accessibility Balanced Profile",
+    "profile_version": "2026.1",
+    "standards_reference": "WCAG 2.1 AA · EN 301 549 · Balanced Web Subtitle Profile"
+  }
+}
