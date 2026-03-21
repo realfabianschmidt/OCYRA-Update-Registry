@@ -12,7 +12,7 @@
         {
           "filename": "sherpa-onnx-offline-speaker-diarization.exe",
           "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/v1.12.29/sherpa-onnx-v1.12.29-win-x64-shared-MT-Release.tar.bz2",
-          "sha256": "<sha256>",
+          "sha256": "5F1CB0375E88CEA2B35ED7B05397C9E6196D30EBAB69D3C04D0B10FCAAE922FA",
           "archive_format": "tar.bz2",
           "archive_entry": "sherpa-onnx-v1.12.29-win-x64-shared-MT-Release/bin/sherpa-onnx-offline-speaker-diarization.exe",
           "extract_siblings": true,

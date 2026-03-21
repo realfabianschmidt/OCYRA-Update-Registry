@@ -1,6 +1,6 @@
 {
   "catalog_version": "1",
-  "published_at": "2026-03-21T15:26:36.416Z",
+  "published_at": "2026-03-21T19:49:28.071Z",
   "app_release": {
     "schema_version": 1,
     "current_version": "2.0.0",
@@ -1987,7 +1987,7 @@
               {
                 "filename": "whisper-x86_64-pc-windows-msvc.exe",
                 "url": "https://github.com/ggml-org/whisper.cpp/releases/latest/download/whisper-bin-x64.zip",
-                "sha256": "<sha256>",
+                "sha256": "D4C598CF97DE103F888D1A53B8ABDDC85BF27AB752F785CA69318CEDC8A2CF64",
                 "archive_format": "zip",
                 "archive_entry": "whisper-cli.exe",
                 "extract_siblings": true,
@@ -2023,7 +2023,7 @@
               {
                 "filename": "sherpa-onnx-offline-speaker-diarization.exe",
                 "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/v1.12.29/sherpa-onnx-v1.12.29-win-x64-shared-MT-Release.tar.bz2",
-                "sha256": "<sha256>",
+                "sha256": "5F1CB0375E88CEA2B35ED7B05397C9E6196D30EBAB69D3C04D0B10FCAAE922FA",
                 "archive_format": "tar.bz2",
                 "archive_entry": "sherpa-onnx-v1.12.29-win-x64-shared-MT-Release/bin/sherpa-onnx-offline-speaker-diarization.exe",
                 "extract_siblings": true,
@@ -2105,7 +2105,7 @@
           {
             "filename": "sherpa-onnx-pyannote-segmentation.onnx",
             "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/speaker-segmentation-models/sherpa-onnx-pyannote-segmentation-3-0.tar.bz2",
-            "sha256": "<sha256>",
+            "sha256": "220AD67CA923BEF2FA91F2390C786097BF305BCEB5E261D4AF67B38E938E1079",
             "archive_format": "tar.bz2",
             "archive_entry": "sherpa-onnx-pyannote-segmentation-3-0/model.onnx",
             "install_root": "dependencies/model-sherpa-segmentation/1.0.0"
@@ -2135,7 +2135,7 @@
           {
             "filename": "sherpa-onnx-3dspeaker-embedding.onnx",
             "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/speaker-recongition-models/3dspeaker_speech_eres2net_base_sv_zh-cn_3dspeaker_16k.onnx",
-            "sha256": "<sha256>",
+            "sha256": "1A331345F04805BADBB495C775A6DDFFCDD1A732567D5EC8B3D5749E3C7A5E4B",
             "install_root": "dependencies/model-sherpa-embedding/1.0.0"
           }
         ],

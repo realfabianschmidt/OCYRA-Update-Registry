@@ -9,7 +9,7 @@
     {
       "filename": "sherpa-onnx-pyannote-segmentation.onnx",
       "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/speaker-segmentation-models/sherpa-onnx-pyannote-segmentation-3-0.tar.bz2",
-      "sha256": "<sha256>",
+      "sha256": "220AD67CA923BEF2FA91F2390C786097BF305BCEB5E261D4AF67B38E938E1079",
       "archive_format": "tar.bz2",
       "archive_entry": "sherpa-onnx-pyannote-segmentation-3-0/model.onnx",
       "install_root": "dependencies/model-sherpa-segmentation/1.0.0"

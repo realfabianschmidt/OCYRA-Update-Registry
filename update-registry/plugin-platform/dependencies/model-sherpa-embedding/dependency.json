@@ -9,7 +9,7 @@
     {
       "filename": "sherpa-onnx-3dspeaker-embedding.onnx",
       "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/speaker-recongition-models/3dspeaker_speech_eres2net_base_sv_zh-cn_3dspeaker_16k.onnx",
-      "sha256": "<sha256>",
+      "sha256": "1A331345F04805BADBB495C775A6DDFFCDD1A732567D5EC8B3D5749E3C7A5E4B",
       "install_root": "dependencies/model-sherpa-embedding/1.0.0"
     }
   ],
