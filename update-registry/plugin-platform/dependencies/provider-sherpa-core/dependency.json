@@ -1,0 +1,25 @@
+{
+  "id": "provider-sherpa-core",
+  "name": "Sherpa-ONNX Core Runtime",
+  "version": "1.0.0",
+  "package_api_version": "1",
+  "category": "provider-core",
+  "summary": "Shared Sherpa-ONNX binary for local speaker diarization.",
+  "install_strategy": "embedded",
+  "platform_variants": {
+    "windows-x64": {
+      "files": [
+        {
+          "filename": "sherpa-onnx-offline-speaker-diarization.exe",
+          "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/v1.12.29/sherpa-onnx-v1.12.29-win-x64-shared-MT-Release.tar.bz2",
+          "sha256": "<sha256>",
+          "archive_format": "tar.bz2",
+          "archive_entry": "sherpa-onnx-v1.12.29-win-x64-shared-MT-Release/bin/sherpa-onnx-offline-speaker-diarization.exe",
+          "extract_siblings": true,
+          "install_root": "dependencies/provider-sherpa-core/1.0.0"
+        }
+      ]
+    }
+  },
+  "dependencies": []
+}

@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "OpenAI Whisper + Sherpa-ONNX Settings",
+  "type": "object",
+  "properties": {
+    "transcription_provider": {
+      "type": "string",
+      "const": "openai",
+      "default": "openai"
+    },
+    "diarization_enabled": {
+      "type": "boolean",
+      "default": true
+    },
+    "diarization_provider": {
+      "type": "string",
+      "const": "sherpa-onnx",
+      "default": "sherpa-onnx"
+    },
+    "requires_api_key": {
+      "type": "boolean",
+      "const": true,
+      "default": true
+    }
+  },
+  "required": [
+    "transcription_provider",
+    "diarization_enabled",
+    "diarization_provider",
+    "requires_api_key"
+  ],
+  "additionalProperties": false
+}

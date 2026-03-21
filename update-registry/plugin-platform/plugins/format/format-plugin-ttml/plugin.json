@@ -1,0 +1,30 @@
+{
+  "id": "format-plugin-ttml",
+  "plugin_api_version": "1",
+  "family": "format",
+  "role": "format.subtitle-provider",
+  "name": "TTML",
+  "version": "1.0.0",
+  "summary": "Timed Text Markup Language subtitle format.",
+  "runtime": {
+    "mode": "js-sandbox",
+    "entry": "handler.js"
+  },
+  "consumes": ["RawFileArtifact", "FormatExportArtifact"],
+  "produces": ["FormatImportArtifact", "RawFileArtifact"],
+  "permissions": ["filesystem.read"],
+  "dependencies": [],
+  "capabilities": ["export", "subtitle-format", "xml-timed-subtitle"],
+  "format": {
+    "id": "ttml",
+    "target": "subtitle",
+    "directions": ["export"],
+    "extensions": ["ttml", "xml"],
+    "export_order": 40,
+    "quality_gate": "timed-subtitle"
+  },
+  "compatibility": {
+    "min_app_version": "2.0.0",
+    "platforms": ["windows-x64", "macos-x64", "macos-arm64", "linux-x64"]
+  }
+}

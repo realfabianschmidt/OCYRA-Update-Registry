@@ -1,0 +1,28 @@
+{
+  "id": "format-plugin-rvvttp-review",
+  "plugin_api_version": "1",
+  "family": "format",
+  "role": "format.review-package-provider",
+  "name": "XYRA Review Package",
+  "version": "1.0.0",
+  "summary": "Review package with language-scoped subtitles and review metadata.",
+  "runtime": {
+    "mode": "js-sandbox",
+    "entry": "handler.js"
+  },
+  "consumes": ["RawFileArtifact", "FormatExportArtifact"],
+  "produces": ["FormatImportArtifact", "RawFileArtifact"],
+  "permissions": ["filesystem.read"],
+  "dependencies": [],
+  "capabilities": ["import", "export", "review-package-format", "xyra-native"],
+  "format": {
+    "id": "rvvttp-review-package",
+    "target": "review-package",
+    "directions": ["import", "export"],
+    "extensions": ["rvvttp"]
+  },
+  "compatibility": {
+    "min_app_version": "2.0.0",
+    "platforms": ["windows-x64", "macos-x64", "macos-arm64", "linux-x64"]
+  }
+}

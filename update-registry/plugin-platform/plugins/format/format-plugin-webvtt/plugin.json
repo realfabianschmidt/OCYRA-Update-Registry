@@ -1,0 +1,30 @@
+{
+  "id": "format-plugin-webvtt",
+  "plugin_api_version": "1",
+  "family": "format",
+  "role": "format.subtitle-provider",
+  "name": "WebVTT",
+  "version": "1.0.0",
+  "summary": "WebVTT subtitle file with timing and metadata.",
+  "runtime": {
+    "mode": "js-sandbox",
+    "entry": "handler.js"
+  },
+  "consumes": ["RawFileArtifact", "FormatExportArtifact"],
+  "produces": ["FormatImportArtifact", "RawFileArtifact"],
+  "permissions": ["filesystem.read"],
+  "dependencies": [],
+  "capabilities": ["import", "export", "subtitle-format", "timed-subtitle"],
+  "format": {
+    "id": "webvtt",
+    "target": "subtitle",
+    "directions": ["import", "export"],
+    "extensions": ["vtt"],
+    "export_order": 10,
+    "quality_gate": "timed-subtitle"
+  },
+  "compatibility": {
+    "min_app_version": "2.0.0",
+    "platforms": ["windows-x64", "macos-x64", "macos-arm64", "linux-x64"]
+  }
+}

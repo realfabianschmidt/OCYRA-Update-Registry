@@ -1,0 +1,40 @@
+{
+  "id": "speech-plugin-whispercpp-sherpa",
+  "plugin_api_version": "1",
+  "family": "speech",
+  "role": "speech.combined-provider",
+  "name": "whisper.cpp + Sherpa-ONNX",
+  "version": "1.0.0",
+  "summary": "Offline transcription with whisper.cpp and speaker diarization with Sherpa-ONNX.",
+  "runtime": {
+    "mode": "js-sandbox",
+    "entry": "handler.js"
+  },
+  "consumes": ["AudioArtifact"],
+  "produces": ["TranscriptArtifact", "WordTimelineArtifact", "SpeakerTurnsArtifact"],
+  "permissions": ["filesystem.read", "process.spawn"],
+  "dependencies": [
+    { "id": "provider-whispercpp-core", "version": "^1.0.0" },
+    { "id": "provider-sherpa-core", "version": "^1.0.0" },
+    { "id": "model-whisper-base", "version": "^1.0.0" },
+    { "id": "model-sherpa-segmentation", "version": "^1.0.0" },
+    { "id": "model-sherpa-embedding", "version": "^1.0.0" }
+  ],
+  "settings_schema": "settings.schema.json",
+  "presets": [
+    {
+      "id": "offline-accurate",
+      "name": "Offline Accurate",
+      "settings": {
+        "transcription_provider": "whispercpp",
+        "diarization_enabled": true,
+        "diarization_provider": "sherpa-onnx"
+      }
+    }
+  ],
+  "capabilities": ["offline", "speaker-labels", "word-midpoint-merge"],
+  "compatibility": {
+    "min_app_version": "2.0.0",
+    "platforms": ["windows-x64"]
+  }
+}

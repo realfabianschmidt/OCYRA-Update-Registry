@@ -1,0 +1,36 @@
+{
+  "id": "speech-plugin-whispercpp-local",
+  "plugin_api_version": "1",
+  "family": "speech",
+  "role": "speech.transcription-provider",
+  "name": "whisper.cpp",
+  "version": "1.0.0",
+  "summary": "Offline transcription with whisper.cpp without speaker diarization.",
+  "runtime": {
+    "mode": "js-sandbox",
+    "entry": "handler.js"
+  },
+  "consumes": ["MediaInputArtifact"],
+  "produces": ["TranscriptArtifact"],
+  "permissions": ["filesystem.read", "process.spawn"],
+  "dependencies": [
+    { "id": "provider-whispercpp-core", "version": "^1.0.0" },
+    { "id": "model-whisper-base", "version": "^1.0.0" }
+  ],
+  "settings_schema": "settings.schema.json",
+  "presets": [
+    {
+      "id": "offline-light",
+      "name": "Offline Light",
+      "settings": {
+        "transcription_provider": "whispercpp",
+        "diarization_enabled": false
+      }
+    }
+  ],
+  "capabilities": ["offline", "transcription-only"],
+  "compatibility": {
+    "min_app_version": "2.0.0",
+    "platforms": ["windows-x64"]
+  }
+}

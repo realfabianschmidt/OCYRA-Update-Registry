@@ -1,0 +1,32 @@
+{
+  "id": "translation-plugin-example",
+  "plugin_api_version": "1",
+  "family": "translation",
+  "role": "translation.subtitle-provider",
+  "name": "Example Translation Plugin",
+  "version": "1.0.0",
+  "summary": "Template plugin used as a starting point for new XYRA translation providers.",
+  "runtime": {
+    "mode": "js-sandbox",
+    "entry": "handler.js"
+  },
+  "consumes": ["TranslationRequestArtifact"],
+  "produces": ["TranslationResultArtifact"],
+  "permissions": [],
+  "dependencies": [],
+  "settings_schema": "settings.schema.json",
+  "presets": [
+    {
+      "id": "example-default",
+      "name": "Example Default",
+      "settings": {
+        "translation_provider": "example"
+      }
+    }
+  ],
+  "capabilities": ["subtitle-translation"],
+  "compatibility": {
+    "min_app_version": "2.0.0",
+    "platforms": ["windows-x64"]
+  }
+}

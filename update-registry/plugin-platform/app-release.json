@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "current_version": "2.0.0",
+  "published_at": "2026-03-21T00:00:00.000Z",
+  "title": "XYRA 2.0.0 Plugin Platform Release",
+  "text": [
+    "The plugin-first runtime is now active for speech, translation, audit/accessibility, and format workflows.",
+    "Signed plugin catalogs, shared dependency installs, and plugin-host execution are now part of the active desktop runtime.",
+    "Enterprise and self-hosted catalog deployments can use the same signed catalog model as the public XYRA catalog."
+  ]
+}

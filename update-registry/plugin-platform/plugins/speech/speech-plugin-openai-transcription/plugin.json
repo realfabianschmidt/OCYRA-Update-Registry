@@ -1,0 +1,35 @@
+{
+  "id": "speech-plugin-openai-transcription",
+  "plugin_api_version": "1",
+  "family": "speech",
+  "role": "speech.transcription-provider",
+  "name": "OpenAI Whisper",
+  "version": "1.0.0",
+  "summary": "Cloud transcription via the OpenAI Whisper API without speaker diarization.",
+  "runtime": {
+    "mode": "js-sandbox",
+    "entry": "handler.js"
+  },
+  "consumes": ["MediaInputArtifact"],
+  "produces": ["TranscriptArtifact"],
+  "permissions": ["filesystem.read", "network.outbound"],
+  "dependencies": [
+    { "id": "provider-openai-whisper", "version": "^1.0.0" }
+  ],
+  "settings_schema": "settings.schema.json",
+  "presets": [
+    {
+      "id": "cloud-fast",
+      "name": "Cloud Fast",
+      "settings": {
+        "transcription_provider": "openai",
+        "diarization_enabled": false
+      }
+    }
+  ],
+  "capabilities": ["cloud", "transcription-only"],
+  "compatibility": {
+    "min_app_version": "2.0.0",
+    "platforms": ["windows-x64"]
+  }
+}

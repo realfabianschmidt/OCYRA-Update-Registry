@@ -1,0 +1,30 @@
+{
+  "id": "audit-plugin-web-balanced",
+  "plugin_api_version": "1",
+  "family": "audit",
+  "role": "audit.policy-provider",
+  "name": "Web Accessibility Balanced",
+  "version": "1.0.0",
+  "summary": "Slightly faster subtitle defaults for general web video while preserving accessibility checks.",
+  "runtime": {
+    "mode": "js-sandbox",
+    "entry": "handler.js"
+  },
+  "consumes": ["SubtitleImportArtifact", "AccessibilityContextArtifact"],
+  "produces": ["AuditReportArtifact", "PolicyConstraintsArtifact"],
+  "permissions": ["filesystem.read"],
+  "dependencies": [],
+  "capabilities": [
+    "compliance",
+    "web",
+    "transcription-autofit",
+    "policy-constraints",
+    "checklist-evaluation"
+  ],
+  "policy_id": "web-balanced",
+  "policy_file": "policy.json",
+  "compatibility": {
+    "min_app_version": "2.0.0",
+    "platforms": ["windows-x64", "macos-x64", "macos-arm64", "linux-x64"]
+  }
+}

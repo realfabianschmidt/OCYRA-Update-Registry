@@ -1,0 +1,19 @@
+{
+  "id": "model-sherpa-segmentation",
+  "name": "Sherpa-ONNX Pyannote Segmentation Model",
+  "version": "1.0.0",
+  "package_api_version": "1",
+  "category": "model",
+  "summary": "Speaker segmentation model (pyannote 3.0) for Sherpa-ONNX diarization.",
+  "files": [
+    {
+      "filename": "sherpa-onnx-pyannote-segmentation.onnx",
+      "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/speaker-segmentation-models/sherpa-onnx-pyannote-segmentation-3-0.tar.bz2",
+      "sha256": "<sha256>",
+      "archive_format": "tar.bz2",
+      "archive_entry": "sherpa-onnx-pyannote-segmentation-3-0/model.onnx",
+      "install_root": "dependencies/model-sherpa-segmentation/1.0.0"
+    }
+  ],
+  "dependencies": []
+}

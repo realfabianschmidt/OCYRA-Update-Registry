@@ -1,0 +1,32 @@
+{
+  "id": "translation-plugin-deepl",
+  "plugin_api_version": "1",
+  "family": "translation",
+  "role": "translation.subtitle-provider",
+  "name": "DeepL Translation",
+  "version": "1.0.0",
+  "summary": "Cloud subtitle translation through the DeepL translation backend.",
+  "runtime": {
+    "mode": "js-sandbox",
+    "entry": "handler.js"
+  },
+  "consumes": ["TranslationRequestArtifact"],
+  "produces": ["TranslationResultArtifact"],
+  "permissions": ["network.outbound"],
+  "dependencies": [],
+  "settings_schema": "settings.schema.json",
+  "presets": [
+    {
+      "id": "cloud-deepl",
+      "name": "Cloud DeepL",
+      "settings": {
+        "translation_provider": "deepl"
+      }
+    }
+  ],
+  "capabilities": ["cloud", "subtitle-translation"],
+  "compatibility": {
+    "min_app_version": "2.0.0",
+    "platforms": ["windows-x64"]
+  }
+}

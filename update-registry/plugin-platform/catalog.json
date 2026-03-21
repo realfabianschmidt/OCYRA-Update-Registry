@@ -1,0 +1,2147 @@
+{
+  "catalog_version": "1",
+  "published_at": "2026-03-21T15:26:36.416Z",
+  "app_release": {
+    "schema_version": 1,
+    "current_version": "2.0.0",
+    "published_at": "2026-03-21T00:00:00.000Z",
+    "title": "XYRA 2.0.0 Plugin Platform Release",
+    "text": [
+      "The plugin-first runtime is now active for speech, translation, audit/accessibility, and format workflows.",
+      "Signed plugin catalogs, shared dependency installs, and plugin-host execution are now part of the active desktop runtime.",
+      "Enterprise and self-hosted catalog deployments can use the same signed catalog model as the public XYRA catalog."
+    ]
+  },
+  "channels": [
+    "stable"
+  ],
+  "publishers": [
+    {
+      "id": "xyra-core",
+      "name": "XYRA Core",
+      "verified": true,
+      "website": "https://github.com/realfabianschmidt/XYRA-Captions",
+      "support_url": "https://github.com/realfabianschmidt/XYRA-Captions/issues",
+      "key_ids": [
+        "xyra-registry-rsa-2026-03"
+      ]
+    }
+  ],
+  "listings": [
+    {
+      "id": "listing-audit-plugin-easy-reading",
+      "kind": "plugin",
+      "name": "Easy Reading",
+      "summary": "High-comfort subtitle defaults for slower reading speed and simplified pacing.",
+      "publisher_id": "xyra-core",
+      "channel": "stable",
+      "target_ref": {
+        "type": "plugin",
+        "id": "audit-plugin-easy-reading",
+        "version": "1.0.0"
+      },
+      "permissions": [
+        "filesystem.read"
+      ],
+      "compatibility": {
+        "min_app_version": "2.0.0",
+        "platforms": [
+          "windows-x64",
+          "macos-x64",
+          "macos-arm64",
+          "linux-x64"
+        ]
+      },
+      "tags": [
+        "audit",
+        "compliance",
+        "easy-reading",
+        "transcription-autofit",
+        "policy-constraints",
+        "checklist-evaluation"
+      ]
+    },
+    {
+      "id": "listing-audit-plugin-eu-accessibility",
+      "kind": "plugin",
+      "name": "EU Accessibility Act / BFSG",
+      "summary": "Balanced accessibility defaults for BFSG, EAA, WCAG 2.1 AA and EBU R37.",
+      "publisher_id": "xyra-core",
+      "channel": "stable",
+      "target_ref": {
+        "type": "plugin",
+        "id": "audit-plugin-eu-accessibility",
+        "version": "1.0.0"
+      },
+      "permissions": [
+        "filesystem.read"
+      ],
+      "compatibility": {
+        "min_app_version": "2.0.0",
+        "platforms": [
+          "windows-x64",
+          "macos-x64",
+          "macos-arm64",
+          "linux-x64"
+        ]
+      },
+      "tags": [
+        "audit",
+        "compliance",
+        "broadcast",
+        "transcription-autofit",
+        "policy-constraints",
+        "checklist-evaluation"
+      ]
+    },
+    {
+      "id": "listing-audit-plugin-web-balanced",
+      "kind": "plugin",
+      "name": "Web Accessibility Balanced",
+      "summary": "Slightly faster subtitle defaults for general web video while preserving accessibility checks.",
+      "publisher_id": "xyra-core",
+      "channel": "stable",
+      "target_ref": {
+        "type": "plugin",
+        "id": "audit-plugin-web-balanced",
+        "version": "1.0.0"
+      },
+      "permissions": [
+        "filesystem.read"
+      ],
+      "compatibility": {
+        "min_app_version": "2.0.0",
+        "platforms": [
+          "windows-x64",
+          "macos-x64",
+          "macos-arm64",
+          "linux-x64"
+        ]
+      },
+      "tags": [
+        "audit",
+        "compliance",
+        "web",
+        "transcription-autofit",
+        "policy-constraints",
+        "checklist-evaluation"
+      ]
+    },
+    {
+      "id": "listing-format-plugin-ebu-tt",
+      "kind": "plugin",
+      "name": "EBU-TT",
+      "summary": "EBU-TT subtitle format for broadcast delivery.",
+      "publisher_id": "xyra-core",
+      "channel": "stable",
+      "target_ref": {
+        "type": "plugin",
+        "id": "format-plugin-ebu-tt",
+        "version": "1.0.0"
+      },
+      "permissions": [
+        "filesystem.read"
+      ],
+      "compatibility": {
+        "min_app_version": "2.0.0",
+        "platforms": [
+          "windows-x64",
+          "macos-x64",
+          "macos-arm64",
+          "linux-x64"
+        ]
+      },
+      "tags": [
+        "format",
+        "export",
+        "subtitle-format",
+        "broadcast-subtitle"
+      ]
+    },
+    {
+      "id": "listing-format-plugin-plain-text",
+      "kind": "plugin",
+      "name": "Plain Text",
+      "summary": "Plain text subtitle import and export for quick copy workflows.",
+      "publisher_id": "xyra-core",
+      "channel": "stable",
+      "target_ref": {
+        "type": "plugin",
+        "id": "format-plugin-plain-text",
+        "version": "1.0.0"
+      },
+      "permissions": [
+        "filesystem.read"
+      ],
+      "compatibility": {
+        "min_app_version": "2.0.0",
+        "platforms": [
+          "windows-x64",
+          "macos-x64",
+          "macos-arm64",
+          "linux-x64"
+        ]
+      },
+      "tags": [
+        "format",
+        "export",
+        "subtitle-format",
+        "plain-text"
+      ]
+    },
+    {
+      "id": "listing-format-plugin-rvvttp-review",
+      "kind": "plugin",
+      "name": "XYRA Review Package",
+      "summary": "Review package with language-scoped subtitles and review metadata.",
+      "publisher_id": "xyra-core",
+      "channel": "stable",
+      "target_ref": {
+        "type": "plugin",
+        "id": "format-plugin-rvvttp-review",
+        "version": "1.0.0"
+      },
+      "permissions": [
+        "filesystem.read"
+      ],
+      "compatibility": {
+        "min_app_version": "2.0.0",
+        "platforms": [
+          "windows-x64",
+          "macos-x64",
+          "macos-arm64",
+          "linux-x64"
+        ]
+      },
+      "tags": [
+        "format",
+        "import",
+        "export",
+        "review-package-format",
+        "xyra-native"
+      ]
+    },
+    {
+      "id": "listing-format-plugin-subrip",
+      "kind": "plugin",
+      "name": "SubRip (SRT)",
+      "summary": "SubRip format for YouTube, Vimeo and general subtitle workflows.",
+      "publisher_id": "xyra-core",
+      "channel": "stable",
+      "target_ref": {
+        "type": "plugin",
+        "id": "format-plugin-subrip",
+        "version": "1.0.0"
+      },
+      "permissions": [
+        "filesystem.read"
+      ],
+      "compatibility": {
+        "min_app_version": "2.0.0",
+        "platforms": [
+          "windows-x64",
+          "macos-x64",
+          "macos-arm64",
+          "linux-x64"
+        ]
+      },
+      "tags": [
+        "format",
+        "import",
+        "export",
+        "subtitle-format",
+        "timed-subtitle"
+      ]
+    },
+    {
+      "id": "listing-format-plugin-ttml",
+      "kind": "plugin",
+      "name": "TTML",
+      "summary": "Timed Text Markup Language subtitle format.",
+      "publisher_id": "xyra-core",
+      "channel": "stable",
+      "target_ref": {
+        "type": "plugin",
+        "id": "format-plugin-ttml",
+        "version": "1.0.0"
+      },
+      "permissions": [
+        "filesystem.read"
+      ],
+      "compatibility": {
+        "min_app_version": "2.0.0",
+        "platforms": [
+          "windows-x64",
+          "macos-x64",
+          "macos-arm64",
+          "linux-x64"
+        ]
+      },
+      "tags": [
+        "format",
+        "export",
+        "subtitle-format",
+        "xml-timed-subtitle"
+      ]
+    },
+    {
+      "id": "listing-format-plugin-vttp-project",
+      "kind": "plugin",
+      "name": "XYRA Project",
+      "summary": "Native XYRA Captions project file.",
+      "publisher_id": "xyra-core",
+      "channel": "stable",
+      "target_ref": {
+        "type": "plugin",
+        "id": "format-plugin-vttp-project",
+        "version": "1.0.0"
+      },
+      "permissions": [
+        "filesystem.read"
+      ],
+      "compatibility": {
+        "min_app_version": "2.0.0",
+        "platforms": [
+          "windows-x64",
+          "macos-x64",
+          "macos-arm64",
+          "linux-x64"
+        ]
+      },
+      "tags": [
+        "format",
+        "import",
+        "export",
+        "project-format",
+        "xyra-native"
+      ]
+    },
+    {
+      "id": "listing-format-plugin-webvtt",
+      "kind": "plugin",
+      "name": "WebVTT",
+      "summary": "WebVTT subtitle file with timing and metadata.",
+      "publisher_id": "xyra-core",
+      "channel": "stable",
+      "target_ref": {
+        "type": "plugin",
+        "id": "format-plugin-webvtt",
+        "version": "1.0.0"
+      },
+      "permissions": [
+        "filesystem.read"
+      ],
+      "compatibility": {
+        "min_app_version": "2.0.0",
+        "platforms": [
+          "windows-x64",
+          "macos-x64",
+          "macos-arm64",
+          "linux-x64"
+        ]
+      },
+      "tags": [
+        "format",
+        "import",
+        "export",
+        "subtitle-format",
+        "timed-subtitle"
+      ]
+    },
+    {
+      "id": "listing-speech-plugin-openai-sherpa",
+      "kind": "plugin",
+      "name": "OpenAI Whisper + Sherpa-ONNX",
+      "summary": "Cloud transcription via OpenAI Whisper API with local Sherpa-ONNX speaker diarization.",
+      "publisher_id": "xyra-core",
+      "channel": "stable",
+      "target_ref": {
+        "type": "plugin",
+        "id": "speech-plugin-openai-sherpa",
+        "version": "1.0.0"
+      },
+      "permissions": [
+        "filesystem.read",
+        "process.spawn",
+        "network.outbound"
+      ],
+      "compatibility": {
+        "min_app_version": "2.0.0",
+        "platforms": [
+          "windows-x64"
+        ]
+      },
+      "tags": [
+        "speech",
+        "hybrid",
+        "speaker-labels",
+        "word-midpoint-merge"
+      ]
+    },
+    {
+      "id": "listing-speech-plugin-openai-transcription",
+      "kind": "plugin",
+      "name": "OpenAI Whisper",
+      "summary": "Cloud transcription via the OpenAI Whisper API without speaker diarization.",
+      "publisher_id": "xyra-core",
+      "channel": "stable",
+      "target_ref": {
+        "type": "plugin",
+        "id": "speech-plugin-openai-transcription",
+        "version": "1.0.0"
+      },
+      "permissions": [
+        "filesystem.read",
+        "network.outbound"
+      ],
+      "compatibility": {
+        "min_app_version": "2.0.0",
+        "platforms": [
+          "windows-x64"
+        ]
+      },
+      "tags": [
+        "speech",
+        "cloud",
+        "transcription-only"
+      ]
+    },
+    {
+      "id": "listing-speech-plugin-whispercpp-local",
+      "kind": "plugin",
+      "name": "whisper.cpp",
+      "summary": "Offline transcription with whisper.cpp without speaker diarization.",
+      "publisher_id": "xyra-core",
+      "channel": "stable",
+      "target_ref": {
+        "type": "plugin",
+        "id": "speech-plugin-whispercpp-local",
+        "version": "1.0.0"
+      },
+      "permissions": [
+        "filesystem.read",
+        "process.spawn"
+      ],
+      "compatibility": {
+        "min_app_version": "2.0.0",
+        "platforms": [
+          "windows-x64"
+        ]
+      },
+      "tags": [
+        "speech",
+        "offline",
+        "transcription-only"
+      ]
+    },
+    {
+      "id": "listing-speech-plugin-whispercpp-sherpa",
+      "kind": "plugin",
+      "name": "whisper.cpp + Sherpa-ONNX",
+      "summary": "Offline transcription with whisper.cpp and speaker diarization with Sherpa-ONNX.",
+      "publisher_id": "xyra-core",
+      "channel": "stable",
+      "target_ref": {
+        "type": "plugin",
+        "id": "speech-plugin-whispercpp-sherpa",
+        "version": "1.0.0"
+      },
+      "permissions": [
+        "filesystem.read",
+        "process.spawn"
+      ],
+      "compatibility": {
+        "min_app_version": "2.0.0",
+        "platforms": [
+          "windows-x64"
+        ]
+      },
+      "tags": [
+        "speech",
+        "offline",
+        "speaker-labels",
+        "word-midpoint-merge"
+      ]
+    },
+    {
+      "id": "listing-translation-plugin-anthropic",
+      "kind": "plugin",
+      "name": "Anthropic Translation",
+      "summary": "Cloud subtitle translation through the Anthropic translation backend.",
+      "publisher_id": "xyra-core",
+      "channel": "stable",
+      "target_ref": {
+        "type": "plugin",
+        "id": "translation-plugin-anthropic",
+        "version": "1.0.0"
+      },
+      "permissions": [
+        "network.outbound"
+      ],
+      "compatibility": {
+        "min_app_version": "2.0.0",
+        "platforms": [
+          "windows-x64"
+        ]
+      },
+      "tags": [
+        "translation",
+        "cloud",
+        "subtitle-translation"
+      ]
+    },
+    {
+      "id": "listing-translation-plugin-azure",
+      "kind": "plugin",
+      "name": "Azure OpenAI Translation",
+      "summary": "Cloud subtitle translation through the Azure OpenAI translation backend.",
+      "publisher_id": "xyra-core",
+      "channel": "stable",
+      "target_ref": {
+        "type": "plugin",
+        "id": "translation-plugin-azure",
+        "version": "1.0.0"
+      },
+      "permissions": [
+        "network.outbound"
+      ],
+      "compatibility": {
+        "min_app_version": "2.0.0",
+        "platforms": [
+          "windows-x64"
+        ]
+      },
+      "tags": [
+        "translation",
+        "cloud",
+        "subtitle-translation"
+      ]
+    },
+    {
+      "id": "listing-translation-plugin-deepl",
+      "kind": "plugin",
+      "name": "DeepL Translation",
+      "summary": "Cloud subtitle translation through the DeepL translation backend.",
+      "publisher_id": "xyra-core",
+      "channel": "stable",
+      "target_ref": {
+        "type": "plugin",
+        "id": "translation-plugin-deepl",
+        "version": "1.0.0"
+      },
+      "permissions": [
+        "network.outbound"
+      ],
+      "compatibility": {
+        "min_app_version": "2.0.0",
+        "platforms": [
+          "windows-x64"
+        ]
+      },
+      "tags": [
+        "translation",
+        "cloud",
+        "subtitle-translation"
+      ]
+    },
+    {
+      "id": "listing-translation-plugin-ollama",
+      "kind": "plugin",
+      "name": "Ollama Translation",
+      "summary": "Local subtitle translation through the Ollama translation backend.",
+      "publisher_id": "xyra-core",
+      "channel": "stable",
+      "target_ref": {
+        "type": "plugin",
+        "id": "translation-plugin-ollama",
+        "version": "1.0.0"
+      },
+      "permissions": [
+        "network.outbound"
+      ],
+      "compatibility": {
+        "min_app_version": "2.0.0",
+        "platforms": [
+          "windows-x64"
+        ]
+      },
+      "tags": [
+        "translation",
+        "local",
+        "subtitle-translation"
+      ]
+    },
+    {
+      "id": "listing-translation-plugin-openai",
+      "kind": "plugin",
+      "name": "OpenAI Translation",
+      "summary": "Cloud subtitle translation through the OpenAI translation backend.",
+      "publisher_id": "xyra-core",
+      "channel": "stable",
+      "target_ref": {
+        "type": "plugin",
+        "id": "translation-plugin-openai",
+        "version": "1.0.0"
+      },
+      "permissions": [
+        "network.outbound"
+      ],
+      "compatibility": {
+        "min_app_version": "2.0.0",
+        "platforms": [
+          "windows-x64"
+        ]
+      },
+      "tags": [
+        "translation",
+        "cloud",
+        "subtitle-translation"
+      ]
+    }
+  ],
+  "plugins": [
+    {
+      "id": "audit-plugin-easy-reading",
+      "plugin_api_version": "1",
+      "family": "audit",
+      "role": "audit.policy-provider",
+      "name": "Easy Reading",
+      "version": "1.0.0",
+      "summary": "High-comfort subtitle defaults for slower reading speed and simplified pacing.",
+      "runtime": {
+        "mode": "js-sandbox",
+        "entry": "handler.js"
+      },
+      "consumes": [
+        "SubtitleImportArtifact",
+        "AccessibilityContextArtifact"
+      ],
+      "produces": [
+        "AuditReportArtifact",
+        "PolicyConstraintsArtifact"
+      ],
+      "permissions": [
+        "filesystem.read"
+      ],
+      "dependencies": [],
+      "capabilities": [
+        "compliance",
+        "easy-reading",
+        "transcription-autofit",
+        "policy-constraints",
+        "checklist-evaluation"
+      ],
+      "policy_id": "easy-reading",
+      "policy_file": "policy.json",
+      "compatibility": {
+        "min_app_version": "2.0.0",
+        "platforms": [
+          "windows-x64",
+          "macos-x64",
+          "macos-arm64",
+          "linux-x64"
+        ]
+      },
+      "package_root_path": "plugins/audit/audit-plugin-easy-reading",
+      "package_files": [
+        {
+          "kind": "runtime-entry",
+          "path": "plugins/audit/audit-plugin-easy-reading/handler.js",
+          "package_path": "handler.js",
+          "sha256": "B43409D8971B94466069C476584E24CB78AA75E5B29B484D47AE5A4492569300",
+          "size_bytes": 853
+        },
+        {
+          "kind": "manifest",
+          "path": "plugins/audit/audit-plugin-easy-reading/plugin.json",
+          "package_path": "plugin.json",
+          "sha256": "963A1F74F17D9F4EDEB05DF9716336A34B11AAF98BAA9BD337A0A7C494983888",
+          "size_bytes": 882
+        },
+        {
+          "kind": "policy-file",
+          "path": "plugins/audit/audit-plugin-easy-reading/policy.json",
+          "package_path": "policy.json",
+          "sha256": "5B52CA85049B468CA25B2F21999C06BE32F60E8E13C4924ACBF5D4A8C7F5A36E",
+          "size_bytes": 1780
+        }
+      ]
+    },
+    {
+      "id": "audit-plugin-eu-accessibility",
+      "plugin_api_version": "1",
+      "family": "audit",
+      "role": "audit.policy-provider",
+      "name": "EU Accessibility Act / BFSG",
+      "version": "1.0.0",
+      "summary": "Balanced accessibility defaults for BFSG, EAA, WCAG 2.1 AA and EBU R37.",
+      "runtime": {
+        "mode": "js-sandbox",
+        "entry": "handler.js"
+      },
+      "consumes": [
+        "SubtitleImportArtifact",
+        "AccessibilityContextArtifact"
+      ],
+      "produces": [
+        "AuditReportArtifact",
+        "PolicyConstraintsArtifact"
+      ],
+      "permissions": [
+        "filesystem.read"
+      ],
+      "dependencies": [],
+      "capabilities": [
+        "compliance",
+        "broadcast",
+        "transcription-autofit",
+        "policy-constraints",
+        "checklist-evaluation"
+      ],
+      "policy_id": "eu-eaa-bfsg",
+      "policy_file": "policy.json",
+      "presets": [
+        {
+          "id": "eu-eaa-bfsg-default",
+          "name": "EU Accessibility Act Default",
+          "settings": {}
+        }
+      ],
+      "compatibility": {
+        "min_app_version": "2.0.0",
+        "platforms": [
+          "windows-x64",
+          "macos-x64",
+          "macos-arm64",
+          "linux-x64"
+        ]
+      },
+      "package_root_path": "plugins/audit/audit-plugin-eu-accessibility",
+      "package_files": [
+        {
+          "kind": "runtime-entry",
+          "path": "plugins/audit/audit-plugin-eu-accessibility/handler.js",
+          "package_path": "handler.js",
+          "sha256": "CE0EB35A87006BC1AD271E5B34DFAC7DE9864B608A82BF02672F4A10F5ECC650",
+          "size_bytes": 880
+        },
+        {
+          "kind": "manifest",
+          "path": "plugins/audit/audit-plugin-eu-accessibility/plugin.json",
+          "package_path": "plugin.json",
+          "sha256": "66C2E0CB1729147CA06DC93EF42486FBD96606E745D8F8B75A391C1CC49D022E",
+          "size_bytes": 1024
+        },
+        {
+          "kind": "policy-file",
+          "path": "plugins/audit/audit-plugin-eu-accessibility/policy.json",
+          "package_path": "policy.json",
+          "sha256": "6680A1E032D6C8DB3A384BAF0729CD8917ACBED0031412B49436BAC24913ED94",
+          "size_bytes": 1830
+        }
+      ]
+    },
+    {
+      "id": "audit-plugin-web-balanced",
+      "plugin_api_version": "1",
+      "family": "audit",
+      "role": "audit.policy-provider",
+      "name": "Web Accessibility Balanced",
+      "version": "1.0.0",
+      "summary": "Slightly faster subtitle defaults for general web video while preserving accessibility checks.",
+      "runtime": {
+        "mode": "js-sandbox",
+        "entry": "handler.js"
+      },
+      "consumes": [
+        "SubtitleImportArtifact",
+        "AccessibilityContextArtifact"
+      ],
+      "produces": [
+        "AuditReportArtifact",
+        "PolicyConstraintsArtifact"
+      ],
+      "permissions": [
+        "filesystem.read"
+      ],
+      "dependencies": [],
+      "capabilities": [
+        "compliance",
+        "web",
+        "transcription-autofit",
+        "policy-constraints",
+        "checklist-evaluation"
+      ],
+      "policy_id": "web-balanced",
+      "policy_file": "policy.json",
+      "compatibility": {
+        "min_app_version": "2.0.0",
+        "platforms": [
+          "windows-x64",
+          "macos-x64",
+          "macos-arm64",
+          "linux-x64"
+        ]
+      },
+      "package_root_path": "plugins/audit/audit-plugin-web-balanced",
+      "package_files": [
+        {
+          "kind": "runtime-entry",
+          "path": "plugins/audit/audit-plugin-web-balanced/handler.js",
+          "package_path": "handler.js",
+          "sha256": "C92CBB57C805FF561CA4884869CD8C642A9A7B506F6C7B3511A9EC5026E0B7C5",
+          "size_bytes": 867
+        },
+        {
+          "kind": "manifest",
+          "path": "plugins/audit/audit-plugin-web-balanced/plugin.json",
+          "package_path": "plugin.json",
+          "sha256": "A4D6F72E2F00519CEA0A9051835699188D998E93E3AA8D8AF9C347813B98AA3B",
+          "size_bytes": 903
+        },
+        {
+          "kind": "policy-file",
+          "path": "plugins/audit/audit-plugin-web-balanced/policy.json",
+          "package_path": "policy.json",
+          "sha256": "7704CA63818DAEF08416819017B39D19F0DBA149516838C80E4C1E7F107B2BA3",
+          "size_bytes": 1817
+        }
+      ]
+    },
+    {
+      "id": "format-plugin-ebu-tt",
+      "plugin_api_version": "1",
+      "family": "format",
+      "role": "format.subtitle-provider",
+      "name": "EBU-TT",
+      "version": "1.0.0",
+      "summary": "EBU-TT subtitle format for broadcast delivery.",
+      "runtime": {
+        "mode": "js-sandbox",
+        "entry": "handler.js"
+      },
+      "consumes": [
+        "RawFileArtifact",
+        "FormatExportArtifact"
+      ],
+      "produces": [
+        "FormatImportArtifact",
+        "RawFileArtifact"
+      ],
+      "permissions": [
+        "filesystem.read"
+      ],
+      "dependencies": [],
+      "capabilities": [
+        "export",
+        "subtitle-format",
+        "broadcast-subtitle"
+      ],
+      "format": {
+        "id": "ebu-tt",
+        "target": "subtitle",
+        "directions": [
+          "export"
+        ],
+        "extensions": [
+          "xml",
+          "ebutt"
+        ],
+        "export_order": 50,
+        "quality_gate": "timed-subtitle"
+      },
+      "compatibility": {
+        "min_app_version": "2.0.0",
+        "platforms": [
+          "windows-x64",
+          "macos-x64",
+          "macos-arm64",
+          "linux-x64"
+        ]
+      },
+      "package_root_path": "plugins/format/format-plugin-ebu-tt",
+      "package_files": [
+        {
+          "kind": "runtime-entry",
+          "path": "plugins/format/format-plugin-ebu-tt/handler.js",
+          "package_path": "handler.js",
+          "sha256": "16BCB789F2812CCA88122FDF08EDFEF39F6D41CFF67FCB499CCE85015CCF3D41",
+          "size_bytes": 5175
+        },
+        {
+          "kind": "manifest",
+          "path": "plugins/format/format-plugin-ebu-tt/plugin.json",
+          "package_path": "plugin.json",
+          "sha256": "70EA810A4DFFE5FCE98C407DB7CD0FAEA12D47433657A8D519E24B97AA075ABD",
+          "size_bytes": 874
+        }
+      ]
+    },
+    {
+      "id": "format-plugin-plain-text",
+      "plugin_api_version": "1",
+      "family": "format",
+      "role": "format.subtitle-provider",
+      "name": "Plain Text",
+      "version": "1.0.0",
+      "summary": "Plain text subtitle import and export for quick copy workflows.",
+      "runtime": {
+        "mode": "js-sandbox",
+        "entry": "handler.js"
+      },
+      "consumes": [
+        "RawFileArtifact",
+        "FormatExportArtifact"
+      ],
+      "produces": [
+        "FormatImportArtifact",
+        "RawFileArtifact"
+      ],
+      "permissions": [
+        "filesystem.read"
+      ],
+      "dependencies": [],
+      "capabilities": [
+        "export",
+        "subtitle-format",
+        "plain-text"
+      ],
+      "format": {
+        "id": "plain-text",
+        "target": "subtitle",
+        "directions": [
+          "export"
+        ],
+        "extensions": [
+          "txt"
+        ],
+        "export_order": 20
+      },
+      "compatibility": {
+        "min_app_version": "2.0.0",
+        "platforms": [
+          "windows-x64",
+          "macos-x64",
+          "macos-arm64",
+          "linux-x64"
+        ]
+      },
+      "package_root_path": "plugins/format/format-plugin-plain-text",
+      "package_files": [
+        {
+          "kind": "runtime-entry",
+          "path": "plugins/format/format-plugin-plain-text/handler.js",
+          "package_path": "handler.js",
+          "sha256": "0457AE1B054863DB86C4A22F8ABBE153202BECB7C8E61BAE04536B9037B37EFE",
+          "size_bytes": 3143
+        },
+        {
+          "kind": "manifest",
+          "path": "plugins/format/format-plugin-plain-text/plugin.json",
+          "package_path": "plugin.json",
+          "sha256": "AFC56EA6AEFA1CCAC4C185498625364D59236B64689A02F5C6601F35437C557E",
+          "size_bytes": 848
+        }
+      ]
+    },
+    {
+      "id": "format-plugin-rvvttp-review",
+      "plugin_api_version": "1",
+      "family": "format",
+      "role": "format.review-package-provider",
+      "name": "XYRA Review Package",
+      "version": "1.0.0",
+      "summary": "Review package with language-scoped subtitles and review metadata.",
+      "runtime": {
+        "mode": "js-sandbox",
+        "entry": "handler.js"
+      },
+      "consumes": [
+        "RawFileArtifact",
+        "FormatExportArtifact"
+      ],
+      "produces": [
+        "FormatImportArtifact",
+        "RawFileArtifact"
+      ],
+      "permissions": [
+        "filesystem.read"
+      ],
+      "dependencies": [],
+      "capabilities": [
+        "import",
+        "export",
+        "review-package-format",
+        "xyra-native"
+      ],
+      "format": {
+        "id": "rvvttp-review-package",
+        "target": "review-package",
+        "directions": [
+          "import",
+          "export"
+        ],
+        "extensions": [
+          "rvvttp"
+        ]
+      },
+      "compatibility": {
+        "min_app_version": "2.0.0",
+        "platforms": [
+          "windows-x64",
+          "macos-x64",
+          "macos-arm64",
+          "linux-x64"
+        ]
+      },
+      "package_root_path": "plugins/format/format-plugin-rvvttp-review",
+      "package_files": [
+        {
+          "kind": "runtime-entry",
+          "path": "plugins/format/format-plugin-rvvttp-review/handler.js",
+          "package_path": "handler.js",
+          "sha256": "FB800B150415AA144B7E74F97E716A4CE3A8BC8A13EE4F9F51DD47BF89F88D03",
+          "size_bytes": 3664
+        },
+        {
+          "kind": "manifest",
+          "path": "plugins/format/format-plugin-rvvttp-review/plugin.json",
+          "package_path": "plugin.json",
+          "sha256": "495BA5F0F0FFFD3218B5CB8AD230680C574CAAAA89FD7332FE96CBB87F480D59",
+          "size_bytes": 892
+        }
+      ]
+    },
+    {
+      "id": "format-plugin-subrip",
+      "plugin_api_version": "1",
+      "family": "format",
+      "role": "format.subtitle-provider",
+      "name": "SubRip (SRT)",
+      "version": "1.0.0",
+      "summary": "SubRip format for YouTube, Vimeo and general subtitle workflows.",
+      "runtime": {
+        "mode": "js-sandbox",
+        "entry": "handler.js"
+      },
+      "consumes": [
+        "RawFileArtifact",
+        "FormatExportArtifact"
+      ],
+      "produces": [
+        "FormatImportArtifact",
+        "RawFileArtifact"
+      ],
+      "permissions": [
+        "filesystem.read"
+      ],
+      "dependencies": [],
+      "capabilities": [
+        "import",
+        "export",
+        "subtitle-format",
+        "timed-subtitle"
+      ],
+      "format": {
+        "id": "subrip",
+        "target": "subtitle",
+        "directions": [
+          "import",
+          "export"
+        ],
+        "extensions": [
+          "srt"
+        ],
+        "export_order": 30,
+        "quality_gate": "timed-subtitle"
+      },
+      "compatibility": {
+        "min_app_version": "2.0.0",
+        "platforms": [
+          "windows-x64",
+          "macos-x64",
+          "macos-arm64",
+          "linux-x64"
+        ]
+      },
+      "package_root_path": "plugins/format/format-plugin-subrip",
+      "package_files": [
+        {
+          "kind": "runtime-entry",
+          "path": "plugins/format/format-plugin-subrip/handler.js",
+          "package_path": "handler.js",
+          "sha256": "3F6987AB38FB129905C14C0D31B74230D367E19D7FDCB89F35DC009541676211",
+          "size_bytes": 5116
+        },
+        {
+          "kind": "manifest",
+          "path": "plugins/format/format-plugin-subrip/plugin.json",
+          "package_path": "plugin.json",
+          "sha256": "9798B279777077F2CD6EE414E28A9B7B7D2A40B9E129C02D3AD5A197E138E208",
+          "size_bytes": 905
+        }
+      ]
+    },
+    {
+      "id": "format-plugin-ttml",
+      "plugin_api_version": "1",
+      "family": "format",
+      "role": "format.subtitle-provider",
+      "name": "TTML",
+      "version": "1.0.0",
+      "summary": "Timed Text Markup Language subtitle format.",
+      "runtime": {
+        "mode": "js-sandbox",
+        "entry": "handler.js"
+      },
+      "consumes": [
+        "RawFileArtifact",
+        "FormatExportArtifact"
+      ],
+      "produces": [
+        "FormatImportArtifact",
+        "RawFileArtifact"
+      ],
+      "permissions": [
+        "filesystem.read"
+      ],
+      "dependencies": [],
+      "capabilities": [
+        "export",
+        "subtitle-format",
+        "xml-timed-subtitle"
+      ],
+      "format": {
+        "id": "ttml",
+        "target": "subtitle",
+        "directions": [
+          "export"
+        ],
+        "extensions": [
+          "ttml",
+          "xml"
+        ],
+        "export_order": 40,
+        "quality_gate": "timed-subtitle"
+      },
+      "compatibility": {
+        "min_app_version": "2.0.0",
+        "platforms": [
+          "windows-x64",
+          "macos-x64",
+          "macos-arm64",
+          "linux-x64"
+        ]
+      },
+      "package_root_path": "plugins/format/format-plugin-ttml",
+      "package_files": [
+        {
+          "kind": "runtime-entry",
+          "path": "plugins/format/format-plugin-ttml/handler.js",
+          "package_path": "handler.js",
+          "sha256": "A9F04103FAA1C9E3FE01A8250CA82DF80B1FCB8C266690561D0824425496737E",
+          "size_bytes": 3915
+        },
+        {
+          "kind": "manifest",
+          "path": "plugins/format/format-plugin-ttml/plugin.json",
+          "package_path": "plugin.json",
+          "sha256": "B8673371C9D44E1865C4BD516BA976BEF2CC32067EDB589B5990EB3C266F9C1C",
+          "size_bytes": 864
+        }
+      ]
+    },
+    {
+      "id": "format-plugin-vttp-project",
+      "plugin_api_version": "1",
+      "family": "format",
+      "role": "format.project-provider",
+      "name": "XYRA Project",
+      "version": "1.0.0",
+      "summary": "Native XYRA Captions project file.",
+      "runtime": {
+        "mode": "js-sandbox",
+        "entry": "handler.js"
+      },
+      "consumes": [
+        "RawFileArtifact",
+        "FormatExportArtifact"
+      ],
+      "produces": [
+        "FormatImportArtifact",
+        "RawFileArtifact"
+      ],
+      "permissions": [
+        "filesystem.read"
+      ],
+      "dependencies": [],
+      "capabilities": [
+        "import",
+        "export",
+        "project-format",
+        "xyra-native"
+      ],
+      "format": {
+        "id": "vttp-project",
+        "target": "project",
+        "directions": [
+          "import",
+          "export"
+        ],
+        "extensions": [
+          "vttp",
+          "json"
+        ]
+      },
+      "compatibility": {
+        "min_app_version": "2.0.0",
+        "platforms": [
+          "windows-x64",
+          "macos-x64",
+          "macos-arm64",
+          "linux-x64"
+        ]
+      },
+      "package_root_path": "plugins/format/format-plugin-vttp-project",
+      "package_files": [
+        {
+          "kind": "runtime-entry",
+          "path": "plugins/format/format-plugin-vttp-project/handler.js",
+          "package_path": "handler.js",
+          "sha256": "3533767DCF89AD0EC86491DCAAAD53964E7FC5C85185EF077C00467DAEB524E4",
+          "size_bytes": 3595
+        },
+        {
+          "kind": "manifest",
+          "path": "plugins/format/format-plugin-vttp-project/plugin.json",
+          "package_path": "plugin.json",
+          "sha256": "D69FFF10928F6BEBC80530D1B7D90F643785AC69264A5BCEE480933970DE14E2",
+          "size_bytes": 828
+        }
+      ]
+    },
+    {
+      "id": "format-plugin-webvtt",
+      "plugin_api_version": "1",
+      "family": "format",
+      "role": "format.subtitle-provider",
+      "name": "WebVTT",
+      "version": "1.0.0",
+      "summary": "WebVTT subtitle file with timing and metadata.",
+      "runtime": {
+        "mode": "js-sandbox",
+        "entry": "handler.js"
+      },
+      "consumes": [
+        "RawFileArtifact",
+        "FormatExportArtifact"
+      ],
+      "produces": [
+        "FormatImportArtifact",
+        "RawFileArtifact"
+      ],
+      "permissions": [
+        "filesystem.read"
+      ],
+      "dependencies": [],
+      "capabilities": [
+        "import",
+        "export",
+        "subtitle-format",
+        "timed-subtitle"
+      ],
+      "format": {
+        "id": "webvtt",
+        "target": "subtitle",
+        "directions": [
+          "import",
+          "export"
+        ],
+        "extensions": [
+          "vtt"
+        ],
+        "export_order": 10,
+        "quality_gate": "timed-subtitle"
+      },
+      "compatibility": {
+        "min_app_version": "2.0.0",
+        "platforms": [
+          "windows-x64",
+          "macos-x64",
+          "macos-arm64",
+          "linux-x64"
+        ]
+      },
+      "package_root_path": "plugins/format/format-plugin-webvtt",
+      "package_files": [
+        {
+          "kind": "runtime-entry",
+          "path": "plugins/format/format-plugin-webvtt/handler.js",
+          "package_path": "handler.js",
+          "sha256": "14D63B070DFC839D74D2F5C03F1069D7C464B8A588EBCA00C2CD8752A67AED8E",
+          "size_bytes": 6707
+        },
+        {
+          "kind": "manifest",
+          "path": "plugins/format/format-plugin-webvtt/plugin.json",
+          "package_path": "plugin.json",
+          "sha256": "C1A9404D2255E38E48400F5E3CBE2763FDD90E0A8A7729A78E02E35FF13E85C9",
+          "size_bytes": 881
+        }
+      ]
+    },
+    {
+      "id": "speech-plugin-openai-sherpa",
+      "plugin_api_version": "1",
+      "family": "speech",
+      "role": "speech.combined-provider",
+      "name": "OpenAI Whisper + Sherpa-ONNX",
+      "version": "1.0.0",
+      "summary": "Cloud transcription via OpenAI Whisper API with local Sherpa-ONNX speaker diarization.",
+      "runtime": {
+        "mode": "js-sandbox",
+        "entry": "handler.js"
+      },
+      "consumes": [
+        "AudioArtifact"
+      ],
+      "produces": [
+        "TranscriptArtifact",
+        "WordTimelineArtifact",
+        "SpeakerTurnsArtifact"
+      ],
+      "permissions": [
+        "filesystem.read",
+        "process.spawn",
+        "network.outbound"
+      ],
+      "dependencies": [
+        {
+          "id": "provider-openai-whisper",
+          "version": "^1.0.0"
+        },
+        {
+          "id": "provider-sherpa-core",
+          "version": "^1.0.0"
+        },
+        {
+          "id": "model-sherpa-segmentation",
+          "version": "^1.0.0"
+        },
+        {
+          "id": "model-sherpa-embedding",
+          "version": "^1.0.0"
+        }
+      ],
+      "settings_schema": "settings.schema.json",
+      "presets": [
+        {
+          "id": "hybrid-cloud-local",
+          "name": "Cloud Whisper + Local Diarization",
+          "settings": {
+            "transcription_provider": "openai",
+            "diarization_enabled": true,
+            "diarization_provider": "sherpa-onnx"
+          }
+        }
+      ],
+      "capabilities": [
+        "hybrid",
+        "speaker-labels",
+        "word-midpoint-merge"
+      ],
+      "compatibility": {
+        "min_app_version": "2.0.0",
+        "platforms": [
+          "windows-x64"
+        ]
+      },
+      "package_root_path": "plugins/speech/speech-plugin-openai-sherpa",
+      "package_files": [
+        {
+          "kind": "runtime-entry",
+          "path": "plugins/speech/speech-plugin-openai-sherpa/handler.js",
+          "package_path": "handler.js",
+          "sha256": "2ABBCF685E22F61A9A88EEF55C978833038B9FAB71D54C4992C25F3775FDEF7F",
+          "size_bytes": 429
+        },
+        {
+          "kind": "manifest",
+          "path": "plugins/speech/speech-plugin-openai-sherpa/plugin.json",
+          "package_path": "plugin.json",
+          "sha256": "B819995CCE846406C31DB77D098F0EA0A672AC61A85483279A1E593E6D90C766",
+          "size_bytes": 1313
+        },
+        {
+          "kind": "settings-schema",
+          "path": "plugins/speech/speech-plugin-openai-sherpa/settings.schema.json",
+          "package_path": "settings.schema.json",
+          "sha256": "2427A697AAF2A07D4C0C1CF81DBEEF57577331A3DF0EDE0CDF3BCF4803D266E5",
+          "size_bytes": 740
+        }
+      ]
+    },
+    {
+      "id": "speech-plugin-openai-transcription",
+      "plugin_api_version": "1",
+      "family": "speech",
+      "role": "speech.transcription-provider",
+      "name": "OpenAI Whisper",
+      "version": "1.0.0",
+      "summary": "Cloud transcription via the OpenAI Whisper API without speaker diarization.",
+      "runtime": {
+        "mode": "js-sandbox",
+        "entry": "handler.js"
+      },
+      "consumes": [
+        "MediaInputArtifact"
+      ],
+      "produces": [
+        "TranscriptArtifact"
+      ],
+      "permissions": [
+        "filesystem.read",
+        "network.outbound"
+      ],
+      "dependencies": [
+        {
+          "id": "provider-openai-whisper",
+          "version": "^1.0.0"
+        }
+      ],
+      "settings_schema": "settings.schema.json",
+      "presets": [
+        {
+          "id": "cloud-fast",
+          "name": "Cloud Fast",
+          "settings": {
+            "transcription_provider": "openai",
+            "diarization_enabled": false
+          }
+        }
+      ],
+      "capabilities": [
+        "cloud",
+        "transcription-only"
+      ],
+      "compatibility": {
+        "min_app_version": "2.0.0",
+        "platforms": [
+          "windows-x64"
+        ]
+      },
+      "package_root_path": "plugins/speech/speech-plugin-openai-transcription",
+      "package_files": [
+        {
+          "kind": "runtime-entry",
+          "path": "plugins/speech/speech-plugin-openai-transcription/handler.js",
+          "package_path": "handler.js",
+          "sha256": "59452AD8DB7EA85F39849FD3E912711EACA844B2D59CA7E5636A890B4D83110D",
+          "size_bytes": 412
+        },
+        {
+          "kind": "manifest",
+          "path": "plugins/speech/speech-plugin-openai-transcription/plugin.json",
+          "package_path": "plugin.json",
+          "sha256": "3150A913AD701B86C33A6F166F1A8D2072BC1316EB06D0DFB816813C6411E13F",
+          "size_bytes": 959
+        },
+        {
+          "kind": "settings-schema",
+          "path": "plugins/speech/speech-plugin-openai-transcription/settings.schema.json",
+          "package_path": "settings.schema.json",
+          "sha256": "D84CA46FF8BCC30AD50F7005BB35233945ED5B14B7054FCFF2D69139C2174FC5",
+          "size_bytes": 577
+        }
+      ]
+    },
+    {
+      "id": "speech-plugin-whispercpp-local",
+      "plugin_api_version": "1",
+      "family": "speech",
+      "role": "speech.transcription-provider",
+      "name": "whisper.cpp",
+      "version": "1.0.0",
+      "summary": "Offline transcription with whisper.cpp without speaker diarization.",
+      "runtime": {
+        "mode": "js-sandbox",
+        "entry": "handler.js"
+      },
+      "consumes": [
+        "MediaInputArtifact"
+      ],
+      "produces": [
+        "TranscriptArtifact"
+      ],
+      "permissions": [
+        "filesystem.read",
+        "process.spawn"
+      ],
+      "dependencies": [
+        {
+          "id": "provider-whispercpp-core",
+          "version": "^1.0.0"
+        },
+        {
+          "id": "model-whisper-base",
+          "version": "^1.0.0"
+        }
+      ],
+      "settings_schema": "settings.schema.json",
+      "presets": [
+        {
+          "id": "offline-light",
+          "name": "Offline Light",
+          "settings": {
+            "transcription_provider": "whispercpp",
+            "diarization_enabled": false
+          }
+        }
+      ],
+      "capabilities": [
+        "offline",
+        "transcription-only"
+      ],
+      "compatibility": {
+        "min_app_version": "2.0.0",
+        "platforms": [
+          "windows-x64"
+        ]
+      },
+      "package_root_path": "plugins/speech/speech-plugin-whispercpp-local",
+      "package_files": [
+        {
+          "kind": "runtime-entry",
+          "path": "plugins/speech/speech-plugin-whispercpp-local/handler.js",
+          "package_path": "handler.js",
+          "sha256": "F51869DA3A0EED6A42130970C4C7AD9CB09ABBB3F5B3AA96161290BEE8B3501F",
+          "size_bytes": 411
+        },
+        {
+          "kind": "manifest",
+          "path": "plugins/speech/speech-plugin-whispercpp-local/plugin.json",
+          "package_path": "plugin.json",
+          "sha256": "13A513E427F786FCEC5A570E33A18EA192E74AD82B7A3CE3ED70F0F798671616",
+          "size_bytes": 1011
+        },
+        {
+          "kind": "settings-schema",
+          "path": "plugins/speech/speech-plugin-whispercpp-local/settings.schema.json",
+          "package_path": "settings.schema.json",
+          "sha256": "27FD3B3580F6E25F39C566EAC4E39A81E1C3F4130ACB0A4F29A2A91527465398",
+          "size_bytes": 457
+        }
+      ]
+    },
+    {
+      "id": "speech-plugin-whispercpp-sherpa",
+      "plugin_api_version": "1",
+      "family": "speech",
+      "role": "speech.combined-provider",
+      "name": "whisper.cpp + Sherpa-ONNX",
+      "version": "1.0.0",
+      "summary": "Offline transcription with whisper.cpp and speaker diarization with Sherpa-ONNX.",
+      "runtime": {
+        "mode": "js-sandbox",
+        "entry": "handler.js"
+      },
+      "consumes": [
+        "AudioArtifact"
+      ],
+      "produces": [
+        "TranscriptArtifact",
+        "WordTimelineArtifact",
+        "SpeakerTurnsArtifact"
+      ],
+      "permissions": [
+        "filesystem.read",
+        "process.spawn"
+      ],
+      "dependencies": [
+        {
+          "id": "provider-whispercpp-core",
+          "version": "^1.0.0"
+        },
+        {
+          "id": "provider-sherpa-core",
+          "version": "^1.0.0"
+        },
+        {
+          "id": "model-whisper-base",
+          "version": "^1.0.0"
+        },
+        {
+          "id": "model-sherpa-segmentation",
+          "version": "^1.0.0"
+        },
+        {
+          "id": "model-sherpa-embedding",
+          "version": "^1.0.0"
+        }
+      ],
+      "settings_schema": "settings.schema.json",
+      "presets": [
+        {
+          "id": "offline-accurate",
+          "name": "Offline Accurate",
+          "settings": {
+            "transcription_provider": "whispercpp",
+            "diarization_enabled": true,
+            "diarization_provider": "sherpa-onnx"
+          }
+        }
+      ],
+      "capabilities": [
+        "offline",
+        "speaker-labels",
+        "word-midpoint-merge"
+      ],
+      "compatibility": {
+        "min_app_version": "2.0.0",
+        "platforms": [
+          "windows-x64"
+        ]
+      },
+      "package_root_path": "plugins/speech/speech-plugin-whispercpp-sherpa",
+      "package_files": [
+        {
+          "kind": "runtime-entry",
+          "path": "plugins/speech/speech-plugin-whispercpp-sherpa/handler.js",
+          "package_path": "handler.js",
+          "sha256": "C44EB009F9AC8DE70E41916BCF17FF65B556A85A33503356C3C8DC3A2CC65990",
+          "size_bytes": 430
+        },
+        {
+          "kind": "manifest",
+          "path": "plugins/speech/speech-plugin-whispercpp-sherpa/plugin.json",
+          "package_path": "plugin.json",
+          "sha256": "02C386735118AE43C197D4151B13E1015A77480F7C5546DD6148EA40401CB18A",
+          "size_bytes": 1332
+        },
+        {
+          "kind": "settings-schema",
+          "path": "plugins/speech/speech-plugin-whispercpp-sherpa/settings.schema.json",
+          "package_path": "settings.schema.json",
+          "sha256": "30A261DF9F09EED7096E31A5CC6842245207829751A33F89C0B728877DC73493",
+          "size_bytes": 620
+        }
+      ]
+    },
+    {
+      "id": "translation-plugin-anthropic",
+      "plugin_api_version": "1",
+      "family": "translation",
+      "role": "translation.subtitle-provider",
+      "name": "Anthropic Translation",
+      "version": "1.0.0",
+      "summary": "Cloud subtitle translation through the Anthropic translation backend.",
+      "runtime": {
+        "mode": "js-sandbox",
+        "entry": "handler.js"
+      },
+      "consumes": [
+        "TranslationRequestArtifact"
+      ],
+      "produces": [
+        "TranslationResultArtifact"
+      ],
+      "permissions": [
+        "network.outbound"
+      ],
+      "dependencies": [],
+      "settings_schema": "settings.schema.json",
+      "presets": [
+        {
+          "id": "cloud-anthropic",
+          "name": "Cloud Anthropic",
+          "settings": {
+            "translation_provider": "anthropic"
+          }
+        }
+      ],
+      "capabilities": [
+        "cloud",
+        "subtitle-translation"
+      ],
+      "compatibility": {
+        "min_app_version": "2.0.0",
+        "platforms": [
+          "windows-x64"
+        ]
+      },
+      "package_root_path": "plugins/translation/translation-plugin-anthropic",
+      "package_files": [
+        {
+          "kind": "runtime-entry",
+          "path": "plugins/translation/translation-plugin-anthropic/handler.js",
+          "package_path": "handler.js",
+          "sha256": "6AA7EF15CDA838FAEC980222C76CBC2235BEBEC489B295EC56BE1F910A76A7ED",
+          "size_bytes": 360
+        },
+        {
+          "kind": "manifest",
+          "path": "plugins/translation/translation-plugin-anthropic/plugin.json",
+          "package_path": "plugin.json",
+          "sha256": "C220DC96C6E913C1A3DE1D54B40729E13D646E63C48675778FDA12118805ACFA",
+          "size_bytes": 866
+        },
+        {
+          "kind": "settings-schema",
+          "path": "plugins/translation/translation-plugin-anthropic/settings.schema.json",
+          "package_path": "settings.schema.json",
+          "sha256": "E605E51B8EFD864480F7279C415D6CDA4ED6CFA26FE69A99FF3C635D99E0026D",
+          "size_bytes": 475
+        }
+      ]
+    },
+    {
+      "id": "translation-plugin-azure",
+      "plugin_api_version": "1",
+      "family": "translation",
+      "role": "translation.subtitle-provider",
+      "name": "Azure OpenAI Translation",
+      "version": "1.0.0",
+      "summary": "Cloud subtitle translation through the Azure OpenAI translation backend.",
+      "runtime": {
+        "mode": "js-sandbox",
+        "entry": "handler.js"
+      },
+      "consumes": [
+        "TranslationRequestArtifact"
+      ],
+      "produces": [
+        "TranslationResultArtifact"
+      ],
+      "permissions": [
+        "network.outbound"
+      ],
+      "dependencies": [],
+      "settings_schema": "settings.schema.json",
+      "presets": [
+        {
+          "id": "cloud-azure",
+          "name": "Cloud Azure",
+          "settings": {
+            "translation_provider": "azure"
+          }
+        }
+      ],
+      "capabilities": [
+        "cloud",
+        "subtitle-translation"
+      ],
+      "compatibility": {
+        "min_app_version": "2.0.0",
+        "platforms": [
+          "windows-x64"
+        ]
+      },
+      "package_root_path": "plugins/translation/translation-plugin-azure",
+      "package_files": [
+        {
+          "kind": "runtime-entry",
+          "path": "plugins/translation/translation-plugin-azure/handler.js",
+          "package_path": "handler.js",
+          "sha256": "8561140C79B3AA488E1C8BBAE82C53D65F4950EDE6C4B8350A3EC9DE6038C1DB",
+          "size_bytes": 359
+        },
+        {
+          "kind": "manifest",
+          "path": "plugins/translation/translation-plugin-azure/plugin.json",
+          "package_path": "plugin.json",
+          "sha256": "70C1188BC3A28F8FA7A1BD0D262F73DFFB9557972B3A1F17F06A0D6A09E62FF3",
+          "size_bytes": 856
+        },
+        {
+          "kind": "settings-schema",
+          "path": "plugins/translation/translation-plugin-azure/settings.schema.json",
+          "package_path": "settings.schema.json",
+          "sha256": "B824CF4413E8F3D10F40B3FEEF55FC820EA14B6F207E979275B8B72497FE2EDB",
+          "size_bytes": 463
+        }
+      ]
+    },
+    {
+      "id": "translation-plugin-deepl",
+      "plugin_api_version": "1",
+      "family": "translation",
+      "role": "translation.subtitle-provider",
+      "name": "DeepL Translation",
+      "version": "1.0.0",
+      "summary": "Cloud subtitle translation through the DeepL translation backend.",
+      "runtime": {
+        "mode": "js-sandbox",
+        "entry": "handler.js"
+      },
+      "consumes": [
+        "TranslationRequestArtifact"
+      ],
+      "produces": [
+        "TranslationResultArtifact"
+      ],
+      "permissions": [
+        "network.outbound"
+      ],
+      "dependencies": [],
+      "settings_schema": "settings.schema.json",
+      "presets": [
+        {
+          "id": "cloud-deepl",
+          "name": "Cloud DeepL",
+          "settings": {
+            "translation_provider": "deepl"
+          }
+        }
+      ],
+      "capabilities": [
+        "cloud",
+        "subtitle-translation"
+      ],
+      "compatibility": {
+        "min_app_version": "2.0.0",
+        "platforms": [
+          "windows-x64"
+        ]
+      },
+      "package_root_path": "plugins/translation/translation-plugin-deepl",
+      "package_files": [
+        {
+          "kind": "runtime-entry",
+          "path": "plugins/translation/translation-plugin-deepl/handler.js",
+          "package_path": "handler.js",
+          "sha256": "9A59E020454C35C415E5B5B717A2FAA538C5B0837DE49E9520EE5F4A3638C7B0",
+          "size_bytes": 352
+        },
+        {
+          "kind": "manifest",
+          "path": "plugins/translation/translation-plugin-deepl/plugin.json",
+          "package_path": "plugin.json",
+          "sha256": "4A3B1BA29DB1F33649C9C0349C5F08C1F13F779E417BDCAD5C4614D1EBEA6BBF",
+          "size_bytes": 842
+        },
+        {
+          "kind": "settings-schema",
+          "path": "plugins/translation/translation-plugin-deepl/settings.schema.json",
+          "package_path": "settings.schema.json",
+          "sha256": "0619DD1CCA58EBF12D60DCFBAFE29E584F0143C328B64D0A564A60724785504F",
+          "size_bytes": 463
+        }
+      ]
+    },
+    {
+      "id": "translation-plugin-ollama",
+      "plugin_api_version": "1",
+      "family": "translation",
+      "role": "translation.subtitle-provider",
+      "name": "Ollama Translation",
+      "version": "1.0.0",
+      "summary": "Local subtitle translation through the Ollama translation backend.",
+      "runtime": {
+        "mode": "js-sandbox",
+        "entry": "handler.js"
+      },
+      "consumes": [
+        "TranslationRequestArtifact"
+      ],
+      "produces": [
+        "TranslationResultArtifact"
+      ],
+      "permissions": [
+        "network.outbound"
+      ],
+      "dependencies": [],
+      "settings_schema": "settings.schema.json",
+      "presets": [
+        {
+          "id": "local-ollama",
+          "name": "Local Ollama",
+          "settings": {
+            "translation_provider": "ollama"
+          }
+        }
+      ],
+      "capabilities": [
+        "local",
+        "subtitle-translation"
+      ],
+      "compatibility": {
+        "min_app_version": "2.0.0",
+        "platforms": [
+          "windows-x64"
+        ]
+      },
+      "package_root_path": "plugins/translation/translation-plugin-ollama",
+      "package_files": [
+        {
+          "kind": "runtime-entry",
+          "path": "plugins/translation/translation-plugin-ollama/handler.js",
+          "package_path": "handler.js",
+          "sha256": "ED7B1C07E91AF75ADEE0FE142CD4480008E6619E97372365612F243E401C40EE",
+          "size_bytes": 354
+        },
+        {
+          "kind": "manifest",
+          "path": "plugins/translation/translation-plugin-ollama/plugin.json",
+          "package_path": "plugin.json",
+          "sha256": "F86DEC12327943A68BE6132DDBFDBBBAA9D84DF77B53B3225F8ADAF4F445C8E9",
+          "size_bytes": 848
+        },
+        {
+          "kind": "settings-schema",
+          "path": "plugins/translation/translation-plugin-ollama/settings.schema.json",
+          "package_path": "settings.schema.json",
+          "sha256": "FBED7AE3607A5DB19AA8636A87F69E476850AE41554626152EF69D84C31BBBB8",
+          "size_bytes": 478
+        }
+      ]
+    },
+    {
+      "id": "translation-plugin-openai",
+      "plugin_api_version": "1",
+      "family": "translation",
+      "role": "translation.subtitle-provider",
+      "name": "OpenAI Translation",
+      "version": "1.0.0",
+      "summary": "Cloud subtitle translation through the OpenAI translation backend.",
+      "runtime": {
+        "mode": "js-sandbox",
+        "entry": "handler.js"
+      },
+      "consumes": [
+        "TranslationRequestArtifact"
+      ],
+      "produces": [
+        "TranslationResultArtifact"
+      ],
+      "permissions": [
+        "network.outbound"
+      ],
+      "dependencies": [],
+      "settings_schema": "settings.schema.json",
+      "presets": [
+        {
+          "id": "cloud-openai",
+          "name": "Cloud OpenAI",
+          "settings": {
+            "translation_provider": "openai"
+          }
+        }
+      ],
+      "capabilities": [
+        "cloud",
+        "subtitle-translation"
+      ],
+      "compatibility": {
+        "min_app_version": "2.0.0",
+        "platforms": [
+          "windows-x64"
+        ]
+      },
+      "package_root_path": "plugins/translation/translation-plugin-openai",
+      "package_files": [
+        {
+          "kind": "runtime-entry",
+          "path": "plugins/translation/translation-plugin-openai/handler.js",
+          "package_path": "handler.js",
+          "sha256": "1D176DC0A8B55F8A298A2A029C22AB5E71DA0E6FA7D7A73912D1BE9E8B17A155",
+          "size_bytes": 354
+        },
+        {
+          "kind": "manifest",
+          "path": "plugins/translation/translation-plugin-openai/plugin.json",
+          "package_path": "plugin.json",
+          "sha256": "0B8A26464BBE848C99A46CCF2C932263CA5DB0A49A3A0782DC51CCAB76430456",
+          "size_bytes": 848
+        },
+        {
+          "kind": "settings-schema",
+          "path": "plugins/translation/translation-plugin-openai/settings.schema.json",
+          "package_path": "settings.schema.json",
+          "sha256": "BFEF286B36C11CF477EEF4E89DFD5AD76E2B187F2C0193F7A80D218731AA6FFB",
+          "size_bytes": 466
+        }
+      ]
+    }
+  ],
+  "dependency_packages": [
+    {
+      "registry_entry": {
+        "id": "provider-whispercpp-core",
+        "name": "whisper.cpp Core Runtime",
+        "version": "1.0.0",
+        "category": "provider-core",
+        "manifest_path": "provider-whispercpp-core/dependency.json",
+        "size_estimate_bytes": 30000000
+      },
+      "manifest": {
+        "id": "provider-whispercpp-core",
+        "name": "whisper.cpp Core Runtime",
+        "version": "1.0.0",
+        "package_api_version": "1",
+        "category": "provider-core",
+        "summary": "Shared whisper.cpp binary for local transcription.",
+        "install_strategy": "embedded",
+        "platform_variants": {
+          "windows-x64": {
+            "files": [
+              {
+                "filename": "whisper-x86_64-pc-windows-msvc.exe",
+                "url": "https://github.com/ggml-org/whisper.cpp/releases/latest/download/whisper-bin-x64.zip",
+                "sha256": "<sha256>",
+                "archive_format": "zip",
+                "archive_entry": "whisper-cli.exe",
+                "extract_siblings": true,
+                "install_root": "dependencies/provider-whispercpp-core/1.0.0"
+              }
+            ]
+          }
+        },
+        "dependencies": []
+      },
+      "dependency_json_path": "dependencies/provider-whispercpp-core/dependency.json"
+    },
+    {
+      "registry_entry": {
+        "id": "provider-sherpa-core",
+        "name": "Sherpa-ONNX Core Runtime",
+        "version": "1.0.0",
+        "category": "provider-core",
+        "manifest_path": "provider-sherpa-core/dependency.json",
+        "size_estimate_bytes": 50000000
+      },
+      "manifest": {
+        "id": "provider-sherpa-core",
+        "name": "Sherpa-ONNX Core Runtime",
+        "version": "1.0.0",
+        "package_api_version": "1",
+        "category": "provider-core",
+        "summary": "Shared Sherpa-ONNX binary for local speaker diarization.",
+        "install_strategy": "embedded",
+        "platform_variants": {
+          "windows-x64": {
+            "files": [
+              {
+                "filename": "sherpa-onnx-offline-speaker-diarization.exe",
+                "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/v1.12.29/sherpa-onnx-v1.12.29-win-x64-shared-MT-Release.tar.bz2",
+                "sha256": "<sha256>",
+                "archive_format": "tar.bz2",
+                "archive_entry": "sherpa-onnx-v1.12.29-win-x64-shared-MT-Release/bin/sherpa-onnx-offline-speaker-diarization.exe",
+                "extract_siblings": true,
+                "install_root": "dependencies/provider-sherpa-core/1.0.0"
+              }
+            ]
+          }
+        },
+        "dependencies": []
+      },
+      "dependency_json_path": "dependencies/provider-sherpa-core/dependency.json"
+    },
+    {
+      "registry_entry": {
+        "id": "provider-openai-whisper",
+        "name": "OpenAI Whisper API Provider",
+        "version": "1.0.0",
+        "category": "provider-core",
+        "manifest_path": "provider-openai-whisper/dependency.json",
+        "size_estimate_bytes": 0
+      },
+      "manifest": {
+        "id": "provider-openai-whisper",
+        "name": "OpenAI Whisper API Provider",
+        "version": "1.0.0",
+        "package_api_version": "1",
+        "category": "provider-core",
+        "summary": "Cloud transcription provider via OpenAI Whisper API. Requires API key.",
+        "files": [],
+        "dependencies": []
+      },
+      "dependency_json_path": "dependencies/provider-openai-whisper/dependency.json"
+    },
+    {
+      "registry_entry": {
+        "id": "model-whisper-base",
+        "name": "Whisper Base Model (ggml)",
+        "version": "1.0.0",
+        "category": "model",
+        "manifest_path": "model-whisper-base/dependency.json",
+        "size_estimate_bytes": 152000000
+      },
+      "manifest": {
+        "id": "model-whisper-base",
+        "name": "Whisper Base Model (ggml)",
+        "version": "1.0.0",
+        "package_api_version": "1",
+        "category": "model",
+        "summary": "ggml-base.bin model file for whisper.cpp transcription.",
+        "files": [
+          {
+            "filename": "ggml-base.bin",
+            "url": "https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-base.bin",
+            "sha256": "60ed5bc3dd14eea856493d334349b405782ddcaf0028d4b5df4088345fba2efe",
+            "install_root": "dependencies/model-whisper-base/1.0.0"
+          }
+        ],
+        "dependencies": []
+      },
+      "dependency_json_path": "dependencies/model-whisper-base/dependency.json"
+    },
+    {
+      "registry_entry": {
+        "id": "model-sherpa-segmentation",
+        "name": "Sherpa-ONNX Pyannote Segmentation Model",
+        "version": "1.0.0",
+        "category": "model",
+        "manifest_path": "model-sherpa-segmentation/dependency.json",
+        "size_estimate_bytes": 80000000
+      },
+      "manifest": {
+        "id": "model-sherpa-segmentation",
+        "name": "Sherpa-ONNX Pyannote Segmentation Model",
+        "version": "1.0.0",
+        "package_api_version": "1",
+        "category": "model",
+        "summary": "Speaker segmentation model (pyannote 3.0) for Sherpa-ONNX diarization.",
+        "files": [
+          {
+            "filename": "sherpa-onnx-pyannote-segmentation.onnx",
+            "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/speaker-segmentation-models/sherpa-onnx-pyannote-segmentation-3-0.tar.bz2",
+            "sha256": "<sha256>",
+            "archive_format": "tar.bz2",
+            "archive_entry": "sherpa-onnx-pyannote-segmentation-3-0/model.onnx",
+            "install_root": "dependencies/model-sherpa-segmentation/1.0.0"
+          }
+        ],
+        "dependencies": []
+      },
+      "dependency_json_path": "dependencies/model-sherpa-segmentation/dependency.json"
+    },
+    {
+      "registry_entry": {
+        "id": "model-sherpa-embedding",
+        "name": "Sherpa-ONNX 3D-Speaker Embedding Model",
+        "version": "1.0.0",
+        "category": "model",
+        "manifest_path": "model-sherpa-embedding/dependency.json",
+        "size_estimate_bytes": 120000000
+      },
+      "manifest": {
+        "id": "model-sherpa-embedding",
+        "name": "Sherpa-ONNX 3D-Speaker Embedding Model",
+        "version": "1.0.0",
+        "package_api_version": "1",
+        "category": "model",
+        "summary": "Speaker embedding model (3D-Speaker eres2net) for Sherpa-ONNX diarization.",
+        "files": [
+          {
+            "filename": "sherpa-onnx-3dspeaker-embedding.onnx",
+            "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/speaker-recongition-models/3dspeaker_speech_eres2net_base_sv_zh-cn_3dspeaker_16k.onnx",
+            "sha256": "<sha256>",
+            "install_root": "dependencies/model-sherpa-embedding/1.0.0"
+          }
+        ],
+        "dependencies": []
+      },
+      "dependency_json_path": "dependencies/model-sherpa-embedding/dependency.json"
+    }
+  ]
+}

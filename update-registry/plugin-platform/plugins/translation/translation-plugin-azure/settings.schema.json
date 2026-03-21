@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Azure Translation Settings",
+  "type": "object",
+  "properties": {
+    "translation_provider": {
+      "type": "string",
+      "const": "azure",
+      "default": "azure"
+    },
+    "requires_api_key": {
+      "type": "boolean",
+      "const": true,
+      "default": true
+    }
+  },
+  "required": [
+    "translation_provider",
+    "requires_api_key"
+  ],
+  "additionalProperties": false
+}

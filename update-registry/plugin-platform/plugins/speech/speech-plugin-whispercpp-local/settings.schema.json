@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "whisper.cpp Settings",
+  "type": "object",
+  "properties": {
+    "transcription_provider": {
+      "type": "string",
+      "const": "whispercpp",
+      "default": "whispercpp"
+    },
+    "diarization_enabled": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "transcription_provider",
+    "diarization_enabled"
+  ],
+  "additionalProperties": false
+}

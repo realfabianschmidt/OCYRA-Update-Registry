@@ -1,0 +1,32 @@
+{
+  "id": "translation-plugin-ollama",
+  "plugin_api_version": "1",
+  "family": "translation",
+  "role": "translation.subtitle-provider",
+  "name": "Ollama Translation",
+  "version": "1.0.0",
+  "summary": "Local subtitle translation through the Ollama translation backend.",
+  "runtime": {
+    "mode": "js-sandbox",
+    "entry": "handler.js"
+  },
+  "consumes": ["TranslationRequestArtifact"],
+  "produces": ["TranslationResultArtifact"],
+  "permissions": ["network.outbound"],
+  "dependencies": [],
+  "settings_schema": "settings.schema.json",
+  "presets": [
+    {
+      "id": "local-ollama",
+      "name": "Local Ollama",
+      "settings": {
+        "translation_provider": "ollama"
+      }
+    }
+  ],
+  "capabilities": ["local", "subtitle-translation"],
+  "compatibility": {
+    "min_app_version": "2.0.0",
+    "platforms": ["windows-x64"]
+  }
+}

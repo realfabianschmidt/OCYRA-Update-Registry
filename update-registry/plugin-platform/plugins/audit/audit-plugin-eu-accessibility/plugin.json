@@ -1,0 +1,37 @@
+{
+  "id": "audit-plugin-eu-accessibility",
+  "plugin_api_version": "1",
+  "family": "audit",
+  "role": "audit.policy-provider",
+  "name": "EU Accessibility Act / BFSG",
+  "version": "1.0.0",
+  "summary": "Balanced accessibility defaults for BFSG, EAA, WCAG 2.1 AA and EBU R37.",
+  "runtime": {
+    "mode": "js-sandbox",
+    "entry": "handler.js"
+  },
+  "consumes": ["SubtitleImportArtifact", "AccessibilityContextArtifact"],
+  "produces": ["AuditReportArtifact", "PolicyConstraintsArtifact"],
+  "permissions": ["filesystem.read"],
+  "dependencies": [],
+  "capabilities": [
+    "compliance",
+    "broadcast",
+    "transcription-autofit",
+    "policy-constraints",
+    "checklist-evaluation"
+  ],
+  "policy_id": "eu-eaa-bfsg",
+  "policy_file": "policy.json",
+  "presets": [
+    {
+      "id": "eu-eaa-bfsg-default",
+      "name": "EU Accessibility Act Default",
+      "settings": {}
+    }
+  ],
+  "compatibility": {
+    "min_app_version": "2.0.0",
+    "platforms": ["windows-x64", "macos-x64", "macos-arm64", "linux-x64"]
+  }
+}

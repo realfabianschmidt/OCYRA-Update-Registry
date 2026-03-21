@@ -1,0 +1,39 @@
+{
+  "id": "speech-plugin-openai-sherpa",
+  "plugin_api_version": "1",
+  "family": "speech",
+  "role": "speech.combined-provider",
+  "name": "OpenAI Whisper + Sherpa-ONNX",
+  "version": "1.0.0",
+  "summary": "Cloud transcription via OpenAI Whisper API with local Sherpa-ONNX speaker diarization.",
+  "runtime": {
+    "mode": "js-sandbox",
+    "entry": "handler.js"
+  },
+  "consumes": ["AudioArtifact"],
+  "produces": ["TranscriptArtifact", "WordTimelineArtifact", "SpeakerTurnsArtifact"],
+  "permissions": ["filesystem.read", "process.spawn", "network.outbound"],
+  "dependencies": [
+    { "id": "provider-openai-whisper", "version": "^1.0.0" },
+    { "id": "provider-sherpa-core", "version": "^1.0.0" },
+    { "id": "model-sherpa-segmentation", "version": "^1.0.0" },
+    { "id": "model-sherpa-embedding", "version": "^1.0.0" }
+  ],
+  "settings_schema": "settings.schema.json",
+  "presets": [
+    {
+      "id": "hybrid-cloud-local",
+      "name": "Cloud Whisper + Local Diarization",
+      "settings": {
+        "transcription_provider": "openai",
+        "diarization_enabled": true,
+        "diarization_provider": "sherpa-onnx"
+      }
+    }
+  ],
+  "capabilities": ["hybrid", "speaker-labels", "word-midpoint-merge"],
+  "compatibility": {
+    "min_app_version": "2.0.0",
+    "platforms": ["windows-x64"]
+  }
+}

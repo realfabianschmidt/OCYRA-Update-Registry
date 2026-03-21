@@ -1,0 +1,10 @@
+{
+  "id": "provider-openai-whisper",
+  "name": "OpenAI Whisper API Provider",
+  "version": "1.0.0",
+  "package_api_version": "1",
+  "category": "provider-core",
+  "summary": "Cloud transcription provider via OpenAI Whisper API. Requires API key.",
+  "files": [],
+  "dependencies": []
+}

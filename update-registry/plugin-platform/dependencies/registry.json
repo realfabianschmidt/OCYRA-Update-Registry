@@ -1,0 +1,55 @@
+{
+  "schema_version": "1",
+  "description": "Central dependency registry. Lists all available dependencies that plugins can reference by ID.",
+  "note": "Plugins declare their dependencies in plugin.json. The Dependency Manager resolves them against this registry. Dependencies are downloaded once and shared via reference counting in the lock state.",
+  "dependencies": [
+    {
+      "id": "provider-whispercpp-core",
+      "name": "whisper.cpp Core Runtime",
+      "version": "1.0.0",
+      "category": "provider-core",
+      "manifest_path": "provider-whispercpp-core/dependency.json",
+      "size_estimate_bytes": 30000000
+    },
+    {
+      "id": "provider-sherpa-core",
+      "name": "Sherpa-ONNX Core Runtime",
+      "version": "1.0.0",
+      "category": "provider-core",
+      "manifest_path": "provider-sherpa-core/dependency.json",
+      "size_estimate_bytes": 50000000
+    },
+    {
+      "id": "provider-openai-whisper",
+      "name": "OpenAI Whisper API Provider",
+      "version": "1.0.0",
+      "category": "provider-core",
+      "manifest_path": "provider-openai-whisper/dependency.json",
+      "size_estimate_bytes": 0
+    },
+    {
+      "id": "model-whisper-base",
+      "name": "Whisper Base Model (ggml)",
+      "version": "1.0.0",
+      "category": "model",
+      "manifest_path": "model-whisper-base/dependency.json",
+      "size_estimate_bytes": 152000000
+    },
+    {
+      "id": "model-sherpa-segmentation",
+      "name": "Sherpa-ONNX Pyannote Segmentation Model",
+      "version": "1.0.0",
+      "category": "model",
+      "manifest_path": "model-sherpa-segmentation/dependency.json",
+      "size_estimate_bytes": 80000000
+    },
+    {
+      "id": "model-sherpa-embedding",
+      "name": "Sherpa-ONNX 3D-Speaker Embedding Model",
+      "version": "1.0.0",
+      "category": "model",
+      "manifest_path": "model-sherpa-embedding/dependency.json",
+      "size_estimate_bytes": 120000000
+    }
+  ]
+}

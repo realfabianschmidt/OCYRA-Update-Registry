@@ -1,0 +1,17 @@
+{
+  "id": "model-sherpa-embedding",
+  "name": "Sherpa-ONNX 3D-Speaker Embedding Model",
+  "version": "1.0.0",
+  "package_api_version": "1",
+  "category": "model",
+  "summary": "Speaker embedding model (3D-Speaker eres2net) for Sherpa-ONNX diarization.",
+  "files": [
+    {
+      "filename": "sherpa-onnx-3dspeaker-embedding.onnx",
+      "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/speaker-recongition-models/3dspeaker_speech_eres2net_base_sv_zh-cn_3dspeaker_16k.onnx",
+      "sha256": "<sha256>",
+      "install_root": "dependencies/model-sherpa-embedding/1.0.0"
+    }
+  ],
+  "dependencies": []
+}

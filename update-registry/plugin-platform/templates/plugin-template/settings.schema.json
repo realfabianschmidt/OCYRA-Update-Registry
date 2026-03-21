@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Example Translation Plugin Settings",
+  "type": "object",
+  "properties": {
+    "translation_provider": {
+      "type": "string",
+      "const": "example",
+      "default": "example"
+    }
+  },
+  "required": [
+    "translation_provider"
+  ],
+  "additionalProperties": false
+}

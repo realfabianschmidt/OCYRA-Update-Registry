@@ -1,0 +1,30 @@
+{
+  "id": "audit-plugin-easy-reading",
+  "plugin_api_version": "1",
+  "family": "audit",
+  "role": "audit.policy-provider",
+  "name": "Easy Reading",
+  "version": "1.0.0",
+  "summary": "High-comfort subtitle defaults for slower reading speed and simplified pacing.",
+  "runtime": {
+    "mode": "js-sandbox",
+    "entry": "handler.js"
+  },
+  "consumes": ["SubtitleImportArtifact", "AccessibilityContextArtifact"],
+  "produces": ["AuditReportArtifact", "PolicyConstraintsArtifact"],
+  "permissions": ["filesystem.read"],
+  "dependencies": [],
+  "capabilities": [
+    "compliance",
+    "easy-reading",
+    "transcription-autofit",
+    "policy-constraints",
+    "checklist-evaluation"
+  ],
+  "policy_id": "easy-reading",
+  "policy_file": "policy.json",
+  "compatibility": {
+    "min_app_version": "2.0.0",
+    "platforms": ["windows-x64", "macos-x64", "macos-arm64", "linux-x64"]
+  }
+}

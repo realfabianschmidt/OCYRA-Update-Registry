@@ -1,0 +1,25 @@
+{
+  "id": "provider-whispercpp-core",
+  "name": "whisper.cpp Core Runtime",
+  "version": "1.0.0",
+  "package_api_version": "1",
+  "category": "provider-core",
+  "summary": "Shared whisper.cpp binary for local transcription.",
+  "install_strategy": "embedded",
+  "platform_variants": {
+    "windows-x64": {
+      "files": [
+        {
+          "filename": "whisper-x86_64-pc-windows-msvc.exe",
+          "url": "https://github.com/ggml-org/whisper.cpp/releases/latest/download/whisper-bin-x64.zip",
+          "sha256": "<sha256>",
+          "archive_format": "zip",
+          "archive_entry": "whisper-cli.exe",
+          "extract_siblings": true,
+          "install_root": "dependencies/provider-whispercpp-core/1.0.0"
+        }
+      ]
+    }
+  },
+  "dependencies": []
+}

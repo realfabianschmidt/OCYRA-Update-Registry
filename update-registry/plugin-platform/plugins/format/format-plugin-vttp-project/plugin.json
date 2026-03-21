@@ -1,0 +1,28 @@
+{
+  "id": "format-plugin-vttp-project",
+  "plugin_api_version": "1",
+  "family": "format",
+  "role": "format.project-provider",
+  "name": "XYRA Project",
+  "version": "1.0.0",
+  "summary": "Native XYRA Captions project file.",
+  "runtime": {
+    "mode": "js-sandbox",
+    "entry": "handler.js"
+  },
+  "consumes": ["RawFileArtifact", "FormatExportArtifact"],
+  "produces": ["FormatImportArtifact", "RawFileArtifact"],
+  "permissions": ["filesystem.read"],
+  "dependencies": [],
+  "capabilities": ["import", "export", "project-format", "xyra-native"],
+  "format": {
+    "id": "vttp-project",
+    "target": "project",
+    "directions": ["import", "export"],
+    "extensions": ["vttp", "json"]
+  },
+  "compatibility": {
+    "min_app_version": "2.0.0",
+    "platforms": ["windows-x64", "macos-x64", "macos-arm64", "linux-x64"]
+  }
+}
