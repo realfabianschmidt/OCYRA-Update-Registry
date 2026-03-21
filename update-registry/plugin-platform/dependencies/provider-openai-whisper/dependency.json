@@ -5,6 +5,7 @@
   "package_api_version": "1",
   "category": "provider-core",
   "summary": "Cloud transcription provider via OpenAI Whisper API. Requires API key.",
+  "install_strategy": "metadata-only",
   "files": [],
   "dependencies": []
 }
