@@ -12,7 +12,7 @@
   },
   "consumes": ["AudioArtifact"],
   "produces": ["TranscriptArtifact", "WordTimelineArtifact", "SpeakerTurnsArtifact"],
-  "permissions": ["filesystem.read", "process.spawn"],
+  "permissions": ["filesystem.read", "process.spawn", "speech.transcribe"],
   "dependencies": [
     { "id": "provider-whispercpp-core", "version": "^1.0.0" },
     { "id": "provider-sherpa-core", "version": "^1.0.0" },

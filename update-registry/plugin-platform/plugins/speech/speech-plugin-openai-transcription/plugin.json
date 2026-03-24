@@ -12,7 +12,7 @@
   },
   "consumes": ["MediaInputArtifact"],
   "produces": ["TranscriptArtifact"],
-  "permissions": ["filesystem.read", "network.outbound"],
+  "permissions": ["filesystem.read", "network.outbound", "speech.transcribe"],
   "dependencies": [
     { "id": "provider-openai-whisper", "version": "^1.0.0" }
   ],

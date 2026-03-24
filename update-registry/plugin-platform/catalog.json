@@ -1,6 +1,6 @@
 {
   "catalog_version": "1",
-  "published_at": "2026-03-24T10:23:20.862Z",
+  "published_at": "2026-03-24T20:25:24.059Z",
   "app_release": {
     "schema_version": 1,
     "current_version": "2.0.0",
@@ -363,7 +363,8 @@
       "permissions": [
         "filesystem.read",
         "process.spawn",
-        "network.outbound"
+        "network.outbound",
+        "speech.transcribe"
       ],
       "compatibility": {
         "min_app_version": "2.0.0",
@@ -392,7 +393,8 @@
       },
       "permissions": [
         "filesystem.read",
-        "network.outbound"
+        "network.outbound",
+        "speech.transcribe"
       ],
       "compatibility": {
         "min_app_version": "2.0.0",
@@ -420,7 +422,8 @@
       },
       "permissions": [
         "filesystem.read",
-        "process.spawn"
+        "process.spawn",
+        "speech.transcribe"
       ],
       "compatibility": {
         "min_app_version": "2.0.0",
@@ -448,7 +451,8 @@
       },
       "permissions": [
         "filesystem.read",
-        "process.spawn"
+        "process.spawn",
+        "speech.transcribe"
       ],
       "compatibility": {
         "min_app_version": "2.0.0",
@@ -1313,7 +1317,8 @@
       "permissions": [
         "filesystem.read",
         "process.spawn",
-        "network.outbound"
+        "network.outbound",
+        "speech.transcribe"
       ],
       "dependencies": [
         {
@@ -1382,8 +1387,8 @@
           "kind": "manifest",
           "path": "plugins/speech/speech-plugin-openai-sherpa/plugin.json",
           "package_path": "plugin.json",
-          "sha256": "33AE4A9477D8F075C455F7F9C803BD3C747F925A1250454ED3ECF2DB61DDF391",
-          "size_bytes": 1658
+          "sha256": "539E134DA5A918D10E4A5620676658889428C098CA0017836C570218983ED63E",
+          "size_bytes": 1679
         },
         {
           "kind": "settings-schema",
@@ -1414,7 +1419,8 @@
       ],
       "permissions": [
         "filesystem.read",
-        "network.outbound"
+        "network.outbound",
+        "speech.transcribe"
       ],
       "dependencies": [
         {
@@ -1469,8 +1475,8 @@
           "kind": "manifest",
           "path": "plugins/speech/speech-plugin-openai-transcription/plugin.json",
           "package_path": "plugin.json",
-          "sha256": "B5BD8EB01E68CE3986D4FD176605D8BE6DA35894445700D29E0CFF522E3DB9B8",
-          "size_bytes": 1304
+          "sha256": "0FF35807332086678E528C6FF9EC0548271E0A64F82F0291B433A1687A84A400",
+          "size_bytes": 1325
         },
         {
           "kind": "settings-schema",
@@ -1501,7 +1507,8 @@
       ],
       "permissions": [
         "filesystem.read",
-        "process.spawn"
+        "process.spawn",
+        "speech.transcribe"
       ],
       "dependencies": [
         {
@@ -1547,8 +1554,8 @@
           "kind": "manifest",
           "path": "plugins/speech/speech-plugin-whispercpp-local/plugin.json",
           "package_path": "plugin.json",
-          "sha256": "13A513E427F786FCEC5A570E33A18EA192E74AD82B7A3CE3ED70F0F798671616",
-          "size_bytes": 1011
+          "sha256": "582B10A6FC5BB61C47745B76D064B9345739C80E96580CAF8A047D29BDA93B1C",
+          "size_bytes": 1032
         },
         {
           "kind": "settings-schema",
@@ -1581,7 +1588,8 @@
       ],
       "permissions": [
         "filesystem.read",
-        "process.spawn"
+        "process.spawn",
+        "speech.transcribe"
       ],
       "dependencies": [
         {
@@ -1641,8 +1649,8 @@
           "kind": "manifest",
           "path": "plugins/speech/speech-plugin-whispercpp-sherpa/plugin.json",
           "package_path": "plugin.json",
-          "sha256": "02C386735118AE43C197D4151B13E1015A77480F7C5546DD6148EA40401CB18A",
-          "size_bytes": 1332
+          "sha256": "4ADEB579D04375F326399ACC4567FE68DB5AA30E88A8386D630C3DB2E9F45850",
+          "size_bytes": 1353
         },
         {
           "kind": "settings-schema",

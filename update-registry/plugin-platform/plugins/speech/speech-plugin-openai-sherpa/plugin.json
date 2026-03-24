@@ -12,7 +12,7 @@
   },
   "consumes": ["AudioArtifact"],
   "produces": ["TranscriptArtifact", "WordTimelineArtifact", "SpeakerTurnsArtifact"],
-  "permissions": ["filesystem.read", "process.spawn", "network.outbound"],
+  "permissions": ["filesystem.read", "process.spawn", "network.outbound", "speech.transcribe"],
   "dependencies": [
     { "id": "provider-openai-whisper", "version": "^1.0.0" },
     { "id": "provider-sherpa-core", "version": "^1.0.0" },
