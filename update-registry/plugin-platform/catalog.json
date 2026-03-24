@@ -1,6 +1,6 @@
 {
   "catalog_version": "1",
-  "published_at": "2026-03-21T19:49:28.071Z",
+  "published_at": "2026-03-24T10:23:20.862Z",
   "app_release": {
     "schema_version": 1,
     "current_version": "2.0.0",
@@ -1334,6 +1334,19 @@
         }
       ],
       "settings_schema": "settings.schema.json",
+      "credential_schema": {
+        "apiKeyProvider": "openai",
+        "apiKeyPlaceholder": "sk-…",
+        "fields": [
+          {
+            "key": "openai_whisper_endpoint",
+            "label": "WHISPER ENDPOINT",
+            "type": "url",
+            "placeholder": "https://api.openai.com/v1/audio/transcriptions",
+            "help": "Leave empty to auto-derive from base endpoint."
+          }
+        ]
+      },
       "presets": [
         {
           "id": "hybrid-cloud-local",
@@ -1369,8 +1382,8 @@
           "kind": "manifest",
           "path": "plugins/speech/speech-plugin-openai-sherpa/plugin.json",
           "package_path": "plugin.json",
-          "sha256": "B819995CCE846406C31DB77D098F0EA0A672AC61A85483279A1E593E6D90C766",
-          "size_bytes": 1313
+          "sha256": "33AE4A9477D8F075C455F7F9C803BD3C747F925A1250454ED3ECF2DB61DDF391",
+          "size_bytes": 1658
         },
         {
           "kind": "settings-schema",
@@ -1410,6 +1423,19 @@
         }
       ],
       "settings_schema": "settings.schema.json",
+      "credential_schema": {
+        "apiKeyProvider": "openai",
+        "apiKeyPlaceholder": "sk-…",
+        "fields": [
+          {
+            "key": "openai_whisper_endpoint",
+            "label": "WHISPER ENDPOINT",
+            "type": "url",
+            "placeholder": "https://api.openai.com/v1/audio/transcriptions",
+            "help": "Leave empty to auto-derive from base endpoint."
+          }
+        ]
+      },
       "presets": [
         {
           "id": "cloud-fast",
@@ -1443,8 +1469,8 @@
           "kind": "manifest",
           "path": "plugins/speech/speech-plugin-openai-transcription/plugin.json",
           "package_path": "plugin.json",
-          "sha256": "3150A913AD701B86C33A6F166F1A8D2072BC1316EB06D0DFB816813C6411E13F",
-          "size_bytes": 959
+          "sha256": "B5BD8EB01E68CE3986D4FD176605D8BE6DA35894445700D29E0CFF522E3DB9B8",
+          "size_bytes": 1304
         },
         {
           "kind": "settings-schema",
@@ -1650,6 +1676,36 @@
       ],
       "dependencies": [],
       "settings_schema": "settings.schema.json",
+      "credential_schema": {
+        "apiKeyProvider": "anthropic",
+        "apiKeyPlaceholder": "sk-ant-…",
+        "fields": [
+          {
+            "key": "anthropic_endpoint",
+            "label": "ENDPOINT",
+            "type": "url",
+            "placeholder": "https://api.anthropic.com/v1/messages"
+          },
+          {
+            "key": "anthropic_model",
+            "label": "MODEL",
+            "type": "text",
+            "placeholder": "claude-3-5-sonnet-latest"
+          },
+          {
+            "key": "translation_prompt_pack",
+            "label": "PROMPT PACK",
+            "type": "select",
+            "source": "packs"
+          },
+          {
+            "key": "translation_prompt_template",
+            "label": "CUSTOM PROMPT",
+            "type": "textarea",
+            "placeholder": "Translate subtitle text from {from_lang} to {to_lang}…"
+          }
+        ]
+      },
       "presets": [
         {
           "id": "cloud-anthropic",
@@ -1682,8 +1738,8 @@
           "kind": "manifest",
           "path": "plugins/translation/translation-plugin-anthropic/plugin.json",
           "package_path": "plugin.json",
-          "sha256": "C220DC96C6E913C1A3DE1D54B40729E13D646E63C48675778FDA12118805ACFA",
-          "size_bytes": 866
+          "sha256": "BE6BA4225D6F91F9827F44F9F65D2C2CFE63688DB3FC2C617558F51D2366C8B3",
+          "size_bytes": 1530
         },
         {
           "kind": "settings-schema",
@@ -1717,6 +1773,42 @@
       ],
       "dependencies": [],
       "settings_schema": "settings.schema.json",
+      "credential_schema": {
+        "apiKeyProvider": "azure",
+        "apiKeyPlaceholder": "Azure key…",
+        "fields": [
+          {
+            "key": "ai_endpoint",
+            "label": "AZURE BASE URL",
+            "type": "url",
+            "placeholder": "https://<resource>.openai.azure.com"
+          },
+          {
+            "key": "azure_api_version",
+            "label": "API VERSION",
+            "type": "text",
+            "placeholder": "2024-06-01"
+          },
+          {
+            "key": "azure_chat_deployment",
+            "label": "CHAT DEPLOYMENT",
+            "type": "text",
+            "placeholder": "gpt-4o-mini"
+          },
+          {
+            "key": "translation_prompt_pack",
+            "label": "PROMPT PACK",
+            "type": "select",
+            "source": "packs"
+          },
+          {
+            "key": "translation_prompt_template",
+            "label": "CUSTOM PROMPT",
+            "type": "textarea",
+            "placeholder": "Translate subtitle text from {from_lang} to {to_lang}…"
+          }
+        ]
+      },
       "presets": [
         {
           "id": "cloud-azure",
@@ -1749,8 +1841,8 @@
           "kind": "manifest",
           "path": "plugins/translation/translation-plugin-azure/plugin.json",
           "package_path": "plugin.json",
-          "sha256": "70C1188BC3A28F8FA7A1BD0D262F73DFFB9557972B3A1F17F06A0D6A09E62FF3",
-          "size_bytes": 856
+          "sha256": "63A75B4F89443B293B6198636EBD80B5B44FCDBD97F039007228285C0AAAF1AD",
+          "size_bytes": 1647
         },
         {
           "kind": "settings-schema",
@@ -1784,6 +1876,32 @@
       ],
       "dependencies": [],
       "settings_schema": "settings.schema.json",
+      "credential_schema": {
+        "apiKeyProvider": "deepl",
+        "apiKeyPlaceholder": "DeepL key…",
+        "fields": [
+          {
+            "key": "deepl_endpoint",
+            "label": "DEEPL ENDPOINT",
+            "type": "url",
+            "placeholder": "https://api-free.deepl.com/v2/translate",
+            "help": "Use Pro endpoint if required by your account."
+          },
+          {
+            "key": "deepl_formality",
+            "label": "FORMALITY",
+            "type": "select",
+            "options": [
+              "default",
+              "more",
+              "less",
+              "prefer_more",
+              "prefer_less"
+            ],
+            "help": "Only applied for supported target languages."
+          }
+        ]
+      },
       "presets": [
         {
           "id": "cloud-deepl",
@@ -1816,8 +1934,8 @@
           "kind": "manifest",
           "path": "plugins/translation/translation-plugin-deepl/plugin.json",
           "package_path": "plugin.json",
-          "sha256": "4A3B1BA29DB1F33649C9C0349C5F08C1F13F779E417BDCAD5C4614D1EBEA6BBF",
-          "size_bytes": 842
+          "sha256": "12EA218A00EF00192E82070F4E825C7976F6635D30F791461BBBC58957FC5478",
+          "size_bytes": 1392
         },
         {
           "kind": "settings-schema",
@@ -1851,6 +1969,35 @@
       ],
       "dependencies": [],
       "settings_schema": "settings.schema.json",
+      "credential_schema": {
+        "fields": [
+          {
+            "key": "ollama_endpoint",
+            "label": "OLLAMA ENDPOINT",
+            "type": "url",
+            "placeholder": "http://localhost:11434/v1/chat/completions"
+          },
+          {
+            "key": "ollama_model",
+            "label": "MODEL",
+            "type": "text",
+            "placeholder": "qwen2.5",
+            "help": "e.g. qwen2.5, qwen2.5:7b"
+          },
+          {
+            "key": "translation_prompt_pack",
+            "label": "PROMPT PACK",
+            "type": "select",
+            "source": "packs"
+          },
+          {
+            "key": "translation_prompt_template",
+            "label": "CUSTOM PROMPT",
+            "type": "textarea",
+            "placeholder": "Translate subtitle text from {from_lang} to {to_lang}…"
+          }
+        ]
+      },
       "presets": [
         {
           "id": "local-ollama",
@@ -1883,8 +2030,8 @@
           "kind": "manifest",
           "path": "plugins/translation/translation-plugin-ollama/plugin.json",
           "package_path": "plugin.json",
-          "sha256": "F86DEC12327943A68BE6132DDBFDBBBAA9D84DF77B53B3225F8ADAF4F445C8E9",
-          "size_bytes": 848
+          "sha256": "CCAB00A2D86D5C9596008E353B9CB5CB33E7A067109237E31C48103D450D2053",
+          "size_bytes": 1470
         },
         {
           "kind": "settings-schema",
@@ -1918,6 +2065,32 @@
       ],
       "dependencies": [],
       "settings_schema": "settings.schema.json",
+      "credential_schema": {
+        "apiKeyProvider": "openai",
+        "apiKeyPlaceholder": "sk-…",
+        "fields": [
+          {
+            "key": "openai_chat_model",
+            "label": "CHAT MODEL",
+            "type": "text",
+            "placeholder": "gpt-4o",
+            "help": "e.g. gpt-4o, gpt-3.5-turbo"
+          },
+          {
+            "key": "translation_prompt_pack",
+            "label": "PROMPT PACK",
+            "type": "select",
+            "source": "packs"
+          },
+          {
+            "key": "translation_prompt_template",
+            "label": "CUSTOM PROMPT",
+            "type": "textarea",
+            "placeholder": "Translate subtitle text from {from_lang} to {to_lang}…",
+            "help": "Variables: {from_lang}, {to_lang}, {text}. Leave empty for pack default."
+          }
+        ]
+      },
       "presets": [
         {
           "id": "cloud-openai",
@@ -1950,8 +2123,8 @@
           "kind": "manifest",
           "path": "plugins/translation/translation-plugin-openai/plugin.json",
           "package_path": "plugin.json",
-          "sha256": "0B8A26464BBE848C99A46CCF2C932263CA5DB0A49A3A0782DC51CCAB76430456",
-          "size_bytes": 848
+          "sha256": "7AEF47A319812AC5967A1A9B110F379B4B3AE2C75BE51E9F2B8C95E8E55DD0BF",
+          "size_bytes": 1498
         },
         {
           "kind": "settings-schema",
@@ -2052,6 +2225,7 @@
         "package_api_version": "1",
         "category": "provider-core",
         "summary": "Cloud transcription provider via OpenAI Whisper API. Requires API key.",
+        "install_strategy": "metadata-only",
         "files": [],
         "dependencies": []
       },

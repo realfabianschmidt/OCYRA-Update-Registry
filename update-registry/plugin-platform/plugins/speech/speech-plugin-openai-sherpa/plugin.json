@@ -20,6 +20,15 @@
     { "id": "model-sherpa-embedding", "version": "^1.0.0" }
   ],
   "settings_schema": "settings.schema.json",
+  "credential_schema": {
+    "apiKeyProvider": "openai",
+    "apiKeyPlaceholder": "sk-…",
+    "fields": [
+      { "key": "openai_whisper_endpoint", "label": "WHISPER ENDPOINT", "type": "url",
+        "placeholder": "https://api.openai.com/v1/audio/transcriptions",
+        "help": "Leave empty to auto-derive from base endpoint." }
+    ]
+  },
   "presets": [
     {
       "id": "hybrid-cloud-local",

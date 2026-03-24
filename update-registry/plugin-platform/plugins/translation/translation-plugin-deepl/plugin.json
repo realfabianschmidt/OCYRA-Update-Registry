@@ -15,6 +15,18 @@
   "permissions": ["network.outbound"],
   "dependencies": [],
   "settings_schema": "settings.schema.json",
+  "credential_schema": {
+    "apiKeyProvider": "deepl",
+    "apiKeyPlaceholder": "DeepL key…",
+    "fields": [
+      { "key": "deepl_endpoint",  "label": "DEEPL ENDPOINT", "type": "url",
+        "placeholder": "https://api-free.deepl.com/v2/translate",
+        "help": "Use Pro endpoint if required by your account." },
+      { "key": "deepl_formality", "label": "FORMALITY", "type": "select",
+        "options": ["default", "more", "less", "prefer_more", "prefer_less"],
+        "help": "Only applied for supported target languages." }
+    ]
+  },
   "presets": [
     {
       "id": "cloud-deepl",

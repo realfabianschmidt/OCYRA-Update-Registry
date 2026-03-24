@@ -15,6 +15,17 @@
   "permissions": ["network.outbound"],
   "dependencies": [],
   "settings_schema": "settings.schema.json",
+  "credential_schema": {
+    "apiKeyProvider": "openai",
+    "apiKeyPlaceholder": "sk-…",
+    "fields": [
+      { "key": "openai_chat_model",          "label": "CHAT MODEL",    "type": "text", "placeholder": "gpt-4o", "help": "e.g. gpt-4o, gpt-3.5-turbo" },
+      { "key": "translation_prompt_pack",     "label": "PROMPT PACK",   "type": "select", "source": "packs" },
+      { "key": "translation_prompt_template", "label": "CUSTOM PROMPT", "type": "textarea",
+        "placeholder": "Translate subtitle text from {from_lang} to {to_lang}…",
+        "help": "Variables: {from_lang}, {to_lang}, {text}. Leave empty for pack default." }
+    ]
+  },
   "presets": [
     {
       "id": "cloud-openai",

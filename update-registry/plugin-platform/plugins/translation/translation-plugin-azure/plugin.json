@@ -15,6 +15,18 @@
   "permissions": ["network.outbound"],
   "dependencies": [],
   "settings_schema": "settings.schema.json",
+  "credential_schema": {
+    "apiKeyProvider": "azure",
+    "apiKeyPlaceholder": "Azure key…",
+    "fields": [
+      { "key": "ai_endpoint",              "label": "AZURE BASE URL",  "type": "url",  "placeholder": "https://<resource>.openai.azure.com" },
+      { "key": "azure_api_version",        "label": "API VERSION",     "type": "text", "placeholder": "2024-06-01" },
+      { "key": "azure_chat_deployment",    "label": "CHAT DEPLOYMENT", "type": "text", "placeholder": "gpt-4o-mini" },
+      { "key": "translation_prompt_pack",     "label": "PROMPT PACK",   "type": "select", "source": "packs" },
+      { "key": "translation_prompt_template", "label": "CUSTOM PROMPT", "type": "textarea",
+        "placeholder": "Translate subtitle text from {from_lang} to {to_lang}…" }
+    ]
+  },
   "presets": [
     {
       "id": "cloud-azure",

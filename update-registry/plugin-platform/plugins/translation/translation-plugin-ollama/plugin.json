@@ -15,6 +15,15 @@
   "permissions": ["network.outbound"],
   "dependencies": [],
   "settings_schema": "settings.schema.json",
+  "credential_schema": {
+    "fields": [
+      { "key": "ollama_endpoint", "label": "OLLAMA ENDPOINT", "type": "url",  "placeholder": "http://localhost:11434/v1/chat/completions" },
+      { "key": "ollama_model",    "label": "MODEL",           "type": "text", "placeholder": "qwen2.5", "help": "e.g. qwen2.5, qwen2.5:7b" },
+      { "key": "translation_prompt_pack",     "label": "PROMPT PACK",   "type": "select", "source": "packs" },
+      { "key": "translation_prompt_template", "label": "CUSTOM PROMPT", "type": "textarea",
+        "placeholder": "Translate subtitle text from {from_lang} to {to_lang}…" }
+    ]
+  },
   "presets": [
     {
       "id": "local-ollama",

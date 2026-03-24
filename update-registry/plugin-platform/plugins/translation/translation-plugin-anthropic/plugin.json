@@ -15,6 +15,17 @@
   "permissions": ["network.outbound"],
   "dependencies": [],
   "settings_schema": "settings.schema.json",
+  "credential_schema": {
+    "apiKeyProvider": "anthropic",
+    "apiKeyPlaceholder": "sk-ant-…",
+    "fields": [
+      { "key": "anthropic_endpoint", "label": "ENDPOINT", "type": "url",  "placeholder": "https://api.anthropic.com/v1/messages" },
+      { "key": "anthropic_model",    "label": "MODEL",    "type": "text", "placeholder": "claude-3-5-sonnet-latest" },
+      { "key": "translation_prompt_pack",     "label": "PROMPT PACK",   "type": "select", "source": "packs" },
+      { "key": "translation_prompt_template", "label": "CUSTOM PROMPT", "type": "textarea",
+        "placeholder": "Translate subtitle text from {from_lang} to {to_lang}…" }
+    ]
+  },
   "presets": [
     {
       "id": "cloud-anthropic",
