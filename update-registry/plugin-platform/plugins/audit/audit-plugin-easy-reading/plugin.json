@@ -12,7 +12,7 @@
   },
   "consumes": ["SubtitleImportArtifact", "AccessibilityContextArtifact"],
   "produces": ["AuditReportArtifact", "PolicyConstraintsArtifact"],
-  "permissions": ["filesystem.read"],
+  "permissions": ["filesystem.read", "plugin.read_data"],
   "dependencies": [],
   "capabilities": [
     "compliance",

@@ -62,8 +62,8 @@ function buildExportResult(context, artifact) {
   };
 }
 
-function parseImportPayload(rawFile, helpers) {
-  const parsed = helpers.safeParseJson(rawFile?.content, 'Project file');
+async function parseImportPayload(rawFile, helpers) {
+  const parsed = await helpers.safeParseJson(rawFile?.content, 'Project file');
   return {
     type: 'project',
     projectData: parsed.value,
@@ -71,7 +71,7 @@ function parseImportPayload(rawFile, helpers) {
   };
 }
 
-function validateImportPayload(payload, helpers) {
+async function validateImportPayload(payload, helpers) {
   if (payload?.parseError) {
     return {
       isValid: false,
@@ -80,7 +80,7 @@ function validateImportPayload(payload, helpers) {
     };
   }
 
-  const validation = helpers.validateProjectShape(payload?.projectData);
+  const validation = await helpers.validateProjectShape(payload?.projectData);
   return {
     isValid: Boolean(validation?.isValid),
     errors: Array.isArray(validation?.errors) ? validation.errors : [],
@@ -88,16 +88,17 @@ function validateImportPayload(payload, helpers) {
   };
 }
 
-function serializeExport(exportData, helpers) {
+async function serializeExport(exportData, helpers) {
   const project = exportData?.project;
   const filename = String(exportData?.filename || '').trim();
   const includeHistory = exportData?.includeHistory !== false;
-  const exportPayload = helpers.buildProjectExportData(project, { includeHistory });
+  const exportPayload = await helpers.buildProjectExportData(project, { includeHistory });
+  const finalFilename = filename || await helpers.buildProjectFilename(await helpers.getProjectName(project), 'vttp');
 
   return {
     content: JSON.stringify(exportPayload, null, 2),
     mimeType: 'application/json',
-    filename: filename || helpers.buildProjectFilename(helpers.getProjectName(project), 'vttp')
+    filename: finalFilename
   };
 }
 
@@ -105,14 +106,14 @@ export async function run(request, context) {
   const helpers = normalizeHelpers(context);
   const rawFile = findInputArtifact(request, 'RawFileArtifact')?.data || null;
   if (rawFile) {
-    const payload = parseImportPayload(rawFile, helpers);
-    const validation = validateImportPayload(payload, helpers);
+    const payload = await parseImportPayload(rawFile, helpers);
+    const validation = await validateImportPayload(payload, helpers);
     return buildImportResult(context, payload, validation);
   }
 
   const exportArtifact = findInputArtifact(request, 'FormatExportArtifact')?.data || null;
   if (exportArtifact) {
-    return buildExportResult(context, serializeExport(exportArtifact, helpers));
+    return buildExportResult(context, await serializeExport(exportArtifact, helpers));
   }
 
   throw new Error('format-plugin-vttp-project expected RawFileArtifact or FormatExportArtifact.');
