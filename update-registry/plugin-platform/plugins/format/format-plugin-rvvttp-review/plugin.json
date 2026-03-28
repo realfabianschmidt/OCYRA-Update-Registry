@@ -21,6 +21,7 @@
     "directions": ["import", "export"],
     "extensions": ["rvvttp"]
   },
+  "auto_install": true,
   "compatibility": {
     "min_app_version": "2.0.0",
     "platforms": ["windows-x64", "macos-x64", "macos-arm64", "linux-x64"]

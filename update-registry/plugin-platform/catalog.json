@@ -1,6 +1,6 @@
 {
   "catalog_version": "1",
-  "published_at": "2026-03-24T20:25:24.059Z",
+  "published_at": "2026-03-28T15:57:51.599Z",
   "app_release": {
     "schema_version": 1,
     "current_version": "2.0.0",
@@ -778,6 +778,7 @@
       ],
       "policy_id": "web-balanced",
       "policy_file": "policy.json",
+      "auto_install": true,
       "compatibility": {
         "min_app_version": "2.0.0",
         "platforms": [
@@ -800,8 +801,8 @@
           "kind": "manifest",
           "path": "plugins/audit/audit-plugin-web-balanced/plugin.json",
           "package_path": "plugin.json",
-          "sha256": "A4D6F72E2F00519CEA0A9051835699188D998E93E3AA8D8AF9C347813B98AA3B",
-          "size_bytes": 903
+          "sha256": "6F81DEBF4581205AF59CE03DFDA84C70A4FC75DCA80DFE1D0AEE2C6909B5A7CA",
+          "size_bytes": 927
         },
         {
           "kind": "policy-file",
@@ -854,6 +855,7 @@
         "export_order": 50,
         "quality_gate": "timed-subtitle"
       },
+      "auto_install": true,
       "compatibility": {
         "min_app_version": "2.0.0",
         "platforms": [
@@ -876,8 +878,8 @@
           "kind": "manifest",
           "path": "plugins/format/format-plugin-ebu-tt/plugin.json",
           "package_path": "plugin.json",
-          "sha256": "70EA810A4DFFE5FCE98C407DB7CD0FAEA12D47433657A8D519E24B97AA075ABD",
-          "size_bytes": 874
+          "sha256": "9DE9DD9F9B99746C303F2F65491C25CF0B44CCB54CFBF1A824518C225902B1D4",
+          "size_bytes": 898
         }
       ]
     },
@@ -921,6 +923,7 @@
         ],
         "export_order": 20
       },
+      "auto_install": true,
       "compatibility": {
         "min_app_version": "2.0.0",
         "platforms": [
@@ -943,8 +946,8 @@
           "kind": "manifest",
           "path": "plugins/format/format-plugin-plain-text/plugin.json",
           "package_path": "plugin.json",
-          "sha256": "AFC56EA6AEFA1CCAC4C185498625364D59236B64689A02F5C6601F35437C557E",
-          "size_bytes": 848
+          "sha256": "AF83140B213E63575CB3E17401CC12AAB5EC62687DB67BF80BCBB0000E837C19",
+          "size_bytes": 872
         }
       ]
     },
@@ -989,6 +992,7 @@
           "rvvttp"
         ]
       },
+      "auto_install": true,
       "compatibility": {
         "min_app_version": "2.0.0",
         "platforms": [
@@ -1011,8 +1015,8 @@
           "kind": "manifest",
           "path": "plugins/format/format-plugin-rvvttp-review/plugin.json",
           "package_path": "plugin.json",
-          "sha256": "495BA5F0F0FFFD3218B5CB8AD230680C574CAAAA89FD7332FE96CBB87F480D59",
-          "size_bytes": 892
+          "sha256": "CAF7646CBA24EA1D84B673579C940B016A2A5B98EE82CBC2D10469188A20E2AC",
+          "size_bytes": 916
         }
       ]
     },
@@ -1059,6 +1063,7 @@
         "export_order": 30,
         "quality_gate": "timed-subtitle"
       },
+      "auto_install": true,
       "compatibility": {
         "min_app_version": "2.0.0",
         "platforms": [
@@ -1081,8 +1086,8 @@
           "kind": "manifest",
           "path": "plugins/format/format-plugin-subrip/plugin.json",
           "package_path": "plugin.json",
-          "sha256": "9798B279777077F2CD6EE414E28A9B7B7D2A40B9E129C02D3AD5A197E138E208",
-          "size_bytes": 905
+          "sha256": "304AD430E4A3CC142BD53E183BB896E8268D827811762115093CB0186960FD9B",
+          "size_bytes": 929
         }
       ]
     },
@@ -1128,6 +1133,7 @@
         "export_order": 40,
         "quality_gate": "timed-subtitle"
       },
+      "auto_install": true,
       "compatibility": {
         "min_app_version": "2.0.0",
         "platforms": [
@@ -1150,8 +1156,8 @@
           "kind": "manifest",
           "path": "plugins/format/format-plugin-ttml/plugin.json",
           "package_path": "plugin.json",
-          "sha256": "B8673371C9D44E1865C4BD516BA976BEF2CC32067EDB589B5990EB3C266F9C1C",
-          "size_bytes": 864
+          "sha256": "F39A22CC1FF6EE0F29ECA63C34D9F2F07494DA9C0FD053B614C865D24BBBDC89",
+          "size_bytes": 888
         }
       ]
     },
@@ -1197,6 +1203,7 @@
           "json"
         ]
       },
+      "auto_install": true,
       "compatibility": {
         "min_app_version": "2.0.0",
         "platforms": [
@@ -1219,8 +1226,8 @@
           "kind": "manifest",
           "path": "plugins/format/format-plugin-vttp-project/plugin.json",
           "package_path": "plugin.json",
-          "sha256": "D69FFF10928F6BEBC80530D1B7D90F643785AC69264A5BCEE480933970DE14E2",
-          "size_bytes": 828
+          "sha256": "564682E5B8CB75E2FF9200509E17B6C6D6A6F463A544A4137EEB8890BBCEBBE8",
+          "size_bytes": 852
         }
       ]
     },
@@ -1267,6 +1274,7 @@
         "export_order": 10,
         "quality_gate": "timed-subtitle"
       },
+      "auto_install": true,
       "compatibility": {
         "min_app_version": "2.0.0",
         "platforms": [
@@ -1289,8 +1297,8 @@
           "kind": "manifest",
           "path": "plugins/format/format-plugin-webvtt/plugin.json",
           "package_path": "plugin.json",
-          "sha256": "C1A9404D2255E38E48400F5E3CBE2763FDD90E0A8A7729A78E02E35FF13E85C9",
-          "size_bytes": 881
+          "sha256": "4D010C6C99ACD9DD0A3EA4C350F7BD172E9D16669CADE18D63F0CBD85FA821A6",
+          "size_bytes": 905
         }
       ]
     },
