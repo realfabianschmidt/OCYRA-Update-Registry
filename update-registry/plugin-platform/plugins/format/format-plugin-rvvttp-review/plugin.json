@@ -4,7 +4,7 @@
   "family": "format",
   "role": "format.review-package-provider",
   "name": "XYRA Review Package",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "summary": "Review package with language-scoped subtitles and review metadata.",
   "runtime": {
     "mode": "js-sandbox",

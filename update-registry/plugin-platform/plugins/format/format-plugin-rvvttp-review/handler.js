@@ -62,8 +62,8 @@ function buildExportResult(context, artifact) {
   };
 }
 
-function parseImportPayload(rawFile, helpers) {
-  const parsed = helpers.safeParseJson(rawFile?.content, 'Review package');
+async function parseImportPayload(rawFile, helpers) {
+  const parsed = await helpers.safeParseJson(rawFile?.content, 'Review package');
   return {
     type: 'review-package',
     reviewData: parsed.value,
@@ -71,7 +71,7 @@ function parseImportPayload(rawFile, helpers) {
   };
 }
 
-function validateImportPayload(payload, helpers) {
+async function validateImportPayload(payload, helpers) {
   if (payload?.parseError) {
     return {
       isValid: false,
@@ -81,7 +81,7 @@ function validateImportPayload(payload, helpers) {
   }
 
   const reviewData = payload?.reviewData;
-  const baseValidation = helpers.validateProjectShape(reviewData);
+  const baseValidation = await helpers.validateProjectShape(reviewData);
   const errors = [...(Array.isArray(baseValidation?.errors) ? baseValidation.errors : [])];
 
   if (!reviewData?.meta?.reviewPackage?.isReview) {
@@ -109,8 +109,8 @@ export async function run(request, context) {
   const helpers = normalizeHelpers(context);
   const rawFile = findInputArtifact(request, 'RawFileArtifact')?.data || null;
   if (rawFile) {
-    const payload = parseImportPayload(rawFile, helpers);
-    const validation = validateImportPayload(payload, helpers);
+    const payload = await parseImportPayload(rawFile, helpers);
+    const validation = await validateImportPayload(payload, helpers);
     return buildImportResult(context, payload, validation);
   }
 

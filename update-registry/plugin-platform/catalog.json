@@ -1,6 +1,6 @@
 {
   "catalog_version": "1",
-  "published_at": "2026-03-28T19:59:40.540Z",
+  "published_at": "2026-03-30T08:45:59.746Z",
   "app_release": {
     "schema_version": 1,
     "current_version": "2.0.0",
@@ -202,7 +202,7 @@
       "target_ref": {
         "type": "plugin",
         "id": "format-plugin-rvvttp-review",
-        "version": "1.0.0"
+        "version": "1.0.1"
       },
       "permissions": [
         "filesystem.read"
@@ -963,7 +963,7 @@
       "family": "format",
       "role": "format.review-package-provider",
       "name": "XYRA Review Package",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "summary": "Review package with language-scoped subtitles and review metadata.",
       "runtime": {
         "mode": "js-sandbox",
@@ -1014,14 +1014,14 @@
           "kind": "runtime-entry",
           "path": "plugins/format/format-plugin-rvvttp-review/handler.js",
           "package_path": "handler.js",
-          "sha256": "FB800B150415AA144B7E74F97E716A4CE3A8BC8A13EE4F9F51DD47BF89F88D03",
-          "size_bytes": 3664
+          "sha256": "CF7F497C6D8149D5997D7204646584F587D6024E22B3D2480D020AE8F8F7A3A5",
+          "size_bytes": 3700
         },
         {
           "kind": "manifest",
           "path": "plugins/format/format-plugin-rvvttp-review/plugin.json",
           "package_path": "plugin.json",
-          "sha256": "CAF7646CBA24EA1D84B673579C940B016A2A5B98EE82CBC2D10469188A20E2AC",
+          "sha256": "8DCD10F33DC24C1D09B4E9E260C4EC4F50AF6DC903ED270C676D2E4233C6D381",
           "size_bytes": 916
         }
       ]
