@@ -1,0 +1,53 @@
+{
+  "id": "format-plugin-xliff-localization",
+  "plugin_api_version": "1",
+  "family": "format",
+  "role": "format.localization-provider",
+  "name": "XLIFF Localization",
+  "version": "1.0.0",
+  "summary": "XLIFF 1.2 and 2.x localization import and export for the Localization workspace.",
+  "runtime": {
+    "mode": "js-sandbox",
+    "entry": "handler.js"
+  },
+  "consumes": [
+    "RawFileArtifact",
+    "FormatExportArtifact"
+  ],
+  "produces": [
+    "FormatImportArtifact",
+    "RawFileArtifact"
+  ],
+  "permissions": [
+    "filesystem.read"
+  ],
+  "dependencies": [],
+  "capabilities": [
+    "import",
+    "export",
+    "localization-format",
+    "xliff"
+  ],
+  "format": {
+    "id": "xliff-localization",
+    "target": "localization",
+    "directions": [
+      "import",
+      "export"
+    ],
+    "extensions": [
+      "xlf",
+      "xliff"
+    ],
+    "export_order": 40
+  },
+  "compatibility": {
+    "min_app_version": "2.0.0",
+    "platforms": [
+      "windows-x64",
+      "macos-x64",
+      "macos-arm64",
+      "linux-x64"
+    ]
+  }
+}

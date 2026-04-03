@@ -1,6 +1,6 @@
 {
   "catalog_version": "1",
-  "published_at": "2026-03-30T08:45:59.746Z",
+  "published_at": "2026-04-03T19:23:53.003Z",
   "app_release": {
     "schema_version": 1,
     "current_version": "2.0.0",
@@ -349,6 +349,38 @@
         "export",
         "subtitle-format",
         "timed-subtitle"
+      ]
+    },
+    {
+      "id": "listing-format-plugin-xliff-localization",
+      "kind": "plugin",
+      "name": "XLIFF Localization",
+      "summary": "XLIFF 1.2 and 2.x localization import and export for the Localization workspace.",
+      "publisher_id": "xyra-core",
+      "channel": "stable",
+      "target_ref": {
+        "type": "plugin",
+        "id": "format-plugin-xliff-localization",
+        "version": "1.0.0"
+      },
+      "permissions": [
+        "filesystem.read"
+      ],
+      "compatibility": {
+        "min_app_version": "2.0.0",
+        "platforms": [
+          "windows-x64",
+          "macos-x64",
+          "macos-arm64",
+          "linux-x64"
+        ]
+      },
+      "tags": [
+        "format",
+        "import",
+        "export",
+        "localization-format",
+        "xliff"
       ]
     },
     {
@@ -1305,6 +1337,76 @@
           "package_path": "plugin.json",
           "sha256": "4D010C6C99ACD9DD0A3EA4C350F7BD172E9D16669CADE18D63F0CBD85FA821A6",
           "size_bytes": 905
+        }
+      ]
+    },
+    {
+      "id": "format-plugin-xliff-localization",
+      "plugin_api_version": "1",
+      "family": "format",
+      "role": "format.localization-provider",
+      "name": "XLIFF Localization",
+      "version": "1.0.0",
+      "summary": "XLIFF 1.2 and 2.x localization import and export for the Localization workspace.",
+      "runtime": {
+        "mode": "js-sandbox",
+        "entry": "handler.js"
+      },
+      "consumes": [
+        "RawFileArtifact",
+        "FormatExportArtifact"
+      ],
+      "produces": [
+        "FormatImportArtifact",
+        "RawFileArtifact"
+      ],
+      "permissions": [
+        "filesystem.read"
+      ],
+      "dependencies": [],
+      "capabilities": [
+        "import",
+        "export",
+        "localization-format",
+        "xliff"
+      ],
+      "format": {
+        "id": "xliff-localization",
+        "target": "localization",
+        "directions": [
+          "import",
+          "export"
+        ],
+        "extensions": [
+          "xlf",
+          "xliff"
+        ],
+        "export_order": 40
+      },
+      "compatibility": {
+        "min_app_version": "2.0.0",
+        "platforms": [
+          "windows-x64",
+          "macos-x64",
+          "macos-arm64",
+          "linux-x64"
+        ]
+      },
+      "package_root_path": "plugins/format/format-plugin-xliff-localization",
+      "package_files": [
+        {
+          "kind": "runtime-entry",
+          "path": "plugins/format/format-plugin-xliff-localization/handler.js",
+          "package_path": "handler.js",
+          "sha256": "401752D72FA66AEDC0E3471A2EFC5062FD9A5207409376008289C9E8FBE17256",
+          "size_bytes": 36847
+        },
+        {
+          "kind": "manifest",
+          "path": "plugins/format/format-plugin-xliff-localization/plugin.json",
+          "package_path": "plugin.json",
+          "sha256": "364FB1AA43334FA231D4E2C863B50594D99A151D42EA58D82D80D37D219CC7C1",
+          "size_bytes": 1043
         }
       ]
     },
