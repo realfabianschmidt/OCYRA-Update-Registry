@@ -1,7 +1,7 @@
 function getPluginInfo(context) {
   return {
     pluginId: String(context?.plugin?.id || 'format-plugin-rvvttp-review').trim() || 'format-plugin-rvvttp-review',
-    providerLabel: String(context?.plugin?.manifest?.name || 'XYRA Review Package').trim() || 'XYRA Review Package'
+    providerLabel: String(context?.plugin?.manifest?.name || 'OCYRA Review Package').trim() || 'OCYRA Review Package'
   };
 }
 
@@ -16,7 +16,7 @@ function findInputArtifact(request, artifactType) {
 
 function normalizeHelpers(context) {
   if (!context?.host?.getFileFormatHelpers) {
-    throw new Error('XYRA plugin host context is missing host.getFileFormatHelpers().');
+    throw new Error('OCYRA plugin host context is missing host.getFileFormatHelpers().');
   }
   return context.host.getFileFormatHelpers();
 }
@@ -85,7 +85,7 @@ async function validateImportPayload(payload, helpers) {
   const errors = [...(Array.isArray(baseValidation?.errors) ? baseValidation.errors : [])];
 
   if (!reviewData?.meta?.reviewPackage?.isReview) {
-    errors.push('This file is not a valid XYRA review package.');
+    errors.push('This file is not a valid OCYRA review package.');
   }
 
   return {
@@ -121,3 +121,4 @@ export async function run(request, context) {
 
   throw new Error('format-plugin-rvvttp-review expected RawFileArtifact or FormatExportArtifact.');
 }
+

@@ -1,6 +1,6 @@
 export async function run(request, context) {
   if (!context?.host?.runSpeechBackend) {
-    throw new Error('XYRA plugin host context is missing host.runSpeechBackend().');
+    throw new Error('OCYRA plugin host context is missing host.runSpeechBackend().');
   }
 
   return context.host.runSpeechBackend(
@@ -13,3 +13,4 @@ export async function run(request, context) {
     request
   );
 }
+

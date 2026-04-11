@@ -16,7 +16,7 @@ function findInputArtifact(request, artifactType) {
 
 function normalizeHelpers(context) {
   if (!context?.host?.getFileFormatHelpers) {
-    throw new Error('XYRA plugin host context is missing host.getFileFormatHelpers().');
+    throw new Error('OCYRA plugin host context is missing host.getFileFormatHelpers().');
   }
   return context.host.getFileFormatHelpers();
 }
@@ -70,7 +70,7 @@ function serializeExport(exportData, helpers) {
   content += `        <ebuttm:conformsToStandard>urn:ebu:tt:distribution:2018-04</ebuttm:conformsToStandard>\n`;
   content += `        <ebuttm:authoredFrameRate>${helpers.escapeXML(frameRateInfo.authoredFrameRate)}</ebuttm:authoredFrameRate>\n`;
   content += `        <ebuttm:documentCreationDate>${now}</ebuttm:documentCreationDate>\n`;
-  content += `        <ebuttm:authoringTool>XYRA Captions</ebuttm:authoringTool>\n`;
+  content += `        <ebuttm:authoringTool>OCYRA Captions</ebuttm:authoringTool>\n`;
   content += `      </ebuttm:documentMetadata>\n`;
   content += `    </metadata>\n`;
   content += `    <styling>\n`;
@@ -121,3 +121,4 @@ export async function run(request, context) {
 
   throw new Error('format-plugin-ebu-tt supports export only and expected FormatExportArtifact.');
 }
+

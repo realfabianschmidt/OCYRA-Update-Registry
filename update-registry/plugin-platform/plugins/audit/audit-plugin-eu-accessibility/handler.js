@@ -1,6 +1,6 @@
 export async function run(_request, context) {
   if (!context?.host?.readPluginJsonFile) {
-    throw new Error('XYRA plugin host context is missing host.readPluginJsonFile().');
+    throw new Error('OCYRA plugin host context is missing host.readPluginJsonFile().');
   }
 
   const policyFile = String(context?.plugin?.manifest?.policy_file || 'policy.json').trim() || 'policy.json';
@@ -27,3 +27,4 @@ export async function run(_request, context) {
     ]
   };
 }
+

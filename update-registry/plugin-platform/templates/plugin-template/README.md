@@ -1,6 +1,6 @@
-# XYRA Plugin Template
+# OCYRA Plugin Template
 
-This folder is a reusable starting point for new XYRA plugins.
+This folder is a reusable starting point for new OCYRA plugins.
 
 ## How To Use
 
@@ -23,3 +23,4 @@ This folder is a reusable starting point for new XYRA plugins.
 - The sample shape is a `translation` plugin because it is the simplest plugin family to copy and adapt.
 - For `audit` plugins, add `policy.json`.
 - For shared runtimes or models, declare entries in `dependencies/` and reference them from `plugin.json`.
+

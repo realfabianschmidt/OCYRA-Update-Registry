@@ -11,7 +11,10 @@ const dependencyRegistryPath = join(dependenciesRoot, 'registry.json');
 const catalogPath = join(baseDir, 'catalog.json');
 const catalogSignaturePath = join(baseDir, 'catalog.sig');
 const appReleasePath = join(baseDir, 'app-release.json');
-const defaultKeyId = process.env.XYRA_MANIFEST_KEY_ID || 'xyra-registry-rsa-2026-03';
+const defaultKeyId =
+    process.env.OCYRA_MANIFEST_KEY_ID
+    || process.env.XYRA_MANIFEST_KEY_ID
+    || 'xyra-registry-rsa-2026-03';
 
 function readJson(path) {
     return JSON.parse(readFileSync(path, 'utf8'));
@@ -31,7 +34,7 @@ function normalizeCatalogPath(path) {
 function findSigningKeyPair() {
     const candidateDirs = [
         resolve(baseDir, '..', '..', '.signing'),
-        resolve(baseDir, '..', '..', '..', 'XYRA-Captions-Update-Registry', '.signing')
+        resolve(baseDir, '..', '..', '..', 'OCYRA-Captions-Update-Registry', '.signing')
     ];
 
     for (const dir of candidateDirs) {
@@ -150,7 +153,7 @@ function buildListings(plugins) {
             kind: 'plugin',
             name: plugin.name,
             summary: plugin.summary,
-            publisher_id: 'xyra-core',
+            publisher_id: 'ocyra-core',
             channel: 'stable',
             target_ref: {
                 type: 'plugin',
@@ -174,11 +177,11 @@ const catalog = {
     channels: ['stable'],
     publishers: [
         {
-            id: 'xyra-core',
-            name: 'XYRA Core',
+            id: 'ocyra-core',
+            name: 'OCYRA Core',
             verified: true,
-            website: 'https://github.com/realfabianschmidt/XYRA-Captions',
-            support_url: 'https://github.com/realfabianschmidt/XYRA-Captions/issues',
+            website: 'https://github.com/realfabianschmidt/OCYRA-Captions',
+            support_url: 'https://github.com/realfabianschmidt/OCYRA-Captions/issues',
             key_ids: ['xyra-registry-rsa-2026-03']
         }
     ],
@@ -209,3 +212,5 @@ if (signingKeyPair) {
 } else {
     console.warn(`No signing key pair found for ${catalogPath}; catalog.sig was not updated.`);
 }
+
+

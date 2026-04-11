@@ -1,6 +1,6 @@
-# XYRA Plugin Platform - Active Registry Layout
+# OCYRA Plugin Platform - Active Registry Layout
 
-This directory is the active source-of-truth layout for the XYRA plugin platform.
+This directory is the active source-of-truth layout for the OCYRA plugin platform.
 
 Only plugin-platform artifacts belong here.
 
@@ -58,11 +58,11 @@ The template stays outside `plugins/` on purpose so the catalog builder ignores 
 
 The desktop app prefers the published plugin catalog at:
 
-`https://raw.githubusercontent.com/realfabianschmidt/XYRA-Captions-Update-Registry/main/update-registry/plugin-platform/catalog.json`
+`https://raw.githubusercontent.com/realfabianschmidt/OCYRA-Captions-Update-Registry/main/update-registry/plugin-platform/catalog.json`
 
 It verifies the detached signature from:
 
-`https://raw.githubusercontent.com/realfabianschmidt/XYRA-Captions-Update-Registry/main/update-registry/plugin-platform/catalog.sig`
+`https://raw.githubusercontent.com/realfabianschmidt/OCYRA-Captions-Update-Registry/main/update-registry/plugin-platform/catalog.sig`
 
 Before publishing, regenerate `catalog.json` from the current plugin and dependency folders.
 The build also refreshes `catalog.sig` automatically when a trusted signing key pair is available:
@@ -113,3 +113,5 @@ Prefer this structure instead:
 - separate catalogs or repos later only when you truly need different publishers or trust boundaries
 
 For company-specific requirements, add a new catalog source entry instead of a new branch per domain.
+
+

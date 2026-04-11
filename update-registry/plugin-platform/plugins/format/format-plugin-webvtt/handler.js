@@ -57,7 +57,7 @@ function buildExportResult(context, artifact) {
 
 function normalizeHelpers(context) {
   if (!context?.host?.getFileFormatHelpers) {
-    throw new Error('XYRA plugin host context is missing host.getFileFormatHelpers().');
+    throw new Error('OCYRA plugin host context is missing host.getFileFormatHelpers().');
   }
 
   return context.host.getFileFormatHelpers();
@@ -184,7 +184,7 @@ function serializeExport(exportData, helpers) {
 
   let content = 'WEBVTT\n\n';
   content += 'NOTE\n';
-  content += 'Exported by: XYRA Captions\n';
+  content += 'Exported by: OCYRA Captions\n';
   content += `Date: ${formattedDate} (${timezone})\n`;
   if (languageData?.name) {
     content += `Language: ${languageData.name} (${languageCode})\n`;
@@ -222,3 +222,4 @@ export async function run(request, context) {
 
   throw new Error('format-plugin-webvtt expected RawFileArtifact or FormatExportArtifact.');
 }
+

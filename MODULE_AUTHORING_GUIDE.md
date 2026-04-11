@@ -1,6 +1,6 @@
 # Plugin Authoring Guide
 
-This repository publishes the finished XYRA plugin platform.
+This repository publishes the finished OCYRA plugin platform.
 
 The safest authoring workflow is:
 
@@ -98,7 +98,7 @@ up to date.
 
 Start from:
 
-- [plugin-template/README.md](H:/VisionVault/01_Projekte/19_CodingProjects/01_XYRA-Captions/XYRA-Captions-Update-Registry/update-registry/plugin-platform/templates/plugin-template/README.md)
+- [plugin-template/README.md](H:/VisionVault/01_Projekte/19_CodingProjects/01_OCYRA-Captions/OCYRA-Captions-Update-Registry/update-registry/plugin-platform/templates/plugin-template/README.md)
 
 The template is intentionally outside `plugins/`, so it is not treated as a publishable plugin by the catalog builder.
 
@@ -118,4 +118,6 @@ The template is intentionally outside `plugins/`, so it is not treated as a publ
 
 For the full clean publish procedure, use:
 
-- [PUSH.md](H:/VisionVault/01_Projekte/19_CodingProjects/01_XYRA-Captions/XYRA-Captions-Update-Registry/PUSH.md)
+- [PUSH.md](H:/VisionVault/01_Projekte/19_CodingProjects/01_OCYRA-Captions/OCYRA-Captions-Update-Registry/PUSH.md)
+
+

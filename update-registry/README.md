@@ -1,6 +1,6 @@
-# XYRA Plugin Publish Surface
+# OCYRA Plugin Publish Surface
 
-This folder contains the runtime-downloadable plugin-platform artifacts used by the XYRA desktop app.
+This folder contains the runtime-downloadable plugin-platform artifacts used by the OCYRA desktop app.
 
 ## Active Publish Surface
 
@@ -42,6 +42,8 @@ Those legacy artifacts have been removed from this publish repository on purpose
 ## Maintainer References
 
 - publish checklist:
-  [../PUSH.md](H:/VisionVault/01_Projekte/19_CodingProjects/01_XYRA-Captions/XYRA-Captions-Update-Registry/PUSH.md)
+  [../PUSH.md](H:/VisionVault/01_Projekte/19_CodingProjects/01_OCYRA-Captions/OCYRA-Captions-Update-Registry/PUSH.md)
 - plugin tree and catalog rules:
-  [plugin-platform/README.md](H:/VisionVault/01_Projekte/19_CodingProjects/01_XYRA-Captions/XYRA-Captions-Update-Registry/update-registry/plugin-platform/README.md)
+  [plugin-platform/README.md](H:/VisionVault/01_Projekte/19_CodingProjects/01_OCYRA-Captions/OCYRA-Captions-Update-Registry/update-registry/plugin-platform/README.md)
+
+

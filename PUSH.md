@@ -1,15 +1,15 @@
 # Clean Push Guide
 
-This guide is the recommended workflow for publishing XYRA plugins cleanly to:
+This guide is the recommended workflow for publishing OCYRA plugins cleanly to:
 
-`H:\VisionVault\01_Projekte\19_CodingProjects\01_XYRA-Captions\XYRA-Captions-Update-Registry`
+`H:\VisionVault\01_Projekte\19_CodingProjects\01_OCYRA-Captions\OCYRA-Captions-Update-Registry`
 
 ## Source And Target
 
 - implementation source:
-  `H:\VisionVault\01_Projekte\19_CodingProjects\01_XYRA-Captions\XYRA-Captions\update-registry\plugin-platform`
+  `H:\VisionVault\01_Projekte\19_CodingProjects\01_OCYRA-Captions\OCYRA-Captions\update-registry\plugin-platform`
 - publish target:
-  `H:\VisionVault\01_Projekte\19_CodingProjects\01_XYRA-Captions\XYRA-Captions-Update-Registry\update-registry\plugin-platform`
+  `H:\VisionVault\01_Projekte\19_CodingProjects\01_OCYRA-Captions\OCYRA-Captions-Update-Registry\update-registry\plugin-platform`
 
 ## Rule Zero
 
@@ -23,7 +23,7 @@ Treat this repository as the public publish mirror.
 
 The authoritative working tree for plugin and dependency authoring is:
 
-- `H:\VisionVault\01_Projekte\19_CodingProjects\01_XYRA-Captions\XYRA-Captions\update-registry\plugin-platform`
+- `H:\VisionVault\01_Projekte\19_CodingProjects\01_OCYRA-Captions\OCYRA-Captions\update-registry\plugin-platform`
 
 That means:
 
@@ -48,8 +48,8 @@ Mirror the full plugin tree from the private app repo into this repo.
 Recommended PowerShell pattern:
 
 ```powershell
-$source = Resolve-Path 'H:\VisionVault\01_Projekte\19_CodingProjects\01_XYRA-Captions\XYRA-Captions\update-registry\plugin-platform'
-$target = Resolve-Path 'H:\VisionVault\01_Projekte\19_CodingProjects\01_XYRA-Captions\XYRA-Captions-Update-Registry\update-registry\plugin-platform'
+$source = Resolve-Path 'H:\VisionVault\01_Projekte\19_CodingProjects\01_OCYRA-Captions\OCYRA-Captions\update-registry\plugin-platform'
+$target = Resolve-Path 'H:\VisionVault\01_Projekte\19_CodingProjects\01_OCYRA-Captions\OCYRA-Captions-Update-Registry\update-registry\plugin-platform'
 robocopy $source $target /MIR /NFL /NDL /NJH /NJS /NP
 if ($LASTEXITCODE -ge 8) { throw "robocopy failed with exit code $LASTEXITCODE" }
 ```
@@ -90,7 +90,7 @@ Do not maintain those by hand. They are rebuilt by the catalog build step.
 
 `catalog.sig` is the detached signature for `catalog.json`.
 
-The catalog build refreshes the signature automatically when the trusted signing key pair is available to the build script. If the signature does not match the generated catalog, XYRA will reject the remote catalog.
+The catalog build refreshes the signature automatically when the trusted signing key pair is available to the build script. If the signature does not match the generated catalog, OCYRA will reject the remote catalog.
 
 So the rule is:
 
@@ -114,7 +114,7 @@ This does three important things:
 
 ## Release Metadata
 
-If you want XYRA to show a new app release notification, update:
+If you want OCYRA to show a new app release notification, update:
 
 - `update-registry/plugin-platform/app-release.json`
 
@@ -176,7 +176,7 @@ After your Git push, verify the raw GitHub URLs:
 - `.../update-registry/plugin-platform/plugins/<family>/<plugin-id>/plugin.json`
 - `.../update-registry/plugin-platform/plugins/<family>/<plugin-id>/handler.js`
 
-If those URLs work and the catalog signature matches, XYRA can discover and install the published plugins.
+If those URLs work and the catalog signature matches, OCYRA can discover and install the published plugins.
 
 ## Clean Push Checklist
 
@@ -190,3 +190,5 @@ If those URLs work and the catalog signature matches, XYRA can discover and inst
 8. Commit only when `catalog.json`, `catalog.sig`, plugins, and dependencies are internally consistent.
 9. Push to `main`.
 10. Verify the raw GitHub URLs.
+
+

@@ -5,7 +5,7 @@
   "role": "translation.subtitle-provider",
   "name": "Example Translation Plugin",
   "version": "1.0.0",
-  "summary": "Template plugin used as a starting point for new XYRA translation providers.",
+  "summary": "Template plugin used as a starting point for new OCYRA translation providers.",
   "runtime": {
     "mode": "js-sandbox",
     "entry": "handler.js"

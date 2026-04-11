@@ -1,15 +1,15 @@
 {
   "catalog_version": "1",
-  "published_at": "2026-04-03T19:23:53.003Z",
+  "published_at": "2026-04-11T19:08:01.457Z",
   "app_release": {
     "schema_version": 1,
     "current_version": "2.0.0",
     "published_at": "2026-03-21T00:00:00.000Z",
-    "title": "XYRA 2.0.0 Plugin Platform Release",
+    "title": "OCYRA 2.0.0 Plugin Platform Release",
     "text": [
       "The plugin-first runtime is now active for speech, translation, audit/accessibility, and format workflows.",
       "Signed plugin catalogs, shared dependency installs, and plugin-host execution are now part of the active desktop runtime.",
-      "Enterprise and self-hosted catalog deployments can use the same signed catalog model as the public XYRA catalog."
+      "Enterprise and self-hosted catalog deployments can use the same signed catalog model as the public OCYRA catalog."
     ]
   },
   "channels": [
@@ -17,11 +17,11 @@
   ],
   "publishers": [
     {
-      "id": "xyra-core",
-      "name": "XYRA Core",
+      "id": "ocyra-core",
+      "name": "OCYRA Core",
       "verified": true,
-      "website": "https://github.com/realfabianschmidt/XYRA-Captions",
-      "support_url": "https://github.com/realfabianschmidt/XYRA-Captions/issues",
+      "website": "https://github.com/realfabianschmidt/OCYRA-Captions",
+      "support_url": "https://github.com/realfabianschmidt/OCYRA-Captions/issues",
       "key_ids": [
         "xyra-registry-rsa-2026-03"
       ]
@@ -33,7 +33,7 @@
       "kind": "plugin",
       "name": "Easy Reading",
       "summary": "High-comfort subtitle defaults for slower reading speed and simplified pacing.",
-      "publisher_id": "xyra-core",
+      "publisher_id": "ocyra-core",
       "channel": "stable",
       "target_ref": {
         "type": "plugin",
@@ -67,7 +67,7 @@
       "kind": "plugin",
       "name": "EU Accessibility Act / BFSG",
       "summary": "Balanced accessibility defaults for BFSG, EAA, WCAG 2.1 AA and EBU R37.",
-      "publisher_id": "xyra-core",
+      "publisher_id": "ocyra-core",
       "channel": "stable",
       "target_ref": {
         "type": "plugin",
@@ -101,7 +101,7 @@
       "kind": "plugin",
       "name": "Web Accessibility Balanced",
       "summary": "Slightly faster subtitle defaults for general web video while preserving accessibility checks.",
-      "publisher_id": "xyra-core",
+      "publisher_id": "ocyra-core",
       "channel": "stable",
       "target_ref": {
         "type": "plugin",
@@ -135,7 +135,7 @@
       "kind": "plugin",
       "name": "EBU-TT",
       "summary": "EBU-TT subtitle format for broadcast delivery.",
-      "publisher_id": "xyra-core",
+      "publisher_id": "ocyra-core",
       "channel": "stable",
       "target_ref": {
         "type": "plugin",
@@ -166,7 +166,7 @@
       "kind": "plugin",
       "name": "Plain Text",
       "summary": "Plain text subtitle import and export for quick copy workflows.",
-      "publisher_id": "xyra-core",
+      "publisher_id": "ocyra-core",
       "channel": "stable",
       "target_ref": {
         "type": "plugin",
@@ -195,9 +195,9 @@
     {
       "id": "listing-format-plugin-rvvttp-review",
       "kind": "plugin",
-      "name": "XYRA Review Package",
+      "name": "OCYRA Review Package",
       "summary": "Review package with language-scoped subtitles and review metadata.",
-      "publisher_id": "xyra-core",
+      "publisher_id": "ocyra-core",
       "channel": "stable",
       "target_ref": {
         "type": "plugin",
@@ -221,7 +221,7 @@
         "import",
         "export",
         "review-package-format",
-        "xyra-native"
+        "ocyra-native"
       ]
     },
     {
@@ -229,7 +229,7 @@
       "kind": "plugin",
       "name": "SubRip (SRT)",
       "summary": "SubRip format for YouTube, Vimeo and general subtitle workflows.",
-      "publisher_id": "xyra-core",
+      "publisher_id": "ocyra-core",
       "channel": "stable",
       "target_ref": {
         "type": "plugin",
@@ -261,7 +261,7 @@
       "kind": "plugin",
       "name": "TTML",
       "summary": "Timed Text Markup Language subtitle format.",
-      "publisher_id": "xyra-core",
+      "publisher_id": "ocyra-core",
       "channel": "stable",
       "target_ref": {
         "type": "plugin",
@@ -290,9 +290,9 @@
     {
       "id": "listing-format-plugin-vttp-project",
       "kind": "plugin",
-      "name": "XYRA Project",
-      "summary": "Native XYRA Captions project file.",
-      "publisher_id": "xyra-core",
+      "name": "OCYRA Project",
+      "summary": "Native OCYRA Captions project file.",
+      "publisher_id": "ocyra-core",
       "channel": "stable",
       "target_ref": {
         "type": "plugin",
@@ -316,7 +316,7 @@
         "import",
         "export",
         "project-format",
-        "xyra-native"
+        "ocyra-native"
       ]
     },
     {
@@ -324,7 +324,7 @@
       "kind": "plugin",
       "name": "WebVTT",
       "summary": "WebVTT subtitle file with timing and metadata.",
-      "publisher_id": "xyra-core",
+      "publisher_id": "ocyra-core",
       "channel": "stable",
       "target_ref": {
         "type": "plugin",
@@ -356,7 +356,7 @@
       "kind": "plugin",
       "name": "XLIFF Localization",
       "summary": "XLIFF 1.2 and 2.x localization import and export for the Localization workspace.",
-      "publisher_id": "xyra-core",
+      "publisher_id": "ocyra-core",
       "channel": "stable",
       "target_ref": {
         "type": "plugin",
@@ -388,7 +388,7 @@
       "kind": "plugin",
       "name": "OpenAI Whisper + Sherpa-ONNX",
       "summary": "Cloud transcription via OpenAI Whisper API with local Sherpa-ONNX speaker diarization.",
-      "publisher_id": "xyra-core",
+      "publisher_id": "ocyra-core",
       "channel": "stable",
       "target_ref": {
         "type": "plugin",
@@ -419,7 +419,7 @@
       "kind": "plugin",
       "name": "OpenAI Whisper",
       "summary": "Cloud transcription via the OpenAI Whisper API without speaker diarization.",
-      "publisher_id": "xyra-core",
+      "publisher_id": "ocyra-core",
       "channel": "stable",
       "target_ref": {
         "type": "plugin",
@@ -448,7 +448,7 @@
       "kind": "plugin",
       "name": "whisper.cpp",
       "summary": "Offline transcription with whisper.cpp without speaker diarization.",
-      "publisher_id": "xyra-core",
+      "publisher_id": "ocyra-core",
       "channel": "stable",
       "target_ref": {
         "type": "plugin",
@@ -477,7 +477,7 @@
       "kind": "plugin",
       "name": "whisper.cpp + Sherpa-ONNX",
       "summary": "Offline transcription with whisper.cpp and speaker diarization with Sherpa-ONNX.",
-      "publisher_id": "xyra-core",
+      "publisher_id": "ocyra-core",
       "channel": "stable",
       "target_ref": {
         "type": "plugin",
@@ -507,7 +507,7 @@
       "kind": "plugin",
       "name": "Anthropic Translation",
       "summary": "Cloud subtitle translation through the Anthropic translation backend.",
-      "publisher_id": "xyra-core",
+      "publisher_id": "ocyra-core",
       "channel": "stable",
       "target_ref": {
         "type": "plugin",
@@ -534,7 +534,7 @@
       "kind": "plugin",
       "name": "Azure OpenAI Translation",
       "summary": "Cloud subtitle translation through the Azure OpenAI translation backend.",
-      "publisher_id": "xyra-core",
+      "publisher_id": "ocyra-core",
       "channel": "stable",
       "target_ref": {
         "type": "plugin",
@@ -561,7 +561,7 @@
       "kind": "plugin",
       "name": "DeepL Translation",
       "summary": "Cloud subtitle translation through the DeepL translation backend.",
-      "publisher_id": "xyra-core",
+      "publisher_id": "ocyra-core",
       "channel": "stable",
       "target_ref": {
         "type": "plugin",
@@ -588,7 +588,7 @@
       "kind": "plugin",
       "name": "Ollama Translation",
       "summary": "Local subtitle translation through the Ollama translation backend.",
-      "publisher_id": "xyra-core",
+      "publisher_id": "ocyra-core",
       "channel": "stable",
       "target_ref": {
         "type": "plugin",
@@ -615,7 +615,7 @@
       "kind": "plugin",
       "name": "OpenAI Translation",
       "summary": "Cloud subtitle translation through the OpenAI translation backend.",
-      "publisher_id": "xyra-core",
+      "publisher_id": "ocyra-core",
       "channel": "stable",
       "target_ref": {
         "type": "plugin",
@@ -688,8 +688,8 @@
           "kind": "runtime-entry",
           "path": "plugins/audit/audit-plugin-easy-reading/handler.js",
           "package_path": "handler.js",
-          "sha256": "B43409D8971B94466069C476584E24CB78AA75E5B29B484D47AE5A4492569300",
-          "size_bytes": 853
+          "sha256": "5DBD8A70C2E40BFA48EB235AE905C12FFB9F45F66BEA3F01086D8BD7FFD65F8E",
+          "size_bytes": 856
         },
         {
           "kind": "manifest",
@@ -763,8 +763,8 @@
           "kind": "runtime-entry",
           "path": "plugins/audit/audit-plugin-eu-accessibility/handler.js",
           "package_path": "handler.js",
-          "sha256": "CE0EB35A87006BC1AD271E5B34DFAC7DE9864B608A82BF02672F4A10F5ECC650",
-          "size_bytes": 880
+          "sha256": "1E0411F854DB6AC57DB71D012055AE5FBE09AA4D54B2199703EF7DA7EB1F45C5",
+          "size_bytes": 883
         },
         {
           "kind": "manifest",
@@ -832,8 +832,8 @@
           "kind": "runtime-entry",
           "path": "plugins/audit/audit-plugin-web-balanced/handler.js",
           "package_path": "handler.js",
-          "sha256": "C92CBB57C805FF561CA4884869CD8C642A9A7B506F6C7B3511A9EC5026E0B7C5",
-          "size_bytes": 867
+          "sha256": "300B77D0E3BEBD22F2654C294A0542C042D2A42CBE72218C41E5FD4EB8CAF6D0",
+          "size_bytes": 870
         },
         {
           "kind": "manifest",
@@ -909,8 +909,8 @@
           "kind": "runtime-entry",
           "path": "plugins/format/format-plugin-ebu-tt/handler.js",
           "package_path": "handler.js",
-          "sha256": "16BCB789F2812CCA88122FDF08EDFEF39F6D41CFF67FCB499CCE85015CCF3D41",
-          "size_bytes": 5175
+          "sha256": "078FD749048937F2BB0D3F098F8F466A2D98CD1E7F2B7C1725798B28BD472E44",
+          "size_bytes": 5179
         },
         {
           "kind": "manifest",
@@ -977,8 +977,8 @@
           "kind": "runtime-entry",
           "path": "plugins/format/format-plugin-plain-text/handler.js",
           "package_path": "handler.js",
-          "sha256": "0457AE1B054863DB86C4A22F8ABBE153202BECB7C8E61BAE04536B9037B37EFE",
-          "size_bytes": 3143
+          "sha256": "75CEFF82DD53EBD63E1226BC3B3BFDE40DE04F365897E898A157C8AA7FBCE00D",
+          "size_bytes": 3146
         },
         {
           "kind": "manifest",
@@ -994,7 +994,7 @@
       "plugin_api_version": "1",
       "family": "format",
       "role": "format.review-package-provider",
-      "name": "XYRA Review Package",
+      "name": "OCYRA Review Package",
       "version": "1.0.1",
       "summary": "Review package with language-scoped subtitles and review metadata.",
       "runtime": {
@@ -1017,7 +1017,7 @@
         "import",
         "export",
         "review-package-format",
-        "xyra-native"
+        "ocyra-native"
       ],
       "format": {
         "id": "rvvttp-review-package",
@@ -1046,15 +1046,15 @@
           "kind": "runtime-entry",
           "path": "plugins/format/format-plugin-rvvttp-review/handler.js",
           "package_path": "handler.js",
-          "sha256": "CF7F497C6D8149D5997D7204646584F587D6024E22B3D2480D020AE8F8F7A3A5",
-          "size_bytes": 3700
+          "sha256": "A74A05B5B5CEAFC67940350B78C9D6E95657E6C5CEA0A5328A6DEAAC85139F2F",
+          "size_bytes": 3706
         },
         {
           "kind": "manifest",
           "path": "plugins/format/format-plugin-rvvttp-review/plugin.json",
           "package_path": "plugin.json",
-          "sha256": "8DCD10F33DC24C1D09B4E9E260C4EC4F50AF6DC903ED270C676D2E4233C6D381",
-          "size_bytes": 916
+          "sha256": "CE729F11A5BDC163B8A79350F0F2C406C629AEB06424D58AFA2C0D4BFACE3D0B",
+          "size_bytes": 920
         }
       ]
     },
@@ -1117,8 +1117,8 @@
           "kind": "runtime-entry",
           "path": "plugins/format/format-plugin-subrip/handler.js",
           "package_path": "handler.js",
-          "sha256": "3F6987AB38FB129905C14C0D31B74230D367E19D7FDCB89F35DC009541676211",
-          "size_bytes": 5116
+          "sha256": "E16453CE536651DF95BE8CBEC916EF3CA3B77558180774F599494939E9A2D939",
+          "size_bytes": 5119
         },
         {
           "kind": "manifest",
@@ -1187,8 +1187,8 @@
           "kind": "runtime-entry",
           "path": "plugins/format/format-plugin-ttml/handler.js",
           "package_path": "handler.js",
-          "sha256": "A9F04103FAA1C9E3FE01A8250CA82DF80B1FCB8C266690561D0824425496737E",
-          "size_bytes": 3915
+          "sha256": "FF25EF33AD180EEE8E313883737A3766EAECC57E929A37EF1D6FEE040FB3BFD6",
+          "size_bytes": 3919
         },
         {
           "kind": "manifest",
@@ -1204,9 +1204,9 @@
       "plugin_api_version": "1",
       "family": "format",
       "role": "format.project-provider",
-      "name": "XYRA Project",
+      "name": "OCYRA Project",
       "version": "1.0.1",
-      "summary": "Native XYRA Captions project file.",
+      "summary": "Native OCYRA Captions project file.",
       "runtime": {
         "mode": "js-sandbox",
         "entry": "handler.js"
@@ -1227,7 +1227,7 @@
         "import",
         "export",
         "project-format",
-        "xyra-native"
+        "ocyra-native"
       ],
       "format": {
         "id": "vttp-project",
@@ -1257,15 +1257,15 @@
           "kind": "runtime-entry",
           "path": "plugins/format/format-plugin-vttp-project/handler.js",
           "package_path": "handler.js",
-          "sha256": "CB6754AB468F5CB62D93A22E2979E16FBA0F2EEC64FF92E9B301CF8AF2FB5CD0",
-          "size_bytes": 3700
+          "sha256": "A2CC660FFD9482E2BADECFD664255DEB7F9485BFF3169712698DE38477B7813E",
+          "size_bytes": 3705
         },
         {
           "kind": "manifest",
           "path": "plugins/format/format-plugin-vttp-project/plugin.json",
           "package_path": "plugin.json",
-          "sha256": "C192A9BFB14F2D1E08E18CB97975B3753FE3FC5BA536A934B24C89B1B0662FD6",
-          "size_bytes": 852
+          "sha256": "A25FC49EEF57B599D4B1F6E92E52D2398EEC4877F4630FB246BA179AE8ADDCEE",
+          "size_bytes": 857
         }
       ]
     },
@@ -1328,8 +1328,8 @@
           "kind": "runtime-entry",
           "path": "plugins/format/format-plugin-webvtt/handler.js",
           "package_path": "handler.js",
-          "sha256": "14D63B070DFC839D74D2F5C03F1069D7C464B8A588EBCA00C2CD8752A67AED8E",
-          "size_bytes": 6707
+          "sha256": "131F014391333DF4196A780AC96C8D59F5830FF04BB8CD59AAEC503F910CB4B6",
+          "size_bytes": 6711
         },
         {
           "kind": "manifest",
@@ -1496,8 +1496,8 @@
           "kind": "runtime-entry",
           "path": "plugins/speech/speech-plugin-openai-sherpa/handler.js",
           "package_path": "handler.js",
-          "sha256": "2ABBCF685E22F61A9A88EEF55C978833038B9FAB71D54C4992C25F3775FDEF7F",
-          "size_bytes": 429
+          "sha256": "CD9B45F9972DCA0695F6E6DA1B36A93708F81E0F10FD7AE7FCB2659643493348",
+          "size_bytes": 432
         },
         {
           "kind": "manifest",
@@ -1584,8 +1584,8 @@
           "kind": "runtime-entry",
           "path": "plugins/speech/speech-plugin-openai-transcription/handler.js",
           "package_path": "handler.js",
-          "sha256": "59452AD8DB7EA85F39849FD3E912711EACA844B2D59CA7E5636A890B4D83110D",
-          "size_bytes": 412
+          "sha256": "CCF4053AB45D20BF46A664B68AD3FE6D1774D9858A2D3E45442D337214224AC4",
+          "size_bytes": 415
         },
         {
           "kind": "manifest",
@@ -1663,8 +1663,8 @@
           "kind": "runtime-entry",
           "path": "plugins/speech/speech-plugin-whispercpp-local/handler.js",
           "package_path": "handler.js",
-          "sha256": "F51869DA3A0EED6A42130970C4C7AD9CB09ABBB3F5B3AA96161290BEE8B3501F",
-          "size_bytes": 411
+          "sha256": "D2FA4A91137BCC913F685119846217ECAB280E4F822318AB6270ADFD2368AF5D",
+          "size_bytes": 414
         },
         {
           "kind": "manifest",
@@ -1758,8 +1758,8 @@
           "kind": "runtime-entry",
           "path": "plugins/speech/speech-plugin-whispercpp-sherpa/handler.js",
           "package_path": "handler.js",
-          "sha256": "C44EB009F9AC8DE70E41916BCF17FF65B556A85A33503356C3C8DC3A2CC65990",
-          "size_bytes": 430
+          "sha256": "4E888004CECEA69BDBB2E9961DA24AF1EBADF6691FFCCAC39D7F1A00B5476F89",
+          "size_bytes": 433
         },
         {
           "kind": "manifest",
@@ -1855,8 +1855,8 @@
           "kind": "runtime-entry",
           "path": "plugins/translation/translation-plugin-anthropic/handler.js",
           "package_path": "handler.js",
-          "sha256": "6AA7EF15CDA838FAEC980222C76CBC2235BEBEC489B295EC56BE1F910A76A7ED",
-          "size_bytes": 360
+          "sha256": "EA289C65E515E1DCC8189146A13F29EADDCD795E6013BA173BB84EACC7C1F67D",
+          "size_bytes": 363
         },
         {
           "kind": "manifest",
@@ -1958,8 +1958,8 @@
           "kind": "runtime-entry",
           "path": "plugins/translation/translation-plugin-azure/handler.js",
           "package_path": "handler.js",
-          "sha256": "8561140C79B3AA488E1C8BBAE82C53D65F4950EDE6C4B8350A3EC9DE6038C1DB",
-          "size_bytes": 359
+          "sha256": "62463747B2DCCB31C0AD9681AE45FB86296D4F45D24B079DF2192878B7C930D3",
+          "size_bytes": 362
         },
         {
           "kind": "manifest",
@@ -2051,8 +2051,8 @@
           "kind": "runtime-entry",
           "path": "plugins/translation/translation-plugin-deepl/handler.js",
           "package_path": "handler.js",
-          "sha256": "9A59E020454C35C415E5B5B717A2FAA538C5B0837DE49E9520EE5F4A3638C7B0",
-          "size_bytes": 352
+          "sha256": "6B0718E31706753A8F975E251CE77C276E3548C417FDAB774B5C071CFB4E2B0F",
+          "size_bytes": 355
         },
         {
           "kind": "manifest",
@@ -2147,8 +2147,8 @@
           "kind": "runtime-entry",
           "path": "plugins/translation/translation-plugin-ollama/handler.js",
           "package_path": "handler.js",
-          "sha256": "ED7B1C07E91AF75ADEE0FE142CD4480008E6619E97372365612F243E401C40EE",
-          "size_bytes": 354
+          "sha256": "DFFA7D2F17F199A854801DF06BB167F47FE94C27138D54F851E9C0414BEEEC72",
+          "size_bytes": 357
         },
         {
           "kind": "manifest",
@@ -2240,8 +2240,8 @@
           "kind": "runtime-entry",
           "path": "plugins/translation/translation-plugin-openai/handler.js",
           "package_path": "handler.js",
-          "sha256": "1D176DC0A8B55F8A298A2A029C22AB5E71DA0E6FA7D7A73912D1BE9E8B17A155",
-          "size_bytes": 354
+          "sha256": "B77D1D3B6388F7C82605FD0A6FE5A9FEC8A263D97CDB50E2925EC277A8482F5F",
+          "size_bytes": 357
         },
         {
           "kind": "manifest",

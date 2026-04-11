@@ -16,7 +16,7 @@ function findInputArtifact(request, artifactType) {
 
 function normalizeHelpers(context) {
   if (!context?.host?.getFileFormatHelpers) {
-    throw new Error('XYRA plugin host context is missing host.getFileFormatHelpers().');
+    throw new Error('OCYRA plugin host context is missing host.getFileFormatHelpers().');
   }
   return context.host.getFileFormatHelpers();
 }
@@ -164,3 +164,4 @@ export async function run(request, context) {
 
   throw new Error('format-plugin-subrip expected RawFileArtifact or FormatExportArtifact.');
 }
+
