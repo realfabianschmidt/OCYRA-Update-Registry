@@ -1,14 +1,14 @@
-# OCYRA Captions Plugin Registry
+# OCYRA Plugin Registry
 
 This repository is the public publish surface for the OCYRA plugin platform.
 
 The desktop app loads the signed plugin catalog from:
 
-`https://raw.githubusercontent.com/realfabianschmidt/OCYRA-Captions-Update-Registry/main/update-registry/plugin-platform/catalog.json`
+`https://raw.githubusercontent.com/realfabianschmidt/OCYRA-Update-Registry/main/update-registry/plugin-platform/catalog.json`
 
 It verifies the detached signature from:
 
-`https://raw.githubusercontent.com/realfabianschmidt/OCYRA-Captions-Update-Registry/main/update-registry/plugin-platform/catalog.sig`
+`https://raw.githubusercontent.com/realfabianschmidt/OCYRA-Update-Registry/main/update-registry/plugin-platform/catalog.sig`
 
 ## What belongs here
 
@@ -33,9 +33,9 @@ It verifies the detached signature from:
 Treat the private app repository as the implementation source of truth:
 
 - source repo:
-  `H:\VisionVault\01_Projekte\19_CodingProjects\01_OCYRA-Captions\OCYRA-Captions`
+  `../OCYRA`
 - publish repo:
-  `H:\VisionVault\01_Projekte\19_CodingProjects\01_OCYRA-Captions\OCYRA-Captions-Update-Registry`
+  `./OCYRA-Update-Registry`
 
 The normal maintainer flow is:
 
@@ -48,11 +48,11 @@ The normal maintainer flow is:
 ## Maintainer Docs
 
 - push workflow:
-  [PUSH.md](H:/VisionVault/01_Projekte/19_CodingProjects/01_OCYRA-Captions/OCYRA-Captions-Update-Registry/PUSH.md)
+  [PUSH.md](./PUSH.md)
 - publish tree details:
-  [plugin-platform/README.md](H:/VisionVault/01_Projekte/19_CodingProjects/01_OCYRA-Captions/OCYRA-Captions-Update-Registry/update-registry/plugin-platform/README.md)
+  [plugin-platform/README.md](./update-registry/plugin-platform/README.md)
 - plugin authoring:
-  [MODULE_AUTHORING_GUIDE.md](H:/VisionVault/01_Projekte/19_CodingProjects/01_OCYRA-Captions/OCYRA-Captions-Update-Registry/MODULE_AUTHORING_GUIDE.md)
+  [MODULE_AUTHORING_GUIDE.md](./MODULE_AUTHORING_GUIDE.md)
 
 ## Branch Strategy
 

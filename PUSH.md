@@ -2,14 +2,14 @@
 
 This guide is the recommended workflow for publishing OCYRA plugins cleanly to:
 
-`H:\VisionVault\01_Projekte\19_CodingProjects\01_OCYRA-Captions\OCYRA-Captions-Update-Registry`
+`./OCYRA-Update-Registry`
 
 ## Source And Target
 
 - implementation source:
-  `H:\VisionVault\01_Projekte\19_CodingProjects\01_OCYRA-Captions\OCYRA-Captions\update-registry\plugin-platform`
+  `../OCYRA/update-registry/plugin-platform`
 - publish target:
-  `H:\VisionVault\01_Projekte\19_CodingProjects\01_OCYRA-Captions\OCYRA-Captions-Update-Registry\update-registry\plugin-platform`
+  `./update-registry/plugin-platform`
 
 ## Rule Zero
 
@@ -23,7 +23,7 @@ Treat this repository as the public publish mirror.
 
 The authoritative working tree for plugin and dependency authoring is:
 
-- `H:\VisionVault\01_Projekte\19_CodingProjects\01_OCYRA-Captions\OCYRA-Captions\update-registry\plugin-platform`
+- `../OCYRA/update-registry/plugin-platform`
 
 That means:
 
@@ -48,8 +48,9 @@ Mirror the full plugin tree from the private app repo into this repo.
 Recommended PowerShell pattern:
 
 ```powershell
-$source = Resolve-Path 'H:\VisionVault\01_Projekte\19_CodingProjects\01_OCYRA-Captions\OCYRA-Captions\update-registry\plugin-platform'
-$target = Resolve-Path 'H:\VisionVault\01_Projekte\19_CodingProjects\01_OCYRA-Captions\OCYRA-Captions-Update-Registry\update-registry\plugin-platform'
+$workspaceRoot = Resolve-Path '..'
+$source = Join-Path $workspaceRoot 'OCYRA\update-registry\plugin-platform'
+$target = Join-Path $workspaceRoot 'OCYRA-Update-Registry\update-registry\plugin-platform'
 robocopy $source $target /MIR /NFL /NDL /NJH /NJS /NP
 if ($LASTEXITCODE -ge 8) { throw "robocopy failed with exit code $LASTEXITCODE" }
 ```

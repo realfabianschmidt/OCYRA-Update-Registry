@@ -70,7 +70,7 @@ function serializeExport(exportData, helpers) {
   content += `        <ebuttm:conformsToStandard>urn:ebu:tt:distribution:2018-04</ebuttm:conformsToStandard>\n`;
   content += `        <ebuttm:authoredFrameRate>${helpers.escapeXML(frameRateInfo.authoredFrameRate)}</ebuttm:authoredFrameRate>\n`;
   content += `        <ebuttm:documentCreationDate>${now}</ebuttm:documentCreationDate>\n`;
-  content += `        <ebuttm:authoringTool>OCYRA Captions</ebuttm:authoringTool>\n`;
+  content += `        <ebuttm:authoringTool>OCYRA</ebuttm:authoringTool>\n`;
   content += `      </ebuttm:documentMetadata>\n`;
   content += `    </metadata>\n`;
   content += `    <styling>\n`;

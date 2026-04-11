@@ -58,7 +58,7 @@ function serializeExport(exportData, helpers) {
   content += `  <head>\n`;
   content += `    <metadata>\n`;
   content += `      <ttm:title>${helpers.escapeXML(projectName)}</ttm:title>\n`;
-  content += `      <ttm:desc>Exported by OCYRA Captions on ${now}</ttm:desc>\n`;
+  content += `      <ttm:desc>Exported by OCYRA on ${now}</ttm:desc>\n`;
   content += `    </metadata>\n`;
   content += `    <styling>\n`;
   content += `      <style xml:id="s1" tts:fontFamily="Arial,Helvetica,sans-serif"\n`;

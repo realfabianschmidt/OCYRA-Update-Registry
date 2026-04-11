@@ -42,8 +42,8 @@ Those legacy artifacts have been removed from this publish repository on purpose
 ## Maintainer References
 
 - publish checklist:
-  [../PUSH.md](H:/VisionVault/01_Projekte/19_CodingProjects/01_OCYRA-Captions/OCYRA-Captions-Update-Registry/PUSH.md)
+  [../PUSH.md](../PUSH.md)
 - plugin tree and catalog rules:
-  [plugin-platform/README.md](H:/VisionVault/01_Projekte/19_CodingProjects/01_OCYRA-Captions/OCYRA-Captions-Update-Registry/update-registry/plugin-platform/README.md)
+  [plugin-platform/README.md](./plugin-platform/README.md)
 
 

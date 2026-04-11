@@ -34,7 +34,7 @@ function normalizeCatalogPath(path) {
 function findSigningKeyPair() {
     const candidateDirs = [
         resolve(baseDir, '..', '..', '.signing'),
-        resolve(baseDir, '..', '..', '..', 'OCYRA-Captions-Update-Registry', '.signing')
+        resolve(baseDir, '..', '..', '..', 'OCYRA-Update-Registry', '.signing')
     ];
 
     for (const dir of candidateDirs) {
@@ -180,8 +180,8 @@ const catalog = {
             id: 'ocyra-core',
             name: 'OCYRA Core',
             verified: true,
-            website: 'https://github.com/realfabianschmidt/OCYRA-Captions',
-            support_url: 'https://github.com/realfabianschmidt/OCYRA-Captions/issues',
+            website: 'https://github.com/realfabianschmidt/OCYRA',
+            support_url: 'https://github.com/realfabianschmidt/OCYRA/issues',
             key_ids: ['xyra-registry-rsa-2026-03']
         }
     ],

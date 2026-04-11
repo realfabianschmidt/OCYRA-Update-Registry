@@ -184,7 +184,7 @@ function serializeExport(exportData, helpers) {
 
   let content = 'WEBVTT\n\n';
   content += 'NOTE\n';
-  content += 'Exported by: OCYRA Captions\n';
+  content += 'Exported by: OCYRA\n';
   content += `Date: ${formattedDate} (${timezone})\n`;
   if (languageData?.name) {
     content += `Language: ${languageData.name} (${languageCode})\n`;

@@ -5,7 +5,7 @@
   "role": "format.project-provider",
   "name": "OCYRA Project",
   "version": "1.0.1",
-  "summary": "Native OCYRA Captions project file.",
+  "summary": "Native OCYRA project file.",
   "runtime": {
     "mode": "js-sandbox",
     "entry": "handler.js"
