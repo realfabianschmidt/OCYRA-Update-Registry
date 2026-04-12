@@ -75,6 +75,13 @@ function parseTimestamp(timeString) {
   return hours * 3600 + minutes * 60 + seconds + milliseconds / 1000;
 }
 
+function buildStableSubtitleId(prefix, cueIndex, startTime, endTime) {
+  const normalizedPrefix = String(prefix || 'subtitle').trim() || 'subtitle';
+  const startMs = Number.isFinite(startTime) ? Math.max(0, Math.round(startTime * 1000)) : 0;
+  const endMs = Number.isFinite(endTime) ? Math.max(0, Math.round(endTime * 1000)) : startMs;
+  return `${normalizedPrefix}-${cueIndex}-${startMs}-${endMs}`;
+}
+
 function parseImportPayload(rawFile, helpers) {
   const blocks = String(rawFile?.content || '')
     .replace(/\r\n/g, '\n')
@@ -100,7 +107,7 @@ function parseImportPayload(rawFile, helpers) {
     if (!text) return;
 
     subtitles.push({
-      id: helpers.generateId('srt'),
+      id: buildStableSubtitleId('srt', subtitles.length + 1, startTime, endTime),
       startTime,
       endTime,
       text
@@ -164,4 +171,3 @@ export async function run(request, context) {
 
   throw new Error('format-plugin-subrip expected RawFileArtifact or FormatExportArtifact.');
 }
-

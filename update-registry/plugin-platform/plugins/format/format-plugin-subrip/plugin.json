@@ -4,7 +4,7 @@
   "family": "format",
   "role": "format.subtitle-provider",
   "name": "SubRip (SRT)",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "summary": "SubRip format for YouTube, Vimeo and general subtitle workflows.",
   "runtime": {
     "mode": "js-sandbox",

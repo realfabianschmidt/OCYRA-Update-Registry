@@ -76,6 +76,13 @@ function parseTimestamp(timeString) {
   return hours * 3600 + minutes * 60 + seconds + milliseconds / 1000;
 }
 
+function buildStableSubtitleId(prefix, cueIndex, startTime, endTime) {
+  const normalizedPrefix = String(prefix || 'subtitle').trim() || 'subtitle';
+  const startMs = Number.isFinite(startTime) ? Math.max(0, Math.round(startTime * 1000)) : 0;
+  const endMs = Number.isFinite(endTime) ? Math.max(0, Math.round(endTime * 1000)) : startMs;
+  return `${normalizedPrefix}-${cueIndex}-${startMs}-${endMs}`;
+}
+
 function parseImportPayload(rawFile, helpers) {
   const value = String(rawFile?.content || '');
   if (!value.trimStart().startsWith('WEBVTT')) {
@@ -108,7 +115,7 @@ function parseImportPayload(rawFile, helpers) {
         const startTime = parseTimestamp(timingParts[0].trim());
         const endTime = parseTimestamp(timingParts[1].trim());
         currentSubtitle = {
-          id: helpers.generateId('subtitle'),
+          id: '',
           startTime,
           endTime,
           text: ''
@@ -120,6 +127,12 @@ function parseImportPayload(rawFile, helpers) {
         : line;
       if (lineIndex + 1 >= lines.length || !lines[lineIndex + 1].trim()) {
         if (currentSubtitle.text.trim()) {
+          currentSubtitle.id = buildStableSubtitleId(
+            'subtitle',
+            subtitles.length + 1,
+            currentSubtitle.startTime,
+            currentSubtitle.endTime
+          );
           subtitles.push(currentSubtitle);
         }
         currentSubtitle = null;
@@ -222,4 +235,3 @@ export async function run(request, context) {
 
   throw new Error('format-plugin-webvtt expected RawFileArtifact or FormatExportArtifact.');
 }
-
