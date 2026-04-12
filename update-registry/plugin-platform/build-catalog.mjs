@@ -13,8 +13,7 @@ const catalogSignaturePath = join(baseDir, 'catalog.sig');
 const appReleasePath = join(baseDir, 'app-release.json');
 const defaultKeyId =
     process.env.OCYRA_MANIFEST_KEY_ID
-    || process.env.XYRA_MANIFEST_KEY_ID
-    || 'xyra-registry-rsa-2026-03';
+    || 'ocyra-registry-rsa-2026-03';
 
 function readJson(path) {
     return JSON.parse(readFileSync(path, 'utf8'));
@@ -182,7 +181,7 @@ const catalog = {
             verified: true,
             website: 'https://github.com/realfabianschmidt/OCYRA',
             support_url: 'https://github.com/realfabianschmidt/OCYRA/issues',
-            key_ids: ['xyra-registry-rsa-2026-03']
+            key_ids: ['ocyra-registry-rsa-2026-03']
         }
     ],
     listings: buildListings(plugins),

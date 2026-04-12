@@ -1,7 +1,7 @@
 function getPluginInfo(context) {
   return {
-    pluginId: String(context?.plugin?.id || 'format-plugin-rvvttp-review').trim() || 'format-plugin-rvvttp-review',
-    providerLabel: String(context?.plugin?.manifest?.name || 'OCYRA Review Package').trim() || 'OCYRA Review Package'
+    pluginId: String(context?.plugin?.id || 'format-plugin-ocyra-project').trim() || 'format-plugin-ocyra-project',
+    providerLabel: String(context?.plugin?.manifest?.name || 'OCYRA Project').trim() || 'OCYRA Project'
   };
 }
 
@@ -31,8 +31,8 @@ function buildImportResult(context, payload, validation) {
         schemaVersion: '1',
         providerId: pluginId,
         providerLabel,
-        formatId: 'rvvttp-review-package',
-        target: 'review-package',
+        formatId: 'ocyra-project',
+        target: 'project',
         data: {
           payload,
           validation
@@ -53,8 +53,8 @@ function buildExportResult(context, artifact) {
           schemaVersion: '1',
           providerId: pluginId,
           providerLabel,
-          formatId: 'rvvttp-review-package',
-          target: 'review-package',
+          formatId: 'ocyra-project',
+          target: 'project',
           data: artifact
         }
       ]
@@ -63,10 +63,10 @@ function buildExportResult(context, artifact) {
 }
 
 async function parseImportPayload(rawFile, helpers) {
-  const parsed = await helpers.safeParseJson(rawFile?.content, 'Review package');
+  const parsed = await helpers.safeParseJson(rawFile?.content, 'Project file');
   return {
-    type: 'review-package',
-    reviewData: parsed.value,
+    type: 'project',
+    projectData: parsed.value,
     parseError: parsed.error
   };
 }
@@ -80,28 +80,25 @@ async function validateImportPayload(payload, helpers) {
     };
   }
 
-  const reviewData = payload?.reviewData;
-  const baseValidation = await helpers.validateProjectShape(reviewData);
-  const errors = [...(Array.isArray(baseValidation?.errors) ? baseValidation.errors : [])];
-
-  if (!reviewData?.meta?.reviewPackage?.isReview) {
-    errors.push('This file is not a valid OCYRA review package.');
-  }
-
+  const validation = await helpers.validateProjectShape(payload?.projectData);
   return {
-    isValid: errors.length === 0,
-    errors,
-    warnings: []
+    isValid: Boolean(validation?.isValid),
+    errors: Array.isArray(validation?.errors) ? validation.errors : [],
+    warnings: Array.isArray(validation?.warnings) ? validation.warnings : []
   };
 }
 
-function serializeExport(exportData, helpers) {
-  const reviewData = exportData?.reviewData;
+async function serializeExport(exportData, helpers) {
+  const project = exportData?.project;
   const filename = String(exportData?.filename || '').trim();
+  const includeHistory = exportData?.includeHistory !== false;
+  const exportPayload = await helpers.buildProjectExportData(project, { includeHistory });
+  const finalFilename = filename || await helpers.buildProjectFilename(await helpers.getProjectName(project), 'ocyra');
+
   return {
-    content: JSON.stringify(reviewData, null, 2),
+    content: JSON.stringify(exportPayload, null, 2),
     mimeType: 'application/json',
-    filename: filename || helpers.buildProjectFilename(reviewData?.meta?.name || 'Review_Package', 'rvvttp', { suffix: 'review' })
+    filename: finalFilename
   };
 }
 
@@ -116,9 +113,9 @@ export async function run(request, context) {
 
   const exportArtifact = findInputArtifact(request, 'FormatExportArtifact')?.data || null;
   if (exportArtifact) {
-    return buildExportResult(context, serializeExport(exportArtifact, helpers));
+    return buildExportResult(context, await serializeExport(exportArtifact, helpers));
   }
 
-  throw new Error('format-plugin-rvvttp-review expected RawFileArtifact or FormatExportArtifact.');
+  throw new Error('format-plugin-ocyra-project expected RawFileArtifact or FormatExportArtifact.');
 }
 

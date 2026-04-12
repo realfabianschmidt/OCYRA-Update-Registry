@@ -1,6 +1,6 @@
 {
   "catalog_version": "1",
-  "published_at": "2026-04-11T19:47:56.540Z",
+  "published_at": "2026-04-12T09:38:41.349Z",
   "app_release": {
     "schema_version": 1,
     "current_version": "2.0.0",
@@ -23,7 +23,7 @@
       "website": "https://github.com/realfabianschmidt/OCYRA",
       "support_url": "https://github.com/realfabianschmidt/OCYRA/issues",
       "key_ids": [
-        "xyra-registry-rsa-2026-03"
+        "ocyra-registry-rsa-2026-03"
       ]
     }
   ],
@@ -162,6 +162,38 @@
       ]
     },
     {
+      "id": "listing-format-plugin-ocyra-project",
+      "kind": "plugin",
+      "name": "OCYRA Project",
+      "summary": "Native OCYRA project file.",
+      "publisher_id": "ocyra-core",
+      "channel": "stable",
+      "target_ref": {
+        "type": "plugin",
+        "id": "format-plugin-ocyra-project",
+        "version": "1.0.1"
+      },
+      "permissions": [
+        "filesystem.read"
+      ],
+      "compatibility": {
+        "min_app_version": "2.0.0",
+        "platforms": [
+          "windows-x64",
+          "macos-x64",
+          "macos-arm64",
+          "linux-x64"
+        ]
+      },
+      "tags": [
+        "format",
+        "import",
+        "export",
+        "project-format",
+        "ocyra-native"
+      ]
+    },
+    {
       "id": "listing-format-plugin-plain-text",
       "kind": "plugin",
       "name": "Plain Text",
@@ -193,7 +225,7 @@
       ]
     },
     {
-      "id": "listing-format-plugin-rvvttp-review",
+      "id": "listing-format-plugin-rocyra-review",
       "kind": "plugin",
       "name": "OCYRA Review Package",
       "summary": "Review package with language-scoped subtitles and review metadata.",
@@ -201,7 +233,7 @@
       "channel": "stable",
       "target_ref": {
         "type": "plugin",
-        "id": "format-plugin-rvvttp-review",
+        "id": "format-plugin-rocyra-review",
         "version": "1.0.1"
       },
       "permissions": [
@@ -285,38 +317,6 @@
         "export",
         "subtitle-format",
         "xml-timed-subtitle"
-      ]
-    },
-    {
-      "id": "listing-format-plugin-vttp-project",
-      "kind": "plugin",
-      "name": "OCYRA Project",
-      "summary": "Native OCYRA project file.",
-      "publisher_id": "ocyra-core",
-      "channel": "stable",
-      "target_ref": {
-        "type": "plugin",
-        "id": "format-plugin-vttp-project",
-        "version": "1.0.1"
-      },
-      "permissions": [
-        "filesystem.read"
-      ],
-      "compatibility": {
-        "min_app_version": "2.0.0",
-        "platforms": [
-          "windows-x64",
-          "macos-x64",
-          "macos-arm64",
-          "linux-x64"
-        ]
-      },
-      "tags": [
-        "format",
-        "import",
-        "export",
-        "project-format",
-        "ocyra-native"
       ]
     },
     {
@@ -922,6 +922,76 @@
       ]
     },
     {
+      "id": "format-plugin-ocyra-project",
+      "plugin_api_version": "1",
+      "family": "format",
+      "role": "format.project-provider",
+      "name": "OCYRA Project",
+      "version": "1.0.1",
+      "summary": "Native OCYRA project file.",
+      "runtime": {
+        "mode": "js-sandbox",
+        "entry": "handler.js"
+      },
+      "consumes": [
+        "RawFileArtifact",
+        "FormatExportArtifact"
+      ],
+      "produces": [
+        "FormatImportArtifact",
+        "RawFileArtifact"
+      ],
+      "permissions": [
+        "filesystem.read"
+      ],
+      "dependencies": [],
+      "capabilities": [
+        "import",
+        "export",
+        "project-format",
+        "ocyra-native"
+      ],
+      "format": {
+        "id": "ocyra-project",
+        "target": "project",
+        "directions": [
+          "import",
+          "export"
+        ],
+        "extensions": [
+          "ocyra",
+          "json"
+        ]
+      },
+      "auto_install": true,
+      "compatibility": {
+        "min_app_version": "2.0.0",
+        "platforms": [
+          "windows-x64",
+          "macos-x64",
+          "macos-arm64",
+          "linux-x64"
+        ]
+      },
+      "package_root_path": "plugins/format/format-plugin-ocyra-project",
+      "package_files": [
+        {
+          "kind": "runtime-entry",
+          "path": "plugins/format/format-plugin-ocyra-project/handler.js",
+          "package_path": "handler.js",
+          "sha256": "D8EF9D021225D11A95AE27737E9864DA18EFB8AC2FE111B523882D1D1FF6F25A",
+          "size_bytes": 3711
+        },
+        {
+          "kind": "manifest",
+          "path": "plugins/format/format-plugin-ocyra-project/plugin.json",
+          "package_path": "plugin.json",
+          "sha256": "CCF86A323B4E26254F61F8476A769AEAC8D64C373F8C7B8B810272F13B28F609",
+          "size_bytes": 851
+        }
+      ]
+    },
+    {
       "id": "format-plugin-plain-text",
       "plugin_api_version": "1",
       "family": "format",
@@ -990,7 +1060,7 @@
       ]
     },
     {
-      "id": "format-plugin-rvvttp-review",
+      "id": "format-plugin-rocyra-review",
       "plugin_api_version": "1",
       "family": "format",
       "role": "format.review-package-provider",
@@ -1020,14 +1090,14 @@
         "ocyra-native"
       ],
       "format": {
-        "id": "rvvttp-review-package",
+        "id": "rocyra-review-package",
         "target": "review-package",
         "directions": [
           "import",
           "export"
         ],
         "extensions": [
-          "rvvttp"
+          "rocyra"
         ]
       },
       "auto_install": true,
@@ -1040,20 +1110,20 @@
           "linux-x64"
         ]
       },
-      "package_root_path": "plugins/format/format-plugin-rvvttp-review",
+      "package_root_path": "plugins/format/format-plugin-rocyra-review",
       "package_files": [
         {
           "kind": "runtime-entry",
-          "path": "plugins/format/format-plugin-rvvttp-review/handler.js",
+          "path": "plugins/format/format-plugin-rocyra-review/handler.js",
           "package_path": "handler.js",
-          "sha256": "A74A05B5B5CEAFC67940350B78C9D6E95657E6C5CEA0A5328A6DEAAC85139F2F",
+          "sha256": "1F6ED3736FC5A91BAF004516501CDD103FC541415ACA2E28E5D6ED647E25A7A3",
           "size_bytes": 3706
         },
         {
           "kind": "manifest",
-          "path": "plugins/format/format-plugin-rvvttp-review/plugin.json",
+          "path": "plugins/format/format-plugin-rocyra-review/plugin.json",
           "package_path": "plugin.json",
-          "sha256": "CE729F11A5BDC163B8A79350F0F2C406C629AEB06424D58AFA2C0D4BFACE3D0B",
+          "sha256": "F4D6115FDDBE1D22DE63981265A34C7D62876F14A59772012B38006EFC4144B0",
           "size_bytes": 920
         }
       ]
@@ -1196,76 +1266,6 @@
           "package_path": "plugin.json",
           "sha256": "F39A22CC1FF6EE0F29ECA63C34D9F2F07494DA9C0FD053B614C865D24BBBDC89",
           "size_bytes": 888
-        }
-      ]
-    },
-    {
-      "id": "format-plugin-vttp-project",
-      "plugin_api_version": "1",
-      "family": "format",
-      "role": "format.project-provider",
-      "name": "OCYRA Project",
-      "version": "1.0.1",
-      "summary": "Native OCYRA project file.",
-      "runtime": {
-        "mode": "js-sandbox",
-        "entry": "handler.js"
-      },
-      "consumes": [
-        "RawFileArtifact",
-        "FormatExportArtifact"
-      ],
-      "produces": [
-        "FormatImportArtifact",
-        "RawFileArtifact"
-      ],
-      "permissions": [
-        "filesystem.read"
-      ],
-      "dependencies": [],
-      "capabilities": [
-        "import",
-        "export",
-        "project-format",
-        "ocyra-native"
-      ],
-      "format": {
-        "id": "vttp-project",
-        "target": "project",
-        "directions": [
-          "import",
-          "export"
-        ],
-        "extensions": [
-          "vttp",
-          "json"
-        ]
-      },
-      "auto_install": true,
-      "compatibility": {
-        "min_app_version": "2.0.0",
-        "platforms": [
-          "windows-x64",
-          "macos-x64",
-          "macos-arm64",
-          "linux-x64"
-        ]
-      },
-      "package_root_path": "plugins/format/format-plugin-vttp-project",
-      "package_files": [
-        {
-          "kind": "runtime-entry",
-          "path": "plugins/format/format-plugin-vttp-project/handler.js",
-          "package_path": "handler.js",
-          "sha256": "A2CC660FFD9482E2BADECFD664255DEB7F9485BFF3169712698DE38477B7813E",
-          "size_bytes": 3705
-        },
-        {
-          "kind": "manifest",
-          "path": "plugins/format/format-plugin-vttp-project/plugin.json",
-          "package_path": "plugin.json",
-          "sha256": "7E03E4B1FE72395E915F3F127B0089F69BD88BB79941ACAD77667F9357EE7256",
-          "size_bytes": 848
         }
       ]
     },
