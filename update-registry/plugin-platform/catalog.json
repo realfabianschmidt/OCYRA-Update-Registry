@@ -1,6 +1,6 @@
 {
   "catalog_version": "1",
-  "published_at": "2026-04-12T19:19:17.718Z",
+  "published_at": "2026-04-12T19:36:11.111Z",
   "app_release": {
     "schema_version": 1,
     "current_version": "2.0.0",
@@ -512,10 +512,11 @@
       "target_ref": {
         "type": "plugin",
         "id": "translation-plugin-anthropic",
-        "version": "1.0.0"
+        "version": "1.0.1"
       },
       "permissions": [
-        "network.outbound"
+        "network.outbound",
+        "translation.translate"
       ],
       "compatibility": {
         "min_app_version": "2.0.0",
@@ -539,10 +540,11 @@
       "target_ref": {
         "type": "plugin",
         "id": "translation-plugin-azure",
-        "version": "1.0.0"
+        "version": "1.0.1"
       },
       "permissions": [
-        "network.outbound"
+        "network.outbound",
+        "translation.translate"
       ],
       "compatibility": {
         "min_app_version": "2.0.0",
@@ -566,10 +568,11 @@
       "target_ref": {
         "type": "plugin",
         "id": "translation-plugin-deepl",
-        "version": "1.0.0"
+        "version": "1.0.1"
       },
       "permissions": [
-        "network.outbound"
+        "network.outbound",
+        "translation.translate"
       ],
       "compatibility": {
         "min_app_version": "2.0.0",
@@ -593,10 +596,11 @@
       "target_ref": {
         "type": "plugin",
         "id": "translation-plugin-ollama",
-        "version": "1.0.0"
+        "version": "1.0.1"
       },
       "permissions": [
-        "network.outbound"
+        "network.outbound",
+        "translation.translate"
       ],
       "compatibility": {
         "min_app_version": "2.0.0",
@@ -620,10 +624,11 @@
       "target_ref": {
         "type": "plugin",
         "id": "translation-plugin-openai",
-        "version": "1.0.0"
+        "version": "1.0.1"
       },
       "permissions": [
-        "network.outbound"
+        "network.outbound",
+        "translation.translate"
       ],
       "compatibility": {
         "min_app_version": "2.0.0",
@@ -1783,7 +1788,7 @@
       "family": "translation",
       "role": "translation.subtitle-provider",
       "name": "Anthropic Translation",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "summary": "Cloud subtitle translation through the Anthropic translation backend.",
       "runtime": {
         "mode": "js-sandbox",
@@ -1796,7 +1801,8 @@
         "TranslationResultArtifact"
       ],
       "permissions": [
-        "network.outbound"
+        "network.outbound",
+        "translation.translate"
       ],
       "dependencies": [],
       "settings_schema": "settings.schema.json",
@@ -1862,8 +1868,8 @@
           "kind": "manifest",
           "path": "plugins/translation/translation-plugin-anthropic/plugin.json",
           "package_path": "plugin.json",
-          "sha256": "BE6BA4225D6F91F9827F44F9F65D2C2CFE63688DB3FC2C617558F51D2366C8B3",
-          "size_bytes": 1530
+          "sha256": "8B7A4B6367C85AFEB1B93B35653E19B27495683D88D3716C3AE68E176F29A856",
+          "size_bytes": 1555
         },
         {
           "kind": "settings-schema",
@@ -1880,7 +1886,7 @@
       "family": "translation",
       "role": "translation.subtitle-provider",
       "name": "Azure OpenAI Translation",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "summary": "Cloud subtitle translation through the Azure OpenAI translation backend.",
       "runtime": {
         "mode": "js-sandbox",
@@ -1893,7 +1899,8 @@
         "TranslationResultArtifact"
       ],
       "permissions": [
-        "network.outbound"
+        "network.outbound",
+        "translation.translate"
       ],
       "dependencies": [],
       "settings_schema": "settings.schema.json",
@@ -1965,8 +1972,8 @@
           "kind": "manifest",
           "path": "plugins/translation/translation-plugin-azure/plugin.json",
           "package_path": "plugin.json",
-          "sha256": "63A75B4F89443B293B6198636EBD80B5B44FCDBD97F039007228285C0AAAF1AD",
-          "size_bytes": 1647
+          "sha256": "5252140D4F2DDDEF5F0BC4F157B3D2A7574EF9238854023D4188A0F3B8E660E1",
+          "size_bytes": 1672
         },
         {
           "kind": "settings-schema",
@@ -1983,7 +1990,7 @@
       "family": "translation",
       "role": "translation.subtitle-provider",
       "name": "DeepL Translation",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "summary": "Cloud subtitle translation through the DeepL translation backend.",
       "runtime": {
         "mode": "js-sandbox",
@@ -1996,7 +2003,8 @@
         "TranslationResultArtifact"
       ],
       "permissions": [
-        "network.outbound"
+        "network.outbound",
+        "translation.translate"
       ],
       "dependencies": [],
       "settings_schema": "settings.schema.json",
@@ -2058,8 +2066,8 @@
           "kind": "manifest",
           "path": "plugins/translation/translation-plugin-deepl/plugin.json",
           "package_path": "plugin.json",
-          "sha256": "12EA218A00EF00192E82070F4E825C7976F6635D30F791461BBBC58957FC5478",
-          "size_bytes": 1392
+          "sha256": "A12859DF7FB6C8985F7FFB466F41599CEB3993E060F473D23CA91CA69CEB7BBD",
+          "size_bytes": 1417
         },
         {
           "kind": "settings-schema",
@@ -2076,7 +2084,7 @@
       "family": "translation",
       "role": "translation.subtitle-provider",
       "name": "Ollama Translation",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "summary": "Local subtitle translation through the Ollama translation backend.",
       "runtime": {
         "mode": "js-sandbox",
@@ -2089,7 +2097,8 @@
         "TranslationResultArtifact"
       ],
       "permissions": [
-        "network.outbound"
+        "network.outbound",
+        "translation.translate"
       ],
       "dependencies": [],
       "settings_schema": "settings.schema.json",
@@ -2154,8 +2163,8 @@
           "kind": "manifest",
           "path": "plugins/translation/translation-plugin-ollama/plugin.json",
           "package_path": "plugin.json",
-          "sha256": "CCAB00A2D86D5C9596008E353B9CB5CB33E7A067109237E31C48103D450D2053",
-          "size_bytes": 1470
+          "sha256": "AF6C44D5F430756C5FC37DD6F44DBF2D81B94F1C673C429DFA8CF60AE90B6C6F",
+          "size_bytes": 1495
         },
         {
           "kind": "settings-schema",
@@ -2172,7 +2181,7 @@
       "family": "translation",
       "role": "translation.subtitle-provider",
       "name": "OpenAI Translation",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "summary": "Cloud subtitle translation through the OpenAI translation backend.",
       "runtime": {
         "mode": "js-sandbox",
@@ -2185,7 +2194,8 @@
         "TranslationResultArtifact"
       ],
       "permissions": [
-        "network.outbound"
+        "network.outbound",
+        "translation.translate"
       ],
       "dependencies": [],
       "settings_schema": "settings.schema.json",
@@ -2247,8 +2257,8 @@
           "kind": "manifest",
           "path": "plugins/translation/translation-plugin-openai/plugin.json",
           "package_path": "plugin.json",
-          "sha256": "7AEF47A319812AC5967A1A9B110F379B4B3AE2C75BE51E9F2B8C95E8E55DD0BF",
-          "size_bytes": 1498
+          "sha256": "1844AE77A7E51FF129FF2F49B6D26BD2C8C90513C1B5C332A17B4B766B591EEA",
+          "size_bytes": 1523
         },
         {
           "kind": "settings-schema",
