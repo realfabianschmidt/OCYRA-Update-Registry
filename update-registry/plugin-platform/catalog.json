@@ -1,6 +1,6 @@
 {
   "catalog_version": "1",
-  "published_at": "2026-04-12T10:16:50.892Z",
+  "published_at": "2026-04-12T17:03:02.438Z",
   "app_release": {
     "schema_version": 1,
     "current_version": "2.0.0",
@@ -688,8 +688,8 @@
           "kind": "runtime-entry",
           "path": "plugins/audit/audit-plugin-easy-reading/handler.js",
           "package_path": "handler.js",
-          "sha256": "5DBD8A70C2E40BFA48EB235AE905C12FFB9F45F66BEA3F01086D8BD7FFD65F8E",
-          "size_bytes": 856
+          "sha256": "E38033DC2E7E1D778E47F4F4FFDC86A5F0FB5864A0C55724F26CA27469BABC4D",
+          "size_bytes": 855
         },
         {
           "kind": "manifest",
@@ -763,8 +763,8 @@
           "kind": "runtime-entry",
           "path": "plugins/audit/audit-plugin-eu-accessibility/handler.js",
           "package_path": "handler.js",
-          "sha256": "1E0411F854DB6AC57DB71D012055AE5FBE09AA4D54B2199703EF7DA7EB1F45C5",
-          "size_bytes": 883
+          "sha256": "47422EB2C569FE1E26D4F7C79984307C6F979530D4AC6FFD2EFF07EDCDDE4E87",
+          "size_bytes": 882
         },
         {
           "kind": "manifest",
@@ -832,8 +832,8 @@
           "kind": "runtime-entry",
           "path": "plugins/audit/audit-plugin-web-balanced/handler.js",
           "package_path": "handler.js",
-          "sha256": "300B77D0E3BEBD22F2654C294A0542C042D2A42CBE72218C41E5FD4EB8CAF6D0",
-          "size_bytes": 870
+          "sha256": "428B20CD42EF3AFBDA4E5CD9507160F60B9D42C298BF427F14209E005A41FD0C",
+          "size_bytes": 869
         },
         {
           "kind": "manifest",
@@ -909,8 +909,8 @@
           "kind": "runtime-entry",
           "path": "plugins/format/format-plugin-ebu-tt/handler.js",
           "package_path": "handler.js",
-          "sha256": "D0507A74185322152877357C78242FD8E37522B604CFA7A69A7EBA2E1AFB6423",
-          "size_bytes": 5170
+          "sha256": "C388BE0F18C8D76361A710F7EA007992292EE4B64A105C73D4881207826157AF",
+          "size_bytes": 5169
         },
         {
           "kind": "manifest",
@@ -979,15 +979,15 @@
           "kind": "runtime-entry",
           "path": "plugins/format/format-plugin-ocyra-project/handler.js",
           "package_path": "handler.js",
-          "sha256": "D8EF9D021225D11A95AE27737E9864DA18EFB8AC2FE111B523882D1D1FF6F25A",
-          "size_bytes": 3711
+          "sha256": "EF620118CB143AE2F8B5AEA04B8934A76C58A08F6ADBD2C75CB0B8ECF3215375",
+          "size_bytes": 3710
         },
         {
           "kind": "manifest",
           "path": "plugins/format/format-plugin-ocyra-project/plugin.json",
           "package_path": "plugin.json",
-          "sha256": "CCF86A323B4E26254F61F8476A769AEAC8D64C373F8C7B8B810272F13B28F609",
-          "size_bytes": 851
+          "sha256": "3E0F29B1938B5E08911D38A469493E0E13694AAFCA62000528E28DBE246FC3C3",
+          "size_bytes": 850
         }
       ]
     },
@@ -1047,8 +1047,8 @@
           "kind": "runtime-entry",
           "path": "plugins/format/format-plugin-plain-text/handler.js",
           "package_path": "handler.js",
-          "sha256": "75CEFF82DD53EBD63E1226BC3B3BFDE40DE04F365897E898A157C8AA7FBCE00D",
-          "size_bytes": 3146
+          "sha256": "431883468843B2E00C29599306A0D26D59D2B52629FC84BEE11DCC0B8DDD83B9",
+          "size_bytes": 3145
         },
         {
           "kind": "manifest",
@@ -1116,15 +1116,15 @@
           "kind": "runtime-entry",
           "path": "plugins/format/format-plugin-rocyra-review/handler.js",
           "package_path": "handler.js",
-          "sha256": "1F6ED3736FC5A91BAF004516501CDD103FC541415ACA2E28E5D6ED647E25A7A3",
-          "size_bytes": 3706
+          "sha256": "6C2B05F4AC7B2F624FF1BF17CC98E186FAC9EC802D6C6C6287FF1829D8F59641",
+          "size_bytes": 3705
         },
         {
           "kind": "manifest",
           "path": "plugins/format/format-plugin-rocyra-review/plugin.json",
           "package_path": "plugin.json",
-          "sha256": "F4D6115FDDBE1D22DE63981265A34C7D62876F14A59772012B38006EFC4144B0",
-          "size_bytes": 920
+          "sha256": "FF14FA30AF65F19E8F7ACF52EBC23CC52D4C79E147001D3DE277D4E0C47145CD",
+          "size_bytes": 919
         }
       ]
     },
@@ -1187,8 +1187,8 @@
           "kind": "runtime-entry",
           "path": "plugins/format/format-plugin-subrip/handler.js",
           "package_path": "handler.js",
-          "sha256": "E16453CE536651DF95BE8CBEC916EF3CA3B77558180774F599494939E9A2D939",
-          "size_bytes": 5119
+          "sha256": "D4EF28FDE416D1A7B5500221E233F3614D473E78D2E7CC7C3688F463A84FEBFE",
+          "size_bytes": 5118
         },
         {
           "kind": "manifest",
@@ -1257,8 +1257,8 @@
           "kind": "runtime-entry",
           "path": "plugins/format/format-plugin-ttml/handler.js",
           "package_path": "handler.js",
-          "sha256": "00308AD8B1CCF8286961A7F6F5B5EBD2A7A4F32732167AAF86DBCAE5ABE6628D",
-          "size_bytes": 3910
+          "sha256": "EFDE0F3FEFEFDDD4DA01D7B38EFCE9C7E2E3994CD39BBD760E955D9293B497E6",
+          "size_bytes": 3909
         },
         {
           "kind": "manifest",
@@ -1328,8 +1328,8 @@
           "kind": "runtime-entry",
           "path": "plugins/format/format-plugin-webvtt/handler.js",
           "package_path": "handler.js",
-          "sha256": "5AE154B6F23549B48136D36A81CAC377C95D835B3CF35EA5A2664BAC03E80BD3",
-          "size_bytes": 6702
+          "sha256": "0A4C725B813729AE57C18BCED2BA2C91DC9E26B5E871801D5D92DD89DCDD54EC",
+          "size_bytes": 6701
         },
         {
           "kind": "manifest",
@@ -1496,8 +1496,8 @@
           "kind": "runtime-entry",
           "path": "plugins/speech/speech-plugin-openai-sherpa/handler.js",
           "package_path": "handler.js",
-          "sha256": "CD9B45F9972DCA0695F6E6DA1B36A93708F81E0F10FD7AE7FCB2659643493348",
-          "size_bytes": 432
+          "sha256": "F31AC5DC1ACA5DFF5A0A8ABCA72BC0210F7B0BDB5D4EA62E2B1C9AAC85EECB67",
+          "size_bytes": 431
         },
         {
           "kind": "manifest",
@@ -1584,8 +1584,8 @@
           "kind": "runtime-entry",
           "path": "plugins/speech/speech-plugin-openai-transcription/handler.js",
           "package_path": "handler.js",
-          "sha256": "CCF4053AB45D20BF46A664B68AD3FE6D1774D9858A2D3E45442D337214224AC4",
-          "size_bytes": 415
+          "sha256": "E10CD1711D13A39B56FE20544EF230669BC8F2A322533384E4AB048014980734",
+          "size_bytes": 414
         },
         {
           "kind": "manifest",
@@ -1663,8 +1663,8 @@
           "kind": "runtime-entry",
           "path": "plugins/speech/speech-plugin-whispercpp-local/handler.js",
           "package_path": "handler.js",
-          "sha256": "D2FA4A91137BCC913F685119846217ECAB280E4F822318AB6270ADFD2368AF5D",
-          "size_bytes": 414
+          "sha256": "344188736FB9302D53D2F0FD46430635360E39A50A068C5FB9A68E8AB1D02EF5",
+          "size_bytes": 413
         },
         {
           "kind": "manifest",
@@ -1758,8 +1758,8 @@
           "kind": "runtime-entry",
           "path": "plugins/speech/speech-plugin-whispercpp-sherpa/handler.js",
           "package_path": "handler.js",
-          "sha256": "4E888004CECEA69BDBB2E9961DA24AF1EBADF6691FFCCAC39D7F1A00B5476F89",
-          "size_bytes": 433
+          "sha256": "C587365C8AEDA16F8F8AACE7D1650DEB71A961476FC5DC2D36255AA6812BB496",
+          "size_bytes": 432
         },
         {
           "kind": "manifest",
@@ -1855,8 +1855,8 @@
           "kind": "runtime-entry",
           "path": "plugins/translation/translation-plugin-anthropic/handler.js",
           "package_path": "handler.js",
-          "sha256": "EA289C65E515E1DCC8189146A13F29EADDCD795E6013BA173BB84EACC7C1F67D",
-          "size_bytes": 363
+          "sha256": "3F8214354A2F2CEAD4CFA71064584BA9D1A0FCB020DE19155AFC96CC7CCA4658",
+          "size_bytes": 362
         },
         {
           "kind": "manifest",
@@ -1958,8 +1958,8 @@
           "kind": "runtime-entry",
           "path": "plugins/translation/translation-plugin-azure/handler.js",
           "package_path": "handler.js",
-          "sha256": "62463747B2DCCB31C0AD9681AE45FB86296D4F45D24B079DF2192878B7C930D3",
-          "size_bytes": 362
+          "sha256": "BC920008C2A1CFE8828D9C8D2F14C9AFC1F4A7572C7F08BEA84BA4700F5BC92B",
+          "size_bytes": 361
         },
         {
           "kind": "manifest",
@@ -2051,8 +2051,8 @@
           "kind": "runtime-entry",
           "path": "plugins/translation/translation-plugin-deepl/handler.js",
           "package_path": "handler.js",
-          "sha256": "6B0718E31706753A8F975E251CE77C276E3548C417FDAB774B5C071CFB4E2B0F",
-          "size_bytes": 355
+          "sha256": "B17532766A0A86E6C9258560FC9A2A0D7FBA6B2B411D9D5207FA4F2492ED8631",
+          "size_bytes": 354
         },
         {
           "kind": "manifest",
@@ -2147,8 +2147,8 @@
           "kind": "runtime-entry",
           "path": "plugins/translation/translation-plugin-ollama/handler.js",
           "package_path": "handler.js",
-          "sha256": "DFFA7D2F17F199A854801DF06BB167F47FE94C27138D54F851E9C0414BEEEC72",
-          "size_bytes": 357
+          "sha256": "284BED8160F8452B65C1BA201ACCD122CBF5758EBA7F3E49012F7A42EDEAD645",
+          "size_bytes": 356
         },
         {
           "kind": "manifest",
@@ -2240,8 +2240,8 @@
           "kind": "runtime-entry",
           "path": "plugins/translation/translation-plugin-openai/handler.js",
           "package_path": "handler.js",
-          "sha256": "B77D1D3B6388F7C82605FD0A6FE5A9FEC8A263D97CDB50E2925EC277A8482F5F",
-          "size_bytes": 357
+          "sha256": "39AFC60C03CB5D32CD55AB4506F1AE6683681E62D085777B9340FAF451979CD3",
+          "size_bytes": 356
         },
         {
           "kind": "manifest",

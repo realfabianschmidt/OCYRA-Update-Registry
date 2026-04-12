@@ -1,0 +1,7 @@
+* text=auto
+
+# Registry artifacts must be byte-stable across platforms.
+update-registry/plugin-platform/**/*.js text eol=lf
+update-registry/plugin-platform/**/*.json text eol=lf
+update-registry/plugin-platform/**/*.md text eol=lf
+update-registry/plugin-platform/**/*.sig text eol=lf
