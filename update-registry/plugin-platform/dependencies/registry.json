@@ -28,12 +28,28 @@
       "size_estimate_bytes": 0
     },
     {
+      "id": "provider-ollama-runtime",
+      "name": "Ollama Runtime",
+      "version": "1.0.0",
+      "category": "runtime",
+      "manifest_path": "provider-ollama-runtime/dependency.json",
+      "size_estimate_bytes": 0
+    },
+    {
       "id": "model-whisper-base",
       "name": "Whisper Base Model (ggml)",
       "version": "1.0.0",
       "category": "model",
       "manifest_path": "model-whisper-base/dependency.json",
       "size_estimate_bytes": 152000000
+    },
+    {
+      "id": "model-ollama-qwen2.5-7b",
+      "name": "Ollama Qwen 2.5 7B",
+      "version": "1.0.0",
+      "category": "model",
+      "manifest_path": "model-ollama-qwen2.5-7b/dependency.json",
+      "size_estimate_bytes": 0
     },
     {
       "id": "model-sherpa-segmentation",

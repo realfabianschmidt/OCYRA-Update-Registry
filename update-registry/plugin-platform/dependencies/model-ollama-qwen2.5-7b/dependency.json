@@ -1,0 +1,22 @@
+{
+  "id": "model-ollama-qwen2.5-7b",
+  "name": "Ollama Qwen 2.5 7B",
+  "version": "1.0.0",
+  "package_api_version": "1",
+  "category": "model",
+  "summary": "Provider-managed Qwen 2.5 7B model for the first-party Ollama translation path.",
+  "install_strategy": "provider-managed",
+  "provisioning": {
+    "provider": "ollama",
+    "resource_type": "model",
+    "command": "ollama",
+    "model": "qwen2.5:7b",
+    "ownership": "plugin-platform",
+    "removal_policy": "remove-when-unused",
+    "update_policy": "always-pull"
+  },
+  "files": [],
+  "dependencies": [
+    { "id": "provider-ollama-runtime", "version": "^1.0.0" }
+  ]
+}

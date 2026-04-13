@@ -1,6 +1,6 @@
 {
   "catalog_version": "1",
-  "published_at": "2026-04-12T19:36:11.111Z",
+  "published_at": "2026-04-13T11:14:44.224Z",
   "app_release": {
     "schema_version": 1,
     "current_version": "2.0.0",
@@ -590,13 +590,13 @@
       "id": "listing-translation-plugin-ollama",
       "kind": "plugin",
       "name": "Ollama Translation",
-      "summary": "Local subtitle translation through the Ollama translation backend.",
+      "summary": "Local subtitle translation through a provider-managed Ollama runtime and first-party default model dependency.",
       "publisher_id": "ocyra-core",
       "channel": "stable",
       "target_ref": {
         "type": "plugin",
         "id": "translation-plugin-ollama",
-        "version": "1.0.1"
+        "version": "1.0.2"
       },
       "permissions": [
         "network.outbound",
@@ -2084,8 +2084,8 @@
       "family": "translation",
       "role": "translation.subtitle-provider",
       "name": "Ollama Translation",
-      "version": "1.0.1",
-      "summary": "Local subtitle translation through the Ollama translation backend.",
+      "version": "1.0.2",
+      "summary": "Local subtitle translation through a provider-managed Ollama runtime and first-party default model dependency.",
       "runtime": {
         "mode": "js-sandbox",
         "entry": "handler.js"
@@ -2100,7 +2100,16 @@
         "network.outbound",
         "translation.translate"
       ],
-      "dependencies": [],
+      "dependencies": [
+        {
+          "id": "provider-ollama-runtime",
+          "version": "^1.0.0"
+        },
+        {
+          "id": "model-ollama-qwen2.5-7b",
+          "version": "^1.0.0"
+        }
+      ],
       "settings_schema": "settings.schema.json",
       "credential_schema": {
         "fields": [
@@ -2114,8 +2123,8 @@
             "key": "ollama_model",
             "label": "MODEL",
             "type": "text",
-            "placeholder": "qwen2.5",
-            "help": "e.g. qwen2.5, qwen2.5:7b"
+            "placeholder": "qwen2.5:7b",
+            "help": "Default first-party dependency-managed profile installs qwen2.5:7b. Use an exact tag from ollama list only when you intentionally override that managed default."
           },
           {
             "key": "translation_prompt_pack",
@@ -2134,7 +2143,7 @@
       "presets": [
         {
           "id": "local-ollama",
-          "name": "Local Ollama",
+          "name": "Local Ollama (Managed Qwen 2.5 7B)",
           "settings": {
             "translation_provider": "ollama"
           }
@@ -2163,8 +2172,8 @@
           "kind": "manifest",
           "path": "plugins/translation/translation-plugin-ollama/plugin.json",
           "package_path": "plugin.json",
-          "sha256": "AF6C44D5F430756C5FC37DD6F44DBF2D81B94F1C673C429DFA8CF60AE90B6C6F",
-          "size_bytes": 1495
+          "sha256": "75BC136EB2B0C45AD7F27D8037276F3901876738C12FA6475A742FCBF0C79C24",
+          "size_bytes": 1826
         },
         {
           "kind": "settings-schema",
@@ -2367,6 +2376,36 @@
     },
     {
       "registry_entry": {
+        "id": "provider-ollama-runtime",
+        "name": "Ollama Runtime",
+        "version": "1.0.0",
+        "category": "runtime",
+        "manifest_path": "provider-ollama-runtime/dependency.json",
+        "size_estimate_bytes": 0
+      },
+      "manifest": {
+        "id": "provider-ollama-runtime",
+        "name": "Ollama Runtime",
+        "version": "1.0.0",
+        "package_api_version": "1",
+        "category": "runtime",
+        "summary": "Provider-managed Ollama runtime check for first-party local translation plugins.",
+        "install_strategy": "provider-managed",
+        "provisioning": {
+          "provider": "ollama",
+          "resource_type": "runtime",
+          "command": "ollama",
+          "minimum_version": "0.20.0",
+          "ownership": "external-system",
+          "removal_policy": "keep"
+        },
+        "files": [],
+        "dependencies": []
+      },
+      "dependency_json_path": "dependencies/provider-ollama-runtime/dependency.json"
+    },
+    {
+      "registry_entry": {
         "id": "model-whisper-base",
         "name": "Whisper Base Model (ggml)",
         "version": "1.0.0",
@@ -2392,6 +2431,42 @@
         "dependencies": []
       },
       "dependency_json_path": "dependencies/model-whisper-base/dependency.json"
+    },
+    {
+      "registry_entry": {
+        "id": "model-ollama-qwen2.5-7b",
+        "name": "Ollama Qwen 2.5 7B",
+        "version": "1.0.0",
+        "category": "model",
+        "manifest_path": "model-ollama-qwen2.5-7b/dependency.json",
+        "size_estimate_bytes": 0
+      },
+      "manifest": {
+        "id": "model-ollama-qwen2.5-7b",
+        "name": "Ollama Qwen 2.5 7B",
+        "version": "1.0.0",
+        "package_api_version": "1",
+        "category": "model",
+        "summary": "Provider-managed Qwen 2.5 7B model for the first-party Ollama translation path.",
+        "install_strategy": "provider-managed",
+        "provisioning": {
+          "provider": "ollama",
+          "resource_type": "model",
+          "command": "ollama",
+          "model": "qwen2.5:7b",
+          "ownership": "plugin-platform",
+          "removal_policy": "remove-when-unused",
+          "update_policy": "always-pull"
+        },
+        "files": [],
+        "dependencies": [
+          {
+            "id": "provider-ollama-runtime",
+            "version": "^1.0.0"
+          }
+        ]
+      },
+      "dependency_json_path": "dependencies/model-ollama-qwen2.5-7b/dependency.json"
     },
     {
       "registry_entry": {

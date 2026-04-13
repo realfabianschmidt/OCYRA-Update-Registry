@@ -12,3 +12,9 @@ Current plugins:
 
 Each translation plugin consumes `TranslationRequestArtifact` and produces
 `TranslationResultArtifact` through the shared plugin host contract.
+
+`translation-plugin-ollama` is the first first-party translation plugin that
+uses provider-managed dependencies:
+
+- `provider-ollama-runtime`
+- `model-ollama-qwen2.5-7b`

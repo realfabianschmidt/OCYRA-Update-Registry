@@ -4,8 +4,8 @@
   "family": "translation",
   "role": "translation.subtitle-provider",
   "name": "Ollama Translation",
-  "version": "1.0.1",
-  "summary": "Local subtitle translation through the Ollama translation backend.",
+  "version": "1.0.2",
+  "summary": "Local subtitle translation through a provider-managed Ollama runtime and first-party default model dependency.",
   "runtime": {
     "mode": "js-sandbox",
     "entry": "handler.js"
@@ -13,12 +13,15 @@
   "consumes": ["TranslationRequestArtifact"],
   "produces": ["TranslationResultArtifact"],
   "permissions": ["network.outbound", "translation.translate"],
-  "dependencies": [],
+  "dependencies": [
+    { "id": "provider-ollama-runtime", "version": "^1.0.0" },
+    { "id": "model-ollama-qwen2.5-7b", "version": "^1.0.0" }
+  ],
   "settings_schema": "settings.schema.json",
   "credential_schema": {
     "fields": [
       { "key": "ollama_endpoint", "label": "OLLAMA ENDPOINT", "type": "url",  "placeholder": "http://localhost:11434/v1/chat/completions" },
-      { "key": "ollama_model",    "label": "MODEL",           "type": "text", "placeholder": "qwen2.5", "help": "e.g. qwen2.5, qwen2.5:7b" },
+      { "key": "ollama_model",    "label": "MODEL",           "type": "text", "placeholder": "qwen2.5:7b", "help": "Default first-party dependency-managed profile installs qwen2.5:7b. Use an exact tag from ollama list only when you intentionally override that managed default." },
       { "key": "translation_prompt_pack",     "label": "PROMPT PACK",   "type": "select", "source": "packs" },
       { "key": "translation_prompt_template", "label": "CUSTOM PROMPT", "type": "textarea",
         "placeholder": "Translate subtitle text from {from_lang} to {to_lang}…" }
@@ -27,7 +30,7 @@
   "presets": [
     {
       "id": "local-ollama",
-      "name": "Local Ollama",
+      "name": "Local Ollama (Managed Qwen 2.5 7B)",
       "settings": {
         "translation_provider": "ollama"
       }

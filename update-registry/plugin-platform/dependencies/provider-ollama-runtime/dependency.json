@@ -1,0 +1,19 @@
+{
+  "id": "provider-ollama-runtime",
+  "name": "Ollama Runtime",
+  "version": "1.0.0",
+  "package_api_version": "1",
+  "category": "runtime",
+  "summary": "Provider-managed Ollama runtime check for first-party local translation plugins.",
+  "install_strategy": "provider-managed",
+  "provisioning": {
+    "provider": "ollama",
+    "resource_type": "runtime",
+    "command": "ollama",
+    "minimum_version": "0.20.0",
+    "ownership": "external-system",
+    "removal_policy": "keep"
+  },
+  "files": [],
+  "dependencies": []
+}
