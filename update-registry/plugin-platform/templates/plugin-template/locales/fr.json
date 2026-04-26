@@ -1,0 +1,10 @@
+{
+  "name": "Plugin de traduction exemple",
+  "summary": "Plugin modele utilise comme point de depart pour de nouveaux fournisseurs de traduction OCYRA.",
+  "presets": [
+    {
+      "id": "example-default",
+      "name": "Exemple par defaut"
+    }
+  ]
+}

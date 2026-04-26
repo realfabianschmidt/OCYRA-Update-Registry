@@ -1,0 +1,31 @@
+{
+  "name": "Traduction OpenAI",
+  "summary": "Traduction cloud de sous-titres via le backend de traduction OpenAI.",
+  "presets": [
+    {
+      "id": "cloud-openai",
+      "name": "Cloud OpenAI"
+    }
+  ],
+  "credential_schema": {
+    "apiKeyPlaceholder": "sk-...",
+    "fields": [
+      {
+        "key": "openai_chat_model",
+        "label": "MODELE DE CHAT",
+        "placeholder": "gpt-4o",
+        "help": "p. ex. gpt-4o, gpt-3.5-turbo"
+      },
+      {
+        "key": "translation_prompt_pack",
+        "label": "PACK DE PROMPTS"
+      },
+      {
+        "key": "translation_prompt_template",
+        "label": "PROMPT PERSONNALISE",
+        "placeholder": "Traduire le texte du sous-titre de {from_lang} vers {to_lang}...",
+        "help": "Variables : {from_lang}, {to_lang}, {text}. Laisser vide pour le pack par defaut."
+      }
+    ]
+  }
+}

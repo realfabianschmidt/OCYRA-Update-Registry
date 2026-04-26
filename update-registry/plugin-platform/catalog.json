@@ -1,6 +1,6 @@
 {
   "catalog_version": "1",
-  "published_at": "2026-04-13T11:14:44.224Z",
+  "published_at": "2026-04-26T09:23:38.616Z",
   "app_release": {
     "schema_version": 1,
     "current_version": "2.0.0",
@@ -687,6 +687,20 @@
           "linux-x64"
         ]
       },
+      "locale_bundles": {
+        "de": {
+          "name": "Einfaches Lesen",
+          "summary": "Untertitel-Standardwerte mit hohem Komfort fuer langsamere Lesegeschwindigkeit und vereinfachtes Timing."
+        },
+        "en": {
+          "name": "Easy Reading",
+          "summary": "High-comfort subtitle defaults for slower reading speed and simplified pacing."
+        },
+        "fr": {
+          "name": "Lecture facile",
+          "summary": "Parametres de sous-titres tres confortables pour une vitesse de lecture plus lente et un rythme simplifie."
+        }
+      },
       "package_root_path": "plugins/audit/audit-plugin-easy-reading",
       "package_files": [
         {
@@ -695,6 +709,27 @@
           "package_path": "handler.js",
           "sha256": "E38033DC2E7E1D778E47F4F4FFDC86A5F0FB5864A0C55724F26CA27469BABC4D",
           "size_bytes": 855
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/audit/audit-plugin-easy-reading/locales/de.json",
+          "package_path": "locales/de.json",
+          "sha256": "5714879564DC11F1DFAF07AD977EB1E082E7E4BC34C6B800E63EB79B64B1186B",
+          "size_bytes": 153
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/audit/audit-plugin-easy-reading/locales/en.json",
+          "package_path": "locales/en.json",
+          "sha256": "6E2AD93E8AB8E68B673780060B95D5305A58DF90AB9BD535048C5CD72E1E16D0",
+          "size_bytes": 124
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/audit/audit-plugin-easy-reading/locales/fr.json",
+          "package_path": "locales/fr.json",
+          "sha256": "9AD9F56BE52FA801696FF57AF0D1C91F919D1FD35C3B4F101ED76666BFDA3992",
+          "size_bytes": 154
         },
         {
           "kind": "manifest",
@@ -762,6 +797,38 @@
           "linux-x64"
         ]
       },
+      "locale_bundles": {
+        "de": {
+          "name": "EU Accessibility Act / BFSG",
+          "summary": "Ausgewogene Barrierefreiheits-Standards fuer BFSG, EAA, WCAG 2.1 AA und EBU R37.",
+          "presets": [
+            {
+              "id": "eu-eaa-bfsg-default",
+              "name": "EU Accessibility Act Standard"
+            }
+          ]
+        },
+        "en": {
+          "name": "EU Accessibility Act / BFSG",
+          "summary": "Balanced accessibility defaults for BFSG, EAA, WCAG 2.1 AA and EBU R37.",
+          "presets": [
+            {
+              "id": "eu-eaa-bfsg-default",
+              "name": "EU Accessibility Act Default"
+            }
+          ]
+        },
+        "fr": {
+          "name": "EU Accessibility Act / BFSG",
+          "summary": "Parametres d'accessibilite equilibres pour la BFSG, l'EAA, WCAG 2.1 AA et EBU R37.",
+          "presets": [
+            {
+              "id": "eu-eaa-bfsg-default",
+              "name": "Profil par defaut Accessibilite UE"
+            }
+          ]
+        }
+      },
       "package_root_path": "plugins/audit/audit-plugin-eu-accessibility",
       "package_files": [
         {
@@ -770,6 +837,27 @@
           "package_path": "handler.js",
           "sha256": "47422EB2C569FE1E26D4F7C79984307C6F979530D4AC6FFD2EFF07EDCDDE4E87",
           "size_bytes": 882
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/audit/audit-plugin-eu-accessibility/locales/de.json",
+          "package_path": "locales/de.json",
+          "sha256": "11AAD951616B392C0D1DD62E6DD1022D7F132D43B17FEC59580D342E802EBF28",
+          "size_bytes": 254
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/audit/audit-plugin-eu-accessibility/locales/en.json",
+          "package_path": "locales/en.json",
+          "sha256": "B557BEA89A0AEE05EDE4A800644F70AFC5C8E1764BD67301ED306E17C7894567",
+          "size_bytes": 244
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/audit/audit-plugin-eu-accessibility/locales/fr.json",
+          "package_path": "locales/fr.json",
+          "sha256": "AB27131ECA982D6BFAF677EE0BCAA43CCF4B5747D96D1BF71191C516973C7966",
+          "size_bytes": 261
         },
         {
           "kind": "manifest",
@@ -831,6 +919,20 @@
           "linux-x64"
         ]
       },
+      "locale_bundles": {
+        "de": {
+          "name": "Web-Barrierefreiheit Ausgewogen",
+          "summary": "Etwas schnellere Untertitel-Standards fuer allgemeine Webvideos bei beibehaltener Barrierefreiheitspruefung."
+        },
+        "en": {
+          "name": "Web Accessibility Balanced",
+          "summary": "Slightly faster subtitle defaults for general web video while preserving accessibility checks."
+        },
+        "fr": {
+          "name": "Accessibilite web equilibree",
+          "summary": "Parametres de sous-titres legerement plus rapides pour la video web generale tout en conservant les controles d'accessibilite."
+        }
+      },
       "package_root_path": "plugins/audit/audit-plugin-web-balanced",
       "package_files": [
         {
@@ -839,6 +941,27 @@
           "package_path": "handler.js",
           "sha256": "428B20CD42EF3AFBDA4E5CD9507160F60B9D42C298BF427F14209E005A41FD0C",
           "size_bytes": 869
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/audit/audit-plugin-web-balanced/locales/de.json",
+          "package_path": "locales/de.json",
+          "sha256": "966847F34453EF1FC63BF9CB680A0B7A4E9AED28A0F2E6A7A0E9C3B20F9422A9",
+          "size_bytes": 173
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/audit/audit-plugin-web-balanced/locales/en.json",
+          "package_path": "locales/en.json",
+          "sha256": "C799840C73AEB55784F659901C850724E0330F16539C450B247734BF7C1E6EE2",
+          "size_bytes": 154
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/audit/audit-plugin-web-balanced/locales/fr.json",
+          "package_path": "locales/fr.json",
+          "sha256": "D4CF940A594B4967044C8A7DFE48C1E6040BFB693976F3107294E8F6FD467C39",
+          "size_bytes": 188
         },
         {
           "kind": "manifest",
@@ -908,6 +1031,20 @@
           "linux-x64"
         ]
       },
+      "locale_bundles": {
+        "de": {
+          "name": "EBU-TT",
+          "summary": "EBU-TT-Untertitelformat fuer Broadcast-Auslieferung."
+        },
+        "en": {
+          "name": "EBU-TT",
+          "summary": "EBU-TT subtitle format for broadcast delivery."
+        },
+        "fr": {
+          "name": "EBU-TT",
+          "summary": "Format de sous-titres EBU-TT pour la diffusion."
+        }
+      },
       "package_root_path": "plugins/format/format-plugin-ebu-tt",
       "package_files": [
         {
@@ -916,6 +1053,27 @@
           "package_path": "handler.js",
           "sha256": "C388BE0F18C8D76361A710F7EA007992292EE4B64A105C73D4881207826157AF",
           "size_bytes": 5169
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/format/format-plugin-ebu-tt/locales/de.json",
+          "package_path": "locales/de.json",
+          "sha256": "D2B69E10CAE1119179E077D591BDEA34C1AE804DF92236569094F45D6549F117",
+          "size_bytes": 92
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/format/format-plugin-ebu-tt/locales/en.json",
+          "package_path": "locales/en.json",
+          "sha256": "95BCE06B5B5347D601FABC1BA783EC607E998D2D2B5CE05CE5AC370BBA0459A1",
+          "size_bytes": 86
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/format/format-plugin-ebu-tt/locales/fr.json",
+          "package_path": "locales/fr.json",
+          "sha256": "ED97BF74666A5705F53A870D7C59D6761150955DFC7C21B602FE1442192FE708",
+          "size_bytes": 87
         },
         {
           "kind": "manifest",
@@ -978,6 +1136,20 @@
           "linux-x64"
         ]
       },
+      "locale_bundles": {
+        "de": {
+          "name": "OCYRA-Projekt",
+          "summary": "Natives OCYRA-Projektformat."
+        },
+        "en": {
+          "name": "OCYRA Project",
+          "summary": "Native OCYRA project file."
+        },
+        "fr": {
+          "name": "Projet OCYRA",
+          "summary": "Format de projet OCYRA natif."
+        }
+      },
       "package_root_path": "plugins/format/format-plugin-ocyra-project",
       "package_files": [
         {
@@ -986,6 +1158,27 @@
           "package_path": "handler.js",
           "sha256": "EF620118CB143AE2F8B5AEA04B8934A76C58A08F6ADBD2C75CB0B8ECF3215375",
           "size_bytes": 3710
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/format/format-plugin-ocyra-project/locales/de.json",
+          "package_path": "locales/de.json",
+          "sha256": "41569FEA581E58C879A100556176B832BC240120B79AC8AE1108A716F7171980",
+          "size_bytes": 75
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/format/format-plugin-ocyra-project/locales/en.json",
+          "package_path": "locales/en.json",
+          "sha256": "05AA22F7F5523C85B5A1E2763DEE688B937FCE827BBED730551CF43612A4821E",
+          "size_bytes": 73
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/format/format-plugin-ocyra-project/locales/fr.json",
+          "package_path": "locales/fr.json",
+          "sha256": "AB921AA826DF57217DA073E74C5D56AF012FF3AE05DBE7450ED6E2BD10FCDF49",
+          "size_bytes": 75
         },
         {
           "kind": "manifest",
@@ -1046,6 +1239,20 @@
           "linux-x64"
         ]
       },
+      "locale_bundles": {
+        "de": {
+          "name": "Klartext",
+          "summary": "Klartext-Untertitelimport und -export fuer schnelle Copy-Workflows."
+        },
+        "en": {
+          "name": "Plain Text",
+          "summary": "Plain text subtitle import and export for quick copy workflows."
+        },
+        "fr": {
+          "name": "Texte brut",
+          "summary": "Import et export de sous-titres en texte brut pour des flux de copie rapides."
+        }
+      },
       "package_root_path": "plugins/format/format-plugin-plain-text",
       "package_files": [
         {
@@ -1054,6 +1261,27 @@
           "package_path": "handler.js",
           "sha256": "431883468843B2E00C29599306A0D26D59D2B52629FC84BEE11DCC0B8DDD83B9",
           "size_bytes": 3145
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/format/format-plugin-plain-text/locales/de.json",
+          "package_path": "locales/de.json",
+          "sha256": "D2236F01157FA69C61FC11987D56AACDFF0BEE643B384009C67451E0EF81906F",
+          "size_bytes": 109
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/format/format-plugin-plain-text/locales/en.json",
+          "package_path": "locales/en.json",
+          "sha256": "203CC50EE295F6D63775BD66E483C0DB75C0364C6AD931E4219DA9633E5E7E53",
+          "size_bytes": 107
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/format/format-plugin-plain-text/locales/fr.json",
+          "package_path": "locales/fr.json",
+          "sha256": "C9DC20F8C4F1DFC419E4CBE7D4F7B45BD4C267D4C455826BE8E44DB13DB7054C",
+          "size_bytes": 121
         },
         {
           "kind": "manifest",
@@ -1115,6 +1343,20 @@
           "linux-x64"
         ]
       },
+      "locale_bundles": {
+        "de": {
+          "name": "OCYRA-Review-Paket",
+          "summary": "Review-Paket mit sprachbezogenen Untertiteln und Review-Metadaten."
+        },
+        "en": {
+          "name": "OCYRA Review Package",
+          "summary": "Review package with language-scoped subtitles and review metadata."
+        },
+        "fr": {
+          "name": "Paquet de revue OCYRA",
+          "summary": "Paquet de revue avec des sous-titres par langue et des metadonnees de revue."
+        }
+      },
       "package_root_path": "plugins/format/format-plugin-rocyra-review",
       "package_files": [
         {
@@ -1123,6 +1365,27 @@
           "package_path": "handler.js",
           "sha256": "6C2B05F4AC7B2F624FF1BF17CC98E186FAC9EC802D6C6C6287FF1829D8F59641",
           "size_bytes": 3705
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/format/format-plugin-rocyra-review/locales/de.json",
+          "package_path": "locales/de.json",
+          "sha256": "FDEACA58BF68E1BF19BE93CEA3221C01E94A1BEC0815407B4B16985A3DDDF2EE",
+          "size_bytes": 118
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/format/format-plugin-rocyra-review/locales/en.json",
+          "package_path": "locales/en.json",
+          "sha256": "825F18047FF0FEE1922F55D45793AD47323A42A17F79FA942D264B902211E558",
+          "size_bytes": 120
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/format/format-plugin-rocyra-review/locales/fr.json",
+          "package_path": "locales/fr.json",
+          "sha256": "821D62DF83B09F77FAE649F1F73675C316461DA0DDAF45C48F5D468DC04D7A67",
+          "size_bytes": 131
         },
         {
           "kind": "manifest",
@@ -1186,6 +1449,20 @@
           "linux-x64"
         ]
       },
+      "locale_bundles": {
+        "de": {
+          "name": "SubRip (SRT)",
+          "summary": "SubRip-Format fuer YouTube, Vimeo und allgemeine Untertitel-Workflows."
+        },
+        "en": {
+          "name": "SubRip (SRT)",
+          "summary": "SubRip format for YouTube, Vimeo and general subtitle workflows."
+        },
+        "fr": {
+          "name": "SubRip (SRT)",
+          "summary": "Format SubRip pour YouTube, Vimeo et les flux de sous-titres generaux."
+        }
+      },
       "package_root_path": "plugins/format/format-plugin-subrip",
       "package_files": [
         {
@@ -1194,6 +1471,27 @@
           "package_path": "handler.js",
           "sha256": "3851E23179EFAA9C5896376B926897B9846D0190B7AAE5C171B2BA052832D3AE",
           "size_bytes": 5566
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/format/format-plugin-subrip/locales/de.json",
+          "package_path": "locales/de.json",
+          "sha256": "66BFDDC587E9920FED34EBB59D8F49425C20FAC2658F25B0D9ACC14240DE58A8",
+          "size_bytes": 116
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/format/format-plugin-subrip/locales/en.json",
+          "package_path": "locales/en.json",
+          "sha256": "D2CC4DA094571CB9F81FD8E2C9D6B12A78C85D4A63E25630818AC4F82D69CDDA",
+          "size_bytes": 110
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/format/format-plugin-subrip/locales/fr.json",
+          "package_path": "locales/fr.json",
+          "sha256": "2C8FE328C59C5DC0E94661A8E0CFB720B49FC4407882884BB3228E3B158C0B9C",
+          "size_bytes": 116
         },
         {
           "kind": "manifest",
@@ -1256,6 +1554,20 @@
           "linux-x64"
         ]
       },
+      "locale_bundles": {
+        "de": {
+          "name": "TTML",
+          "summary": "Timed-Text-Markup-Language-Untertitelformat."
+        },
+        "en": {
+          "name": "TTML",
+          "summary": "Timed Text Markup Language subtitle format."
+        },
+        "fr": {
+          "name": "TTML",
+          "summary": "Format de sous-titres Timed Text Markup Language."
+        }
+      },
       "package_root_path": "plugins/format/format-plugin-ttml",
       "package_files": [
         {
@@ -1264,6 +1576,27 @@
           "package_path": "handler.js",
           "sha256": "EFDE0F3FEFEFDDD4DA01D7B38EFCE9C7E2E3994CD39BBD760E955D9293B497E6",
           "size_bytes": 3909
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/format/format-plugin-ttml/locales/de.json",
+          "package_path": "locales/de.json",
+          "sha256": "6FE29239A351713B9F25AB779FE50E27A40560521E8FD7B82E2CBD72A566ADFD",
+          "size_bytes": 82
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/format/format-plugin-ttml/locales/en.json",
+          "package_path": "locales/en.json",
+          "sha256": "BDE29BFCCBF5ADD45C1F36108B48FCC1FFE7E364A27FF57192E63334BA3B3D7B",
+          "size_bytes": 81
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/format/format-plugin-ttml/locales/fr.json",
+          "package_path": "locales/fr.json",
+          "sha256": "CC6E52455A2F68C2D9139EB7AF093E7EDDBC5A16A65374443F395C8584A44873",
+          "size_bytes": 87
         },
         {
           "kind": "manifest",
@@ -1327,6 +1660,20 @@
           "linux-x64"
         ]
       },
+      "locale_bundles": {
+        "de": {
+          "name": "WebVTT",
+          "summary": "WebVTT-Untertiteldatei mit Timing und Metadaten."
+        },
+        "en": {
+          "name": "WebVTT",
+          "summary": "WebVTT subtitle file with timing and metadata."
+        },
+        "fr": {
+          "name": "WebVTT",
+          "summary": "Fichier de sous-titres WebVTT avec timing et metadonnees."
+        }
+      },
       "package_root_path": "plugins/format/format-plugin-webvtt",
       "package_files": [
         {
@@ -1335,6 +1682,27 @@
           "package_path": "handler.js",
           "sha256": "DB55C7B0765B07AE4325E684004B3965363CFDD3887ECF00A8B5AD24F7A8189D",
           "size_bytes": 7276
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/format/format-plugin-webvtt/locales/de.json",
+          "package_path": "locales/de.json",
+          "sha256": "B49A4A16EBFC28BFD1A253AB04F8E9F98D35AAB539F2C8AC78F362E62A96F40D",
+          "size_bytes": 88
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/format/format-plugin-webvtt/locales/en.json",
+          "package_path": "locales/en.json",
+          "sha256": "5B29C0668A44E5B0277933DA6533D0813E0362A9A7F931A63EF8E1C18CD54A2C",
+          "size_bytes": 86
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/format/format-plugin-webvtt/locales/fr.json",
+          "package_path": "locales/fr.json",
+          "sha256": "15390FBE3872BEF76CF4FC031320E20DC9D7B7C29437F10C8A1BAE894C76E857",
+          "size_bytes": 97
         },
         {
           "kind": "manifest",
@@ -1397,6 +1765,20 @@
           "linux-x64"
         ]
       },
+      "locale_bundles": {
+        "de": {
+          "name": "XLIFF-Lokalisierung",
+          "summary": "XLIFF-1.2- und -2.x-Lokalisierungsimport und -export fuer den Lokalisierungs-Workspace."
+        },
+        "en": {
+          "name": "XLIFF Localization",
+          "summary": "XLIFF 1.2 and 2.x localization import and export for the Localization workspace."
+        },
+        "fr": {
+          "name": "Localisation XLIFF",
+          "summary": "Import et export de localisation XLIFF 1.2 et 2.x pour l'espace de travail de localisation."
+        }
+      },
       "package_root_path": "plugins/format/format-plugin-xliff-localization",
       "package_files": [
         {
@@ -1405,6 +1787,27 @@
           "package_path": "handler.js",
           "sha256": "401752D72FA66AEDC0E3471A2EFC5062FD9A5207409376008289C9E8FBE17256",
           "size_bytes": 36847
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/format/format-plugin-xliff-localization/locales/de.json",
+          "package_path": "locales/de.json",
+          "sha256": "74AA2586C9FD84253C8AD6C1BB962F04842B745BE37A63A8210D57825F427390",
+          "size_bytes": 140
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/format/format-plugin-xliff-localization/locales/en.json",
+          "package_path": "locales/en.json",
+          "sha256": "3A4D5E05B79A21B103A9C4A6FCB1B22A65C2FB84E913D7B62E95237FF5B1E1CA",
+          "size_bytes": 132
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/format/format-plugin-xliff-localization/locales/fr.json",
+          "package_path": "locales/fr.json",
+          "sha256": "3CD3D4DB011C3439E307DCA5A39962FC2B5240C606BEAEA2F4DF05FA2F7F3048",
+          "size_bytes": 143
         },
         {
           "kind": "manifest",
@@ -1495,6 +1898,68 @@
           "windows-x64"
         ]
       },
+      "locale_bundles": {
+        "de": {
+          "name": "OpenAI Whisper + Sherpa-ONNX",
+          "summary": "Cloud-Transkription ueber die OpenAI-Whisper-API mit lokaler Sherpa-ONNX-Sprecherdiarisierung.",
+          "presets": [
+            {
+              "id": "hybrid-cloud-local",
+              "name": "Cloud Whisper + Lokale Diarisierung"
+            }
+          ],
+          "credential_schema": {
+            "fields": [
+              {
+                "key": "openai_whisper_endpoint",
+                "label": "WHISPER-ENDPUNKT",
+                "placeholder": "https://api.openai.com/v1/audio/transcriptions",
+                "help": "Leer lassen, um ihn automatisch aus dem Basis-Endpunkt abzuleiten."
+              }
+            ]
+          }
+        },
+        "en": {
+          "name": "OpenAI Whisper + Sherpa-ONNX",
+          "summary": "Cloud transcription via OpenAI Whisper API with local Sherpa-ONNX speaker diarization.",
+          "presets": [
+            {
+              "id": "hybrid-cloud-local",
+              "name": "Cloud Whisper + Local Diarization"
+            }
+          ],
+          "credential_schema": {
+            "fields": [
+              {
+                "key": "openai_whisper_endpoint",
+                "label": "WHISPER ENDPOINT",
+                "placeholder": "https://api.openai.com/v1/audio/transcriptions",
+                "help": "Leave empty to auto-derive from base endpoint."
+              }
+            ]
+          }
+        },
+        "fr": {
+          "name": "OpenAI Whisper + Sherpa-ONNX",
+          "summary": "Transcription cloud via l'API OpenAI Whisper avec diarisation locale des locuteurs via Sherpa-ONNX.",
+          "presets": [
+            {
+              "id": "hybrid-cloud-local",
+              "name": "Cloud Whisper + Diarisation locale"
+            }
+          ],
+          "credential_schema": {
+            "fields": [
+              {
+                "key": "openai_whisper_endpoint",
+                "label": "ENDPOINT WHISPER",
+                "placeholder": "https://api.openai.com/v1/audio/transcriptions",
+                "help": "Laisser vide pour le deduire automatiquement de l'endpoint de base."
+              }
+            ]
+          }
+        }
+      },
       "package_root_path": "plugins/speech/speech-plugin-openai-sherpa",
       "package_files": [
         {
@@ -1503,6 +1968,27 @@
           "package_path": "handler.js",
           "sha256": "F31AC5DC1ACA5DFF5A0A8ABCA72BC0210F7B0BDB5D4EA62E2B1C9AAC85EECB67",
           "size_bytes": 431
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/speech/speech-plugin-openai-sherpa/locales/de.json",
+          "package_path": "locales/de.json",
+          "sha256": "5165F225D1F28F6CD1A769227C2E7168D723BB61C0A06D1E958F3F88313DDA91",
+          "size_bytes": 579
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/speech/speech-plugin-openai-sherpa/locales/en.json",
+          "package_path": "locales/en.json",
+          "sha256": "A6C1846667748FC15390ED1C01C4A071080DCAF3B78898261DDACB28D38D66BB",
+          "size_bytes": 549
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/speech/speech-plugin-openai-sherpa/locales/fr.json",
+          "package_path": "locales/fr.json",
+          "sha256": "0DE09E3CAE8527E2588DA4D4880BA20ECB4BAC6EA5367C7F25B11756D9F58DA7",
+          "size_bytes": 584
         },
         {
           "kind": "manifest",
@@ -1583,6 +2069,68 @@
           "windows-x64"
         ]
       },
+      "locale_bundles": {
+        "de": {
+          "name": "OpenAI Whisper",
+          "summary": "Cloud-Transkription ueber die OpenAI-Whisper-API ohne Sprecherdiarisierung.",
+          "presets": [
+            {
+              "id": "cloud-fast",
+              "name": "Cloud Schnell"
+            }
+          ],
+          "credential_schema": {
+            "fields": [
+              {
+                "key": "openai_whisper_endpoint",
+                "label": "WHISPER-ENDPUNKT",
+                "placeholder": "https://api.openai.com/v1/audio/transcriptions",
+                "help": "Leer lassen, um ihn automatisch aus dem Basis-Endpunkt abzuleiten."
+              }
+            ]
+          }
+        },
+        "en": {
+          "name": "OpenAI Whisper",
+          "summary": "Cloud transcription via the OpenAI Whisper API without speaker diarization.",
+          "presets": [
+            {
+              "id": "cloud-fast",
+              "name": "Cloud Fast"
+            }
+          ],
+          "credential_schema": {
+            "fields": [
+              {
+                "key": "openai_whisper_endpoint",
+                "label": "WHISPER ENDPOINT",
+                "placeholder": "https://api.openai.com/v1/audio/transcriptions",
+                "help": "Leave empty to auto-derive from base endpoint."
+              }
+            ]
+          }
+        },
+        "fr": {
+          "name": "OpenAI Whisper",
+          "summary": "Transcription cloud via l'API OpenAI Whisper sans diarisation des locuteurs.",
+          "presets": [
+            {
+              "id": "cloud-fast",
+              "name": "Cloud rapide"
+            }
+          ],
+          "credential_schema": {
+            "fields": [
+              {
+                "key": "openai_whisper_endpoint",
+                "label": "ENDPOINT WHISPER",
+                "placeholder": "https://api.openai.com/v1/audio/transcriptions",
+                "help": "Laisser vide pour le deduire automatiquement de l'endpoint de base."
+              }
+            ]
+          }
+        }
+      },
       "package_root_path": "plugins/speech/speech-plugin-openai-transcription",
       "package_files": [
         {
@@ -1591,6 +2139,27 @@
           "package_path": "handler.js",
           "sha256": "E10CD1711D13A39B56FE20544EF230669BC8F2A322533384E4AB048014980734",
           "size_bytes": 414
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/speech/speech-plugin-openai-transcription/locales/de.json",
+          "package_path": "locales/de.json",
+          "sha256": "9016429A74EDD7FB1D2928BD3B360BB58236481228E2AE11FAB1F93F7C4F504E",
+          "size_bytes": 516
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/speech/speech-plugin-openai-transcription/locales/en.json",
+          "package_path": "locales/en.json",
+          "sha256": "ACFA3EC2004B4DD0EC493217F8BEC2FB7345B154A5731D8787E849EE9318F19E",
+          "size_bytes": 493
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/speech/speech-plugin-openai-transcription/locales/fr.json",
+          "package_path": "locales/fr.json",
+          "sha256": "87809515E8AB3013BE42BCA40959D581813F013EC9463331A163142673401277",
+          "size_bytes": 517
         },
         {
           "kind": "manifest",
@@ -1662,6 +2231,38 @@
           "windows-x64"
         ]
       },
+      "locale_bundles": {
+        "de": {
+          "name": "whisper.cpp",
+          "summary": "Offline-Transkription mit whisper.cpp ohne Sprecherdiarisierung.",
+          "presets": [
+            {
+              "id": "offline-light",
+              "name": "Offline Leicht"
+            }
+          ]
+        },
+        "en": {
+          "name": "whisper.cpp",
+          "summary": "Offline transcription with whisper.cpp without speaker diarization.",
+          "presets": [
+            {
+              "id": "offline-light",
+              "name": "Offline Light"
+            }
+          ]
+        },
+        "fr": {
+          "name": "whisper.cpp",
+          "summary": "Transcription hors ligne avec whisper.cpp sans diarisation des locuteurs.",
+          "presets": [
+            {
+              "id": "offline-light",
+              "name": "Hors ligne leger"
+            }
+          ]
+        }
+      },
       "package_root_path": "plugins/speech/speech-plugin-whispercpp-local",
       "package_files": [
         {
@@ -1670,6 +2271,27 @@
           "package_path": "handler.js",
           "sha256": "344188736FB9302D53D2F0FD46430635360E39A50A068C5FB9A68E8AB1D02EF5",
           "size_bytes": 413
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/speech/speech-plugin-whispercpp-local/locales/de.json",
+          "package_path": "locales/de.json",
+          "sha256": "9E5F87DCCAFB4F7FA75A8A41196E2AB42B224058DE78D03AD12B1EA853EC5804",
+          "size_bytes": 201
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/speech/speech-plugin-whispercpp-local/locales/en.json",
+          "package_path": "locales/en.json",
+          "sha256": "4136B1C921238624D66944E2E043FA939DC5C3C0331261F5435456BCD0F4CCAF",
+          "size_bytes": 203
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/speech/speech-plugin-whispercpp-local/locales/fr.json",
+          "package_path": "locales/fr.json",
+          "sha256": "22F847ABC417B07AE155A97DC75328431B698E448B8EFB5CFA4169C332118909",
+          "size_bytes": 212
         },
         {
           "kind": "manifest",
@@ -1757,6 +2379,38 @@
           "windows-x64"
         ]
       },
+      "locale_bundles": {
+        "de": {
+          "name": "whisper.cpp + Sherpa-ONNX",
+          "summary": "Offline-Transkription mit whisper.cpp und Sprecherdiarisierung ueber Sherpa-ONNX.",
+          "presets": [
+            {
+              "id": "offline-accurate",
+              "name": "Offline Praezise"
+            }
+          ]
+        },
+        "en": {
+          "name": "whisper.cpp + Sherpa-ONNX",
+          "summary": "Offline transcription with whisper.cpp and speaker diarization with Sherpa-ONNX.",
+          "presets": [
+            {
+              "id": "offline-accurate",
+              "name": "Offline Accurate"
+            }
+          ]
+        },
+        "fr": {
+          "name": "whisper.cpp + Sherpa-ONNX",
+          "summary": "Transcription hors ligne avec whisper.cpp et diarisation des locuteurs via Sherpa-ONNX.",
+          "presets": [
+            {
+              "id": "offline-accurate",
+              "name": "Hors ligne precis"
+            }
+          ]
+        }
+      },
       "package_root_path": "plugins/speech/speech-plugin-whispercpp-sherpa",
       "package_files": [
         {
@@ -1765,6 +2419,27 @@
           "package_path": "handler.js",
           "sha256": "C587365C8AEDA16F8F8AACE7D1650DEB71A961476FC5DC2D36255AA6812BB496",
           "size_bytes": 432
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/speech/speech-plugin-whispercpp-sherpa/locales/de.json",
+          "package_path": "locales/de.json",
+          "sha256": "950177AAE8E199D71ABA4AD321B1406E7A32B89AA7CFD989BB7B8BC897405637",
+          "size_bytes": 237
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/speech/speech-plugin-whispercpp-sherpa/locales/en.json",
+          "package_path": "locales/en.json",
+          "sha256": "DA0BEAA55632B0A90BB67719581259BB2A9D2FDB115F00B627732699D8E5729E",
+          "size_bytes": 236
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/speech/speech-plugin-whispercpp-sherpa/locales/fr.json",
+          "package_path": "locales/fr.json",
+          "sha256": "F8EAF6A1B4346F54136A482F47582FC1060C0DAFEC930FB95AB828155D893286",
+          "size_bytes": 244
         },
         {
           "kind": "manifest",
@@ -1855,6 +2530,110 @@
           "windows-x64"
         ]
       },
+      "locale_bundles": {
+        "de": {
+          "name": "Anthropic Uebersetzung",
+          "summary": "Cloud-Untertiteluebersetzung ueber das Anthropic-Uebersetzungs-Backend.",
+          "presets": [
+            {
+              "id": "cloud-anthropic",
+              "name": "Anthropic Cloud"
+            }
+          ],
+          "credential_schema": {
+            "apiKeyPlaceholder": "sk-ant-...",
+            "fields": [
+              {
+                "key": "anthropic_endpoint",
+                "label": "ENDPUNKT",
+                "placeholder": "https://api.anthropic.com/v1/messages"
+              },
+              {
+                "key": "anthropic_model",
+                "label": "MODELL",
+                "placeholder": "claude-3-5-sonnet-latest"
+              },
+              {
+                "key": "translation_prompt_pack",
+                "label": "PROMPT-PAKET"
+              },
+              {
+                "key": "translation_prompt_template",
+                "label": "BENUTZERDEFINIERTER PROMPT",
+                "placeholder": "Untertiteltext von {from_lang} nach {to_lang} uebersetzen..."
+              }
+            ]
+          }
+        },
+        "en": {
+          "name": "Anthropic Translation",
+          "summary": "Cloud subtitle translation through the Anthropic translation backend.",
+          "presets": [
+            {
+              "id": "cloud-anthropic",
+              "name": "Cloud Anthropic"
+            }
+          ],
+          "credential_schema": {
+            "apiKeyPlaceholder": "sk-ant-...",
+            "fields": [
+              {
+                "key": "anthropic_endpoint",
+                "label": "ENDPOINT",
+                "placeholder": "https://api.anthropic.com/v1/messages"
+              },
+              {
+                "key": "anthropic_model",
+                "label": "MODEL",
+                "placeholder": "claude-3-5-sonnet-latest"
+              },
+              {
+                "key": "translation_prompt_pack",
+                "label": "PROMPT PACK"
+              },
+              {
+                "key": "translation_prompt_template",
+                "label": "CUSTOM PROMPT",
+                "placeholder": "Translate subtitle text from {from_lang} to {to_lang}..."
+              }
+            ]
+          }
+        },
+        "fr": {
+          "name": "Traduction Anthropic",
+          "summary": "Traduction cloud de sous-titres via le backend de traduction Anthropic.",
+          "presets": [
+            {
+              "id": "cloud-anthropic",
+              "name": "Cloud Anthropic"
+            }
+          ],
+          "credential_schema": {
+            "apiKeyPlaceholder": "sk-ant-...",
+            "fields": [
+              {
+                "key": "anthropic_endpoint",
+                "label": "ENDPOINT",
+                "placeholder": "https://api.anthropic.com/v1/messages"
+              },
+              {
+                "key": "anthropic_model",
+                "label": "MODELE",
+                "placeholder": "claude-3-5-sonnet-latest"
+              },
+              {
+                "key": "translation_prompt_pack",
+                "label": "PACK DE PROMPTS"
+              },
+              {
+                "key": "translation_prompt_template",
+                "label": "PROMPT PERSONNALISE",
+                "placeholder": "Traduire le texte du sous-titre de {from_lang} vers {to_lang}..."
+              }
+            ]
+          }
+        }
+      },
       "package_root_path": "plugins/translation/translation-plugin-anthropic",
       "package_files": [
         {
@@ -1863,6 +2642,27 @@
           "package_path": "handler.js",
           "sha256": "3F8214354A2F2CEAD4CFA71064584BA9D1A0FCB020DE19155AFC96CC7CCA4658",
           "size_bytes": 362
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/translation/translation-plugin-anthropic/locales/de.json",
+          "package_path": "locales/de.json",
+          "sha256": "FBA76E30F2C2980258513FF8C4480F6C44F1808814CFAA63ACE76CC7AD49B4A5",
+          "size_bytes": 873
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/translation/translation-plugin-anthropic/locales/en.json",
+          "package_path": "locales/en.json",
+          "sha256": "20CA583400A7A9B6E9F00B02B7D857BEFBD5A91051DDF07A0DB34FD1A76BF7AF",
+          "size_bytes": 851
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/translation/translation-plugin-anthropic/locales/fr.json",
+          "package_path": "locales/fr.json",
+          "sha256": "08B0E5F45350A0C9CF105D213D1BA09D770F03AEB83B013FE7D975971AF2C54D",
+          "size_bytes": 871
         },
         {
           "kind": "manifest",
@@ -1959,6 +2759,125 @@
           "windows-x64"
         ]
       },
+      "locale_bundles": {
+        "de": {
+          "name": "Azure OpenAI Uebersetzung",
+          "summary": "Cloud-Untertiteluebersetzung ueber das Azure-OpenAI-Uebersetzungs-Backend.",
+          "presets": [
+            {
+              "id": "cloud-azure",
+              "name": "Azure Cloud"
+            }
+          ],
+          "credential_schema": {
+            "apiKeyPlaceholder": "Azure-Key...",
+            "fields": [
+              {
+                "key": "ai_endpoint",
+                "label": "AZURE-BASIS-URL",
+                "placeholder": "https://<resource>.openai.azure.com"
+              },
+              {
+                "key": "azure_api_version",
+                "label": "API-VERSION",
+                "placeholder": "2024-06-01"
+              },
+              {
+                "key": "azure_chat_deployment",
+                "label": "CHAT-DEPLOYMENT",
+                "placeholder": "gpt-4o-mini"
+              },
+              {
+                "key": "translation_prompt_pack",
+                "label": "PROMPT-PAKET"
+              },
+              {
+                "key": "translation_prompt_template",
+                "label": "BENUTZERDEFINIERTER PROMPT",
+                "placeholder": "Untertiteltext von {from_lang} nach {to_lang} uebersetzen..."
+              }
+            ]
+          }
+        },
+        "en": {
+          "name": "Azure OpenAI Translation",
+          "summary": "Cloud subtitle translation through the Azure OpenAI translation backend.",
+          "presets": [
+            {
+              "id": "cloud-azure",
+              "name": "Cloud Azure"
+            }
+          ],
+          "credential_schema": {
+            "apiKeyPlaceholder": "Azure key...",
+            "fields": [
+              {
+                "key": "ai_endpoint",
+                "label": "AZURE BASE URL",
+                "placeholder": "https://<resource>.openai.azure.com"
+              },
+              {
+                "key": "azure_api_version",
+                "label": "API VERSION",
+                "placeholder": "2024-06-01"
+              },
+              {
+                "key": "azure_chat_deployment",
+                "label": "CHAT DEPLOYMENT",
+                "placeholder": "gpt-4o-mini"
+              },
+              {
+                "key": "translation_prompt_pack",
+                "label": "PROMPT PACK"
+              },
+              {
+                "key": "translation_prompt_template",
+                "label": "CUSTOM PROMPT",
+                "placeholder": "Translate subtitle text from {from_lang} to {to_lang}..."
+              }
+            ]
+          }
+        },
+        "fr": {
+          "name": "Traduction Azure OpenAI",
+          "summary": "Traduction cloud de sous-titres via le backend de traduction Azure OpenAI.",
+          "presets": [
+            {
+              "id": "cloud-azure",
+              "name": "Cloud Azure"
+            }
+          ],
+          "credential_schema": {
+            "apiKeyPlaceholder": "Cle Azure...",
+            "fields": [
+              {
+                "key": "ai_endpoint",
+                "label": "URL DE BASE AZURE",
+                "placeholder": "https://<resource>.openai.azure.com"
+              },
+              {
+                "key": "azure_api_version",
+                "label": "VERSION API",
+                "placeholder": "2024-06-01"
+              },
+              {
+                "key": "azure_chat_deployment",
+                "label": "DEPLOIEMENT CHAT",
+                "placeholder": "gpt-4o-mini"
+              },
+              {
+                "key": "translation_prompt_pack",
+                "label": "PACK DE PROMPTS"
+              },
+              {
+                "key": "translation_prompt_template",
+                "label": "PROMPT PERSONNALISE",
+                "placeholder": "Traduire le texte du sous-titre de {from_lang} vers {to_lang}..."
+              }
+            ]
+          }
+        }
+      },
       "package_root_path": "plugins/translation/translation-plugin-azure",
       "package_files": [
         {
@@ -1967,6 +2886,27 @@
           "package_path": "handler.js",
           "sha256": "BC920008C2A1CFE8828D9C8D2F14C9AFC1F4A7572C7F08BEA84BA4700F5BC92B",
           "size_bytes": 361
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/translation/translation-plugin-azure/locales/de.json",
+          "package_path": "locales/de.json",
+          "sha256": "1A52827E29D7F78AA959C751E0128CB0E69291082505A4217E6016461CD4DB32",
+          "size_bytes": 994
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/translation/translation-plugin-azure/locales/en.json",
+          "package_path": "locales/en.json",
+          "sha256": "BDA16D3C18970B2510B3A421B6EE6309170704D95A2A8BB6324B28082D80D294",
+          "size_bytes": 972
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/translation/translation-plugin-azure/locales/fr.json",
+          "package_path": "locales/fr.json",
+          "sha256": "0BF4CC12AC9C3AA002D561DAF604594FB5B83CFE570DEB0C6D1F98F087E94AA8",
+          "size_bytes": 995
         },
         {
           "kind": "manifest",
@@ -2053,6 +2993,86 @@
           "windows-x64"
         ]
       },
+      "locale_bundles": {
+        "de": {
+          "name": "DeepL Uebersetzung",
+          "summary": "Cloud-Untertiteluebersetzung ueber das DeepL-Uebersetzungs-Backend.",
+          "presets": [
+            {
+              "id": "cloud-deepl",
+              "name": "DeepL Cloud"
+            }
+          ],
+          "credential_schema": {
+            "apiKeyPlaceholder": "DeepL-Key...",
+            "fields": [
+              {
+                "key": "deepl_endpoint",
+                "label": "DEEPL-ENDPUNKT",
+                "placeholder": "https://api-free.deepl.com/v2/translate",
+                "help": "Verwende bei Bedarf den Pro-Endpunkt deines Kontos."
+              },
+              {
+                "key": "deepl_formality",
+                "label": "FORMALITAET",
+                "help": "Wird nur fuer unterstuetzte Zielsprachen angewendet."
+              }
+            ]
+          }
+        },
+        "en": {
+          "name": "DeepL Translation",
+          "summary": "Cloud subtitle translation through the DeepL translation backend.",
+          "presets": [
+            {
+              "id": "cloud-deepl",
+              "name": "Cloud DeepL"
+            }
+          ],
+          "credential_schema": {
+            "apiKeyPlaceholder": "DeepL key...",
+            "fields": [
+              {
+                "key": "deepl_endpoint",
+                "label": "DEEPL ENDPOINT",
+                "placeholder": "https://api-free.deepl.com/v2/translate",
+                "help": "Use Pro endpoint if required by your account."
+              },
+              {
+                "key": "deepl_formality",
+                "label": "FORMALITY",
+                "help": "Only applied for supported target languages."
+              }
+            ]
+          }
+        },
+        "fr": {
+          "name": "Traduction DeepL",
+          "summary": "Traduction cloud de sous-titres via le backend de traduction DeepL.",
+          "presets": [
+            {
+              "id": "cloud-deepl",
+              "name": "Cloud DeepL"
+            }
+          ],
+          "credential_schema": {
+            "apiKeyPlaceholder": "Cle DeepL...",
+            "fields": [
+              {
+                "key": "deepl_endpoint",
+                "label": "ENDPOINT DEEPL",
+                "placeholder": "https://api-free.deepl.com/v2/translate",
+                "help": "Utiliser l'endpoint Pro si votre compte l'exige."
+              },
+              {
+                "key": "deepl_formality",
+                "label": "FORMALITE",
+                "help": "Applique uniquement aux langues cibles prises en charge."
+              }
+            ]
+          }
+        }
+      },
       "package_root_path": "plugins/translation/translation-plugin-deepl",
       "package_files": [
         {
@@ -2061,6 +3081,27 @@
           "package_path": "handler.js",
           "sha256": "B17532766A0A86E6C9258560FC9A2A0D7FBA6B2B411D9D5207FA4F2492ED8631",
           "size_bytes": 354
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/translation/translation-plugin-deepl/locales/de.json",
+          "package_path": "locales/de.json",
+          "sha256": "2565D6C57A6D240F63BA435C646EACC417E87148C77DB024B5A5ED8047351786",
+          "size_bytes": 673
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/translation/translation-plugin-deepl/locales/en.json",
+          "package_path": "locales/en.json",
+          "sha256": "1870CD352661AA1F673D848CB9021D932D7A6B745D31F90A068E2310A49D590E",
+          "size_bytes": 654
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/translation/translation-plugin-deepl/locales/fr.json",
+          "package_path": "locales/fr.json",
+          "sha256": "1A9BA38228A364BA5EC68C129E52E77F9780E6B2F17E53FAE9D16CF93E6DF46E",
+          "size_bytes": 670
         },
         {
           "kind": "manifest",
@@ -2159,6 +3200,110 @@
           "windows-x64"
         ]
       },
+      "locale_bundles": {
+        "de": {
+          "name": "Ollama Uebersetzung",
+          "summary": "Lokale Untertiteluebersetzung ueber eine provider-verwaltete Ollama-Laufzeit und ein First-Party-Standardmodell.",
+          "presets": [
+            {
+              "id": "local-ollama",
+              "name": "Lokales Ollama (verwaltetes Qwen 2.5 7B)"
+            }
+          ],
+          "credential_schema": {
+            "fields": [
+              {
+                "key": "ollama_endpoint",
+                "label": "OLLAMA-ENDPUNKT",
+                "placeholder": "http://localhost:11434/v1/chat/completions"
+              },
+              {
+                "key": "ollama_model",
+                "label": "MODELL",
+                "placeholder": "qwen2.5:7b",
+                "help": "Das First-Party-Ollama-Plugin installiert standardmaessig qwen2.5:7b. Verwende den exakten Tag aus `ollama list` nur, wenn du diesen verwalteten Standard bewusst ueberschreiben willst."
+              },
+              {
+                "key": "translation_prompt_pack",
+                "label": "PROMPT-PAKET"
+              },
+              {
+                "key": "translation_prompt_template",
+                "label": "BENUTZERDEFINIERTER PROMPT",
+                "placeholder": "Untertiteltext von {from_lang} nach {to_lang} uebersetzen..."
+              }
+            ]
+          }
+        },
+        "en": {
+          "name": "Ollama Translation",
+          "summary": "Local subtitle translation through a provider-managed Ollama runtime and first-party default model dependency.",
+          "presets": [
+            {
+              "id": "local-ollama",
+              "name": "Local Ollama (Managed Qwen 2.5 7B)"
+            }
+          ],
+          "credential_schema": {
+            "fields": [
+              {
+                "key": "ollama_endpoint",
+                "label": "OLLAMA ENDPOINT",
+                "placeholder": "http://localhost:11434/v1/chat/completions"
+              },
+              {
+                "key": "ollama_model",
+                "label": "MODEL",
+                "placeholder": "qwen2.5:7b",
+                "help": "The first-party managed Ollama plugin installs qwen2.5:7b by default. Use the exact tag from `ollama list` only if you intentionally override that managed default."
+              },
+              {
+                "key": "translation_prompt_pack",
+                "label": "PROMPT PACK"
+              },
+              {
+                "key": "translation_prompt_template",
+                "label": "CUSTOM PROMPT",
+                "placeholder": "Translate subtitle text from {from_lang} to {to_lang}..."
+              }
+            ]
+          }
+        },
+        "fr": {
+          "name": "Traduction Ollama",
+          "summary": "Traduction locale de sous-titres via un runtime Ollama gere par le fournisseur et une dependance de modele first-party par defaut.",
+          "presets": [
+            {
+              "id": "local-ollama",
+              "name": "Ollama local (Qwen 2.5 7B gere)"
+            }
+          ],
+          "credential_schema": {
+            "fields": [
+              {
+                "key": "ollama_endpoint",
+                "label": "ENDPOINT OLLAMA",
+                "placeholder": "http://localhost:11434/v1/chat/completions"
+              },
+              {
+                "key": "ollama_model",
+                "label": "MODELE",
+                "placeholder": "qwen2.5:7b",
+                "help": "Le plugin Ollama first-party installe qwen2.5:7b par defaut. Utilisez l'etiquette exacte de `ollama list` seulement si vous souhaitez remplacer ce defaut gere."
+              },
+              {
+                "key": "translation_prompt_pack",
+                "label": "PACK DE PROMPTS"
+              },
+              {
+                "key": "translation_prompt_template",
+                "label": "PROMPT PERSONNALISE",
+                "placeholder": "Traduire le texte du sous-titre de {from_lang} vers {to_lang}..."
+              }
+            ]
+          }
+        }
+      },
       "package_root_path": "plugins/translation/translation-plugin-ollama",
       "package_files": [
         {
@@ -2167,6 +3312,27 @@
           "package_path": "handler.js",
           "sha256": "284BED8160F8452B65C1BA201ACCD122CBF5758EBA7F3E49012F7A42EDEAD645",
           "size_bytes": 356
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/translation/translation-plugin-ollama/locales/de.json",
+          "package_path": "locales/de.json",
+          "sha256": "1F214B27B6FBC35BC67F6B87378ADB76A26BC0E721E195AC9E02FC7F2005D64C",
+          "size_bytes": 1090
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/translation/translation-plugin-ollama/locales/en.json",
+          "package_path": "locales/en.json",
+          "sha256": "B816B4EEF66957B64C0E4DEB4E5322E9853EAE4F0B66154EC2B7CE86D4B39DD6",
+          "size_bytes": 1041
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/translation/translation-plugin-ollama/locales/fr.json",
+          "package_path": "locales/fr.json",
+          "sha256": "EF2B7ECF851FE75661DE34B92C105D9EA83CDAAC5B27C7D435B84BF0E836D393",
+          "size_bytes": 1072
         },
         {
           "kind": "manifest",
@@ -2253,6 +3419,101 @@
           "windows-x64"
         ]
       },
+      "locale_bundles": {
+        "de": {
+          "name": "OpenAI Uebersetzung",
+          "summary": "Cloud-Untertiteluebersetzung ueber das OpenAI-Uebersetzungs-Backend.",
+          "presets": [
+            {
+              "id": "cloud-openai",
+              "name": "OpenAI Cloud"
+            }
+          ],
+          "credential_schema": {
+            "apiKeyPlaceholder": "sk-...",
+            "fields": [
+              {
+                "key": "openai_chat_model",
+                "label": "CHAT-MODELL",
+                "placeholder": "gpt-4o",
+                "help": "z. B. gpt-4o, gpt-3.5-turbo"
+              },
+              {
+                "key": "translation_prompt_pack",
+                "label": "PROMPT-PAKET"
+              },
+              {
+                "key": "translation_prompt_template",
+                "label": "BENUTZERDEFINIERTER PROMPT",
+                "placeholder": "Untertiteltext von {from_lang} nach {to_lang} uebersetzen...",
+                "help": "Variablen: {from_lang}, {to_lang}, {text}. Leer lassen fuer den Pack-Standard."
+              }
+            ]
+          }
+        },
+        "en": {
+          "name": "OpenAI Translation",
+          "summary": "Cloud subtitle translation through the OpenAI translation backend.",
+          "presets": [
+            {
+              "id": "cloud-openai",
+              "name": "Cloud OpenAI"
+            }
+          ],
+          "credential_schema": {
+            "apiKeyPlaceholder": "sk-...",
+            "fields": [
+              {
+                "key": "openai_chat_model",
+                "label": "CHAT MODEL",
+                "placeholder": "gpt-4o",
+                "help": "e.g. gpt-4o, gpt-3.5-turbo"
+              },
+              {
+                "key": "translation_prompt_pack",
+                "label": "PROMPT PACK"
+              },
+              {
+                "key": "translation_prompt_template",
+                "label": "CUSTOM PROMPT",
+                "placeholder": "Translate subtitle text from {from_lang} to {to_lang}...",
+                "help": "Variables: {from_lang}, {to_lang}, {text}. Leave empty for pack default."
+              }
+            ]
+          }
+        },
+        "fr": {
+          "name": "Traduction OpenAI",
+          "summary": "Traduction cloud de sous-titres via le backend de traduction OpenAI.",
+          "presets": [
+            {
+              "id": "cloud-openai",
+              "name": "Cloud OpenAI"
+            }
+          ],
+          "credential_schema": {
+            "apiKeyPlaceholder": "sk-...",
+            "fields": [
+              {
+                "key": "openai_chat_model",
+                "label": "MODELE DE CHAT",
+                "placeholder": "gpt-4o",
+                "help": "p. ex. gpt-4o, gpt-3.5-turbo"
+              },
+              {
+                "key": "translation_prompt_pack",
+                "label": "PACK DE PROMPTS"
+              },
+              {
+                "key": "translation_prompt_template",
+                "label": "PROMPT PERSONNALISE",
+                "placeholder": "Traduire le texte du sous-titre de {from_lang} vers {to_lang}...",
+                "help": "Variables : {from_lang}, {to_lang}, {text}. Laisser vide pour le pack par defaut."
+              }
+            ]
+          }
+        }
+      },
       "package_root_path": "plugins/translation/translation-plugin-openai",
       "package_files": [
         {
@@ -2261,6 +3522,27 @@
           "package_path": "handler.js",
           "sha256": "39AFC60C03CB5D32CD55AB4506F1AE6683681E62D085777B9340FAF451979CD3",
           "size_bytes": 356
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/translation/translation-plugin-openai/locales/de.json",
+          "package_path": "locales/de.json",
+          "sha256": "89BF3ABC708110D31EF8270F490F8E188CE9999295A852DB54B6AA8FF1367A0D",
+          "size_bytes": 845
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/translation/translation-plugin-openai/locales/en.json",
+          "package_path": "locales/en.json",
+          "sha256": "11DA7613E4E4C8F0CDC4F38550900D8567FA347BC54D48BC587819806B11B68B",
+          "size_bytes": 816
+        },
+        {
+          "kind": "locale-bundle",
+          "path": "plugins/translation/translation-plugin-openai/locales/fr.json",
+          "package_path": "locales/fr.json",
+          "sha256": "2158D7672DB0551A940EDF214DB956134BAD37AC73D1C84FD03AA34C51ACB81D",
+          "size_bytes": 850
         },
         {
           "kind": "manifest",

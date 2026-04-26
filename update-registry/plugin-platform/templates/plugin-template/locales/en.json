@@ -1,0 +1,10 @@
+{
+  "name": "Example Translation Plugin",
+  "summary": "Template plugin used as a starting point for new OCYRA translation providers.",
+  "presets": [
+    {
+      "id": "example-default",
+      "name": "Example Default"
+    }
+  ]
+}

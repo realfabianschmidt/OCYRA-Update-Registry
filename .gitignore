@@ -1,1 +1,13 @@
 .signing/
+
+# Local build and packaging artifacts do not belong in the public registry repo.
+/.cargo-lock
+/.fingerprint/
+/bundle/
+/deps/
+/examples/
+/incremental/
+/resources/
+/wix/
+/_up_/
+/ffmpeg.exe

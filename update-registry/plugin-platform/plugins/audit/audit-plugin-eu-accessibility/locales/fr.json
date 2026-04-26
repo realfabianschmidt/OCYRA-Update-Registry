@@ -1,0 +1,10 @@
+{
+  "name": "EU Accessibility Act / BFSG",
+  "summary": "Parametres d'accessibilite equilibres pour la BFSG, l'EAA, WCAG 2.1 AA et EBU R37.",
+  "presets": [
+    {
+      "id": "eu-eaa-bfsg-default",
+      "name": "Profil par defaut Accessibilite UE"
+    }
+  ]
+}

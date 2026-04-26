@@ -1,0 +1,26 @@
+{
+  "name": "Traduction DeepL",
+  "summary": "Traduction cloud de sous-titres via le backend de traduction DeepL.",
+  "presets": [
+    {
+      "id": "cloud-deepl",
+      "name": "Cloud DeepL"
+    }
+  ],
+  "credential_schema": {
+    "apiKeyPlaceholder": "Cle DeepL...",
+    "fields": [
+      {
+        "key": "deepl_endpoint",
+        "label": "ENDPOINT DEEPL",
+        "placeholder": "https://api-free.deepl.com/v2/translate",
+        "help": "Utiliser l'endpoint Pro si votre compte l'exige."
+      },
+      {
+        "key": "deepl_formality",
+        "label": "FORMALITE",
+        "help": "Applique uniquement aux langues cibles prises en charge."
+      }
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "whisper.cpp + Sherpa-ONNX",
+  "summary": "Offline-Transkription mit whisper.cpp und Sprecherdiarisierung ueber Sherpa-ONNX.",
+  "presets": [
+    {
+      "id": "offline-accurate",
+      "name": "Offline Praezise"
+    }
+  ]
+}

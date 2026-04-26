@@ -1,0 +1,34 @@
+{
+  "name": "Traduction Ollama",
+  "summary": "Traduction locale de sous-titres via un runtime Ollama gere par le fournisseur et une dependance de modele first-party par defaut.",
+  "presets": [
+    {
+      "id": "local-ollama",
+      "name": "Ollama local (Qwen 2.5 7B gere)"
+    }
+  ],
+  "credential_schema": {
+    "fields": [
+      {
+        "key": "ollama_endpoint",
+        "label": "ENDPOINT OLLAMA",
+        "placeholder": "http://localhost:11434/v1/chat/completions"
+      },
+      {
+        "key": "ollama_model",
+        "label": "MODELE",
+        "placeholder": "qwen2.5:7b",
+        "help": "Le plugin Ollama first-party installe qwen2.5:7b par defaut. Utilisez l'etiquette exacte de `ollama list` seulement si vous souhaitez remplacer ce defaut gere."
+      },
+      {
+        "key": "translation_prompt_pack",
+        "label": "PACK DE PROMPTS"
+      },
+      {
+        "key": "translation_prompt_template",
+        "label": "PROMPT PERSONNALISE",
+        "placeholder": "Traduire le texte du sous-titre de {from_lang} vers {to_lang}..."
+      }
+    ]
+  }
+}

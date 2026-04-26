@@ -1,0 +1,10 @@
+{
+  "name": "whisper.cpp",
+  "summary": "Transcription hors ligne avec whisper.cpp sans diarisation des locuteurs.",
+  "presets": [
+    {
+      "id": "offline-light",
+      "name": "Hors ligne leger"
+    }
+  ]
+}

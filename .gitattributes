@@ -1,5 +1,12 @@
 * text=auto
 
+# Maintainer docs and local guardrail scripts should stay LF-stable as well.
+README.md text eol=lf
+PUSH.md text eol=lf
+MODULE_AUTHORING_GUIDE.md text eol=lf
+docs/**/*.md text eol=lf
+scripts/**/*.mjs text eol=lf
+
 # Registry artifacts must be byte-stable across platforms.
 update-registry/plugin-platform/**/*.js text eol=lf
 update-registry/plugin-platform/**/*.json text eol=lf

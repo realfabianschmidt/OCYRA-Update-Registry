@@ -30,6 +30,10 @@ function normalizeCatalogPath(path) {
     return path.replace(/\\/gu, '/');
 }
 
+function normalizeLocaleCode(value) {
+    return String(value || '').trim().toLowerCase().replace(/_/gu, '-');
+}
+
 function findSigningKeyPair() {
     const candidateDirs = [
         resolve(baseDir, '..', '..', '.signing'),
@@ -94,7 +98,39 @@ function collectPluginPackageFiles(plugin, pluginDir) {
         addFile(file, 'data-file');
     }
 
+    const localesDir = join(pluginDir, 'locales');
+    if (existsSync(localesDir)) {
+        for (const entry of readdirSync(localesDir, { withFileTypes: true })) {
+            if (!entry.isFile()) continue;
+            if (!entry.name.toLowerCase().endsWith('.json')) continue;
+            addFile(`locales/${entry.name}`, 'locale-bundle');
+        }
+    }
+
     return specs.sort((left, right) => left.package_path.localeCompare(right.package_path));
+}
+
+function collectPluginLocaleBundles(pluginDir) {
+    const localesDir = join(pluginDir, 'locales');
+    if (!existsSync(localesDir)) {
+        return {};
+    }
+
+    const bundles = {};
+    for (const entry of readdirSync(localesDir, { withFileTypes: true })) {
+        if (!entry.isFile()) continue;
+        if (!entry.name.toLowerCase().endsWith('.json')) continue;
+        const locale = normalizeLocaleCode(entry.name.slice(0, -5));
+        if (!locale) continue;
+        const bundlePath = join(localesDir, entry.name);
+        const bundle = readJson(bundlePath);
+        if (!bundle || typeof bundle !== 'object' || Array.isArray(bundle)) {
+            continue;
+        }
+        bundles[locale] = bundle;
+    }
+
+    return bundles;
 }
 
 function collectPlugins() {
@@ -104,9 +140,11 @@ function collectPlugins() {
             const pluginPath = join(pluginDir, 'plugin.json');
             if (!existsSync(pluginPath)) continue;
             const plugin = readJson(pluginPath);
+            const localeBundles = collectPluginLocaleBundles(pluginDir);
             const pluginRelativeDir = normalizeCatalogPath(pluginDir.slice(baseDir.length + 1));
             plugins.push({
                 ...plugin,
+                ...(Object.keys(localeBundles).length > 0 ? { locale_bundles: localeBundles } : {}),
                 package_root_path: pluginRelativeDir,
                 package_files: collectPluginPackageFiles(plugin, pluginDir)
             });

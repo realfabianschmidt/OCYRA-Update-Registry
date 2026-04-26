@@ -26,7 +26,7 @@ Those legacy artifacts have been removed from this publish repository on purpose
 2. Never hand-edit `catalog.json` or `catalog.sig` unless you are debugging.
 3. Edit plugin and dependency source files first, then rebuild the catalog.
 4. Keep publisher trust and file hashes accurate.
-5. Prefer mirroring the full `plugin-platform/` tree from the private app repo instead of copying individual files ad hoc.
+5. Do not let desktop-app build outputs or local scratch directories live under `update-registry/`.
 
 ## Important Paths
 
@@ -45,5 +45,7 @@ Those legacy artifacts have been removed from this publish repository on purpose
   [../PUSH.md](../PUSH.md)
 - plugin tree and catalog rules:
   [plugin-platform/README.md](./plugin-platform/README.md)
+- repository guardrails:
+  [../docs/active/REGISTRY_ENGINEERING_STANDARDS.md](../docs/active/REGISTRY_ENGINEERING_STANDARDS.md)
 
 

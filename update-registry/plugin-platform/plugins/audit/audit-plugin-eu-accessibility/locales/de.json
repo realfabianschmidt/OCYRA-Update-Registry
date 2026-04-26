@@ -1,0 +1,10 @@
+{
+  "name": "EU Accessibility Act / BFSG",
+  "summary": "Ausgewogene Barrierefreiheits-Standards fuer BFSG, EAA, WCAG 2.1 AA und EBU R37.",
+  "presets": [
+    {
+      "id": "eu-eaa-bfsg-default",
+      "name": "EU Accessibility Act Standard"
+    }
+  ]
+}

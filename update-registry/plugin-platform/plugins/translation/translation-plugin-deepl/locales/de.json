@@ -1,0 +1,26 @@
+{
+  "name": "DeepL Uebersetzung",
+  "summary": "Cloud-Untertiteluebersetzung ueber das DeepL-Uebersetzungs-Backend.",
+  "presets": [
+    {
+      "id": "cloud-deepl",
+      "name": "DeepL Cloud"
+    }
+  ],
+  "credential_schema": {
+    "apiKeyPlaceholder": "DeepL-Key...",
+    "fields": [
+      {
+        "key": "deepl_endpoint",
+        "label": "DEEPL-ENDPUNKT",
+        "placeholder": "https://api-free.deepl.com/v2/translate",
+        "help": "Verwende bei Bedarf den Pro-Endpunkt deines Kontos."
+      },
+      {
+        "key": "deepl_formality",
+        "label": "FORMALITAET",
+        "help": "Wird nur fuer unterstuetzte Zielsprachen angewendet."
+      }
+    ]
+  }
+}

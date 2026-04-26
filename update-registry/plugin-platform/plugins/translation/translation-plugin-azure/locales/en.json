@@ -1,0 +1,39 @@
+{
+  "name": "Azure OpenAI Translation",
+  "summary": "Cloud subtitle translation through the Azure OpenAI translation backend.",
+  "presets": [
+    {
+      "id": "cloud-azure",
+      "name": "Cloud Azure"
+    }
+  ],
+  "credential_schema": {
+    "apiKeyPlaceholder": "Azure key...",
+    "fields": [
+      {
+        "key": "ai_endpoint",
+        "label": "AZURE BASE URL",
+        "placeholder": "https://<resource>.openai.azure.com"
+      },
+      {
+        "key": "azure_api_version",
+        "label": "API VERSION",
+        "placeholder": "2024-06-01"
+      },
+      {
+        "key": "azure_chat_deployment",
+        "label": "CHAT DEPLOYMENT",
+        "placeholder": "gpt-4o-mini"
+      },
+      {
+        "key": "translation_prompt_pack",
+        "label": "PROMPT PACK"
+      },
+      {
+        "key": "translation_prompt_template",
+        "label": "CUSTOM PROMPT",
+        "placeholder": "Translate subtitle text from {from_lang} to {to_lang}..."
+      }
+    ]
+  }
+}

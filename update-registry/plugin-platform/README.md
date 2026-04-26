@@ -1,6 +1,6 @@
 # OCYRA Plugin Platform - Active Registry Layout
 
-This directory is the active source-of-truth layout for the OCYRA plugin platform.
+This directory is the canonical authoring and publish tree for the OCYRA plugin platform.
 
 Only plugin-platform artifacts belong here.
 
@@ -36,6 +36,7 @@ plugin-platform/
 3. `Dependencies are central.` Shared runtimes and models live in `dependencies/`.
 4. `Templates stay out of plugins.` Authoring templates belong in `templates/`, not in `plugins/`.
 5. `Catalogs are generated.` `catalog.json` and `catalog.sig` are build outputs, not hand-maintained files.
+6. `Publish tree only.` Plans, build outputs, and app-runtime artifacts do not belong under `plugin-platform/`.
 
 Family-specific metadata stays explicit:
 
@@ -73,6 +74,12 @@ node .\update-registry\plugin-platform\build-catalog.mjs
 
 The generated catalog embeds `app-release.json`, so release notes and plugin metadata share the same signed distribution surface.
 
+Before committing, also run:
+
+```powershell
+node .\scripts\check-registry-structure.mjs
+```
+
 ## Hidden Catalog Source Config
 
 Catalog source URLs are intentionally not configured in the frontend.
@@ -98,6 +105,15 @@ For self-hosted or company-private catalogs, keep the same object model and trus
 
 The desktop runtime treats public and private catalogs as the same platform concept with different trust sources.
 
+## Documentation Placement
+
+Keep runtime-readable publish files here.
+
+Keep maintainer design notes and historical plans outside the publish tree:
+
+- active maintainer rules: `docs/active/`
+- archived plans and retired notes: `docs/archive/`
+
 ## Repository And Branch Strategy
 
 Keep one canonical registry branch, normally `main`.
@@ -113,5 +129,3 @@ Prefer this structure instead:
 - separate catalogs or repos later only when you truly need different publishers or trust boundaries
 
 For company-specific requirements, add a new catalog source entry instead of a new branch per domain.
-
-

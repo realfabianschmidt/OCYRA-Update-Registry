@@ -1,0 +1,10 @@
+{
+  "name": "whisper.cpp + Sherpa-ONNX",
+  "summary": "Transcription hors ligne avec whisper.cpp et diarisation des locuteurs via Sherpa-ONNX.",
+  "presets": [
+    {
+      "id": "offline-accurate",
+      "name": "Hors ligne precis"
+    }
+  ]
+}

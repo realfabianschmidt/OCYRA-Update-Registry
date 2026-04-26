@@ -1,0 +1,10 @@
+{
+  "name": "EU Accessibility Act / BFSG",
+  "summary": "Balanced accessibility defaults for BFSG, EAA, WCAG 2.1 AA and EBU R37.",
+  "presets": [
+    {
+      "id": "eu-eaa-bfsg-default",
+      "name": "EU Accessibility Act Default"
+    }
+  ]
+}

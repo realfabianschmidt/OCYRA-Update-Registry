@@ -1,0 +1,10 @@
+{
+  "name": "whisper.cpp",
+  "summary": "Offline transcription with whisper.cpp without speaker diarization.",
+  "presets": [
+    {
+      "id": "offline-light",
+      "name": "Offline Light"
+    }
+  ]
+}

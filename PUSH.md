@@ -4,34 +4,23 @@ This guide is the recommended workflow for publishing OCYRA plugins cleanly to:
 
 `./OCYRA-Update-Registry`
 
-## Source And Target
+## Repository Boundary
 
-- implementation source:
-  `../OCYRA/update-registry/plugin-platform`
-- publish target:
+- desktop runtime repo:
+  `../OCYRA`
+- plugin registry repo:
   `./update-registry/plugin-platform`
 
 ## Rule Zero
 
-Do not manually maintain plugin metadata in two places.
+Treat this repository as the authoritative authoring and publish surface for plugin packages, dependency manifests, locale bundles, and catalog outputs.
 
-Edit the private app repository first, then mirror the finished `plugin-platform/` tree into this publish repository.
+Use the `OCYRA` repo only when the change belongs to the desktop runtime itself:
 
-## Source Of Truth
-
-Treat this repository as the public publish mirror.
-
-The authoritative working tree for plugin and dependency authoring is:
-
-- `../OCYRA/update-registry/plugin-platform`
-
-That means:
-
-1. build or change plugins in the private app repo
-2. rebuild the catalog there
-3. mirror the finished `plugin-platform/` tree into this repo
-4. validate
-5. commit and push from this repo
+- Tauri/Rust backend behavior
+- renderer UI and AppBridge logic
+- plugin host/runtime contracts
+- app tests and release packaging
 
 ## What Must Exist Before Push
 
@@ -40,20 +29,6 @@ That means:
 - `plugin-platform/app-release.json`
 - all plugin folders under `plugin-platform/plugins/...`
 - all dependency manifests under `plugin-platform/dependencies/...`
-
-## Mirror Step
-
-Mirror the full plugin tree from the private app repo into this repo.
-
-Recommended PowerShell pattern:
-
-```powershell
-$workspaceRoot = Resolve-Path '..'
-$source = Join-Path $workspaceRoot 'OCYRA\update-registry\plugin-platform'
-$target = Join-Path $workspaceRoot 'OCYRA-Update-Registry\update-registry\plugin-platform'
-robocopy $source $target /MIR /NFL /NDL /NJH /NJS /NP
-if ($LASTEXITCODE -ge 8) { throw "robocopy failed with exit code $LASTEXITCODE" }
-```
 
 ## Hashes
 
@@ -104,14 +79,16 @@ So the rule is:
 Rebuild the catalog from the current plugin and dependency files:
 
 ```powershell
+node .\scripts\check-registry-structure.mjs
 node .\update-registry\plugin-platform\build-catalog.mjs
 ```
 
 This does three important things:
 
-1. regenerates `catalog.json`
-2. embeds `app-release.json` into the catalog as `app_release`
-3. refreshes `catalog.sig` when the trusted signing key pair is available
+1. verifies that the repo surface is still registry-only
+2. regenerates `catalog.json`
+3. embeds `app-release.json` into the catalog as `app_release`
+4. refreshes `catalog.sig` when the trusted signing key pair is available
 
 ## Release Metadata
 
@@ -131,6 +108,7 @@ Important fields:
 Run at least these checks:
 
 ```powershell
+node .\scripts\check-registry-structure.mjs
 Get-Content .\update-registry\plugin-platform\app-release.json | ConvertFrom-Json | Out-Null
 Get-Content .\update-registry\plugin-platform\catalog.json | ConvertFrom-Json | Out-Null
 Get-Content .\update-registry\plugin-platform\catalog.sig | ConvertFrom-Json | Out-Null
@@ -144,14 +122,15 @@ Also verify that:
 - every referenced runtime entry file exists
 - every referenced dependency manifest exists
 - every referenced dependency download URL still points to the intended release asset
-- no legacy top-level publish paths reappeared
+- no desktop-app build outputs reappeared
+- no retired publish paths reappeared
 
 ## Optional Structure Check
 
 To make sure this publish repo stayed plugin-only, run:
 
 ```powershell
-rg --files .\update-registry | sort
+node .\scripts\check-registry-structure.mjs
 ```
 
 Expected shape:
@@ -161,6 +140,11 @@ Expected shape:
 
 Unexpected shape:
 
+- `bundle/...`
+- `deps/...`
+- `wix/...`
+- `ffmpeg.exe`
+- `update-registry/heads/...`
 - `update-registry/manifest.json`
 - `update-registry/manifest.sig`
 - `update-registry/pipeline-handlers/...`
@@ -181,15 +165,13 @@ If those URLs work and the catalog signature matches, OCYRA can discover and ins
 
 ## Clean Push Checklist
 
-1. Change plugin and dependency source files in the private app repo.
-2. Update any dependency `sha256` values when download artifacts changed.
-3. Update `app-release.json` if you want a new release notice.
-4. Rebuild the catalog and signature.
-5. Mirror the complete `plugin-platform/` tree into this publish repo.
-6. Confirm no retired legacy paths came back.
-7. Validate JSON files parse.
+1. Change plugin and dependency source files in this repository.
+2. If the change also needs runtime support, land the matching app change in `../OCYRA`.
+3. Update any dependency `sha256` values when download artifacts changed.
+4. Update `app-release.json` if you want a new release notice.
+5. Run `node .\scripts\check-registry-structure.mjs`.
+6. Rebuild the catalog and signature.
+7. Validate the JSON files and publish surface.
 8. Commit only when `catalog.json`, `catalog.sig`, plugins, and dependencies are internally consistent.
 9. Push to `main`.
 10. Verify the raw GitHub URLs.
-
-

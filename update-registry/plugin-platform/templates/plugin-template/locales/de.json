@@ -1,0 +1,10 @@
+{
+  "name": "Beispiel-Uebersetzungs-Plugin",
+  "summary": "Template-Plugin als Ausgangspunkt fuer neue OCYRA-Uebersetzungs-Provider.",
+  "presets": [
+    {
+      "id": "example-default",
+      "name": "Beispiel-Standard"
+    }
+  ]
+}

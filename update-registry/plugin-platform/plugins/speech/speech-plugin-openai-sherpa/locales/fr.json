@@ -1,0 +1,20 @@
+{
+  "name": "OpenAI Whisper + Sherpa-ONNX",
+  "summary": "Transcription cloud via l'API OpenAI Whisper avec diarisation locale des locuteurs via Sherpa-ONNX.",
+  "presets": [
+    {
+      "id": "hybrid-cloud-local",
+      "name": "Cloud Whisper + Diarisation locale"
+    }
+  ],
+  "credential_schema": {
+    "fields": [
+      {
+        "key": "openai_whisper_endpoint",
+        "label": "ENDPOINT WHISPER",
+        "placeholder": "https://api.openai.com/v1/audio/transcriptions",
+        "help": "Laisser vide pour le deduire automatiquement de l'endpoint de base."
+      }
+    ]
+  }
+}

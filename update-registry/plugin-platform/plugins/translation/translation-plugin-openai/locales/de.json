@@ -1,0 +1,31 @@
+{
+  "name": "OpenAI Uebersetzung",
+  "summary": "Cloud-Untertiteluebersetzung ueber das OpenAI-Uebersetzungs-Backend.",
+  "presets": [
+    {
+      "id": "cloud-openai",
+      "name": "OpenAI Cloud"
+    }
+  ],
+  "credential_schema": {
+    "apiKeyPlaceholder": "sk-...",
+    "fields": [
+      {
+        "key": "openai_chat_model",
+        "label": "CHAT-MODELL",
+        "placeholder": "gpt-4o",
+        "help": "z. B. gpt-4o, gpt-3.5-turbo"
+      },
+      {
+        "key": "translation_prompt_pack",
+        "label": "PROMPT-PAKET"
+      },
+      {
+        "key": "translation_prompt_template",
+        "label": "BENUTZERDEFINIERTER PROMPT",
+        "placeholder": "Untertiteltext von {from_lang} nach {to_lang} uebersetzen...",
+        "help": "Variablen: {from_lang}, {to_lang}, {text}. Leer lassen fuer den Pack-Standard."
+      }
+    ]
+  }
+}

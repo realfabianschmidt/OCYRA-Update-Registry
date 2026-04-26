@@ -13,7 +13,22 @@ Current plugins:
 Each translation plugin consumes `TranslationRequestArtifact` and produces
 `TranslationResultArtifact` through the shared plugin host contract.
 
-`translation-plugin-ollama` is the first first-party translation plugin that
+Common package shape:
+
+```text
+translation-plugin-<provider>/
+  plugin.json
+  handler.js
+  settings.schema.json
+  locales/<locale>.json          optional for first-party shipped UI copy
+```
+
+Translation plugins usually expose a credential schema and one or more presets.
+Keep `plugin.json` as the canonical English fallback and place localized plugin-owned
+copy in `locales/*.json`.
+
+`translation-plugin-ollama` is the earliest first-party-maintained translation plugin in this
+repository that
 uses provider-managed dependencies:
 
 - `provider-ollama-runtime`

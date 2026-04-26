@@ -1,0 +1,34 @@
+{
+  "name": "Ollama Translation",
+  "summary": "Local subtitle translation through a provider-managed Ollama runtime and first-party default model dependency.",
+  "presets": [
+    {
+      "id": "local-ollama",
+      "name": "Local Ollama (Managed Qwen 2.5 7B)"
+    }
+  ],
+  "credential_schema": {
+    "fields": [
+      {
+        "key": "ollama_endpoint",
+        "label": "OLLAMA ENDPOINT",
+        "placeholder": "http://localhost:11434/v1/chat/completions"
+      },
+      {
+        "key": "ollama_model",
+        "label": "MODEL",
+        "placeholder": "qwen2.5:7b",
+        "help": "The first-party managed Ollama plugin installs qwen2.5:7b by default. Use the exact tag from `ollama list` only if you intentionally override that managed default."
+      },
+      {
+        "key": "translation_prompt_pack",
+        "label": "PROMPT PACK"
+      },
+      {
+        "key": "translation_prompt_template",
+        "label": "CUSTOM PROMPT",
+        "placeholder": "Translate subtitle text from {from_lang} to {to_lang}..."
+      }
+    ]
+  }
+}

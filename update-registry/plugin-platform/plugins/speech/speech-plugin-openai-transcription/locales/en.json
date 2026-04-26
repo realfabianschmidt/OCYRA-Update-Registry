@@ -1,0 +1,20 @@
+{
+  "name": "OpenAI Whisper",
+  "summary": "Cloud transcription via the OpenAI Whisper API without speaker diarization.",
+  "presets": [
+    {
+      "id": "cloud-fast",
+      "name": "Cloud Fast"
+    }
+  ],
+  "credential_schema": {
+    "fields": [
+      {
+        "key": "openai_whisper_endpoint",
+        "label": "WHISPER ENDPOINT",
+        "placeholder": "https://api.openai.com/v1/audio/transcriptions",
+        "help": "Leave empty to auto-derive from base endpoint."
+      }
+    ]
+  }
+}
