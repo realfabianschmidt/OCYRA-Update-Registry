@@ -1,6 +1,6 @@
 {
   "catalog_version": "1",
-  "published_at": "2026-04-26T09:23:38.616Z",
+  "published_at": "2026-05-02T19:01:52.250Z",
   "app_release": {
     "schema_version": 1,
     "current_version": "2.0.0",
@@ -355,7 +355,7 @@
       "id": "listing-format-plugin-xliff-localization",
       "kind": "plugin",
       "name": "XLIFF Localization",
-      "summary": "XLIFF 1.2 and 2.x localization import and export for the Localization workspace.",
+      "summary": "XLIFF 1.2 and 2.x localization import and export for the Document Localization workspace.",
       "publisher_id": "ocyra-core",
       "channel": "stable",
       "target_ref": {
@@ -1720,7 +1720,7 @@
       "role": "format.localization-provider",
       "name": "XLIFF Localization",
       "version": "1.0.0",
-      "summary": "XLIFF 1.2 and 2.x localization import and export for the Localization workspace.",
+      "summary": "XLIFF 1.2 and 2.x localization import and export for the Document Localization workspace.",
       "runtime": {
         "mode": "js-sandbox",
         "entry": "handler.js"
@@ -1772,7 +1772,7 @@
         },
         "en": {
           "name": "XLIFF Localization",
-          "summary": "XLIFF 1.2 and 2.x localization import and export for the Localization workspace."
+          "summary": "XLIFF 1.2 and 2.x localization import and export for the Document Localization workspace."
         },
         "fr": {
           "name": "Localisation XLIFF",
@@ -1799,8 +1799,8 @@
           "kind": "locale-bundle",
           "path": "plugins/format/format-plugin-xliff-localization/locales/en.json",
           "package_path": "locales/en.json",
-          "sha256": "3A4D5E05B79A21B103A9C4A6FCB1B22A65C2FB84E913D7B62E95237FF5B1E1CA",
-          "size_bytes": 132
+          "sha256": "CF7D5BE4390F570BC02D00A2A7F8783B6216859C31A233AD45CB5F32F36DCC4E",
+          "size_bytes": 141
         },
         {
           "kind": "locale-bundle",
@@ -1813,8 +1813,8 @@
           "kind": "manifest",
           "path": "plugins/format/format-plugin-xliff-localization/plugin.json",
           "package_path": "plugin.json",
-          "sha256": "364FB1AA43334FA231D4E2C863B50594D99A151D42EA58D82D80D37D219CC7C1",
-          "size_bytes": 1043
+          "sha256": "DBCAF9148D7EC40DBB898FB7AB77BDE4162FC465933B56F3A89D0A64C87E3B54",
+          "size_bytes": 1052
         }
       ]
     },

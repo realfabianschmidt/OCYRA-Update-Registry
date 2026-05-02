@@ -5,7 +5,7 @@
   "role": "format.localization-provider",
   "name": "XLIFF Localization",
   "version": "1.0.0",
-  "summary": "XLIFF 1.2 and 2.x localization import and export for the Localization workspace.",
+  "summary": "XLIFF 1.2 and 2.x localization import and export for the Document Localization workspace.",
   "runtime": {
     "mode": "js-sandbox",
     "entry": "handler.js"

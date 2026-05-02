@@ -19,3 +19,11 @@ Contract notes:
 - declare the correct `target`, `directions`, and file `extensions`
 - keep import/export logic inside `handler.js`
 - use locale bundles for first-party shipped plugin copy when needed
+- format plugins describe data boundaries, not workspace placement; OCYRA's
+  app-owned capability resolver decides where installed formats appear
+- localization-oriented document formats, including future DOCX/PDF importers,
+  should use `format.target: "localization"` and normalize text into the shared
+  localization project model
+- future page-preview data for DOCX/PDF should be returned as optional preview
+  or context artifacts alongside the localization payload, without changing the
+  XLIFF/WebVTT contracts
