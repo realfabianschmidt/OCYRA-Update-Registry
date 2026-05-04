@@ -3,13 +3,13 @@ export async function run(request, context) {
     throw new Error('Example plugin received no request payload.');
   }
 
-  if (!context?.host?.runTranslationBackend) {
+  if (!context?.host?.translation?.translate) {
     throw new Error(
-      'Replace the template handler with a real implementation or provide host.runTranslationBackend().'
+      'Replace the template handler with a real implementation or provide host.translation.translate().'
     );
   }
 
-  return context.host.runTranslationBackend(
+  return context.host.translation.translate(
     {
       providerId: 'translation-plugin-example',
       providerLabel: 'Example Translation Plugin'

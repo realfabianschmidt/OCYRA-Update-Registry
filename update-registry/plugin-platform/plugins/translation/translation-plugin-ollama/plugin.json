@@ -4,7 +4,7 @@
   "family": "translation",
   "role": "translation.subtitle-provider",
   "name": "Ollama Translation",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "summary": "Local subtitle translation through a provider-managed Ollama runtime and first-party default model dependency.",
   "runtime": {
     "mode": "js-sandbox",

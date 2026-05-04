@@ -4,7 +4,7 @@
   "family": "speech",
   "role": "speech.transcription-provider",
   "name": "whisper.cpp",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "summary": "Offline transcription with whisper.cpp without speaker diarization.",
   "runtime": {
     "mode": "js-sandbox",

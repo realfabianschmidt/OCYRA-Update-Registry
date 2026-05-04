@@ -4,7 +4,7 @@
   "family": "translation",
   "role": "translation.subtitle-provider",
   "name": "DeepL Translation",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "summary": "Cloud subtitle translation through the DeepL translation backend.",
   "runtime": {
     "mode": "js-sandbox",

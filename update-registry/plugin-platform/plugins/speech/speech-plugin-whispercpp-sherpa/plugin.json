@@ -4,7 +4,7 @@
   "family": "speech",
   "role": "speech.combined-provider",
   "name": "whisper.cpp + Sherpa-ONNX",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "summary": "Offline transcription with whisper.cpp and speaker diarization with Sherpa-ONNX.",
   "runtime": {
     "mode": "js-sandbox",

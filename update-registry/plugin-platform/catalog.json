@@ -1,6 +1,6 @@
 {
   "catalog_version": "1",
-  "published_at": "2026-05-02T19:01:52.250Z",
+  "published_at": "2026-05-04T09:03:41.078Z",
   "app_release": {
     "schema_version": 1,
     "current_version": "2.0.0",
@@ -393,7 +393,7 @@
       "target_ref": {
         "type": "plugin",
         "id": "speech-plugin-openai-sherpa",
-        "version": "1.0.0"
+        "version": "2.0.0"
       },
       "permissions": [
         "filesystem.read",
@@ -424,7 +424,7 @@
       "target_ref": {
         "type": "plugin",
         "id": "speech-plugin-openai-transcription",
-        "version": "1.0.0"
+        "version": "2.0.0"
       },
       "permissions": [
         "filesystem.read",
@@ -453,7 +453,7 @@
       "target_ref": {
         "type": "plugin",
         "id": "speech-plugin-whispercpp-local",
-        "version": "1.0.0"
+        "version": "2.0.0"
       },
       "permissions": [
         "filesystem.read",
@@ -482,7 +482,7 @@
       "target_ref": {
         "type": "plugin",
         "id": "speech-plugin-whispercpp-sherpa",
-        "version": "1.0.0"
+        "version": "2.0.0"
       },
       "permissions": [
         "filesystem.read",
@@ -512,7 +512,7 @@
       "target_ref": {
         "type": "plugin",
         "id": "translation-plugin-anthropic",
-        "version": "1.0.1"
+        "version": "1.0.2"
       },
       "permissions": [
         "network.outbound",
@@ -540,7 +540,7 @@
       "target_ref": {
         "type": "plugin",
         "id": "translation-plugin-azure",
-        "version": "1.0.1"
+        "version": "1.0.2"
       },
       "permissions": [
         "network.outbound",
@@ -568,7 +568,7 @@
       "target_ref": {
         "type": "plugin",
         "id": "translation-plugin-deepl",
-        "version": "1.0.1"
+        "version": "1.0.2"
       },
       "permissions": [
         "network.outbound",
@@ -596,7 +596,7 @@
       "target_ref": {
         "type": "plugin",
         "id": "translation-plugin-ollama",
-        "version": "1.0.2"
+        "version": "1.0.3"
       },
       "permissions": [
         "network.outbound",
@@ -624,7 +624,7 @@
       "target_ref": {
         "type": "plugin",
         "id": "translation-plugin-openai",
-        "version": "1.0.1"
+        "version": "1.0.2"
       },
       "permissions": [
         "network.outbound",
@@ -1751,8 +1751,8 @@
           "export"
         ],
         "extensions": [
-          "xlf",
-          "xliff"
+          "xliff",
+          "xlf"
         ],
         "export_order": 40
       },
@@ -1785,8 +1785,8 @@
           "kind": "runtime-entry",
           "path": "plugins/format/format-plugin-xliff-localization/handler.js",
           "package_path": "handler.js",
-          "sha256": "401752D72FA66AEDC0E3471A2EFC5062FD9A5207409376008289C9E8FBE17256",
-          "size_bytes": 36847
+          "sha256": "D8A0DA1CAA45D76B9D7C7B3DF1D08D9BF44E02E0D6CC3D8E887E771767760754",
+          "size_bytes": 37042
         },
         {
           "kind": "locale-bundle",
@@ -1813,7 +1813,7 @@
           "kind": "manifest",
           "path": "plugins/format/format-plugin-xliff-localization/plugin.json",
           "package_path": "plugin.json",
-          "sha256": "DBCAF9148D7EC40DBB898FB7AB77BDE4162FC465933B56F3A89D0A64C87E3B54",
+          "sha256": "04F780BA4693FEC04635085C24D2D11696D900455E1B80E4224B0A1E668068F1",
           "size_bytes": 1052
         }
       ]
@@ -1824,7 +1824,7 @@
       "family": "speech",
       "role": "speech.combined-provider",
       "name": "OpenAI Whisper + Sherpa-ONNX",
-      "version": "1.0.0",
+      "version": "2.0.0",
       "summary": "Cloud transcription via OpenAI Whisper API with local Sherpa-ONNX speaker diarization.",
       "runtime": {
         "mode": "js-sandbox",
@@ -1966,8 +1966,8 @@
           "kind": "runtime-entry",
           "path": "plugins/speech/speech-plugin-openai-sherpa/handler.js",
           "package_path": "handler.js",
-          "sha256": "F31AC5DC1ACA5DFF5A0A8ABCA72BC0210F7B0BDB5D4EA62E2B1C9AAC85EECB67",
-          "size_bytes": 431
+          "sha256": "582C478E26738480CCF1408EBB78BD539093E030904772D2478A6CCAAECBCF09",
+          "size_bytes": 434
         },
         {
           "kind": "locale-bundle",
@@ -1994,7 +1994,7 @@
           "kind": "manifest",
           "path": "plugins/speech/speech-plugin-openai-sherpa/plugin.json",
           "package_path": "plugin.json",
-          "sha256": "539E134DA5A918D10E4A5620676658889428C098CA0017836C570218983ED63E",
+          "sha256": "7BBBFA3D0E9C39818306D6EA9D89ACF82E879510C7EE04AA7312C3AF9CB995DC",
           "size_bytes": 1679
         },
         {
@@ -2012,7 +2012,7 @@
       "family": "speech",
       "role": "speech.transcription-provider",
       "name": "OpenAI Whisper",
-      "version": "1.0.0",
+      "version": "2.0.0",
       "summary": "Cloud transcription via the OpenAI Whisper API without speaker diarization.",
       "runtime": {
         "mode": "js-sandbox",
@@ -2137,8 +2137,8 @@
           "kind": "runtime-entry",
           "path": "plugins/speech/speech-plugin-openai-transcription/handler.js",
           "package_path": "handler.js",
-          "sha256": "E10CD1711D13A39B56FE20544EF230669BC8F2A322533384E4AB048014980734",
-          "size_bytes": 414
+          "sha256": "7B7EC25F1B5D76CA24F58095AD445018C8138235972333131D982C50C5E12A39",
+          "size_bytes": 417
         },
         {
           "kind": "locale-bundle",
@@ -2165,7 +2165,7 @@
           "kind": "manifest",
           "path": "plugins/speech/speech-plugin-openai-transcription/plugin.json",
           "package_path": "plugin.json",
-          "sha256": "0FF35807332086678E528C6FF9EC0548271E0A64F82F0291B433A1687A84A400",
+          "sha256": "3CF993D0A23B0FD4346F65B88F2E07E02E5C3D86B68DBE7558D7ED69AE787C80",
           "size_bytes": 1325
         },
         {
@@ -2183,7 +2183,7 @@
       "family": "speech",
       "role": "speech.transcription-provider",
       "name": "whisper.cpp",
-      "version": "1.0.0",
+      "version": "2.0.0",
       "summary": "Offline transcription with whisper.cpp without speaker diarization.",
       "runtime": {
         "mode": "js-sandbox",
@@ -2269,8 +2269,8 @@
           "kind": "runtime-entry",
           "path": "plugins/speech/speech-plugin-whispercpp-local/handler.js",
           "package_path": "handler.js",
-          "sha256": "344188736FB9302D53D2F0FD46430635360E39A50A068C5FB9A68E8AB1D02EF5",
-          "size_bytes": 413
+          "sha256": "E5F3E59B44E1BA0818329D4B574A3C94CDC45D1B27E5D85281CCEAE5275E041D",
+          "size_bytes": 416
         },
         {
           "kind": "locale-bundle",
@@ -2297,7 +2297,7 @@
           "kind": "manifest",
           "path": "plugins/speech/speech-plugin-whispercpp-local/plugin.json",
           "package_path": "plugin.json",
-          "sha256": "582B10A6FC5BB61C47745B76D064B9345739C80E96580CAF8A047D29BDA93B1C",
+          "sha256": "988E63ABBAAC2FC8A88367C4585C6BABFF77B277CEA33938FE71471E411A4494",
           "size_bytes": 1032
         },
         {
@@ -2315,7 +2315,7 @@
       "family": "speech",
       "role": "speech.combined-provider",
       "name": "whisper.cpp + Sherpa-ONNX",
-      "version": "1.0.0",
+      "version": "2.0.0",
       "summary": "Offline transcription with whisper.cpp and speaker diarization with Sherpa-ONNX.",
       "runtime": {
         "mode": "js-sandbox",
@@ -2417,8 +2417,8 @@
           "kind": "runtime-entry",
           "path": "plugins/speech/speech-plugin-whispercpp-sherpa/handler.js",
           "package_path": "handler.js",
-          "sha256": "C587365C8AEDA16F8F8AACE7D1650DEB71A961476FC5DC2D36255AA6812BB496",
-          "size_bytes": 432
+          "sha256": "914C4DDB8BB0C36D6ABF312512DB1BAF0AA1764886BBA24E6DA3078ABB54A8C2",
+          "size_bytes": 435
         },
         {
           "kind": "locale-bundle",
@@ -2445,7 +2445,7 @@
           "kind": "manifest",
           "path": "plugins/speech/speech-plugin-whispercpp-sherpa/plugin.json",
           "package_path": "plugin.json",
-          "sha256": "4ADEB579D04375F326399ACC4567FE68DB5AA30E88A8386D630C3DB2E9F45850",
+          "sha256": "D72188C95815E4A0559AF8B020A14589FCD2330A91C19091FF84FDCF913097FC",
           "size_bytes": 1353
         },
         {
@@ -2463,7 +2463,7 @@
       "family": "translation",
       "role": "translation.subtitle-provider",
       "name": "Anthropic Translation",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "summary": "Cloud subtitle translation through the Anthropic translation backend.",
       "runtime": {
         "mode": "js-sandbox",
@@ -2640,7 +2640,7 @@
           "kind": "runtime-entry",
           "path": "plugins/translation/translation-plugin-anthropic/handler.js",
           "package_path": "handler.js",
-          "sha256": "3F8214354A2F2CEAD4CFA71064584BA9D1A0FCB020DE19155AFC96CC7CCA4658",
+          "sha256": "5DC2179EB6BF8064695C88D588AA7C2CE68384B998352AF4F499F42D264D763E",
           "size_bytes": 362
         },
         {
@@ -2668,7 +2668,7 @@
           "kind": "manifest",
           "path": "plugins/translation/translation-plugin-anthropic/plugin.json",
           "package_path": "plugin.json",
-          "sha256": "8B7A4B6367C85AFEB1B93B35653E19B27495683D88D3716C3AE68E176F29A856",
+          "sha256": "0783293DCF5E1A915FB4DE4C4BB7175B7F1CF8D9EC65118D554C84481D4A0B6F",
           "size_bytes": 1555
         },
         {
@@ -2686,7 +2686,7 @@
       "family": "translation",
       "role": "translation.subtitle-provider",
       "name": "Azure OpenAI Translation",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "summary": "Cloud subtitle translation through the Azure OpenAI translation backend.",
       "runtime": {
         "mode": "js-sandbox",
@@ -2884,7 +2884,7 @@
           "kind": "runtime-entry",
           "path": "plugins/translation/translation-plugin-azure/handler.js",
           "package_path": "handler.js",
-          "sha256": "BC920008C2A1CFE8828D9C8D2F14C9AFC1F4A7572C7F08BEA84BA4700F5BC92B",
+          "sha256": "7F685514CC07332E7710F3BF593A6385B5F2AEC322F56AFBC58035750E91BB29",
           "size_bytes": 361
         },
         {
@@ -2912,7 +2912,7 @@
           "kind": "manifest",
           "path": "plugins/translation/translation-plugin-azure/plugin.json",
           "package_path": "plugin.json",
-          "sha256": "5252140D4F2DDDEF5F0BC4F157B3D2A7574EF9238854023D4188A0F3B8E660E1",
+          "sha256": "472983347899ABC5A78AB6016E4A269AB0A54AFF867FC7CAFA357AAE9D352C5B",
           "size_bytes": 1672
         },
         {
@@ -2930,7 +2930,7 @@
       "family": "translation",
       "role": "translation.subtitle-provider",
       "name": "DeepL Translation",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "summary": "Cloud subtitle translation through the DeepL translation backend.",
       "runtime": {
         "mode": "js-sandbox",
@@ -3079,7 +3079,7 @@
           "kind": "runtime-entry",
           "path": "plugins/translation/translation-plugin-deepl/handler.js",
           "package_path": "handler.js",
-          "sha256": "B17532766A0A86E6C9258560FC9A2A0D7FBA6B2B411D9D5207FA4F2492ED8631",
+          "sha256": "41E1C67462C6F17955F8FE153AA995A3FB2226B96356F9A2DE14B10AEE21C92B",
           "size_bytes": 354
         },
         {
@@ -3107,7 +3107,7 @@
           "kind": "manifest",
           "path": "plugins/translation/translation-plugin-deepl/plugin.json",
           "package_path": "plugin.json",
-          "sha256": "A12859DF7FB6C8985F7FFB466F41599CEB3993E060F473D23CA91CA69CEB7BBD",
+          "sha256": "0E38D7CFA7B748ED6A8C14F8F7B8A388AEEDDFA2213E0F46349A566C25DE210C",
           "size_bytes": 1417
         },
         {
@@ -3125,7 +3125,7 @@
       "family": "translation",
       "role": "translation.subtitle-provider",
       "name": "Ollama Translation",
-      "version": "1.0.2",
+      "version": "1.0.3",
       "summary": "Local subtitle translation through a provider-managed Ollama runtime and first-party default model dependency.",
       "runtime": {
         "mode": "js-sandbox",
@@ -3310,7 +3310,7 @@
           "kind": "runtime-entry",
           "path": "plugins/translation/translation-plugin-ollama/handler.js",
           "package_path": "handler.js",
-          "sha256": "284BED8160F8452B65C1BA201ACCD122CBF5758EBA7F3E49012F7A42EDEAD645",
+          "sha256": "D6A80D8955BF66E9FF6083B34FFF5E7523480E8C0C413F2B15A2E3D4D4633423",
           "size_bytes": 356
         },
         {
@@ -3338,7 +3338,7 @@
           "kind": "manifest",
           "path": "plugins/translation/translation-plugin-ollama/plugin.json",
           "package_path": "plugin.json",
-          "sha256": "75BC136EB2B0C45AD7F27D8037276F3901876738C12FA6475A742FCBF0C79C24",
+          "sha256": "B946FC3044091EB8745D01CC74FD0399BF5CFE8B99F19B95F98EE0A8A11A79E3",
           "size_bytes": 1826
         },
         {
@@ -3356,7 +3356,7 @@
       "family": "translation",
       "role": "translation.subtitle-provider",
       "name": "OpenAI Translation",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "summary": "Cloud subtitle translation through the OpenAI translation backend.",
       "runtime": {
         "mode": "js-sandbox",
@@ -3520,7 +3520,7 @@
           "kind": "runtime-entry",
           "path": "plugins/translation/translation-plugin-openai/handler.js",
           "package_path": "handler.js",
-          "sha256": "39AFC60C03CB5D32CD55AB4506F1AE6683681E62D085777B9340FAF451979CD3",
+          "sha256": "4AFDB11AAD1AE14AADF14881B115D1E61F602F25EEE5A09C9C886F1781834938",
           "size_bytes": 356
         },
         {
@@ -3548,7 +3548,7 @@
           "kind": "manifest",
           "path": "plugins/translation/translation-plugin-openai/plugin.json",
           "package_path": "plugin.json",
-          "sha256": "1844AE77A7E51FF129FF2F49B6D26BD2C8C90513C1B5C332A17B4B766B591EEA",
+          "sha256": "5C071323A1B1D6BC94009EBE3533E03456E70A1034BD91F9805733797F4FEA84",
           "size_bytes": 1523
         },
         {

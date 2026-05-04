@@ -4,7 +4,7 @@
   "family": "speech",
   "role": "speech.transcription-provider",
   "name": "OpenAI Whisper",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "summary": "Cloud transcription via the OpenAI Whisper API without speaker diarization.",
   "runtime": {
     "mode": "js-sandbox",

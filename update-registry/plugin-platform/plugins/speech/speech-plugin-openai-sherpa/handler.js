@@ -1,9 +1,9 @@
 export async function run(request, context) {
-  if (!context?.host?.runSpeechBackend) {
-    throw new Error('OCYRA plugin host context is missing host.runSpeechBackend().');
+  if (!context?.host?.speech?.transcribe) {
+    throw new Error('OCYRA plugin host context is missing host.speech.transcribe().');
   }
 
-  return context.host.runSpeechBackend(
+  return context.host.speech.transcribe(
     {
       command: 'transcribe_with_diarization',
       providerId: 'speech-plugin-openai-sherpa',
@@ -13,4 +13,3 @@ export async function run(request, context) {
     request
   );
 }
-
