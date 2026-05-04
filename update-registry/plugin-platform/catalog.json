@@ -1,6 +1,6 @@
 {
   "catalog_version": "1",
-  "published_at": "2026-05-04T09:03:41.078Z",
+  "published_at": "2026-05-04T09:06:00.856Z",
   "app_release": {
     "schema_version": 1,
     "current_version": "2.0.0",
@@ -361,7 +361,7 @@
       "target_ref": {
         "type": "plugin",
         "id": "format-plugin-xliff-localization",
-        "version": "1.0.0"
+        "version": "1.0.1"
       },
       "permissions": [
         "filesystem.read"
@@ -1719,7 +1719,7 @@
       "family": "format",
       "role": "format.localization-provider",
       "name": "XLIFF Localization",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "summary": "XLIFF 1.2 and 2.x localization import and export for the Document Localization workspace.",
       "runtime": {
         "mode": "js-sandbox",
@@ -1813,7 +1813,7 @@
           "kind": "manifest",
           "path": "plugins/format/format-plugin-xliff-localization/plugin.json",
           "package_path": "plugin.json",
-          "sha256": "04F780BA4693FEC04635085C24D2D11696D900455E1B80E4224B0A1E668068F1",
+          "sha256": "8D0016090F49CB4191F6B2D7E66A112263C992339C6B87B463F79FF0736B80FC",
           "size_bytes": 1052
         }
       ]

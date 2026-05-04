@@ -4,7 +4,7 @@
   "family": "format",
   "role": "format.localization-provider",
   "name": "XLIFF Localization",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "summary": "XLIFF 1.2 and 2.x localization import and export for the Document Localization workspace.",
   "runtime": {
     "mode": "js-sandbox",
@@ -36,8 +36,8 @@
       "export"
     ],
     "extensions": [
-      "xlf",
-      "xliff"
+      "xliff",
+      "xlf"
     ],
     "export_order": 40
   },

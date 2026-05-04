@@ -795,20 +795,22 @@ function exportXliff(project = {}, targetLocale = '') {
 function buildExportFilename(project = {}, targetLocale = '') {
     const originalFilename = normalizeString(project?.meta?.originalFilename).trim();
     if (originalFilename) {
-        return originalFilename.replace(/\.(xliff|xlf|xml)$/i, '.xlf');
+        const originalExtensionMatch = /\.(xliff|xlf)$/i.exec(originalFilename);
+        const originalExtension = originalExtensionMatch?.[1]?.toLowerCase() || 'xliff';
+        return originalFilename.replace(/\.(xliff|xlf|xml)$/i, `.${originalExtension}`);
     }
 
     const projectName = sanitizeFilename(project?.meta?.name || 'localization-project');
     return targetLocale
-        ? `${projectName}_${sanitizeFilename(targetLocale, targetLocale)}.xlf`
-        : `${projectName}.xlf`;
+        ? `${projectName}_${sanitizeFilename(targetLocale, targetLocale)}.xliff`
+        : `${projectName}.xliff`;
 }
 
 function handleImport(request = {}) {
     const artifact = Array.isArray(request?.input_artifacts) ? request.input_artifacts[0] : null;
     const data = artifact?.data || {};
     const content = normalizeString(data.content);
-    const filename = normalizeString(data.filename || 'localization.xlf').trim() || 'localization.xlf';
+    const filename = normalizeString(data.filename || 'localization.xliff').trim() || 'localization.xliff';
 
     const payload = importXliff(content, filename);
     return buildImportArtifact(payload, buildImportValidation(payload));
