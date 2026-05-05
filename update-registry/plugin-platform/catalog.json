@@ -1,6 +1,6 @@
 {
   "catalog_version": "1",
-  "published_at": "2026-05-04T09:06:00.856Z",
+  "published_at": "2026-05-05T20:09:38.040Z",
   "app_release": {
     "schema_version": 1,
     "current_version": "2.0.0",
@@ -1828,7 +1828,13 @@
       "summary": "Cloud transcription via OpenAI Whisper API with local Sherpa-ONNX speaker diarization.",
       "runtime": {
         "mode": "js-sandbox",
-        "entry": "handler.js"
+        "entry": "handler.js",
+        "speechBackend": {
+          "transcriptionCommand": "transcribe_video",
+          "diarizationCommand": "transcribe_with_diarization",
+          "transcriptionProvider": "openai",
+          "diarizationProvider": "sherpa-onnx"
+        }
       },
       "consumes": [
         "AudioArtifact"
@@ -1994,8 +2000,8 @@
           "kind": "manifest",
           "path": "plugins/speech/speech-plugin-openai-sherpa/plugin.json",
           "package_path": "plugin.json",
-          "sha256": "7BBBFA3D0E9C39818306D6EA9D89ACF82E879510C7EE04AA7312C3AF9CB995DC",
-          "size_bytes": 1679
+          "sha256": "E54E68582177249CF5A22EA08FFD306A09C800D21D8AE879AAA86326748259E6",
+          "size_bytes": 1902
         },
         {
           "kind": "settings-schema",
@@ -2016,7 +2022,11 @@
       "summary": "Cloud transcription via the OpenAI Whisper API without speaker diarization.",
       "runtime": {
         "mode": "js-sandbox",
-        "entry": "handler.js"
+        "entry": "handler.js",
+        "speechBackend": {
+          "transcriptionCommand": "transcribe_video",
+          "transcriptionProvider": "openai"
+        }
       },
       "consumes": [
         "MediaInputArtifact"
@@ -2165,8 +2175,8 @@
           "kind": "manifest",
           "path": "plugins/speech/speech-plugin-openai-transcription/plugin.json",
           "package_path": "plugin.json",
-          "sha256": "3CF993D0A23B0FD4346F65B88F2E07E02E5C3D86B68DBE7558D7ED69AE787C80",
-          "size_bytes": 1325
+          "sha256": "786AB6912640CB202A46D1975831D9CE87FBE1C4E98FB8B1AD7588CDE791DB65",
+          "size_bytes": 1445
         },
         {
           "kind": "settings-schema",
@@ -2187,7 +2197,11 @@
       "summary": "Offline transcription with whisper.cpp without speaker diarization.",
       "runtime": {
         "mode": "js-sandbox",
-        "entry": "handler.js"
+        "entry": "handler.js",
+        "speechBackend": {
+          "transcriptionCommand": "transcribe_video_local",
+          "transcriptionProvider": "whispercpp"
+        }
       },
       "consumes": [
         "MediaInputArtifact"
@@ -2297,8 +2311,8 @@
           "kind": "manifest",
           "path": "plugins/speech/speech-plugin-whispercpp-local/plugin.json",
           "package_path": "plugin.json",
-          "sha256": "988E63ABBAAC2FC8A88367C4585C6BABFF77B277CEA33938FE71471E411A4494",
-          "size_bytes": 1032
+          "sha256": "CBB95ED5447514FBA2380FD8328A6550CE2468D04CAAAF575EF6C6FE30226504",
+          "size_bytes": 1162
         },
         {
           "kind": "settings-schema",
@@ -2319,7 +2333,13 @@
       "summary": "Offline transcription with whisper.cpp and speaker diarization with Sherpa-ONNX.",
       "runtime": {
         "mode": "js-sandbox",
-        "entry": "handler.js"
+        "entry": "handler.js",
+        "speechBackend": {
+          "transcriptionCommand": "transcribe_video_local",
+          "diarizationCommand": "transcribe_with_diarization",
+          "transcriptionProvider": "whispercpp",
+          "diarizationProvider": "sherpa-onnx"
+        }
       },
       "consumes": [
         "AudioArtifact"
@@ -2445,8 +2465,8 @@
           "kind": "manifest",
           "path": "plugins/speech/speech-plugin-whispercpp-sherpa/plugin.json",
           "package_path": "plugin.json",
-          "sha256": "D72188C95815E4A0559AF8B020A14589FCD2330A91C19091FF84FDCF913097FC",
-          "size_bytes": 1353
+          "sha256": "B01FD292B7B6D0B8087646AFD8E630ACC57F0C29CD3385A4823A0C31FDC16D5C",
+          "size_bytes": 1586
         },
         {
           "kind": "settings-schema",

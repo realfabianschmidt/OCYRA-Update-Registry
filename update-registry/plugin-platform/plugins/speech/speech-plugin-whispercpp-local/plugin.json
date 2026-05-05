@@ -8,7 +8,11 @@
   "summary": "Offline transcription with whisper.cpp without speaker diarization.",
   "runtime": {
     "mode": "js-sandbox",
-    "entry": "handler.js"
+    "entry": "handler.js",
+    "speechBackend": {
+      "transcriptionCommand": "transcribe_video_local",
+      "transcriptionProvider": "whispercpp"
+    }
   },
   "consumes": ["MediaInputArtifact"],
   "produces": ["TranscriptArtifact"],

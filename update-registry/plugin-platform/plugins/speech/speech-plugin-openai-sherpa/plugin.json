@@ -8,7 +8,13 @@
   "summary": "Cloud transcription via OpenAI Whisper API with local Sherpa-ONNX speaker diarization.",
   "runtime": {
     "mode": "js-sandbox",
-    "entry": "handler.js"
+    "entry": "handler.js",
+    "speechBackend": {
+      "transcriptionCommand": "transcribe_video",
+      "diarizationCommand": "transcribe_with_diarization",
+      "transcriptionProvider": "openai",
+      "diarizationProvider": "sherpa-onnx"
+    }
   },
   "consumes": ["AudioArtifact"],
   "produces": ["TranscriptArtifact", "WordTimelineArtifact", "SpeakerTurnsArtifact"],

@@ -8,7 +8,11 @@
   "summary": "Cloud transcription via the OpenAI Whisper API without speaker diarization.",
   "runtime": {
     "mode": "js-sandbox",
-    "entry": "handler.js"
+    "entry": "handler.js",
+    "speechBackend": {
+      "transcriptionCommand": "transcribe_video",
+      "transcriptionProvider": "openai"
+    }
   },
   "consumes": ["MediaInputArtifact"],
   "produces": ["TranscriptArtifact"],

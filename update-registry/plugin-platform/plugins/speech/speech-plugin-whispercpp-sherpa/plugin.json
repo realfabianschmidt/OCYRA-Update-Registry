@@ -8,7 +8,13 @@
   "summary": "Offline transcription with whisper.cpp and speaker diarization with Sherpa-ONNX.",
   "runtime": {
     "mode": "js-sandbox",
-    "entry": "handler.js"
+    "entry": "handler.js",
+    "speechBackend": {
+      "transcriptionCommand": "transcribe_video_local",
+      "diarizationCommand": "transcribe_with_diarization",
+      "transcriptionProvider": "whispercpp",
+      "diarizationProvider": "sherpa-onnx"
+    }
   },
   "consumes": ["AudioArtifact"],
   "produces": ["TranscriptArtifact", "WordTimelineArtifact", "SpeakerTurnsArtifact"],
