@@ -1,6 +1,6 @@
 {
   "catalog_version": "1",
-  "published_at": "2026-05-05T20:09:38.040Z",
+  "published_at": "2026-05-10T11:11:11.654Z",
   "app_release": {
     "schema_version": 1,
     "current_version": "2.0.0",
@@ -482,7 +482,7 @@
       "target_ref": {
         "type": "plugin",
         "id": "speech-plugin-whispercpp-sherpa",
-        "version": "2.0.0"
+        "version": "2.0.1"
       },
       "permissions": [
         "filesystem.read",
@@ -2329,7 +2329,7 @@
       "family": "speech",
       "role": "speech.combined-provider",
       "name": "whisper.cpp + Sherpa-ONNX",
-      "version": "2.0.0",
+      "version": "2.0.1",
       "summary": "Offline transcription with whisper.cpp and speaker diarization with Sherpa-ONNX.",
       "runtime": {
         "mode": "js-sandbox",
@@ -2465,7 +2465,7 @@
           "kind": "manifest",
           "path": "plugins/speech/speech-plugin-whispercpp-sherpa/plugin.json",
           "package_path": "plugin.json",
-          "sha256": "B01FD292B7B6D0B8087646AFD8E630ACC57F0C29CD3385A4823A0C31FDC16D5C",
+          "sha256": "49FCF26B59A666945A06FCA5E87E303C50B1C883A20E3F9A4781407CA4BB7095",
           "size_bytes": 1586
         },
         {
