@@ -1,6 +1,6 @@
 {
   "catalog_version": "1",
-  "published_at": "2026-05-14T21:22:00.860Z",
+  "published_at": "2026-06-11T17:54:10.080Z",
   "app_release": {
     "schema_version": 1,
     "current_version": "2.0.0",
@@ -38,7 +38,7 @@
       "target_ref": {
         "type": "plugin",
         "id": "audit-plugin-easy-reading",
-        "version": "1.0.0"
+        "version": "1.1.0"
       },
       "permissions": [
         "filesystem.read",
@@ -59,7 +59,8 @@
         "easy-reading",
         "transcription-autofit",
         "policy-constraints",
-        "checklist-evaluation"
+        "checklist-evaluation",
+        "audit-evaluation"
       ]
     },
     {
@@ -72,7 +73,7 @@
       "target_ref": {
         "type": "plugin",
         "id": "audit-plugin-eu-accessibility",
-        "version": "1.0.0"
+        "version": "1.1.0"
       },
       "permissions": [
         "filesystem.read",
@@ -93,7 +94,8 @@
         "broadcast",
         "transcription-autofit",
         "policy-constraints",
-        "checklist-evaluation"
+        "checklist-evaluation",
+        "audit-evaluation"
       ]
     },
     {
@@ -106,7 +108,7 @@
       "target_ref": {
         "type": "plugin",
         "id": "audit-plugin-web-balanced",
-        "version": "1.0.0"
+        "version": "1.1.0"
       },
       "permissions": [
         "filesystem.read",
@@ -127,7 +129,8 @@
         "web",
         "transcription-autofit",
         "policy-constraints",
-        "checklist-evaluation"
+        "checklist-evaluation",
+        "audit-evaluation"
       ]
     },
     {
@@ -650,7 +653,7 @@
       "family": "audit",
       "role": "audit.policy-provider",
       "name": "Easy Reading",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "summary": "High-comfort subtitle defaults for slower reading speed and simplified pacing.",
       "runtime": {
         "mode": "js-sandbox",
@@ -658,7 +661,8 @@
       },
       "consumes": [
         "SubtitleImportArtifact",
-        "AccessibilityContextArtifact"
+        "AccessibilityContextArtifact",
+        "ContentAuditFactsArtifact"
       ],
       "produces": [
         "AuditReportArtifact",
@@ -674,7 +678,8 @@
         "easy-reading",
         "transcription-autofit",
         "policy-constraints",
-        "checklist-evaluation"
+        "checklist-evaluation",
+        "audit-evaluation"
       ],
       "policy_id": "easy-reading",
       "policy_file": "policy.json",
@@ -707,8 +712,8 @@
           "kind": "runtime-entry",
           "path": "plugins/audit/audit-plugin-easy-reading/handler.js",
           "package_path": "handler.js",
-          "sha256": "E38033DC2E7E1D778E47F4F4FFDC86A5F0FB5864A0C55724F26CA27469BABC4D",
-          "size_bytes": 855
+          "sha256": "6641C2C3ABC4AD76C4A6E19990F61674755E53DF1E199D8D997A43D8A818CCFC",
+          "size_bytes": 11319
         },
         {
           "kind": "locale-bundle",
@@ -735,8 +740,8 @@
           "kind": "manifest",
           "path": "plugins/audit/audit-plugin-easy-reading/plugin.json",
           "package_path": "plugin.json",
-          "sha256": "DFE42CD02DFE62B6CF851B3E59393791FAF2D74C2F934176ECEB0B979C8AB55D",
-          "size_bytes": 902
+          "sha256": "3261153ADE1D072C924EE1C394972DDF6C6B8C5FAC0B169270116850EAE7DE8B",
+          "size_bytes": 955
         },
         {
           "kind": "policy-file",
@@ -753,7 +758,7 @@
       "family": "audit",
       "role": "audit.policy-provider",
       "name": "EU Accessibility Act / BFSG",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "summary": "Balanced accessibility defaults for BFSG, EAA, WCAG 2.1 AA and EBU R37.",
       "runtime": {
         "mode": "js-sandbox",
@@ -761,7 +766,8 @@
       },
       "consumes": [
         "SubtitleImportArtifact",
-        "AccessibilityContextArtifact"
+        "AccessibilityContextArtifact",
+        "ContentAuditFactsArtifact"
       ],
       "produces": [
         "AuditReportArtifact",
@@ -777,7 +783,8 @@
         "broadcast",
         "transcription-autofit",
         "policy-constraints",
-        "checklist-evaluation"
+        "checklist-evaluation",
+        "audit-evaluation"
       ],
       "policy_id": "eu-eaa-bfsg",
       "policy_file": "policy.json",
@@ -835,8 +842,8 @@
           "kind": "runtime-entry",
           "path": "plugins/audit/audit-plugin-eu-accessibility/handler.js",
           "package_path": "handler.js",
-          "sha256": "47422EB2C569FE1E26D4F7C79984307C6F979530D4AC6FFD2EFF07EDCDDE4E87",
-          "size_bytes": 882
+          "sha256": "A9F6B0C3F2D13418D193CE75C54EB77DC24D7402A6CB347AAD14F597A431E8A4",
+          "size_bytes": 11338
         },
         {
           "kind": "locale-bundle",
@@ -863,8 +870,8 @@
           "kind": "manifest",
           "path": "plugins/audit/audit-plugin-eu-accessibility/plugin.json",
           "package_path": "plugin.json",
-          "sha256": "EAAE86962BC1676FA6DFED3109B5A9CFF3B0ADBEBDDA70984CB2406E3AF00670",
-          "size_bytes": 1044
+          "sha256": "F96D5F58C3968A01872FF6D065D25B318D03F03E355BE0CA073B298F5A14F20E",
+          "size_bytes": 1097
         },
         {
           "kind": "policy-file",
@@ -881,7 +888,7 @@
       "family": "audit",
       "role": "audit.policy-provider",
       "name": "Web Accessibility Balanced",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "summary": "Slightly faster subtitle defaults for general web video while preserving accessibility checks.",
       "runtime": {
         "mode": "js-sandbox",
@@ -889,7 +896,8 @@
       },
       "consumes": [
         "SubtitleImportArtifact",
-        "AccessibilityContextArtifact"
+        "AccessibilityContextArtifact",
+        "ContentAuditFactsArtifact"
       ],
       "produces": [
         "AuditReportArtifact",
@@ -905,7 +913,8 @@
         "web",
         "transcription-autofit",
         "policy-constraints",
-        "checklist-evaluation"
+        "checklist-evaluation",
+        "audit-evaluation"
       ],
       "policy_id": "web-balanced",
       "policy_file": "policy.json",
@@ -939,8 +948,8 @@
           "kind": "runtime-entry",
           "path": "plugins/audit/audit-plugin-web-balanced/handler.js",
           "package_path": "handler.js",
-          "sha256": "428B20CD42EF3AFBDA4E5CD9507160F60B9D42C298BF427F14209E005A41FD0C",
-          "size_bytes": 869
+          "sha256": "17CCFC7B329CAD365219723CD25D8C8B91ABDE639EB27535F33C3859ECE43E7D",
+          "size_bytes": 11333
         },
         {
           "kind": "locale-bundle",
@@ -967,8 +976,8 @@
           "kind": "manifest",
           "path": "plugins/audit/audit-plugin-web-balanced/plugin.json",
           "package_path": "plugin.json",
-          "sha256": "50932DDBAD14BF38F2C1FB5FA446FE318FFB1166D6E17D4FC0AD33178F90B609",
-          "size_bytes": 947
+          "sha256": "575A5E4B2C98DE14E682D9A74820137684D7C055C6BD88EC561E273EE7160046",
+          "size_bytes": 1000
         },
         {
           "kind": "policy-file",
