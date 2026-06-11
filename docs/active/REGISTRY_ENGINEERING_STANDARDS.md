@@ -42,6 +42,10 @@ Forbidden examples:
 
 - Shared runtimes and models live under `update-registry/plugin-platform/dependencies/`.
 - `dependencies/registry.json` is the index; each dependency package owns its `dependency.json`.
+- Native local AI provider binaries and models must be shipped as signed dependency
+  packages, not as desktop-app bundled resources.
+- Speech plugins that call native backend commands must declare the exact provider
+  and model dependencies they require.
 - If a downloadable artifact changes, update the corresponding `sha256` value in the dependency manifest.
 - Do not commit downloaded archives, extracted model payloads, or scratch hashes unless they are part of the deliberate published contract.
 

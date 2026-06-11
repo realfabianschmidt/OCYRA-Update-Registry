@@ -1,6 +1,6 @@
 {
   "name": "Ollama Uebersetzung",
-  "summary": "Lokale Untertiteluebersetzung ueber eine provider-verwaltete Ollama-Laufzeit und ein First-Party-Standardmodell.",
+  "summary": "Lokale Untertiteluebersetzung ueber die in OCYRA gebuendelte Ollama-Laufzeit und ein First-Party-Standardmodell.",
   "presets": [
     {
       "id": "local-ollama",
@@ -12,13 +12,14 @@
       {
         "key": "ollama_endpoint",
         "label": "OLLAMA-ENDPUNKT",
-        "placeholder": "http://localhost:11434/v1/chat/completions"
+        "placeholder": "http://127.0.0.1:11435/v1/chat/completions",
+        "help": "Der Endpunkt gehoert zur von OCYRA verwalteten Ollama-Laufzeit."
       },
       {
         "key": "ollama_model",
         "label": "MODELL",
         "placeholder": "qwen2.5:7b",
-        "help": "Das First-Party-Ollama-Plugin installiert standardmaessig qwen2.5:7b. Verwende den exakten Tag aus `ollama list` nur, wenn du diesen verwalteten Standard bewusst ueberschreiben willst."
+        "help": "Das First-Party-Ollama-Plugin installiert standardmaessig qwen2.5:7b. Der Readiness-Check verlangt den exakten Tag."
       },
       {
         "key": "translation_prompt_pack",

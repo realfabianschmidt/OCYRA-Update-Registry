@@ -22,3 +22,4 @@ Rules:
 - keep each package self-contained under its own folder
 - update `sha256` values when downloadable artifacts change
 - do not commit downloaded archives, extracted payloads, or scratch files here
+- `provider-ollama-runtime` resolves the OCYRA app-bundled Ollama binary; plugins only declare model dependencies such as `model-ollama-qwen2.5-7b`

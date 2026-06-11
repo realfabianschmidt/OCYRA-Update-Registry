@@ -1,6 +1,6 @@
 {
   "name": "Ollama Translation",
-  "summary": "Local subtitle translation through a provider-managed Ollama runtime and first-party default model dependency.",
+  "summary": "Local subtitle translation through the OCYRA app-bundled Ollama runtime and first-party default model dependency.",
   "presets": [
     {
       "id": "local-ollama",
@@ -12,13 +12,14 @@
       {
         "key": "ollama_endpoint",
         "label": "OLLAMA ENDPOINT",
-        "placeholder": "http://localhost:11434/v1/chat/completions"
+        "placeholder": "http://127.0.0.1:11435/v1/chat/completions",
+        "help": "Endpoint is owned by the OCYRA managed Ollama runtime."
       },
       {
         "key": "ollama_model",
         "label": "MODEL",
         "placeholder": "qwen2.5:7b",
-        "help": "The first-party managed Ollama plugin installs qwen2.5:7b by default. Use the exact tag from `ollama list` only if you intentionally override that managed default."
+        "help": "The first-party managed Ollama plugin installs qwen2.5:7b by default. The readiness check requires the exact tag."
       },
       {
         "key": "translation_prompt_pack",

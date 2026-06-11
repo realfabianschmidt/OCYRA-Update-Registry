@@ -1,6 +1,6 @@
 {
   "catalog_version": "1",
-  "published_at": "2026-05-10T11:11:11.654Z",
+  "published_at": "2026-05-14T21:22:00.860Z",
   "app_release": {
     "schema_version": 1,
     "current_version": "2.0.0",
@@ -590,13 +590,13 @@
       "id": "listing-translation-plugin-ollama",
       "kind": "plugin",
       "name": "Ollama Translation",
-      "summary": "Local subtitle translation through a provider-managed Ollama runtime and first-party default model dependency.",
+      "summary": "Local subtitle translation through the OCYRA app-bundled Ollama runtime and first-party default model dependency.",
       "publisher_id": "ocyra-core",
       "channel": "stable",
       "target_ref": {
         "type": "plugin",
         "id": "translation-plugin-ollama",
-        "version": "1.0.3"
+        "version": "1.0.4"
       },
       "permissions": [
         "network.outbound",
@@ -3145,8 +3145,8 @@
       "family": "translation",
       "role": "translation.subtitle-provider",
       "name": "Ollama Translation",
-      "version": "1.0.3",
-      "summary": "Local subtitle translation through a provider-managed Ollama runtime and first-party default model dependency.",
+      "version": "1.0.4",
+      "summary": "Local subtitle translation through the OCYRA app-bundled Ollama runtime and first-party default model dependency.",
       "runtime": {
         "mode": "js-sandbox",
         "entry": "handler.js"
@@ -3178,14 +3178,15 @@
             "key": "ollama_endpoint",
             "label": "OLLAMA ENDPOINT",
             "type": "url",
-            "placeholder": "http://localhost:11434/v1/chat/completions"
+            "placeholder": "http://127.0.0.1:11435/v1/chat/completions",
+            "help": "Endpoint is owned by the OCYRA managed Ollama runtime."
           },
           {
             "key": "ollama_model",
             "label": "MODEL",
             "type": "text",
             "placeholder": "qwen2.5:7b",
-            "help": "Default first-party dependency-managed profile installs qwen2.5:7b. Use an exact tag from ollama list only when you intentionally override that managed default."
+            "help": "Default first-party dependency-managed profile installs qwen2.5:7b. The readiness check requires the exact tag."
           },
           {
             "key": "translation_prompt_pack",
@@ -3206,7 +3207,9 @@
           "id": "local-ollama",
           "name": "Local Ollama (Managed Qwen 2.5 7B)",
           "settings": {
-            "translation_provider": "ollama"
+            "translation_provider": "ollama",
+            "ollama_endpoint": "http://127.0.0.1:11435/v1/chat/completions",
+            "ollama_model": "qwen2.5:7b"
           }
         }
       ],
@@ -3223,7 +3226,7 @@
       "locale_bundles": {
         "de": {
           "name": "Ollama Uebersetzung",
-          "summary": "Lokale Untertiteluebersetzung ueber eine provider-verwaltete Ollama-Laufzeit und ein First-Party-Standardmodell.",
+          "summary": "Lokale Untertiteluebersetzung ueber die in OCYRA gebuendelte Ollama-Laufzeit und ein First-Party-Standardmodell.",
           "presets": [
             {
               "id": "local-ollama",
@@ -3235,13 +3238,14 @@
               {
                 "key": "ollama_endpoint",
                 "label": "OLLAMA-ENDPUNKT",
-                "placeholder": "http://localhost:11434/v1/chat/completions"
+                "placeholder": "http://127.0.0.1:11435/v1/chat/completions",
+                "help": "Der Endpunkt gehoert zur von OCYRA verwalteten Ollama-Laufzeit."
               },
               {
                 "key": "ollama_model",
                 "label": "MODELL",
                 "placeholder": "qwen2.5:7b",
-                "help": "Das First-Party-Ollama-Plugin installiert standardmaessig qwen2.5:7b. Verwende den exakten Tag aus `ollama list` nur, wenn du diesen verwalteten Standard bewusst ueberschreiben willst."
+                "help": "Das First-Party-Ollama-Plugin installiert standardmaessig qwen2.5:7b. Der Readiness-Check verlangt den exakten Tag."
               },
               {
                 "key": "translation_prompt_pack",
@@ -3257,7 +3261,7 @@
         },
         "en": {
           "name": "Ollama Translation",
-          "summary": "Local subtitle translation through a provider-managed Ollama runtime and first-party default model dependency.",
+          "summary": "Local subtitle translation through the OCYRA app-bundled Ollama runtime and first-party default model dependency.",
           "presets": [
             {
               "id": "local-ollama",
@@ -3269,13 +3273,14 @@
               {
                 "key": "ollama_endpoint",
                 "label": "OLLAMA ENDPOINT",
-                "placeholder": "http://localhost:11434/v1/chat/completions"
+                "placeholder": "http://127.0.0.1:11435/v1/chat/completions",
+                "help": "Endpoint is owned by the OCYRA managed Ollama runtime."
               },
               {
                 "key": "ollama_model",
                 "label": "MODEL",
                 "placeholder": "qwen2.5:7b",
-                "help": "The first-party managed Ollama plugin installs qwen2.5:7b by default. Use the exact tag from `ollama list` only if you intentionally override that managed default."
+                "help": "The first-party managed Ollama plugin installs qwen2.5:7b by default. The readiness check requires the exact tag."
               },
               {
                 "key": "translation_prompt_pack",
@@ -3291,7 +3296,7 @@
         },
         "fr": {
           "name": "Traduction Ollama",
-          "summary": "Traduction locale de sous-titres via un runtime Ollama gere par le fournisseur et une dependance de modele first-party par defaut.",
+          "summary": "Traduction locale de sous-titres via le runtime Ollama integre a OCYRA et une dependance de modele first-party par defaut.",
           "presets": [
             {
               "id": "local-ollama",
@@ -3303,13 +3308,14 @@
               {
                 "key": "ollama_endpoint",
                 "label": "ENDPOINT OLLAMA",
-                "placeholder": "http://localhost:11434/v1/chat/completions"
+                "placeholder": "http://127.0.0.1:11435/v1/chat/completions",
+                "help": "L'endpoint appartient au runtime Ollama gere par OCYRA."
               },
               {
                 "key": "ollama_model",
                 "label": "MODELE",
                 "placeholder": "qwen2.5:7b",
-                "help": "Le plugin Ollama first-party installe qwen2.5:7b par defaut. Utilisez l'etiquette exacte de `ollama list` seulement si vous souhaitez remplacer ce defaut gere."
+                "help": "Le plugin Ollama first-party installe qwen2.5:7b par defaut. Le readiness check exige l'etiquette exacte."
               },
               {
                 "key": "translation_prompt_pack",
@@ -3337,36 +3343,36 @@
           "kind": "locale-bundle",
           "path": "plugins/translation/translation-plugin-ollama/locales/de.json",
           "package_path": "locales/de.json",
-          "sha256": "1F214B27B6FBC35BC67F6B87378ADB76A26BC0E721E195AC9E02FC7F2005D64C",
-          "size_bytes": 1090
+          "sha256": "A7B8AB832F5DB80632DCC89A831C02A4CDDE02B677B30854B9DF7441FB9C0FAF",
+          "size_bytes": 1104
         },
         {
           "kind": "locale-bundle",
           "path": "plugins/translation/translation-plugin-ollama/locales/en.json",
           "package_path": "locales/en.json",
-          "sha256": "B816B4EEF66957B64C0E4DEB4E5322E9853EAE4F0B66154EC2B7CE86D4B39DD6",
-          "size_bytes": 1041
+          "sha256": "2E9BBEC35E18EE2690D8178DE845A59A5D3B9F0E8C8F85B46F5BC58CDFFBCC4E",
+          "size_bytes": 1068
         },
         {
           "kind": "locale-bundle",
           "path": "plugins/translation/translation-plugin-ollama/locales/fr.json",
           "package_path": "locales/fr.json",
-          "sha256": "EF2B7ECF851FE75661DE34B92C105D9EA83CDAAC5B27C7D435B84BF0E836D393",
-          "size_bytes": 1072
+          "sha256": "41B12311ED1D5989B5C40E1A1DB731CB757520BD0AA9FA1E10D25C3AF3A95289",
+          "size_bytes": 1085
         },
         {
           "kind": "manifest",
           "path": "plugins/translation/translation-plugin-ollama/plugin.json",
           "package_path": "plugin.json",
-          "sha256": "B946FC3044091EB8745D01CC74FD0399BF5CFE8B99F19B95F98EE0A8A11A79E3",
-          "size_bytes": 1826
+          "sha256": "4C4D87173EF86B36E595BF6571D8C826E0BF65A2D21F6E8B79D10BD87858B07C",
+          "size_bytes": 1957
         },
         {
           "kind": "settings-schema",
           "path": "plugins/translation/translation-plugin-ollama/settings.schema.json",
           "package_path": "settings.schema.json",
-          "sha256": "FBED7AE3607A5DB19AA8636A87F69E476850AE41554626152EF69D84C31BBBB8",
-          "size_bytes": 478
+          "sha256": "752BF6CFC0F8458BF2698B1655BEFD643D9D65439C10E38F1266E07F76917FFE",
+          "size_bytes": 812
         }
       ]
     },
@@ -3691,14 +3697,16 @@
         "version": "1.0.0",
         "package_api_version": "1",
         "category": "runtime",
-        "summary": "Provider-managed Ollama runtime check for first-party local translation plugins.",
+        "summary": "OCYRA app-bundled Ollama runtime for first-party local AI plugins.",
         "install_strategy": "provider-managed",
         "provisioning": {
           "provider": "ollama",
           "resource_type": "runtime",
-          "command": "ollama",
+          "command": "app-bundled",
+          "runtime_mode": "app-bundled",
+          "endpoint": "http://127.0.0.1:11435",
           "minimum_version": "0.20.0",
-          "ownership": "external-system",
+          "ownership": "app-bundled",
           "removal_policy": "keep"
         },
         "files": [],
@@ -3749,12 +3757,13 @@
         "version": "1.0.0",
         "package_api_version": "1",
         "category": "model",
-        "summary": "Provider-managed Qwen 2.5 7B model for the first-party Ollama translation path.",
+        "summary": "Plugin-managed Qwen 2.5 7B model pulled through the OCYRA app-bundled Ollama runtime.",
         "install_strategy": "provider-managed",
         "provisioning": {
           "provider": "ollama",
           "resource_type": "model",
-          "command": "ollama",
+          "command": "app-bundled",
+          "runtime": "provider-ollama-runtime",
           "model": "qwen2.5:7b",
           "ownership": "plugin-platform",
           "removal_policy": "remove-when-unused",

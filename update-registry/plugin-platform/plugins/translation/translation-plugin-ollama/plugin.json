@@ -4,8 +4,8 @@
   "family": "translation",
   "role": "translation.subtitle-provider",
   "name": "Ollama Translation",
-  "version": "1.0.3",
-  "summary": "Local subtitle translation through a provider-managed Ollama runtime and first-party default model dependency.",
+  "version": "1.0.4",
+  "summary": "Local subtitle translation through the OCYRA app-bundled Ollama runtime and first-party default model dependency.",
   "runtime": {
     "mode": "js-sandbox",
     "entry": "handler.js"
@@ -20,8 +20,8 @@
   "settings_schema": "settings.schema.json",
   "credential_schema": {
     "fields": [
-      { "key": "ollama_endpoint", "label": "OLLAMA ENDPOINT", "type": "url",  "placeholder": "http://localhost:11434/v1/chat/completions" },
-      { "key": "ollama_model",    "label": "MODEL",           "type": "text", "placeholder": "qwen2.5:7b", "help": "Default first-party dependency-managed profile installs qwen2.5:7b. Use an exact tag from ollama list only when you intentionally override that managed default." },
+      { "key": "ollama_endpoint", "label": "OLLAMA ENDPOINT", "type": "url",  "placeholder": "http://127.0.0.1:11435/v1/chat/completions", "help": "Endpoint is owned by the OCYRA managed Ollama runtime." },
+      { "key": "ollama_model",    "label": "MODEL",           "type": "text", "placeholder": "qwen2.5:7b", "help": "Default first-party dependency-managed profile installs qwen2.5:7b. The readiness check requires the exact tag." },
       { "key": "translation_prompt_pack",     "label": "PROMPT PACK",   "type": "select", "source": "packs" },
       { "key": "translation_prompt_template", "label": "CUSTOM PROMPT", "type": "textarea",
         "placeholder": "Translate subtitle text from {from_lang} to {to_lang}…" }
@@ -32,7 +32,9 @@
       "id": "local-ollama",
       "name": "Local Ollama (Managed Qwen 2.5 7B)",
       "settings": {
-        "translation_provider": "ollama"
+        "translation_provider": "ollama",
+        "ollama_endpoint": "http://127.0.0.1:11435/v1/chat/completions",
+        "ollama_model": "qwen2.5:7b"
       }
     }
   ],

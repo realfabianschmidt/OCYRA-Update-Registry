@@ -1,6 +1,6 @@
 {
   "name": "Traduction Ollama",
-  "summary": "Traduction locale de sous-titres via un runtime Ollama gere par le fournisseur et une dependance de modele first-party par defaut.",
+  "summary": "Traduction locale de sous-titres via le runtime Ollama integre a OCYRA et une dependance de modele first-party par defaut.",
   "presets": [
     {
       "id": "local-ollama",
@@ -12,13 +12,14 @@
       {
         "key": "ollama_endpoint",
         "label": "ENDPOINT OLLAMA",
-        "placeholder": "http://localhost:11434/v1/chat/completions"
+        "placeholder": "http://127.0.0.1:11435/v1/chat/completions",
+        "help": "L'endpoint appartient au runtime Ollama gere par OCYRA."
       },
       {
         "key": "ollama_model",
         "label": "MODELE",
         "placeholder": "qwen2.5:7b",
-        "help": "Le plugin Ollama first-party installe qwen2.5:7b par defaut. Utilisez l'etiquette exacte de `ollama list` seulement si vous souhaitez remplacer ce defaut gere."
+        "help": "Le plugin Ollama first-party installe qwen2.5:7b par defaut. Le readiness check exige l'etiquette exacte."
       },
       {
         "key": "translation_prompt_pack",

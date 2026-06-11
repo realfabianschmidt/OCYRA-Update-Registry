@@ -8,6 +8,16 @@
       "const": "ollama",
       "default": "ollama"
     },
+    "ollama_endpoint": {
+      "type": "string",
+      "const": "http://127.0.0.1:11435/v1/chat/completions",
+      "default": "http://127.0.0.1:11435/v1/chat/completions"
+    },
+    "ollama_model": {
+      "type": "string",
+      "const": "qwen2.5:7b",
+      "default": "qwen2.5:7b"
+    },
     "requires_local_runtime": {
       "type": "boolean",
       "const": true,
@@ -16,6 +26,8 @@
   },
   "required": [
     "translation_provider",
+    "ollama_endpoint",
+    "ollama_model",
     "requires_local_runtime"
   ],
   "additionalProperties": false
